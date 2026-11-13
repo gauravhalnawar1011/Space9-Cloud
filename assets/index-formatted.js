@@ -1,0 +1,24530 @@
+const __vite__mapDeps = (
+  i,
+  m = __vite__mapDeps,
+  d = m.f ||
+    (m.f = [
+      "assets/CoursesPage-DGNww11V.js",
+      "assets/vendor-react-Ux0UbkiD.js",
+      "assets/vendor-animation-BmeQzH7S.js",
+      "assets/vendor-lucide-OsCWqxzU.js",
+      "assets/vendor-supabase-2rm18Nxb.js",
+      "assets/CourseDetailPage-Z4nDbAbC.js",
+      "assets/AboutPage-wGPfL1oU.js",
+      "assets/ContactPage-DztNAHFb.js",
+      "assets/TermsPage-Z8iBTtjj.js",
+      "assets/JobApplicationSupportPage-CAC1JwTw.js",
+      "assets/CertificationSupportPage-DiIqqx9m.js",
+    ]),
+) => i.map((i) => d[i]);
+var $d = Object.defineProperty;
+var Ns = (e) => {
+  throw TypeError(e);
+};
+var Wd = (e, t, n) =>
+  t in e
+    ? $d(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n })
+    : (e[t] = n);
+var J = (e, t, n) => Wd(e, typeof t != "symbol" ? t + "" : t, n),
+  Rs = (e, t, n) => t.has(e) || Ns("Cannot " + n);
+var Ge = (e, t, n) => (
+    Rs(e, t, "read from private field"),
+    n ? n.call(e) : t.get(e)
+  ),
+  Es = (e, t, n) =>
+    t.has(e)
+      ? Ns("Cannot add the same private member more than once")
+      : t instanceof WeakSet
+        ? t.add(e)
+        : t.set(e, n),
+  No = (e, t, n, r) => (
+    Rs(e, t, "write to private field"),
+    r ? r.call(e, n) : t.set(e, n),
+    n
+  );
+import {
+  r as g,
+  u as fo,
+  j as l,
+  L as Ot,
+  a as Ud,
+  R as q,
+  b as hr,
+  c as yr,
+  d as Hd,
+  B as Gd,
+  e as Zd,
+  f as ft,
+  N as Os,
+  g as Jd,
+} from "./vendor-react-Ux0UbkiD.js";
+import { m as Q, A as Kr } from "./vendor-animation-BmeQzH7S.js";
+import {
+  X as Li,
+  M as Kd,
+  C as wl,
+  A as xl,
+  a as Sl,
+  E as Ls,
+  b as qd,
+  P as Yd,
+  c as Qd,
+  d as ti,
+  S as Xd,
+  D as lt,
+  W as Te,
+  B as ni,
+  T as Ro,
+  e as Wr,
+  f as fn,
+  g as zs,
+  h as pn,
+  i as Qe,
+  L as tt,
+  F as zi,
+  j as vt,
+  k as En,
+  l as Ue,
+  m as or,
+  n as On,
+  o as mn,
+  p as Yt,
+  q as Pt,
+  r as Xn,
+  s as Pr,
+  t as Jt,
+  Z as ar,
+  u as Ar,
+  v as lr,
+  G as Cl,
+  U as Fs,
+  N as ri,
+  w as ef,
+  x as tf,
+  y as Pl,
+  z as nf,
+  K as qr,
+  H as vn,
+  I as Al,
+  J as rf,
+  R as of,
+  O as sf,
+  Q as af,
+  V as kl,
+  Y as Bs,
+  _ as lf,
+  $ as Fi,
+  a0 as cf,
+  a1 as Il,
+  a2 as _l,
+  a3 as Tl,
+  a4 as uf,
+  a5 as df,
+  a6 as ff,
+  a7 as mf,
+  a8 as pf,
+  a9 as gf,
+  aa as hf,
+  ab as yf,
+} from "./vendor-lucide-OsCWqxzU.js";
+import {
+  c as vf,
+  _ as Kt,
+  a as Ml,
+  b as bf,
+} from "./vendor-supabase-2rm18Nxb.js";
+(function () {
+  const t = document.createElement("link").relList;
+  if (t && t.supports && t.supports("modulepreload")) return;
+  for (const o of document.querySelectorAll('link[rel="modulepreload"]')) r(o);
+  new MutationObserver((o) => {
+    for (const i of o)
+      if (i.type === "childList")
+        for (const s of i.addedNodes)
+          s.tagName === "LINK" && s.rel === "modulepreload" && r(s);
+  }).observe(document, { childList: !0, subtree: !0 });
+  function n(o) {
+    const i = {};
+    return (
+      o.integrity && (i.integrity = o.integrity),
+      o.referrerPolicy && (i.referrerPolicy = o.referrerPolicy),
+      o.crossOrigin === "use-credentials"
+        ? (i.credentials = "include")
+        : o.crossOrigin === "anonymous"
+          ? (i.credentials = "omit")
+          : (i.credentials = "same-origin"),
+      i
+    );
+  }
+  function r(o) {
+    if (o.ep) return;
+    o.ep = !0;
+    const i = n(o);
+    fetch(o.href, i);
+  }
+})();
+const oi = "/assets/logoNav-1geMMrzP.png",
+  wf = "modulepreload",
+  xf = function (e) {
+    return "/" + e;
+  },
+  Vs = {},
+  An = function (t, n, r) {
+    let o = Promise.resolve();
+    if (n && n.length > 0) {
+      document.getElementsByTagName("link");
+      const s = document.querySelector("meta[property=csp-nonce]"),
+        a =
+          (s == null ? void 0 : s.nonce) ||
+          (s == null ? void 0 : s.getAttribute("nonce"));
+      o = Promise.allSettled(
+        n.map((c) => {
+          if (((c = xf(c)), c in Vs)) return;
+          Vs[c] = !0;
+          const u = c.endsWith(".css"),
+            f = u ? '[rel="stylesheet"]' : "";
+          if (document.querySelector(`link[href="${c}"]${f}`)) return;
+          const d = document.createElement("link");
+          if (
+            ((d.rel = u ? "stylesheet" : wf),
+            u || (d.as = "script"),
+            (d.crossOrigin = ""),
+            (d.href = c),
+            a && d.setAttribute("nonce", a),
+            document.head.appendChild(d),
+            u)
+          )
+            return new Promise((m, y) => {
+              (d.addEventListener("load", m),
+                d.addEventListener("error", () =>
+                  y(new Error(`Unable to preload CSS for ${c}`)),
+                ));
+            });
+        }),
+      );
+    }
+    function i(s) {
+      const a = new Event("vite:preloadError", { cancelable: !0 });
+      if (((a.payload = s), window.dispatchEvent(a), !a.defaultPrevented))
+        throw s;
+    }
+    return o.then((s) => {
+      for (const a of s || []) a.status === "rejected" && i(a.reason);
+      return t().catch(i);
+    });
+  };
+var $s = "1.3.26";
+function Dl(e, t, n) {
+  return Math.max(e, Math.min(t, n));
+}
+function Sf(e, t, n) {
+  return (1 - n) * e + n * t;
+}
+function Cf(e, t, n, r) {
+  return Sf(e, t, 1 - Math.exp(-n * r));
+}
+function Pf(e, t) {
+  return ((e % t) + t) % t;
+}
+var Af = class {
+  constructor() {
+    J(this, "isRunning", !1);
+    J(this, "value", 0);
+    J(this, "from", 0);
+    J(this, "to", 0);
+    J(this, "currentTime", 0);
+    J(this, "lerp");
+    J(this, "duration");
+    J(this, "easing");
+    J(this, "onUpdate");
+  }
+  advance(e) {
+    var n;
+    if (!this.isRunning) return;
+    let t = !1;
+    if (this.duration && this.easing) {
+      this.currentTime += e;
+      const r = Dl(0, this.currentTime / this.duration, 1);
+      t = r >= 1;
+      const o = t ? 1 : this.easing(r);
+      this.value = this.from + (this.to - this.from) * o;
+    } else
+      this.lerp
+        ? ((this.value = Cf(this.value, this.to, this.lerp * 60, e)),
+          Math.round(this.value) === Math.round(this.to) &&
+            ((this.value = this.to), (t = !0)))
+        : ((this.value = this.to), (t = !0));
+    (t && this.stop(),
+      (n = this.onUpdate) == null || n.call(this, this.value, t));
+  }
+  stop() {
+    this.isRunning = !1;
+  }
+  fromTo(e, t, { lerp: n, duration: r, easing: o, onStart: i, onUpdate: s }) {
+    ((this.from = this.value = e),
+      (this.to = t),
+      (this.lerp = n),
+      (this.duration = r),
+      (this.easing = o),
+      (this.currentTime = 0),
+      (this.isRunning = !0),
+      i == null || i(),
+      (this.onUpdate = s));
+  }
+};
+function kf(e, t) {
+  let n;
+  return function (...r) {
+    (clearTimeout(n),
+      (n = setTimeout(() => {
+        ((n = void 0), e.apply(this, r));
+      }, t)));
+  };
+}
+var If = class {
+    constructor(e, t, { autoResize: n = !0, debounce: r = 250 } = {}) {
+      J(this, "width", 0);
+      J(this, "height", 0);
+      J(this, "scrollHeight", 0);
+      J(this, "scrollWidth", 0);
+      J(this, "debouncedResize");
+      J(this, "wrapperResizeObserver");
+      J(this, "contentResizeObserver");
+      J(this, "resize", () => {
+        (this.onWrapperResize(), this.onContentResize());
+      });
+      J(this, "onWrapperResize", () => {
+        this.wrapper instanceof Window
+          ? ((this.width = window.innerWidth),
+            (this.height = window.innerHeight))
+          : ((this.width = this.wrapper.clientWidth),
+            (this.height = this.wrapper.clientHeight));
+      });
+      J(this, "onContentResize", () => {
+        this.wrapper instanceof Window
+          ? ((this.scrollHeight = this.content.scrollHeight),
+            (this.scrollWidth = this.content.scrollWidth))
+          : ((this.scrollHeight = this.wrapper.scrollHeight),
+            (this.scrollWidth = this.wrapper.scrollWidth));
+      });
+      ((this.wrapper = e),
+        (this.content = t),
+        n &&
+          ((this.debouncedResize = kf(this.resize, r)),
+          this.wrapper instanceof Window
+            ? window.addEventListener("resize", this.debouncedResize)
+            : ((this.wrapperResizeObserver = new ResizeObserver(
+                this.debouncedResize,
+              )),
+              this.wrapperResizeObserver.observe(this.wrapper)),
+          (this.contentResizeObserver = new ResizeObserver(
+            this.debouncedResize,
+          )),
+          this.contentResizeObserver.observe(this.content)),
+        this.resize());
+    }
+    destroy() {
+      var e, t;
+      ((e = this.wrapperResizeObserver) == null || e.disconnect(),
+        (t = this.contentResizeObserver) == null || t.disconnect(),
+        this.wrapper === window &&
+          this.debouncedResize &&
+          window.removeEventListener("resize", this.debouncedResize));
+    }
+    get limit() {
+      return {
+        x: this.scrollWidth - this.width,
+        y: this.scrollHeight - this.height,
+      };
+    }
+  },
+  jl = class {
+    constructor() {
+      J(this, "events", {});
+    }
+    emit(e, ...t) {
+      var r;
+      const n = this.events[e] || [];
+      for (let o = 0, i = n.length; o < i; o++)
+        (r = n[o]) == null || r.call(n, ...t);
+    }
+    on(e, t) {
+      return (
+        this.events[e] ? this.events[e].push(t) : (this.events[e] = [t]),
+        () => {
+          var n;
+          this.events[e] =
+            (n = this.events[e]) == null ? void 0 : n.filter((r) => t !== r);
+        }
+      );
+    }
+    off(e, t) {
+      var n;
+      this.events[e] =
+        (n = this.events[e]) == null ? void 0 : n.filter((r) => t !== r);
+    }
+    destroy() {
+      this.events = {};
+    }
+  };
+const _f = 100 / 6,
+  Ut = { passive: !1 };
+function Ws(e, t) {
+  return e === 1 ? _f : e === 2 ? t : 1;
+}
+var Tf = class {
+  constructor(e, t = { wheelMultiplier: 1, touchMultiplier: 1 }) {
+    J(this, "touchStart", { x: 0, y: 0 });
+    J(this, "lastDelta", { x: 0, y: 0 });
+    J(this, "window", { width: 0, height: 0 });
+    J(this, "emitter", new jl());
+    J(this, "onTouchStart", (e) => {
+      const { clientX: t, clientY: n } = e.targetTouches
+        ? e.targetTouches[0]
+        : e;
+      ((this.touchStart.x = t),
+        (this.touchStart.y = n),
+        (this.lastDelta = { x: 0, y: 0 }),
+        this.emitter.emit("scroll", { deltaX: 0, deltaY: 0, event: e }));
+    });
+    J(this, "onTouchMove", (e) => {
+      const { clientX: t, clientY: n } = e.targetTouches
+          ? e.targetTouches[0]
+          : e,
+        r = -(t - this.touchStart.x) * this.options.touchMultiplier,
+        o = -(n - this.touchStart.y) * this.options.touchMultiplier;
+      ((this.touchStart.x = t),
+        (this.touchStart.y = n),
+        (this.lastDelta = { x: r, y: o }),
+        this.emitter.emit("scroll", { deltaX: r, deltaY: o, event: e }));
+    });
+    J(this, "onTouchEnd", (e) => {
+      this.emitter.emit("scroll", {
+        deltaX: this.lastDelta.x,
+        deltaY: this.lastDelta.y,
+        event: e,
+      });
+    });
+    J(this, "onWheel", (e) => {
+      let { deltaX: t, deltaY: n, deltaMode: r } = e;
+      const o = Ws(r, this.window.width),
+        i = Ws(r, this.window.height);
+      ((t *= o),
+        (n *= i),
+        (t *= this.options.wheelMultiplier),
+        (n *= this.options.wheelMultiplier),
+        this.emitter.emit("scroll", { deltaX: t, deltaY: n, event: e }));
+    });
+    J(this, "onWindowResize", () => {
+      this.window = { width: window.innerWidth, height: window.innerHeight };
+    });
+    ((this.element = e),
+      (this.options = t),
+      window.addEventListener("resize", this.onWindowResize),
+      this.onWindowResize(),
+      this.element.addEventListener("wheel", this.onWheel, Ut),
+      this.element.addEventListener("touchstart", this.onTouchStart, Ut),
+      this.element.addEventListener("touchmove", this.onTouchMove, Ut),
+      this.element.addEventListener("touchend", this.onTouchEnd, Ut));
+  }
+  on(e, t) {
+    return this.emitter.on(e, t);
+  }
+  destroy() {
+    (this.emitter.destroy(),
+      window.removeEventListener("resize", this.onWindowResize),
+      this.element.removeEventListener("wheel", this.onWheel, Ut),
+      this.element.removeEventListener("touchstart", this.onTouchStart, Ut),
+      this.element.removeEventListener("touchmove", this.onTouchMove, Ut),
+      this.element.removeEventListener("touchend", this.onTouchEnd, Ut));
+  }
+};
+const Us = (e) => Math.min(1, 1.001 - 2 ** (-10 * e));
+var Mf = class {
+  constructor({
+    wrapper: e = window,
+    content: t = document.documentElement,
+    eventsTarget: n = e,
+    smoothWheel: r = !0,
+    syncTouch: o = !1,
+    syncTouchLerp: i = 0.075,
+    touchInertiaExponent: s = 1.7,
+    duration: a,
+    easing: c,
+    lerp: u = 0.1,
+    infinite: f = !1,
+    orientation: d = "vertical",
+    gestureOrientation: m = d === "horizontal" ? "both" : "vertical",
+    touchMultiplier: y = 1,
+    wheelMultiplier: p = 1,
+    autoResize: v = !0,
+    prevent: h,
+    virtualScroll: S,
+    overscroll: x = !0,
+    autoRaf: C = !1,
+    anchors: w = !1,
+    autoToggle: k = !1,
+    allowNestedScroll: _ = !1,
+    __experimental__naiveDimensions: D = !1,
+    naiveDimensions: I = D,
+    stopInertiaOnNavigate: N = !1,
+    respectReducedMotion: V = !0,
+  } = {}) {
+    J(this, "_isScrolling", !1);
+    J(this, "_isStopped", !1);
+    J(this, "_isLocked", !1);
+    J(this, "_preventNextNativeScrollEvent", !1);
+    J(this, "_resetVelocityTimeout", null);
+    J(this, "_rafId", null);
+    J(this, "_isDraggingSelection", !1);
+    J(
+      this,
+      "reducedMotionMediaQuery",
+      window.matchMedia("(prefers-reduced-motion: reduce)"),
+    );
+    J(this, "isTouching");
+    J(this, "isIos");
+    J(this, "time", 0);
+    J(this, "userData", {});
+    J(this, "lastVelocity", 0);
+    J(this, "velocity", 0);
+    J(this, "direction", 0);
+    J(this, "options");
+    J(this, "targetScroll");
+    J(this, "animatedScroll");
+    J(this, "animate", new Af());
+    J(this, "emitter", new jl());
+    J(this, "dimensions");
+    J(this, "virtualScroll");
+    J(this, "onScrollEnd", (e) => {
+      e instanceof CustomEvent ||
+        ((this.isScrolling === "smooth" || this.isScrolling === !1) &&
+          e.stopPropagation());
+    });
+    J(this, "dispatchScrollendEvent", () => {
+      this.options.wrapper.dispatchEvent(
+        new CustomEvent("scrollend", {
+          bubbles: this.options.wrapper === window,
+          detail: { lenisScrollEnd: !0 },
+        }),
+      );
+    });
+    J(this, "onTransitionEnd", (e) => {
+      var t;
+      (t = e.propertyName) != null &&
+        t.includes("overflow") &&
+        e.target === this.rootElement &&
+        this.checkOverflow();
+    });
+    J(this, "onClick", (e) => {
+      const t = e
+          .composedPath()
+          .filter((r) => r instanceof HTMLAnchorElement && r.href)
+          .map((r) => new URL(r.href)),
+        n = new URL(window.location.href);
+      if (this.options.anchors) {
+        const r = t.find(
+          (o) => n.host === o.host && n.pathname === o.pathname && o.hash,
+        );
+        if (r) {
+          const o =
+              typeof this.options.anchors == "object" && this.options.anchors
+                ? this.options.anchors
+                : void 0,
+            i = decodeURIComponent(r.hash);
+          this.scrollTo(i, o);
+          return;
+        }
+      }
+      if (
+        this.options.stopInertiaOnNavigate &&
+        t.some((r) => n.host === r.host && n.pathname !== r.pathname)
+      ) {
+        this.reset();
+        return;
+      }
+    });
+    J(this, "onPointerDown", (e) => {
+      e.button === 1 && this.reset();
+    });
+    J(this, "onVirtualScroll", (e) => {
+      if (
+        typeof this.options.virtualScroll == "function" &&
+        this.options.virtualScroll(e) === !1
+      )
+        return;
+      const { deltaX: t, deltaY: n, event: r } = e;
+      if (
+        (this.emitter.emit("virtual-scroll", {
+          deltaX: t,
+          deltaY: n,
+          event: r,
+        }),
+        r.ctrlKey || r.lenisStopPropagation)
+      )
+        return;
+      const o = r.type.includes("touch"),
+        i = r.type.includes("wheel");
+      if (
+        o &&
+        this.isIos &&
+        (r.type === "touchstart" &&
+          (this._isDraggingSelection = this.isTouchOnSelectionHandle(r)),
+        this._isDraggingSelection)
+      ) {
+        r.type === "touchend" && (this._isDraggingSelection = !1);
+        return;
+      }
+      this.isTouching = r.type === "touchstart" || r.type === "touchmove";
+      const s = t === 0 && n === 0;
+      if (
+        this.options.syncTouch &&
+        o &&
+        r.type === "touchstart" &&
+        s &&
+        !this.isStopped &&
+        !this.isLocked
+      ) {
+        this.reset();
+        return;
+      }
+      const a =
+        (this.options.gestureOrientation === "vertical" && n === 0) ||
+        (this.options.gestureOrientation === "horizontal" && t === 0);
+      if (s || a) return;
+      let c = r.composedPath();
+      c = c.slice(0, c.indexOf(this.rootElement));
+      const u = this.options.prevent,
+        f = Math.abs(t) >= Math.abs(n) ? "horizontal" : "vertical";
+      if (
+        c.find((p) => {
+          var v, h, S, x, C;
+          return (
+            p instanceof HTMLElement &&
+            ((typeof u == "function" && (u == null ? void 0 : u(p))) ||
+              ((v = p.hasAttribute) == null
+                ? void 0
+                : v.call(p, "data-lenis-prevent")) ||
+              (f === "vertical" &&
+                ((h = p.hasAttribute) == null
+                  ? void 0
+                  : h.call(p, "data-lenis-prevent-vertical"))) ||
+              (f === "horizontal" &&
+                ((S = p.hasAttribute) == null
+                  ? void 0
+                  : S.call(p, "data-lenis-prevent-horizontal"))) ||
+              (o &&
+                ((x = p.hasAttribute) == null
+                  ? void 0
+                  : x.call(p, "data-lenis-prevent-touch"))) ||
+              (i &&
+                ((C = p.hasAttribute) == null
+                  ? void 0
+                  : C.call(p, "data-lenis-prevent-wheel"))) ||
+              (this.options.allowNestedScroll &&
+                this.hasNestedScroll(p, { deltaX: t, deltaY: n })))
+          );
+        })
+      )
+        return;
+      if (this.isStopped || this.isLocked) {
+        r.cancelable && r.preventDefault();
+        return;
+      }
+      if (!((this.options.syncTouch && o) || (this.options.smoothWheel && i))) {
+        ((this.isScrolling = "native"),
+          this.animate.stop(),
+          (r.lenisStopPropagation = !0));
+        return;
+      }
+      let d = n;
+      (this.options.gestureOrientation === "both"
+        ? (d = Math.abs(n) > Math.abs(t) ? n : t)
+        : this.options.gestureOrientation === "horizontal" && (d = t),
+        (!this.options.overscroll ||
+          this.options.infinite ||
+          (this.options.wrapper !== window &&
+            this.limit > 0 &&
+            ((this.animatedScroll > 0 && this.animatedScroll < this.limit) ||
+              (this.animatedScroll === 0 && n > 0) ||
+              (this.animatedScroll === this.limit && n < 0)))) &&
+          (r.lenisStopPropagation = !0),
+        r.cancelable && r.preventDefault());
+      const m = o && this.options.syncTouch,
+        y = o && r.type === "touchend";
+      (y &&
+        (d =
+          Math.sign(d) *
+          Math.abs(this.velocity) ** this.options.touchInertiaExponent),
+        this.scrollTo(this.targetScroll + d, {
+          programmatic: !1,
+          ...(m
+            ? { lerp: y ? this.options.syncTouchLerp : 1 }
+            : {
+                lerp: this.options.lerp,
+                duration: this.options.duration,
+                easing: this.options.easing,
+              }),
+        }));
+    });
+    J(this, "onNativeScroll", () => {
+      if (
+        (this._resetVelocityTimeout !== null &&
+          (clearTimeout(this._resetVelocityTimeout),
+          (this._resetVelocityTimeout = null)),
+        this._preventNextNativeScrollEvent)
+      ) {
+        this._preventNextNativeScrollEvent = !1;
+        return;
+      }
+      if (this.isScrolling === !1 || this.isScrolling === "native") {
+        const e = this.animatedScroll;
+        ((this.animatedScroll = this.targetScroll = this.actualScroll),
+          (this.lastVelocity = this.velocity),
+          (this.velocity = this.animatedScroll - e),
+          (this.direction = Math.sign(this.animatedScroll - e)),
+          this.isStopped || (this.isScrolling = "native"),
+          this.emit(),
+          this.velocity !== 0 &&
+            (this._resetVelocityTimeout = setTimeout(() => {
+              ((this.lastVelocity = this.velocity),
+                (this.velocity = 0),
+                (this.isScrolling = !1),
+                this.emit());
+            }, 400)));
+      }
+    });
+    J(this, "raf", (e) => {
+      const t = e - (this.time || e);
+      ((this.time = e),
+        this.animate.advance(t * 0.001),
+        this.options.autoRaf &&
+          (this._rafId = requestAnimationFrame(this.raf)));
+    });
+    ((window.lenisVersion = $s),
+      window.lenis || (window.lenis = {}),
+      (window.lenis.version = $s),
+      d === "horizontal" && (window.lenis.horizontal = !0),
+      o === !0 && (window.lenis.touch = !0),
+      (this.isIos = /(iPad|iPhone|iPod)/g.test(navigator.userAgent)),
+      (!e || e === document.documentElement) && (e = window),
+      typeof a == "number" && typeof c != "function"
+        ? (c = Us)
+        : typeof c == "function" && typeof a != "number" && (a = 1),
+      (this.options = {
+        wrapper: e,
+        content: t,
+        eventsTarget: n,
+        smoothWheel: r,
+        syncTouch: o,
+        syncTouchLerp: i,
+        touchInertiaExponent: s,
+        duration: a,
+        easing: c,
+        lerp: u,
+        infinite: f,
+        gestureOrientation: m,
+        orientation: d,
+        touchMultiplier: y,
+        wheelMultiplier: p,
+        autoResize: v,
+        prevent: h,
+        virtualScroll: S,
+        overscroll: x,
+        autoRaf: C,
+        anchors: w,
+        autoToggle: k,
+        allowNestedScroll: _,
+        naiveDimensions: I,
+        stopInertiaOnNavigate: N,
+        respectReducedMotion: V,
+      }),
+      (this.dimensions = new If(e, t, { autoResize: v })),
+      this.updateClassName(),
+      (this.targetScroll = this.animatedScroll = this.actualScroll),
+      this.options.wrapper.addEventListener("scroll", this.onNativeScroll),
+      this.options.wrapper.addEventListener("scrollend", this.onScrollEnd, {
+        capture: !0,
+      }),
+      (this.options.anchors || this.options.stopInertiaOnNavigate) &&
+        this.options.wrapper.addEventListener("click", this.onClick),
+      this.options.wrapper.addEventListener("pointerdown", this.onPointerDown),
+      (this.virtualScroll = new Tf(n, {
+        touchMultiplier: y,
+        wheelMultiplier: p,
+      })),
+      this.virtualScroll.on("scroll", this.onVirtualScroll),
+      this.options.autoToggle &&
+        (this.checkOverflow(),
+        this.rootElement.addEventListener(
+          "transitionend",
+          this.onTransitionEnd,
+        )),
+      this.options.autoRaf && (this._rafId = requestAnimationFrame(this.raf)));
+  }
+  destroy() {
+    (this.emitter.destroy(),
+      this.options.wrapper.removeEventListener("scroll", this.onNativeScroll),
+      this.options.wrapper.removeEventListener("scrollend", this.onScrollEnd, {
+        capture: !0,
+      }),
+      this.options.wrapper.removeEventListener(
+        "pointerdown",
+        this.onPointerDown,
+      ),
+      (this.options.anchors || this.options.stopInertiaOnNavigate) &&
+        this.options.wrapper.removeEventListener("click", this.onClick),
+      this.virtualScroll.destroy(),
+      this.dimensions.destroy(),
+      this.cleanUpClassName(),
+      this._rafId && cancelAnimationFrame(this._rafId));
+  }
+  on(e, t) {
+    return this.emitter.on(e, t);
+  }
+  off(e, t) {
+    return this.emitter.off(e, t);
+  }
+  get overflow() {
+    const e = this.isHorizontal ? "overflow-x" : "overflow-y";
+    return getComputedStyle(this.rootElement)[e];
+  }
+  checkOverflow() {
+    ["hidden", "clip"].includes(this.overflow)
+      ? this.internalStop()
+      : this.internalStart();
+  }
+  setScroll(e) {
+    this.isHorizontal
+      ? this.options.wrapper.scrollTo({ left: e, behavior: "instant" })
+      : this.options.wrapper.scrollTo({ top: e, behavior: "instant" });
+  }
+  isTouchOnSelectionHandle(e) {
+    const t = window.getSelection();
+    if (!t || t.isCollapsed || t.rangeCount === 0) return !1;
+    const n = e.targetTouches[0] ?? e.changedTouches[0];
+    if (!n) return !1;
+    const r = t.getRangeAt(0).getClientRects();
+    if (r.length === 0) return !1;
+    const o = r[0],
+      i = r[r.length - 1],
+      s = 40,
+      a = Math.hypot(n.clientX - o.left, n.clientY - o.top) <= s,
+      c = Math.hypot(n.clientX - i.right, n.clientY - i.bottom) <= s;
+    return a || c;
+  }
+  resize() {
+    (this.dimensions.resize(),
+      (this.animatedScroll = this.targetScroll = this.actualScroll),
+      this.emit());
+  }
+  emit() {
+    this.emitter.emit("scroll", this);
+  }
+  reset() {
+    ((this.isLocked = !1),
+      (this.isScrolling = !1),
+      (this.animatedScroll = this.targetScroll = this.actualScroll),
+      (this.lastVelocity = this.velocity = 0),
+      this.animate.stop());
+  }
+  start() {
+    if (this.isStopped) {
+      if (this.options.autoToggle) {
+        this.rootElement.style.removeProperty("overflow");
+        return;
+      }
+      this.internalStart();
+    }
+  }
+  internalStart() {
+    this.isStopped && (this.reset(), (this.isStopped = !1), this.emit());
+  }
+  stop() {
+    if (!this.isStopped) {
+      if (this.options.autoToggle) {
+        this.rootElement.style.setProperty("overflow", "clip");
+        return;
+      }
+      this.internalStop();
+    }
+  }
+  internalStop() {
+    this.isStopped || (this.reset(), (this.isStopped = !0), this.emit());
+  }
+  scrollTo(
+    e,
+    {
+      offset: t = 0,
+      immediate: n = !1,
+      lock: r = !1,
+      programmatic: o = !0,
+      lerp: i = o ? this.options.lerp : void 0,
+      duration: s = o ? this.options.duration : void 0,
+      easing: a = o ? this.options.easing : void 0,
+      onStart: c,
+      onComplete: u,
+      force: f = !1,
+      userData: d,
+    } = {},
+  ) {
+    if (
+      (this.prefersReducedMotion &&
+        (o ? (n = !0) : ((i = 1), (s = void 0), (a = void 0))),
+      (this.isStopped || this.isLocked) && !f)
+    )
+      return;
+    let m = e,
+      y = t;
+    if (typeof m == "string" && ["top", "left", "start", "#"].includes(m))
+      m = 0;
+    else if (typeof m == "string" && ["bottom", "right", "end"].includes(m))
+      m = this.limit;
+    else {
+      let p = null;
+      if (
+        (typeof m == "string"
+          ? ((p = m.startsWith("#")
+              ? document.getElementById(m.slice(1))
+              : document.querySelector(m)),
+            p ||
+              (m === "#top"
+                ? (m = 0)
+                : console.warn("Lenis: Target not found", m)))
+          : m instanceof HTMLElement && m != null && m.nodeType && (p = m),
+        p)
+      ) {
+        if (this.options.wrapper !== window) {
+          const w = this.rootElement.getBoundingClientRect();
+          y -= this.isHorizontal ? w.left : w.top;
+        }
+        const v = p.getBoundingClientRect(),
+          h = getComputedStyle(p),
+          S = this.isHorizontal
+            ? Number.parseFloat(h.scrollMarginLeft)
+            : Number.parseFloat(h.scrollMarginTop),
+          x = getComputedStyle(this.rootElement),
+          C = this.isHorizontal
+            ? Number.parseFloat(x.scrollPaddingLeft)
+            : Number.parseFloat(x.scrollPaddingTop);
+        m =
+          (this.isHorizontal ? v.left : v.top) +
+          this.animatedScroll -
+          (Number.isNaN(S) ? 0 : S) -
+          (Number.isNaN(C) ? 0 : C);
+      }
+    }
+    if (typeof m == "number") {
+      if (((m += y), this.options.infinite)) {
+        if (o) {
+          this.targetScroll = this.animatedScroll = this.scroll;
+          const p = m - this.animatedScroll;
+          p > this.limit / 2
+            ? (m -= this.limit)
+            : p < -this.limit / 2 && (m += this.limit);
+        }
+      } else m = Dl(0, m, this.limit);
+      if (m === this.targetScroll) {
+        (c == null || c(this), u == null || u(this));
+        return;
+      }
+      if (((this.userData = d ?? {}), n)) {
+        ((this.animatedScroll = this.targetScroll = m),
+          this.setScroll(this.scroll),
+          this.reset(),
+          this.preventNextNativeScrollEvent(),
+          this.emit(),
+          u == null || u(this),
+          (this.userData = {}),
+          requestAnimationFrame(() => {
+            this.dispatchScrollendEvent();
+          }));
+        return;
+      }
+      (o || (this.targetScroll = m),
+        typeof s == "number" && typeof a != "function"
+          ? (a = Us)
+          : typeof a == "function" && typeof s != "number" && (s = 1),
+        this.animate.fromTo(this.animatedScroll, m, {
+          duration: s,
+          easing: a,
+          lerp: i,
+          onStart: () => {
+            (r && (this.isLocked = !0),
+              (this.isScrolling = "smooth"),
+              c == null || c(this));
+          },
+          onUpdate: (p, v) => {
+            ((this.isScrolling = "smooth"),
+              (this.lastVelocity = this.velocity),
+              (this.velocity = p - this.animatedScroll),
+              (this.direction = Math.sign(this.velocity)),
+              (this.animatedScroll = p),
+              this.setScroll(this.scroll),
+              o && (this.targetScroll = p),
+              v || this.emit(),
+              v &&
+                (this.reset(),
+                this.emit(),
+                u == null || u(this),
+                (this.userData = {}),
+                requestAnimationFrame(() => {
+                  this.dispatchScrollendEvent();
+                }),
+                this.preventNextNativeScrollEvent()));
+          },
+        }));
+    }
+  }
+  preventNextNativeScrollEvent() {
+    ((this._preventNextNativeScrollEvent = !0),
+      requestAnimationFrame(() => {
+        this._preventNextNativeScrollEvent = !1;
+      }));
+  }
+  hasNestedScroll(e, { deltaX: t, deltaY: n }) {
+    const r = Date.now();
+    e._lenis || (e._lenis = {});
+    const o = e._lenis;
+    let i, s, a, c, u, f, d, m, y, p;
+    if (r - (o.time ?? 0) > 2e3) {
+      o.time = Date.now();
+      const _ = window.getComputedStyle(e);
+      if (
+        ((o.computedStyle = _),
+        (i = ["auto", "overlay", "scroll"].includes(_.overflowX)),
+        (s = ["auto", "overlay", "scroll"].includes(_.overflowY)),
+        (u = ["auto"].includes(_.overscrollBehaviorX)),
+        (f = ["auto"].includes(_.overscrollBehaviorY)),
+        (o.hasOverflowX = i),
+        (o.hasOverflowY = s),
+        !(i || s))
+      )
+        return !1;
+      ((d = e.scrollWidth),
+        (m = e.scrollHeight),
+        (y = e.clientWidth),
+        (p = e.clientHeight),
+        (a = d > y),
+        (c = m > p),
+        (o.isScrollableX = a),
+        (o.isScrollableY = c),
+        (o.scrollWidth = d),
+        (o.scrollHeight = m),
+        (o.clientWidth = y),
+        (o.clientHeight = p),
+        (o.hasOverscrollBehaviorX = u),
+        (o.hasOverscrollBehaviorY = f));
+    } else
+      ((a = o.isScrollableX),
+        (c = o.isScrollableY),
+        (i = o.hasOverflowX),
+        (s = o.hasOverflowY),
+        (d = o.scrollWidth),
+        (m = o.scrollHeight),
+        (y = o.clientWidth),
+        (p = o.clientHeight),
+        (u = o.hasOverscrollBehaviorX),
+        (f = o.hasOverscrollBehaviorY));
+    if (!((i && a) || (s && c))) return !1;
+    const v = Math.abs(t) >= Math.abs(n) ? "horizontal" : "vertical";
+    let h, S, x, C, w, k;
+    if (v === "horizontal")
+      ((h = Math.round(e.scrollLeft)),
+        (S = d - y),
+        (x = t),
+        (C = i),
+        (w = a),
+        (k = u));
+    else if (v === "vertical")
+      ((h = Math.round(e.scrollTop)),
+        (S = m - p),
+        (x = n),
+        (C = s),
+        (w = c),
+        (k = f));
+    else return !1;
+    return !k && (h >= S || h <= 0) ? !0 : (x > 0 ? h < S : h > 0) && C && w;
+  }
+  get rootElement() {
+    return this.options.wrapper === window
+      ? document.documentElement
+      : this.options.wrapper;
+  }
+  get limit() {
+    return this.options.naiveDimensions
+      ? this.isHorizontal
+        ? this.rootElement.scrollWidth - this.rootElement.clientWidth
+        : this.rootElement.scrollHeight - this.rootElement.clientHeight
+      : this.dimensions.limit[this.isHorizontal ? "x" : "y"];
+  }
+  get isHorizontal() {
+    return this.options.orientation === "horizontal";
+  }
+  get actualScroll() {
+    const e = this.options.wrapper;
+    return this.isHorizontal
+      ? (e.scrollX ?? e.scrollLeft)
+      : (e.scrollY ?? e.scrollTop);
+  }
+  get scroll() {
+    return this.options.infinite
+      ? Pf(this.animatedScroll, this.limit)
+      : this.animatedScroll;
+  }
+  get progress() {
+    return this.limit === 0 ? 1 : this.scroll / this.limit;
+  }
+  get isScrolling() {
+    return this._isScrolling;
+  }
+  set isScrolling(e) {
+    this._isScrolling !== e &&
+      ((this._isScrolling = e), this.updateClassName());
+  }
+  get isStopped() {
+    return this._isStopped;
+  }
+  set isStopped(e) {
+    this._isStopped !== e && ((this._isStopped = e), this.updateClassName());
+  }
+  get isLocked() {
+    return this._isLocked;
+  }
+  set isLocked(e) {
+    this._isLocked !== e && ((this._isLocked = e), this.updateClassName());
+  }
+  get isSmooth() {
+    return this.isScrolling === "smooth";
+  }
+  get prefersReducedMotion() {
+    return (
+      this.options.respectReducedMotion && this.reducedMotionMediaQuery.matches
+    );
+  }
+  get className() {
+    let e = "lenis";
+    return (
+      this.options.autoToggle && (e += " lenis-autoToggle"),
+      this.isStopped && (e += " lenis-stopped"),
+      this.isLocked && (e += " lenis-locked"),
+      this.isScrolling && (e += " lenis-scrolling"),
+      this.isScrolling === "smooth" && (e += " lenis-smooth"),
+      e
+    );
+  }
+  updateClassName() {
+    (this.cleanUpClassName(),
+      this.className.split(" ").forEach((e) => {
+        this.rootElement.classList.add(e);
+      }));
+  }
+  cleanUpClassName() {
+    for (const e of Array.from(this.rootElement.classList))
+      (e === "lenis" || e.startsWith("lenis-")) &&
+        this.rootElement.classList.remove(e);
+  }
+};
+const Df = g.createContext({ lenis: null, scrollTo: () => {} });
+function jf({ children: e }) {
+  const t = g.useRef(null),
+    n = fo();
+  (g.useEffect(() => {
+    const o = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      i = new Mf({
+        duration: o ? 0.1 : 1.2,
+        easing: (u) => Math.min(1, 1.001 - Math.pow(2, -10 * u)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: !0,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.6,
+        infinite: !1,
+      });
+    ((t.current = i), (window.lenis = i));
+    let s;
+    function a(u) {
+      (i.raf(u), (s = requestAnimationFrame(a)));
+    }
+    s = requestAnimationFrame(a);
+    const c = (u) => {
+      const f = u.target,
+        d = f == null ? void 0 : f.closest("a");
+      if (!d) return;
+      const m = d.getAttribute("href");
+      if (m && m.startsWith("#") && m.length > 1) {
+        const y = document.querySelector(m);
+        y &&
+          (u.preventDefault(),
+          i.scrollTo(y, {
+            offset: -80,
+            duration: 1.2,
+            easing: (p) => Math.min(1, 1.001 - Math.pow(2, -10 * p)),
+          }));
+      }
+    };
+    return (
+      document.addEventListener("click", c, { passive: !1 }),
+      () => {
+        (document.removeEventListener("click", c),
+          cancelAnimationFrame(s),
+          i.destroy(),
+          (t.current = null),
+          delete window.lenis);
+      }
+    );
+  }, []),
+    g.useEffect(() => {
+      if (t.current) {
+        if (n.hash) {
+          const o = document.querySelector(n.hash);
+          if (o) {
+            t.current.scrollTo(o, { offset: -80, duration: 1 });
+            return;
+          }
+        }
+        t.current.scrollTo(0, { immediate: !0 });
+      }
+    }, [n.pathname, n.hash]));
+  const r = (o, i) => {
+    var s;
+    (s = t.current) == null || s.scrollTo(o, i);
+  };
+  return l.jsx(Df.Provider, {
+    value: { lenis: t.current, scrollTo: r },
+    children: e,
+  });
+}
+function Nf() {
+  const [e, t] = g.useState(!1),
+    [n, r] = g.useState(!1),
+    o = fo();
+  (g.useEffect(() => {
+    const s = () => r(window.scrollY > 20);
+    return (
+      window.addEventListener("scroll", s, { passive: !0 }),
+      () => window.removeEventListener("scroll", s)
+    );
+  }, []),
+    g.useEffect(() => {
+      t(!1);
+    }, [o.pathname]));
+  const i = [
+    { name: "Home", path: "/" },
+    { name: "Programs", path: "/programs" },
+    { name: "Job Application Support", path: "/job-application-support" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
+    { name: "Terms & Conditions", path: "/terms" },
+  ];
+  return l.jsxs(Q.nav, {
+    initial: { y: -100 },
+    animate: { y: 0 },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${n ? "glass border-b border-black/[0.06] shadow-xl shadow-black/5" : "bg-transparent"}`,
+    children: [
+      l.jsx("div", {
+        className: "max-w-[1280px] mx-auto px-5 sm:px-8",
+        children: l.jsxs("div", {
+          className: "flex justify-between h-[72px] items-center",
+          children: [
+            l.jsxs("div", {
+              className: "flex items-center gap-0 flex-1 md:flex-none",
+              children: [
+                l.jsx("div", {
+                  className: "md:hidden",
+                  children: l.jsx(Q.button, {
+                    onClick: () => t(!e),
+                    className:
+                      "focus:outline-none p-1.5 text-db-muted hover:text-db-text",
+                    whileTap: { scale: 0.9 },
+                    children: l.jsx(Kr, {
+                      mode: "wait",
+                      children: e
+                        ? l.jsx(
+                            Q.div,
+                            {
+                              initial: { rotate: -90, opacity: 0 },
+                              animate: { rotate: 0, opacity: 1 },
+                              exit: { rotate: 90, opacity: 0 },
+                              transition: { duration: 0.2 },
+                              children: l.jsx(Li, { className: "h-5 w-5" }),
+                            },
+                            "close",
+                          )
+                        : l.jsx(
+                            Q.div,
+                            {
+                              initial: { rotate: 90, opacity: 0 },
+                              animate: { rotate: 0, opacity: 1 },
+                              exit: { rotate: -90, opacity: 0 },
+                              transition: { duration: 0.2 },
+                              children: l.jsx(Kd, { className: "h-5 w-5" }),
+                            },
+                            "menu",
+                          ),
+                    }),
+                  }),
+                }),
+                l.jsx(Ot, {
+                  to: "/",
+                  className: "flex-shrink-0 flex items-center group",
+                  children: l.jsx("img", {
+                    src: oi,
+                    alt: "space9",
+                    className:
+                      "h-9 md:h-11 w-auto opacity-100 transition-opacity",
+                  }),
+                }),
+              ],
+            }),
+            l.jsx("div", {
+              className: "hidden md:flex items-center gap-1",
+              children: i.map((s, a) =>
+                l.jsx(
+                  Q.div,
+                  {
+                    initial: { opacity: 0, y: -20 },
+                    animate: { opacity: 1, y: 0 },
+                    transition: {
+                      delay: 0.1 + a * 0.06,
+                      duration: 0.5,
+                      ease: [0.22, 1, 0.36, 1],
+                    },
+                    children: l.jsxs(Ot, {
+                      to: s.path,
+                      className: `relative px-2.5 xl:px-3.5 py-1.5 rounded-lg text-[12px] xl:text-[13px] font-medium tracking-wide transition-all duration-300 whitespace-nowrap ${o.pathname === s.path ? "text-db-accent font-semibold" : "text-db-muted hover:text-db-text"}`,
+                      children: [
+                        s.name,
+                        o.pathname === s.path &&
+                          l.jsx(Q.span, {
+                            layoutId: "nav-indicator",
+                            className:
+                              "absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-db-accent rounded-full",
+                            transition: {
+                              type: "spring",
+                              bounce: 0.2,
+                              duration: 0.6,
+                            },
+                          }),
+                      ],
+                    }),
+                  },
+                  s.name,
+                ),
+              ),
+            }),
+            l.jsx("div", {
+              className:
+                "flex items-center gap-3 justify-end flex-1 md:flex-none",
+              children: l.jsx(Q.a, {
+                href: "https://learn.space9.in/login",
+                initial: { opacity: 0, x: 20 },
+                animate: { opacity: 1, x: 0 },
+                className:
+                  "px-4 py-2 rounded-lg text-[12px] md:text-[13px] font-bold tracking-wider uppercase text-white bg-black shadow-md shadow-black/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-800 active:scale-95",
+                whileTap: { scale: 0.95 },
+                children: "Login/Register",
+              }),
+            }),
+          ],
+        }),
+      }),
+      l.jsx(Kr, {
+        children:
+          e &&
+          l.jsx(Q.div, {
+            initial: { height: 0, opacity: 0 },
+            animate: { height: "auto", opacity: 1 },
+            exit: { height: 0, opacity: 0 },
+            transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+            className:
+              "md:hidden overflow-hidden glass border-t border-black/[0.06]",
+            children: l.jsx("div", {
+              className: "px-5 pt-3 pb-5 space-y-1",
+              children: i.map((s, a) =>
+                l.jsx(
+                  Q.div,
+                  {
+                    initial: { opacity: 0, x: -20 },
+                    animate: { opacity: 1, x: 0 },
+                    transition: { delay: a * 0.06, duration: 0.3 },
+                    children: l.jsx(Ot, {
+                      to: s.path,
+                      className: `block px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${o.pathname === s.path ? "text-db-accent bg-db-accent/10" : "text-db-muted hover:text-db-text hover:bg-white/[0.03]"}`,
+                      onClick: () => t(!1),
+                      children: s.name,
+                    }),
+                  },
+                  s.name,
+                ),
+              ),
+            }),
+          }),
+      }),
+    ],
+  });
+}
+function Rf() {
+  return l.jsxs("div", {
+    className:
+      "flex flex-col items-center justify-start w-full max-w-[1440px] mx-auto relative pt-4 sm:pt-8 md:pt-6 pb-1 px-4 overflow-hidden",
+    children: [
+      l.jsxs("div", {
+        className:
+          "flex items-center gap-0 bg-white rounded-xl px-4 py-2 border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] mb-4 sm:mb-8 animate-fade-in z-10",
+        children: [
+          l.jsx("span", {
+            className: "text-[11px] sm:text-xs font-medium text-slate-800",
+            children: "Learn. Build. Get Hired.",
+          }),
+          l.jsx("span", { className: "mx-1.5 text-slate-200", children: "|" }),
+          l.jsxs("a", {
+            href: "https://learn.space9.in/signup",
+            className:
+              "flex items-center gap-0.5 text-[11px] sm:text-xs font-medium text-purple-600 hover:text-purple-700 group transition-colors",
+            children: [
+              "Join Now",
+              " ",
+              l.jsx(wl, {
+                className:
+                  "w-3 h-3 group-hover:translate-x-0.5 transition-transform",
+              }),
+            ],
+          }),
+        ],
+      }),
+      l.jsx("div", {
+        className:
+          "relative mb-6 sm:mb-8 animate-slide-up z-10 w-full text-center px-4",
+        children: l.jsxs("h1", {
+          className:
+            "text-4xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl font-normal text-slate-950 leading-[1.1] tracking-tight max-w-[1240px] mx-auto font-display",
+          children: [
+            l.jsx("span", {
+              className: "block whitespace-normal lg:whitespace-nowrap",
+              children: "Build Job-Ready",
+            }),
+            l.jsx("span", {
+              className: "block whitespace-normal lg:whitespace-nowrap",
+              children: "Skills That Companies",
+            }),
+            l.jsx("span", {
+              className: "block whitespace-normal lg:whitespace-nowrap",
+              children: "Actually Hire For",
+            }),
+          ],
+        }),
+      }),
+      l.jsx("div", {
+        className:
+          "mx-auto flex flex-col items-center justify-center gap-4 mb-8 sm:mb-10 animate-scale-in z-10",
+        children: l.jsxs("a", {
+          href: "#programs",
+          className:
+            "btn-grad !py-2.5 !px-10 text-base font-bold tracking-wide whitespace-nowrap gap-2 group flex items-center justify-center",
+          children: [
+            l.jsx("span", { children: "Explore Programs" }),
+            l.jsx(xl, {
+              className:
+                "w-5 h-5 group-hover:translate-x-1 transition-transform",
+            }),
+          ],
+        }),
+      }),
+      l.jsx("div", {
+        className:
+          "text-center flex flex-col items-center gap-2 mb-8 sm:mb-12 animate-fade-in delay-300 z-10 px-6 max-w-4xl mx-auto w-full",
+        children: l.jsx("p", {
+          className:
+            "text-base sm:text-lg md:text-xl xl:text-2xl text-slate-500 font-medium tracking-tight whitespace-normal",
+          children:
+            "Master Cloud, Security, AI, and DevOps. Expert Mentorship, & Complete Job Application Support to Get You Hired.",
+        }),
+      }),
+      l.jsx("div", {
+        className:
+          "w-full h-14 sm:h-24 md:h-32 overflow-hidden opacity-[0.09] pointer-events-none select-none z-0 mt-0 sm:mt-2",
+        children: l.jsx("div", {
+          className: "flex whitespace-nowrap animate-marquee py-2",
+          children: [1, 2].map((e) =>
+            l.jsx(
+              "span",
+              {
+                className:
+                  "text-4xl sm:text-6xl md:text-8xl font-medium text-slate-900 mx-5 uppercase flex items-center gap-6",
+                children:
+                  "DevOps • SOC Analyst • Cloud Computing • Cybersecurity • Artificial Intelligence • DevOps • SOC Analyst • Cloud Computing • Cybersecurity • Artificial Intelligence •",
+              },
+              e,
+            ),
+          ),
+        }),
+      }),
+    ],
+  });
+}
+function Ef() {
+  return l.jsx("section", {
+    id: "hero",
+    className:
+      "relative w-full text-slate-800 pb-2 pt-0 flex flex-col justify-start overflow-hidden",
+    children: l.jsx("div", {
+      className: "relative z-10 w-full flex flex-col items-center",
+      children: l.jsx(Rf, {}),
+    }),
+  });
+}
+const Hs = {
+    aws: "/images/aws-cert-logo.svg",
+    "amazon web services": "/images/aws-cert-logo.svg",
+    cisco: "/images/cisco-cert-logo.svg",
+    comptia: "/images/comptia-cert-logo.svg",
+    "comptia logo": "/images/comptia-cert-logo.svg",
+    isaca: "/images/isaca-hd.png",
+    accenture: "/images/accenture-logo.svg",
+    amazon: "/images/amazon-logo.svg",
+    cognizant: "/images/cognizant-logo.svg",
+    dell: "/images/dell-logo.svg",
+    deloitte: "/images/deloitte-logo.svg",
+    google: "/images/google-logo.svg",
+    gcp: "/images/google-logo.svg",
+    ibm: "/images/ibm-logo.svg",
+    infosys: "/images/infosys-technologies-logo.svg",
+    kpmg: "/images/kpmg-logo.svg",
+    microsoft: "/images/microsoft-logo-1.svg",
+    azure: "/images/microsoft-logo-1.svg",
+    oracle: "/images/oracle-logo.svg",
+    "red hat": "/images/red-hat-logo.svg",
+    redhat: "/images/red-hat-logo.svg",
+    tcs: "/images/tata-consultancy-services-logo.svg",
+    tata: "/images/tata-consultancy-services-logo.svg",
+    pmi: "/images/pmi-cert-logo.svg",
+    "project management institute": "/images/pmi-cert-logo.svg",
+  },
+  Gs = {
+    amazon: "https://cdn.worldvectorlogo.com/logos/amazon-dark.svg",
+    aws: "https://cdn.worldvectorlogo.com/logos/aws-2.svg",
+    cisco: "https://cdn.worldvectorlogo.com/logos/cisco-2.svg",
+    comptia: "https://cdn.worldvectorlogo.com/logos/comptia-logo.svg",
+    vmware: "https://cdn.worldvectorlogo.com/logos/vmware-1.svg",
+    salesforce: "https://cdn.worldvectorlogo.com/logos/salesforce-2.svg",
+    snowflake: "https://cdn.worldvectorlogo.com/logos/snowflake-1.svg",
+    servicenow: "https://cdn.worldvectorlogo.com/logos/servicenow.svg",
+    splunk: "https://cdn.worldvectorlogo.com/logos/splunk-1.svg",
+    linux: "https://cdn.worldvectorlogo.com/logos/linux-tux-1.svg",
+    terraform: "https://cdn.worldvectorlogo.com/logos/terraform-enterprise.svg",
+    docker: "https://cdn.worldvectorlogo.com/logos/docker.svg",
+    python: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+    node: "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg",
+    nodejs: "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg",
+  };
+function Of({ name: e, className: t = "h-8 w-auto" }) {
+  const [n, r] = g.useState(!1),
+    o = e.toLowerCase().trim(),
+    i = Object.keys(Hs).find((c) => o === c || o.includes(c));
+  if (i && !n)
+    return l.jsx("img", {
+      src: Hs[i],
+      alt: `${e} Logo`,
+      className: `${t} object-contain`,
+      onError: () => r(!0),
+      loading: "lazy",
+    });
+  const s = Object.keys(Gs).find((c) => o === c || o.includes(c)),
+    a = s ? Gs[s] : null;
+  return a && !n
+    ? l.jsx("img", {
+        src: a,
+        alt: `${e} Logo`,
+        className: `${t} object-contain`,
+        onError: () => r(!0),
+        loading: "lazy",
+      })
+    : l.jsxs("div", {
+        className: `inline-flex items-center gap-1.5 font-bold text-slate-800 dark:text-white ${t}`,
+        children: [
+          l.jsx("svg", {
+            className: "w-5 h-5 text-purple-600 shrink-0",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "2",
+            children: l.jsx("path", {
+              d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
+            }),
+          }),
+          l.jsx("span", {
+            className: "text-xs tracking-tight whitespace-nowrap",
+            children: e,
+          }),
+        ],
+      });
+}
+function Lf() {
+  const e = [
+    { name: "CompTIA", category: "Certification Partner" },
+    { name: "Microsoft", category: "Cloud & Tech Partner" },
+    { name: "IBM", category: "Enterprise Partner" },
+    { name: "AWS", category: "Cloud Partner" },
+    { name: "Google", category: "Cloud & Tech Partner" },
+    { name: "Cognizant", category: "IT Services Partner" },
+    { name: "Red Hat", category: "Open Source Partner" },
+    { name: "Cisco", category: "Networking Partner" },
+    { name: "Accenture", category: "Consulting Partner" },
+    { name: "Infosys", category: "Global IT Partner" },
+    { name: "Deloitte", category: "Consulting Partner" },
+    { name: "Dell", category: "Infrastructure Partner" },
+    { name: "Oracle", category: "Database & Cloud Partner" },
+    { name: "KPMG", category: "Consulting & Audit Partner" },
+    { name: "Amazon", category: "E-Commerce & Tech Partner" },
+  ];
+  return l.jsxs("section", {
+    className:
+      "py-12 sm:py-16 bg-gradient-to-b from-white via-slate-50/50 to-white relative overflow-hidden border-y border-slate-100",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none",
+      }),
+      l.jsxs("div", {
+        className: "max-w-[1280px] mx-auto px-4 sm:px-6 relative z-10",
+        children: [
+          l.jsxs("div", {
+            className:
+              "flex flex-col items-center text-center gap-3 sm:gap-4 max-w-3xl mx-auto mb-10 sm:mb-12",
+            children: [
+              l.jsx("p", {
+                className:
+                  "text-xs font-medium tracking-[0.2em] uppercase text-db-accent",
+                children: "Top Hiring Partners",
+              }),
+              l.jsxs("h2", {
+                className:
+                  "font-display font-medium text-2xl sm:text-3xl md:text-display-md text-db-text max-w-2xl leading-tight",
+                children: [
+                  "Our Learners Are Hired",
+                  " ",
+                  l.jsxs("span", {
+                    className: "hidden sm:inline",
+                    children: ["By ", l.jsx("br", {})],
+                  }),
+                  l.jsxs("span", {
+                    className: "sm:hidden",
+                    children: [l.jsx("br", {}), "By", " "],
+                  }),
+                  l.jsx("span", {
+                    className: "text-purple-600",
+                    children: "Industry Leaders",
+                  }),
+                ],
+              }),
+              l.jsx("p", {
+                className:
+                  "text-sm sm:text-base text-db-muted max-w-xl leading-relaxed",
+                children:
+                  "space9 graduates land high-growth tech roles at Fortune 500 enterprises and global tech giants.",
+              }),
+            ],
+          }),
+          l.jsx("div", {
+            className:
+              "relative w-full overflow-hidden py-4 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-16 sm:before:w-32 before:bg-gradient-to-r before:from-white before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-16 sm:after:w-32 after:bg-gradient-to-l after:from-white after:to-transparent after:z-10",
+            children: l.jsx("div", {
+              className:
+                "flex gap-6 sm:gap-8 w-max animate-ticker-reverse-fast hover:[animation-play-state:paused] items-center",
+              children: [...e, ...e].map((t, n) =>
+                l.jsx(
+                  "div",
+                  {
+                    className:
+                      "flex items-center justify-center shrink-0 group cursor-pointer",
+                    children: l.jsx(Of, {
+                      name: t.name,
+                      className:
+                        "h-6 sm:h-7 w-auto max-w-[105px] sm:max-w-[120px] object-contain transition-transform duration-200 group-hover:scale-105",
+                    }),
+                  },
+                  n,
+                ),
+              ),
+            }),
+          }),
+        ],
+      }),
+    ],
+  });
+}
+const zf = "/assets/session1-B9hvkLi3.jpeg",
+  Ff = "/assets/session2-B5GZlcut.jpeg",
+  Bf = "/assets/session3-7QGbxuzT.jpeg",
+  Vf = "/assets/session4-BUlhmwE8.jpeg",
+  $f = [
+    { src: zf, label: "Session 01", title: "Live mentorship" },
+    { src: Ff, label: "Session 02", title: "Project-based learning" },
+    { src: Bf, label: "Session 03", title: "Community network" },
+    { src: Vf, label: "Session 04", title: "Career placement" },
+  ];
+function Wf() {
+  const e = g.useRef(null);
+  return l.jsxs("div", {
+    className: "w-full relative",
+    children: [
+      l.jsxs("div", {
+        className: "px-4 mb-10 text-center pt-16",
+        children: [
+          l.jsx("p", {
+            className:
+              "text-[10px] font-medium tracking-[0.2em] uppercase text-db-accent mb-2",
+            children: "The space9 Edge",
+          }),
+          l.jsxs("h2", {
+            className:
+              "text-3xl sm:text-4xl md:text-5xl font-display font-medium text-[#111111] tracking-tight leading-tight mb-3",
+            children: [
+              "Why Professionals",
+              l.jsx("br", {}),
+              "Choose space9?",
+            ],
+          }),
+          l.jsx("p", {
+            className:
+              "text-[13px] sm:text-sm md:text-base text-[#4B5563] font-medium max-w-2xl mx-auto whitespace-normal",
+            children: "Build the Skills. Get the Interview. Land the Job.",
+          }),
+        ],
+      }),
+      l.jsx("div", {
+        ref: e,
+        "data-lenis-prevent": !0,
+        className:
+          "flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 px-6 pb-12 hide-scrollbar max-w-7xl mx-auto",
+        style: {
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+        },
+        children: $f.map((t, n) =>
+          l.jsxs(
+            "div",
+            {
+              className:
+                "flex-shrink-0 w-[80vw] sm:w-[70vw] md:w-full aspect-[4/5] snap-start relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#E5E7EB] bg-[#F9FAFB] group transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]",
+              children: [
+                l.jsx("button", {
+                  className:
+                    "absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-md border border-white/30 rounded-full p-2.5 shadow-lg transition-all duration-300 hover:bg-white/40 active:scale-95 group/btn",
+                  "aria-label": "Redirect",
+                  children: l.jsx(Sl, {
+                    className:
+                      "w-5 h-5 text-white transition-transform duration-300 group-hover/btn:rotate-12",
+                  }),
+                }),
+                l.jsx("img", {
+                  src: t.src,
+                  alt: `space9 edge ${n + 1}`,
+                  className:
+                    "w-full h-full object-cover object-top transition-all duration-500",
+                }),
+              ],
+            },
+            n,
+          ),
+        ),
+      }),
+      l.jsx("style", {
+        children: `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `,
+      }),
+    ],
+  });
+}
+const Uf = "/assets/discover-tech-careers-D2AC6MCQ.jpg";
+function Hf() {
+  return l.jsx("section", {
+    className: "py-8 sm:py-12 md:py-16 bg-white relative overflow-hidden",
+    children: l.jsxs("div", {
+      className: "max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+      children: [
+        l.jsx(Q.div, {
+          initial: { opacity: 0, y: 16 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0, margin: "-40px" },
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          className: "flex justify-center items-center mb-8 sm:mb-10",
+          children: l.jsxs("div", {
+            className:
+              "relative inline-flex flex-wrap sm:flex-nowrap items-center justify-center gap-6 sm:gap-10 md:gap-12 bg-white rounded-2xl sm:rounded-[28px] border border-slate-200/90 py-3.5 px-6 sm:py-4 sm:px-8 sm:pr-14 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-300",
+            children: [
+              l.jsxs("a", {
+                href: "https://www.trustpilot.com/review/space9.in",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                "aria-label": "View space9 Trustpilot Reviews (4.5/5 Rating)",
+                title: "View space9 on Trustpilot (4.5/5 Rating)",
+                className:
+                  "flex items-center gap-3 sm:gap-3.5 group cursor-pointer",
+                children: [
+                  l.jsx("div", {
+                    className:
+                      "w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 group-hover:scale-105 transition-transform duration-200",
+                    children: l.jsxs("svg", {
+                      viewBox: "0 0 24 24",
+                      className: "w-full h-full",
+                      "aria-hidden": "true",
+                      children: [
+                        l.jsx("path", {
+                          fill: "#005128",
+                          d: "M12 17.964l5.214-1.321 2.179 6.714L12 17.964z",
+                        }),
+                        l.jsx("path", {
+                          fill: "#00B67A",
+                          d: "M24 9.286h-9.179L12 0.643 9.179 9.286H0l7.429 5.357-2.821 8.643 7.429-5.357 4.571-3.286L24 9.286z",
+                        }),
+                      ],
+                    }),
+                  }),
+                  l.jsxs("div", {
+                    className:
+                      "text-left font-medium text-slate-800 text-sm sm:text-base leading-tight font-body",
+                    children: [
+                      l.jsx("span", {
+                        className:
+                          "block group-hover:text-emerald-700 transition-colors",
+                        children: "Trustpilot",
+                      }),
+                      l.jsx("span", {
+                        className:
+                          "block group-hover:text-emerald-700 transition-colors",
+                        children: "(4.5/5 Rating)",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              l.jsxs("a", {
+                href: "https://share.google/lKgbhT2uLOALKSLCd",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                "aria-label": "View space9 Google Reviews (4.8/5 Rating)",
+                title: "View space9 on Google (4.8/5 Rating)",
+                className:
+                  "flex items-center gap-3 sm:gap-3.5 group cursor-pointer",
+                children: [
+                  l.jsx("div", {
+                    className:
+                      "w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 group-hover:scale-105 transition-transform duration-200",
+                    children: l.jsxs("svg", {
+                      viewBox: "0 0 24 24",
+                      className: "w-full h-full",
+                      "aria-hidden": "true",
+                      children: [
+                        l.jsx("path", {
+                          fill: "#4285F4",
+                          d: "M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z",
+                        }),
+                        l.jsx("path", {
+                          fill: "#34A853",
+                          d: "M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z",
+                        }),
+                        l.jsx("path", {
+                          fill: "#FBBC05",
+                          d: "M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z",
+                        }),
+                        l.jsx("path", {
+                          fill: "#EA4335",
+                          d: "M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z",
+                        }),
+                      ],
+                    }),
+                  }),
+                  l.jsxs("div", {
+                    className:
+                      "text-left font-medium text-slate-800 text-sm sm:text-base leading-tight font-body",
+                    children: [
+                      l.jsx("span", {
+                        className:
+                          "block group-hover:text-blue-700 transition-colors",
+                        children: "Google",
+                      }),
+                      l.jsx("span", {
+                        className:
+                          "block group-hover:text-blue-700 transition-colors",
+                        children: "(4.8/5 Rating)",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              l.jsxs("a", {
+                href: "https://www.trustpilot.com/review/space9.in",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                "aria-label": "Verify space9 Ratings",
+                title: "Verify space9 ratings on official platforms",
+                className:
+                  "sm:absolute sm:bottom-2 sm:right-3.5 inline-flex items-center gap-0.5 text-[10px] font-medium text-blue-400 hover:text-blue-600 bg-blue-50/50 hover:bg-blue-50 border border-blue-100/90 px-1.5 py-0.5 rounded transition-all",
+                children: [
+                  l.jsx("span", { children: "Verify" }),
+                  l.jsx(Ls, { className: "w-2.5 h-2.5 ml-0.5" }),
+                ],
+              }),
+            ],
+          }),
+        }),
+        l.jsx(Q.div, {
+          initial: { opacity: 0, y: 24 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0, margin: "-60px" },
+          transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+          className: "relative max-w-4xl mx-auto",
+          children: l.jsxs("div", {
+            className:
+              "relative w-full aspect-[1200/896] select-none [mask-image:linear-gradient(to_bottom,black_88%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_88%,transparent_100%)]",
+            children: [
+              l.jsx("img", {
+                src: Uf,
+                alt: "Discover Tech Careers - space9 programs in Cybersecurity, AWS Cloud, GRC, AI ML, and SOC Analyst",
+                className:
+                  "w-full h-full object-contain block mix-blend-multiply",
+                loading: "lazy",
+              }),
+              l.jsxs("a", {
+                href: "#programs",
+                "aria-label":
+                  "Discover space9 Tech Careers (Cybersecurity, AWS Cloud, GRC, AI ML, SOC Analyst)",
+                title:
+                  "Discover Tech Careers (Cybersecurity, AWS Cloud, GRC, AI ML, SOC Analyst)",
+                className:
+                  "absolute top-[6.5%] right-[4.5%] w-[31%] h-[62%] rounded-2xl sm:rounded-3xl hover:bg-purple-500/10 border-2 border-transparent hover:border-purple-500/30 transition-all duration-200 cursor-pointer flex items-start justify-end p-2 sm:p-3 group/careers",
+                children: [
+                  l.jsx("span", {
+                    className: "sr-only",
+                    children: "Explore Tech Careers",
+                  }),
+                  l.jsxs("span", {
+                    className:
+                      "opacity-0 group-hover/careers:opacity-100 transition-opacity bg-white/95 backdrop-blur-sm text-purple-700 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-md shadow-sm flex items-center gap-1 border border-purple-200 mt-1 mr-1",
+                    children: [
+                      l.jsx("span", { children: "Explore" }),
+                      l.jsx(Ls, { className: "w-3 h-3" }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        }),
+      ],
+    }),
+  });
+}
+const Gf = "/assets/review1-uMqQfu0V.jpeg",
+  Zf = "/assets/review2-DuIxFPoo.jpeg",
+  Jf = "/assets/review3-C3cmTrel.jpeg",
+  Kf = "/assets/review4-Cu_Edg2l.jpeg",
+  qf = "/assets/review5-p9AvfK6E.jpeg",
+  Yf = [
+    {
+      id: "1",
+      name: "Timothy Ugo",
+      role: "GRC Professional",
+      quote:
+        "space9 transformed my learning with 24/7 support and great mentorship.",
+      videoUrl: "https://www.youtube.com/embed/oge2Fxii71s",
+      thumbnailUrl: Gf,
+    },
+    {
+      id: "2",
+      name: "John Frederick",
+      role: "Cyber Security Analyst",
+      quote:
+        "Thanks to space9, I earned certifications and got a role in product management.",
+      videoUrl: "https://www.youtube.com/embed/4cWUHRE12Bg",
+      thumbnailUrl: Zf,
+    },
+    {
+      id: "3",
+      name: "Jeff Ngaruiya",
+      role: "Cyber Security Professional",
+      quote:
+        "As a commerce student, space9's course gave me the data science skills I needed.",
+      videoUrl: "https://www.youtube.com/embed/pQJ6iUgv-vc",
+      thumbnailUrl: Jf,
+    },
+    {
+      id: "4",
+      name: "Ikechukwu Obinwanne",
+      role: "DevOps Engineer",
+      quote:
+        "With space9, I'm exploring tech advancements and thriving in data centers.",
+      videoUrl: "https://www.youtube.com/embed/dsSm3V2zVDc",
+      thumbnailUrl: Kf,
+    },
+    {
+      id: "5",
+      name: "Martin",
+      role: "Cybersecurity Professional",
+      quote:
+        "space9's intensive training and practical approach helped me transition successfully into cybersecurity.",
+      videoUrl: "https://www.youtube.com/embed/OqiwqmLpum0",
+      thumbnailUrl: qf,
+    },
+  ];
+function Qf() {
+  const e = g.useRef(null),
+    [t, n] = g.useState(null),
+    r = (o) => {
+      if (!e.current) return;
+      const i = 420;
+      e.current.scrollBy({ left: o === "left" ? -i : i, behavior: "smooth" });
+    };
+  return l.jsxs("section", {
+    className: "py-10 sm:py-16",
+    children: [
+      l.jsxs("div", {
+        className:
+          "rounded-3xl border border-[#E5E7EB] bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF7FF_100%)] px-4 py-6 shadow-[0_14px_40px_rgba(17,24,39,0.06)] sm:px-6 sm:py-8",
+        children: [
+          l.jsxs("div", {
+            className:
+              "flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6 sm:mb-8",
+            children: [
+              l.jsxs("div", {
+                children: [
+                  l.jsx("p", {
+                    className:
+                      "text-[10px] font-medium tracking-[0.2em] uppercase text-db-accent mb-2",
+                    children: "Success Stories",
+                  }),
+                  l.jsx("h2", {
+                    className:
+                      "text-3xl sm:text-4xl font-display font-medium text-[#111111] leading-tight tracking-tight",
+                    children: "space9 Testimonials",
+                  }),
+                ],
+              }),
+              l.jsxs("div", {
+                className: "hidden sm:flex items-center gap-2",
+                children: [
+                  l.jsx("button", {
+                    onClick: () => r("left"),
+                    className:
+                      "flex h-9 w-9 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#6B7280] transition-all hover:bg-[#F9FAFB] hover:text-[#111111]",
+                    "aria-label": "Scroll left",
+                    children: l.jsx(qd, { className: "w-4 h-4" }),
+                  }),
+                  l.jsx("button", {
+                    onClick: () => r("right"),
+                    className:
+                      "flex h-9 w-9 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#6B7280] transition-all hover:bg-[#F9FAFB] hover:text-[#111111]",
+                    "aria-label": "Scroll right",
+                    children: l.jsx(wl, { className: "w-4 h-4" }),
+                  }),
+                ],
+              }),
+            ],
+          }),
+          l.jsx("div", {
+            ref: e,
+            className:
+              "flex gap-6 overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 hide-scrollbar scroll-smooth snap-x snap-mandatory",
+            children: Yf.map((o) =>
+              l.jsx(
+                "div",
+                {
+                  className:
+                    "flex-shrink-0 w-[320px] sm:w-[420px] lg:w-[460px] snap-start group",
+                  children: l.jsxs("div", {
+                    className:
+                      "overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_12px_35px_rgba(17,24,39,0.08)] transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_18px_45px_rgba(17,24,39,0.14)]",
+                    children: [
+                      l.jsx("div", {
+                        className:
+                          "relative aspect-[16/9] bg-[#111111] overflow-hidden",
+                        children:
+                          t === o.id
+                            ? l.jsx("iframe", {
+                                src: `${o.videoUrl}?autoplay=1&rel=0`,
+                                className: "absolute inset-0 w-full h-full",
+                                allow:
+                                  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                                allowFullScreen: !0,
+                                title: `${o.name} testimonial`,
+                              })
+                            : l.jsxs(l.Fragment, {
+                                children: [
+                                  l.jsx("img", {
+                                    src: o.thumbnailUrl,
+                                    alt: o.name,
+                                    className:
+                                      "absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                                  }),
+                                  l.jsx("div", {
+                                    className:
+                                      "absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent",
+                                  }),
+                                  l.jsxs("button", {
+                                    onClick: () => n(o.id),
+                                    className:
+                                      "absolute bottom-4 left-4 z-10 inline-flex items-center gap-1.5 rounded-xl border border-[#D8B4FE] bg-[#F3E8FF] px-2.5 py-1.5 text-xs font-bold text-black shadow-lg transition-all duration-300 hover:bg-[#E9D5FF]",
+                                    "aria-label": `Play ${o.name}'s testimonial`,
+                                    children: [
+                                      l.jsx("span", {
+                                        className:
+                                          "flex h-6 w-6 items-center justify-center rounded-full bg-[#A855F7] text-white",
+                                        children: l.jsx(Yd, {
+                                          className:
+                                            "ml-0.5 h-3 w-3 fill-white text-white",
+                                        }),
+                                      }),
+                                      l.jsx("span", {
+                                        children: "Watch my story",
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                      }),
+                      l.jsx("div", {
+                        className: "bg-white p-5 sm:p-6",
+                        children: l.jsxs("div", {
+                          children: [
+                            l.jsx("p", {
+                              className:
+                                "text-base font-display font-semibold leading-tight text-[#111111]",
+                              children: o.name,
+                            }),
+                            l.jsx("p", {
+                              className:
+                                "mt-1 text-sm font-display font-normal text-[#6B7280]",
+                              children: o.role,
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                },
+                o.id,
+              ),
+            ),
+          }),
+        ],
+      }),
+      l.jsx("style", {
+        children: `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `,
+      }),
+    ],
+  });
+}
+function vr(e = 0.15) {
+  const t = g.useRef(null),
+    [n, r] = g.useState(!1);
+  return (
+    g.useEffect(() => {
+      const o = t.current;
+      if (!o) return;
+      const i = new IntersectionObserver(
+        ([s]) => {
+          s.isIntersecting && r(!0);
+        },
+        { threshold: e, rootMargin: "0px 0px -60px 0px" },
+      );
+      return (i.observe(o), () => i.disconnect());
+    }, [e]),
+    { ref: t, isVisible: n }
+  );
+}
+function Zs(e, t = 2e3, n = !1) {
+  const [r, o] = g.useState(0);
+  return (
+    g.useEffect(() => {
+      if (!n) return;
+      let i, s;
+      const a = (c) => {
+        i || (i = c);
+        const u = Math.min((c - i) / t, 1),
+          f = 1 - Math.pow(1 - u, 3);
+        (o(Math.floor(f * e)), u < 1 && (s = requestAnimationFrame(a)));
+      };
+      return ((s = requestAnimationFrame(a)), () => cancelAnimationFrame(s));
+    }, [e, t, n]),
+    r
+  );
+}
+const Pe = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } },
+  sC = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } },
+  aC = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } },
+  bn = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+  },
+  Re = { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  Xf = "/assets/video-BItqE6vf.mp4";
+function em({ onBookDemoClick: e }) {
+  const { ref: t, isVisible: n } = vr(0.15),
+    r = Zs(1300, 2e3, n),
+    o = Zs(1500, 2e3, n);
+  return l.jsx("section", {
+    className: "relative py-16 lg:py-24 bg-white",
+    children: l.jsx("div", {
+      className: "max-w-[1280px] mx-auto px-5 sm:px-8",
+      children: l.jsx(Q.div, {
+        ref: t,
+        variants: bn,
+        initial: "hidden",
+        animate: n ? "visible" : "hidden",
+        className:
+          "bg-white rounded-[32px] p-4 sm:p-5 border border-slate-200 shadow-xl",
+        children: l.jsxs("div", {
+          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4",
+          children: [
+            l.jsxs(Q.div, {
+              variants: Pe,
+              className:
+                "bg-slate-50 hover:bg-slate-100/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-center min-h-[220px] border border-slate-100 relative overflow-hidden group transition-colors duration-500",
+              children: [
+                l.jsx("div", {
+                  className:
+                    "absolute inset-0 bg-gradient-to-b from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                }),
+                l.jsxs("div", {
+                  className: "relative z-10",
+                  children: [
+                    l.jsxs("div", {
+                      className: "flex flex-col gap-1 mb-2",
+                      children: [
+                        l.jsxs("span", {
+                          className:
+                            "text-[2.75rem] leading-none text-purple-600 font-semibold tracking-tight",
+                          children: [n ? r.toLocaleString() : "0", "+"],
+                        }),
+                        l.jsx("div", {
+                          className:
+                            "text-slate-900 text-base font-display font-medium",
+                          children: "Successful Placements",
+                        }),
+                      ],
+                    }),
+                    l.jsx("div", {
+                      className: "text-slate-500 text-sm font-medium",
+                      children: "Last Year",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            l.jsxs(Q.div, {
+              variants: Pe,
+              className:
+                "bg-slate-50 hover:bg-slate-100/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-center min-h-[220px] border border-slate-100 relative overflow-hidden group transition-colors duration-500",
+              children: [
+                l.jsx("div", {
+                  className:
+                    "absolute inset-0 bg-gradient-to-b from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                }),
+                l.jsxs("div", {
+                  className: "relative z-10",
+                  children: [
+                    l.jsxs("div", {
+                      className: "flex flex-col gap-1 mb-2",
+                      children: [
+                        l.jsxs("span", {
+                          className:
+                            "text-[2.75rem] leading-none text-purple-600 font-semibold tracking-tight",
+                          children: [n ? o.toLocaleString() : "0", "+"],
+                        }),
+                        l.jsx("div", {
+                          className:
+                            "text-slate-900 text-base font-display font-medium",
+                          children: "Live 1-on-1 Training",
+                        }),
+                      ],
+                    }),
+                    l.jsx("div", {
+                      className: "text-slate-500 text-sm font-medium",
+                      children: "Programs Delivered",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            l.jsxs(Q.div, {
+              variants: Pe,
+              className:
+                "lg:col-span-2 w-full flex max-sm:h-[40vh] relative border border-[#302C2A] bg-black overflow-hidden rounded-2xl group",
+              children: [
+                l.jsx("video", {
+                  autoPlay: !0,
+                  loop: !0,
+                  muted: !0,
+                  playsInline: !0,
+                  className:
+                    "absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700",
+                  children: l.jsx("source", { src: Xf, type: "video/mp4" }),
+                }),
+                l.jsxs("div", {
+                  className:
+                    "relative z-10 flex flex-col items-start justify-between h-full p-6 sm:p-8 w-full",
+                  children: [
+                    l.jsx("h3", {
+                      className:
+                        "text-white text-2xl sm:text-3xl font-display font-medium tracking-tight",
+                      children: "Experience space9",
+                    }),
+                    l.jsxs("a", {
+                      href: "https://play.google.com/store/apps/details?id=com.space9.app",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className:
+                        "text-xs sm:text-sm py-2 px-4 sm:px-5 bg-white/15 border border-white/20 backdrop-blur-md rounded-lg text-white/90 font-medium hover:bg-white/25 transition-all duration-300 flex items-center gap-2",
+                      children: [
+                        "Download now",
+                        l.jsx(xl, { className: "w-3.5 h-3.5" }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+    }),
+  });
+}
+function tm() {
+  const e = [
+    {
+      name: "AWS",
+      label: "Cloud Certification",
+      logo: "/images/aws-cert-logo.svg",
+      className: "h-8 sm:h-9 max-h-9 w-auto object-contain",
+    },
+    {
+      name: "Cisco",
+      label: "Networking & Security",
+      logo: "/images/cisco-cert-logo.svg",
+      className: "h-8 sm:h-9 max-h-9 w-auto object-contain",
+    },
+    {
+      name: "CompTIA",
+      label: "IT Infrastructure",
+      logo: "/images/comptia-cert-logo.svg",
+      className: "h-5 sm:h-6 max-h-6 w-auto object-contain",
+    },
+    {
+      name: "PMI",
+      label: "Project Management",
+      logo: "/images/pmi-cert-logo.svg",
+      className: "h-8 sm:h-9 max-h-9 w-auto object-contain",
+    },
+  ];
+  return l.jsxs("section", {
+    className:
+      "py-8 sm:py-12 bg-gradient-to-b from-white via-slate-50/40 to-white relative overflow-hidden",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-purple-500/5 rounded-full blur-[110px] pointer-events-none",
+      }),
+      l.jsxs("div", {
+        className:
+          "w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+        children: [
+          l.jsxs("div", {
+            className:
+              "flex flex-col items-center text-center gap-3 sm:gap-4 max-w-3xl mx-auto mb-10 sm:mb-12",
+            children: [
+              l.jsx("p", {
+                className:
+                  "text-xs font-medium tracking-[0.2em] uppercase text-db-accent",
+                children: "Industry Certification Standards",
+              }),
+              l.jsxs("h2", {
+                className:
+                  "font-display font-medium text-2xl sm:text-3xl md:text-display-md text-db-text max-w-2xl leading-tight",
+                children: [
+                  "Aligned With Global ",
+                  l.jsx("br", { className: "sm:hidden" }),
+                  "Certification Leaders",
+                ],
+              }),
+              l.jsx("p", {
+                className:
+                  "text-sm sm:text-base text-db-muted max-w-xl leading-relaxed",
+                children:
+                  "Our curriculum directly prepares you for industry-recognized certifications.",
+              }),
+            ],
+          }),
+          l.jsx("div", {
+            className: "max-w-4xl mx-auto",
+            children: l.jsx("div", {
+              className:
+                "bg-white rounded-2xl sm:rounded-full border border-slate-200/90 py-5 px-6 sm:py-6 sm:px-10 shadow-[0_10px_35px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_45px_rgba(124,58,237,0.08)] transition-all duration-300",
+              children: l.jsx("div", {
+                className:
+                  "grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-0 items-center",
+                children: e.map((t, n) =>
+                  l.jsx(
+                    "div",
+                    {
+                      className: `flex items-center justify-center h-12 sm:h-14 px-4 group cursor-pointer ${n > 0 ? "sm:border-l sm:border-slate-200/90" : ""}`,
+                      title: `${t.name} - ${t.label}`,
+                      children: l.jsx("img", {
+                        src: t.logo,
+                        alt: `${t.name} Certification`,
+                        className: `${t.className} group-hover:scale-105 transition-transform duration-200`,
+                        loading: "lazy",
+                      }),
+                    },
+                    t.name,
+                  ),
+                ),
+              }),
+            }),
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function Nl(e) {
+  var t,
+    n,
+    r = "";
+  if (typeof e == "string" || typeof e == "number") r += e;
+  else if (typeof e == "object")
+    if (Array.isArray(e)) {
+      var o = e.length;
+      for (t = 0; t < o; t++)
+        e[t] && (n = Nl(e[t])) && (r && (r += " "), (r += n));
+    } else for (n in e) e[n] && (r && (r += " "), (r += n));
+  return r;
+}
+function Rl() {
+  for (var e, t, n = 0, r = "", o = arguments.length; n < o; n++)
+    (e = arguments[n]) && (t = Nl(e)) && (r && (r += " "), (r += t));
+  return r;
+}
+const nm = (e, t) => {
+    const n = new Array(e.length + t.length);
+    for (let r = 0; r < e.length; r++) n[r] = e[r];
+    for (let r = 0; r < t.length; r++) n[e.length + r] = t[r];
+    return n;
+  },
+  rm = (e, t) => ({ classGroupId: e, validator: t }),
+  El = (e = new Map(), t = null, n) => ({
+    nextPart: e,
+    validators: t,
+    classGroupId: n,
+  }),
+  Yr = "-",
+  Js = [],
+  om = "arbitrary..",
+  im = (e) => {
+    const t = am(e),
+      { conflictingClassGroups: n, conflictingClassGroupModifiers: r } = e;
+    return {
+      getClassGroupId: (s) => {
+        if (s.startsWith("[") && s.endsWith("]")) return sm(s);
+        const a = s.split(Yr),
+          c = a[0] === "" && a.length > 1 ? 1 : 0;
+        return Ol(a, c, t);
+      },
+      getConflictingClassGroupIds: (s, a) => {
+        if (a) {
+          const c = r[s],
+            u = n[s];
+          return c ? (u ? nm(u, c) : c) : u || Js;
+        }
+        return n[s] || Js;
+      },
+    };
+  },
+  Ol = (e, t, n) => {
+    if (e.length - t === 0) return n.classGroupId;
+    const o = e[t],
+      i = n.nextPart.get(o);
+    if (i) {
+      const u = Ol(e, t + 1, i);
+      if (u) return u;
+    }
+    const s = n.validators;
+    if (s === null) return;
+    const a = t === 0 ? e.join(Yr) : e.slice(t).join(Yr),
+      c = s.length;
+    for (let u = 0; u < c; u++) {
+      const f = s[u];
+      if (f.validator(a)) return f.classGroupId;
+    }
+  },
+  sm = (e) =>
+    e.slice(1, -1).indexOf(":") === -1
+      ? void 0
+      : (() => {
+          const t = e.slice(1, -1),
+            n = t.indexOf(":"),
+            r = t.slice(0, n);
+          return r ? om + r : void 0;
+        })(),
+  am = (e) => {
+    const { theme: t, classGroups: n } = e;
+    return lm(n, t);
+  },
+  lm = (e, t) => {
+    const n = El();
+    for (const r in e) {
+      const o = e[r];
+      Bi(o, n, r, t);
+    }
+    return n;
+  },
+  Bi = (e, t, n, r) => {
+    const o = e.length;
+    for (let i = 0; i < o; i++) {
+      const s = e[i];
+      cm(s, t, n, r);
+    }
+  },
+  cm = (e, t, n, r) => {
+    if (typeof e == "string") {
+      um(e, t, n);
+      return;
+    }
+    if (typeof e == "function") {
+      dm(e, t, n, r);
+      return;
+    }
+    fm(e, t, n, r);
+  },
+  um = (e, t, n) => {
+    const r = e === "" ? t : Ll(t, e);
+    r.classGroupId = n;
+  },
+  dm = (e, t, n, r) => {
+    if (mm(e)) {
+      Bi(e(r), t, n, r);
+      return;
+    }
+    (t.validators === null && (t.validators = []), t.validators.push(rm(n, e)));
+  },
+  fm = (e, t, n, r) => {
+    const o = Object.entries(e),
+      i = o.length;
+    for (let s = 0; s < i; s++) {
+      const [a, c] = o[s];
+      Bi(c, Ll(t, a), n, r);
+    }
+  },
+  Ll = (e, t) => {
+    let n = e;
+    const r = t.split(Yr),
+      o = r.length;
+    for (let i = 0; i < o; i++) {
+      const s = r[i];
+      let a = n.nextPart.get(s);
+      (a || ((a = El()), n.nextPart.set(s, a)), (n = a));
+    }
+    return n;
+  },
+  mm = (e) => "isThemeGetter" in e && e.isThemeGetter === !0,
+  pm = (e) => {
+    if (e < 1) return { get: () => {}, set: () => {} };
+    let t = 0,
+      n = Object.create(null),
+      r = Object.create(null);
+    const o = (i, s) => {
+      ((n[i] = s), t++, t > e && ((t = 0), (r = n), (n = Object.create(null))));
+    };
+    return {
+      get(i) {
+        let s = n[i];
+        if (s !== void 0) return s;
+        if ((s = r[i]) !== void 0) return (o(i, s), s);
+      },
+      set(i, s) {
+        i in n ? (n[i] = s) : o(i, s);
+      },
+    };
+  },
+  ii = "!",
+  Ks = ":",
+  gm = [],
+  qs = (e, t, n, r, o) => ({
+    modifiers: e,
+    hasImportantModifier: t,
+    baseClassName: n,
+    maybePostfixModifierPosition: r,
+    isExternal: o,
+  }),
+  hm = (e) => {
+    const { prefix: t, experimentalParseClassName: n } = e;
+    let r = (o) => {
+      const i = [];
+      let s = 0,
+        a = 0,
+        c = 0,
+        u;
+      const f = o.length;
+      for (let v = 0; v < f; v++) {
+        const h = o[v];
+        if (s === 0 && a === 0) {
+          if (h === Ks) {
+            (i.push(o.slice(c, v)), (c = v + 1));
+            continue;
+          }
+          if (h === "/") {
+            u = v;
+            continue;
+          }
+        }
+        h === "[" ? s++ : h === "]" ? s-- : h === "(" ? a++ : h === ")" && a--;
+      }
+      const d = i.length === 0 ? o : o.slice(c);
+      let m = d,
+        y = !1;
+      d.endsWith(ii)
+        ? ((m = d.slice(0, -1)), (y = !0))
+        : d.startsWith(ii) && ((m = d.slice(1)), (y = !0));
+      const p = u && u > c ? u - c : void 0;
+      return qs(i, y, m, p);
+    };
+    if (t) {
+      const o = t + Ks,
+        i = r;
+      r = (s) =>
+        s.startsWith(o) ? i(s.slice(o.length)) : qs(gm, !1, s, void 0, !0);
+    }
+    if (n) {
+      const o = r;
+      r = (i) => n({ className: i, parseClassName: o });
+    }
+    return r;
+  },
+  ym = (e) => {
+    const t = new Map();
+    return (
+      e.orderSensitiveModifiers.forEach((n, r) => {
+        t.set(n, 1e6 + r);
+      }),
+      (n) => {
+        const r = [];
+        let o = [];
+        for (let i = 0; i < n.length; i++) {
+          const s = n[i],
+            a = s[0] === "[",
+            c = t.has(s);
+          a || c
+            ? (o.length > 0 && (o.sort(), r.push(...o), (o = [])), r.push(s))
+            : o.push(s);
+        }
+        return (o.length > 0 && (o.sort(), r.push(...o)), r);
+      }
+    );
+  },
+  vm = (e) => ({
+    cache: pm(e.cacheSize),
+    parseClassName: hm(e),
+    sortModifiers: ym(e),
+    postfixLookupClassGroupIds: bm(e),
+    ...im(e),
+  }),
+  bm = (e) => {
+    const t = Object.create(null),
+      n = e.postfixLookupClassGroups;
+    if (n) for (let r = 0; r < n.length; r++) t[n[r]] = !0;
+    return t;
+  },
+  wm = /\s+/,
+  xm = (e, t) => {
+    const {
+        parseClassName: n,
+        getClassGroupId: r,
+        getConflictingClassGroupIds: o,
+        sortModifiers: i,
+        postfixLookupClassGroupIds: s,
+      } = t,
+      a = [],
+      c = e.trim().split(wm);
+    let u = "";
+    for (let f = c.length - 1; f >= 0; f -= 1) {
+      const d = c[f],
+        {
+          isExternal: m,
+          modifiers: y,
+          hasImportantModifier: p,
+          baseClassName: v,
+          maybePostfixModifierPosition: h,
+        } = n(d);
+      if (m) {
+        u = d + (u.length > 0 ? " " + u : u);
+        continue;
+      }
+      let S = !!h,
+        x;
+      if (S) {
+        const D = v.substring(0, h);
+        x = r(D);
+        const I = x && s[x] ? r(v) : void 0;
+        I && I !== x && ((x = I), (S = !1));
+      } else x = r(v);
+      if (!x) {
+        if (!S) {
+          u = d + (u.length > 0 ? " " + u : u);
+          continue;
+        }
+        if (((x = r(v)), !x)) {
+          u = d + (u.length > 0 ? " " + u : u);
+          continue;
+        }
+        S = !1;
+      }
+      const C = y.length === 0 ? "" : y.length === 1 ? y[0] : i(y).join(":"),
+        w = p ? C + ii : C,
+        k = w + x;
+      if (a.indexOf(k) > -1) continue;
+      a.push(k);
+      const _ = o(x, S);
+      for (let D = 0; D < _.length; ++D) {
+        const I = _[D];
+        a.push(w + I);
+      }
+      u = d + (u.length > 0 ? " " + u : u);
+    }
+    return u;
+  },
+  Sm = (...e) => {
+    let t = 0,
+      n,
+      r,
+      o = "";
+    for (; t < e.length;)
+      (n = e[t++]) && (r = zl(n)) && (o && (o += " "), (o += r));
+    return o;
+  },
+  zl = (e) => {
+    if (typeof e == "string") return e;
+    let t,
+      n = "";
+    for (let r = 0; r < e.length; r++)
+      e[r] && (t = zl(e[r])) && (n && (n += " "), (n += t));
+    return n;
+  },
+  Cm = (e, ...t) => {
+    let n, r, o, i;
+    const s = (c) => {
+        const u = t.reduce((f, d) => d(f), e());
+        return (
+          (n = vm(u)),
+          (r = n.cache.get),
+          (o = n.cache.set),
+          (i = a),
+          a(c)
+        );
+      },
+      a = (c) => {
+        const u = r(c);
+        if (u) return u;
+        const f = xm(c, n);
+        return (o(c, f), f);
+      };
+    return ((i = s), (...c) => i(Sm(...c)));
+  },
+  Pm = [],
+  je = (e) => {
+    const t = (n) => n[e] || Pm;
+    return ((t.isThemeGetter = !0), t);
+  },
+  Fl = /^\[(?:(\w[\w-]*):)?(.+)\]$/i,
+  Bl = /^\((?:(\w[\w-]*):)?(.+)\)$/i,
+  Am = /^\d+(?:\.\d+)?\/\d+(?:\.\d+)?$/,
+  km = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/,
+  Im =
+    /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/,
+  _m = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/,
+  Tm = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/,
+  Mm =
+    /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/,
+  Ht = (e) => Am.test(e),
+  oe = (e) => !!e && !Number.isNaN(Number(e)),
+  wt = (e) => !!e && Number.isInteger(Number(e)),
+  Eo = (e) => e.endsWith("%") && oe(e.slice(0, -1)),
+  Rt = (e) => km.test(e),
+  Vl = () => !0,
+  Dm = (e) => Im.test(e) && !_m.test(e),
+  Vi = () => !1,
+  jm = (e) => Tm.test(e),
+  Nm = (e) => Mm.test(e),
+  Rm = (e) => !$(e) && !W(e),
+  Em = (e) =>
+    e.startsWith("@container") &&
+    ((e[10] === "/" && e[11] !== void 0) ||
+      (e[11] === "s" && e[16] !== void 0 && e.startsWith("-size/", 10)) ||
+      (e[11] === "n" && e[18] !== void 0 && e.startsWith("-normal/", 10))),
+  Om = (e) => tn(e, Ul, Vi),
+  $ = (e) => Fl.test(e),
+  cn = (e) => tn(e, Hl, Dm),
+  Ys = (e) => tn(e, Um, oe),
+  Lm = (e) => tn(e, Zl, Vl),
+  zm = (e) => tn(e, Gl, Vi),
+  Qs = (e) => tn(e, $l, Vi),
+  Fm = (e) => tn(e, Wl, Nm),
+  kr = (e) => tn(e, Jl, jm),
+  W = (e) => Bl.test(e),
+  er = (e) => kn(e, Hl),
+  Bm = (e) => kn(e, Gl),
+  Xs = (e) => kn(e, $l),
+  Vm = (e) => kn(e, Ul),
+  $m = (e) => kn(e, Wl),
+  Ir = (e) => kn(e, Jl, !0),
+  Wm = (e) => kn(e, Zl, !0),
+  tn = (e, t, n) => {
+    const r = Fl.exec(e);
+    return r ? (r[1] ? t(r[1]) : n(r[2])) : !1;
+  },
+  kn = (e, t, n = !1) => {
+    const r = Bl.exec(e);
+    return r ? (r[1] ? t(r[1]) : n) : !1;
+  },
+  $l = (e) => e === "position" || e === "percentage",
+  Wl = (e) => e === "image" || e === "url",
+  Ul = (e) => e === "length" || e === "size" || e === "bg-size",
+  Hl = (e) => e === "length",
+  Um = (e) => e === "number",
+  Gl = (e) => e === "family-name",
+  Zl = (e) => e === "number" || e === "weight",
+  Jl = (e) => e === "shadow",
+  Hm = () => {
+    const e = je("color"),
+      t = je("font"),
+      n = je("text"),
+      r = je("font-weight"),
+      o = je("tracking"),
+      i = je("leading"),
+      s = je("breakpoint"),
+      a = je("container"),
+      c = je("spacing"),
+      u = je("radius"),
+      f = je("shadow"),
+      d = je("inset-shadow"),
+      m = je("text-shadow"),
+      y = je("drop-shadow"),
+      p = je("blur"),
+      v = je("perspective"),
+      h = je("aspect"),
+      S = je("ease"),
+      x = je("animate"),
+      C = () => [
+        "auto",
+        "avoid",
+        "all",
+        "avoid-page",
+        "page",
+        "left",
+        "right",
+        "column",
+      ],
+      w = () => [
+        "center",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-left",
+        "left-top",
+        "top-right",
+        "right-top",
+        "bottom-right",
+        "right-bottom",
+        "bottom-left",
+        "left-bottom",
+      ],
+      k = () => [...w(), W, $],
+      _ = () => ["auto", "hidden", "clip", "visible", "scroll"],
+      D = () => ["auto", "contain", "none"],
+      I = () => [W, $, c],
+      N = () => [Ht, "full", "auto", ...I()],
+      V = () => [wt, "none", "subgrid", W, $],
+      X = () => ["auto", { span: ["full", wt, W, $] }, wt, W, $],
+      U = () => [wt, "auto", W, $],
+      O = () => ["auto", "min", "max", "fr", W, $],
+      B = () => [
+        "start",
+        "end",
+        "center",
+        "between",
+        "around",
+        "evenly",
+        "stretch",
+        "baseline",
+        "center-safe",
+        "end-safe",
+      ],
+      H = () => [
+        "start",
+        "end",
+        "center",
+        "stretch",
+        "center-safe",
+        "end-safe",
+      ],
+      G = () => ["auto", ...I()],
+      Y = () => [
+        Ht,
+        "auto",
+        "full",
+        "dvw",
+        "dvh",
+        "lvw",
+        "lvh",
+        "svw",
+        "svh",
+        "min",
+        "max",
+        "fit",
+        ...I(),
+      ],
+      Z = () => [
+        Ht,
+        "screen",
+        "full",
+        "dvw",
+        "lvw",
+        "svw",
+        "min",
+        "max",
+        "fit",
+        ...I(),
+      ],
+      ie = () => [
+        Ht,
+        "screen",
+        "full",
+        "lh",
+        "dvh",
+        "lvh",
+        "svh",
+        "min",
+        "max",
+        "fit",
+        ...I(),
+      ],
+      R = () => [e, W, $],
+      Le = () => [...w(), Xs, Qs, { position: [W, $] }],
+      Se = () => ["no-repeat", { repeat: ["", "x", "y", "space", "round"] }],
+      Ce = () => ["auto", "cover", "contain", Vm, Om, { size: [W, $] }],
+      Je = () => [Eo, er, cn],
+      pe = () => ["", "none", "full", u, W, $],
+      fe = () => ["", oe, er, cn],
+      Xe = () => ["solid", "dashed", "dotted", "double"],
+      te = () => [
+        "normal",
+        "multiply",
+        "screen",
+        "overlay",
+        "darken",
+        "lighten",
+        "color-dodge",
+        "color-burn",
+        "hard-light",
+        "soft-light",
+        "difference",
+        "exclusion",
+        "hue",
+        "saturation",
+        "color",
+        "luminosity",
+      ],
+      ne = () => [oe, Eo, Xs, Qs],
+      ve = () => ["", "none", p, W, $],
+      ce = () => ["none", oe, W, $],
+      se = () => ["none", oe, W, $],
+      ae = () => [oe, W, $],
+      ze = () => [Ht, "full", ...I()];
+    return {
+      cacheSize: 500,
+      theme: {
+        animate: ["spin", "ping", "pulse", "bounce"],
+        aspect: ["video"],
+        blur: [Rt],
+        breakpoint: [Rt],
+        color: [Vl],
+        container: [Rt],
+        "drop-shadow": [Rt],
+        ease: ["in", "out", "in-out"],
+        font: [Rm],
+        "font-weight": [
+          "thin",
+          "extralight",
+          "light",
+          "normal",
+          "medium",
+          "semibold",
+          "bold",
+          "extrabold",
+          "black",
+        ],
+        "inset-shadow": [Rt],
+        leading: ["none", "tight", "snug", "normal", "relaxed", "loose"],
+        perspective: [
+          "dramatic",
+          "near",
+          "normal",
+          "midrange",
+          "distant",
+          "none",
+        ],
+        radius: [Rt],
+        shadow: [Rt],
+        spacing: ["px", oe],
+        text: [Rt],
+        "text-shadow": [Rt],
+        tracking: ["tighter", "tight", "normal", "wide", "wider", "widest"],
+      },
+      classGroups: {
+        aspect: [{ aspect: ["auto", "square", Ht, $, W, h] }],
+        container: ["container"],
+        "container-type": [{ "@container": ["", "normal", "size", W, $] }],
+        "container-named": [Em],
+        columns: [{ columns: [oe, $, W, a] }],
+        "break-after": [{ "break-after": C() }],
+        "break-before": [{ "break-before": C() }],
+        "break-inside": [
+          { "break-inside": ["auto", "avoid", "avoid-page", "avoid-column"] },
+        ],
+        "box-decoration": [{ "box-decoration": ["slice", "clone"] }],
+        box: [{ box: ["border", "content"] }],
+        display: [
+          "block",
+          "inline-block",
+          "inline",
+          "flex",
+          "inline-flex",
+          "table",
+          "inline-table",
+          "table-caption",
+          "table-cell",
+          "table-column",
+          "table-column-group",
+          "table-footer-group",
+          "table-header-group",
+          "table-row-group",
+          "table-row",
+          "flow-root",
+          "grid",
+          "inline-grid",
+          "contents",
+          "list-item",
+          "hidden",
+        ],
+        sr: ["sr-only", "not-sr-only"],
+        float: [{ float: ["right", "left", "none", "start", "end"] }],
+        clear: [{ clear: ["left", "right", "both", "none", "start", "end"] }],
+        isolation: ["isolate", "isolation-auto"],
+        "object-fit": [
+          { object: ["contain", "cover", "fill", "none", "scale-down"] },
+        ],
+        "object-position": [{ object: k() }],
+        overflow: [{ overflow: _() }],
+        "overflow-x": [{ "overflow-x": _() }],
+        "overflow-y": [{ "overflow-y": _() }],
+        overscroll: [{ overscroll: D() }],
+        "overscroll-x": [{ "overscroll-x": D() }],
+        "overscroll-y": [{ "overscroll-y": D() }],
+        position: ["static", "fixed", "absolute", "relative", "sticky"],
+        inset: [{ inset: N() }],
+        "inset-x": [{ "inset-x": N() }],
+        "inset-y": [{ "inset-y": N() }],
+        start: [{ "inset-s": N(), start: N() }],
+        end: [{ "inset-e": N(), end: N() }],
+        "inset-bs": [{ "inset-bs": N() }],
+        "inset-be": [{ "inset-be": N() }],
+        top: [{ top: N() }],
+        right: [{ right: N() }],
+        bottom: [{ bottom: N() }],
+        left: [{ left: N() }],
+        visibility: ["visible", "invisible", "collapse"],
+        z: [{ z: [wt, "auto", W, $] }],
+        basis: [{ basis: [Ht, "full", "auto", a, ...I()] }],
+        "flex-direction": [
+          { flex: ["row", "row-reverse", "col", "col-reverse"] },
+        ],
+        "flex-wrap": [{ flex: ["nowrap", "wrap", "wrap-reverse"] }],
+        flex: [{ flex: [oe, Ht, "auto", "initial", "none", $] }],
+        grow: [{ grow: ["", oe, W, $] }],
+        shrink: [{ shrink: ["", oe, W, $] }],
+        order: [{ order: [wt, "first", "last", "none", W, $] }],
+        "grid-cols": [{ "grid-cols": V() }],
+        "col-start-end": [{ col: X() }],
+        "col-start": [{ "col-start": U() }],
+        "col-end": [{ "col-end": U() }],
+        "grid-rows": [{ "grid-rows": V() }],
+        "row-start-end": [{ row: X() }],
+        "row-start": [{ "row-start": U() }],
+        "row-end": [{ "row-end": U() }],
+        "grid-flow": [
+          { "grid-flow": ["row", "col", "dense", "row-dense", "col-dense"] },
+        ],
+        "auto-cols": [{ "auto-cols": O() }],
+        "auto-rows": [{ "auto-rows": O() }],
+        gap: [{ gap: I() }],
+        "gap-x": [{ "gap-x": I() }],
+        "gap-y": [{ "gap-y": I() }],
+        "justify-content": [{ justify: [...B(), "normal"] }],
+        "justify-items": [{ "justify-items": [...H(), "normal"] }],
+        "justify-self": [{ "justify-self": ["auto", ...H()] }],
+        "align-content": [{ content: ["normal", ...B()] }],
+        "align-items": [{ items: [...H(), { baseline: ["", "last"] }] }],
+        "align-self": [{ self: ["auto", ...H(), { baseline: ["", "last"] }] }],
+        "place-content": [{ "place-content": B() }],
+        "place-items": [{ "place-items": [...H(), "baseline"] }],
+        "place-self": [{ "place-self": ["auto", ...H()] }],
+        p: [{ p: I() }],
+        px: [{ px: I() }],
+        py: [{ py: I() }],
+        ps: [{ ps: I() }],
+        pe: [{ pe: I() }],
+        pbs: [{ pbs: I() }],
+        pbe: [{ pbe: I() }],
+        pt: [{ pt: I() }],
+        pr: [{ pr: I() }],
+        pb: [{ pb: I() }],
+        pl: [{ pl: I() }],
+        m: [{ m: G() }],
+        mx: [{ mx: G() }],
+        my: [{ my: G() }],
+        ms: [{ ms: G() }],
+        me: [{ me: G() }],
+        mbs: [{ mbs: G() }],
+        mbe: [{ mbe: G() }],
+        mt: [{ mt: G() }],
+        mr: [{ mr: G() }],
+        mb: [{ mb: G() }],
+        ml: [{ ml: G() }],
+        "space-x": [{ "space-x": I() }],
+        "space-x-reverse": ["space-x-reverse"],
+        "space-y": [{ "space-y": I() }],
+        "space-y-reverse": ["space-y-reverse"],
+        size: [{ size: Y() }],
+        "inline-size": [{ inline: ["auto", ...Z()] }],
+        "min-inline-size": [{ "min-inline": ["auto", ...Z()] }],
+        "max-inline-size": [{ "max-inline": ["none", ...Z()] }],
+        "block-size": [{ block: ["auto", ...ie()] }],
+        "min-block-size": [{ "min-block": ["auto", ...ie()] }],
+        "max-block-size": [{ "max-block": ["none", ...ie()] }],
+        w: [{ w: [a, "screen", ...Y()] }],
+        "min-w": [{ "min-w": [a, "screen", "none", ...Y()] }],
+        "max-w": [
+          { "max-w": [a, "screen", "none", "prose", { screen: [s] }, ...Y()] },
+        ],
+        h: [{ h: ["screen", "lh", ...Y()] }],
+        "min-h": [{ "min-h": ["screen", "lh", "none", ...Y()] }],
+        "max-h": [{ "max-h": ["screen", "lh", ...Y()] }],
+        "font-size": [{ text: ["base", n, er, cn] }],
+        "font-smoothing": ["antialiased", "subpixel-antialiased"],
+        "font-style": ["italic", "not-italic"],
+        "font-weight": [{ font: [r, Wm, Lm] }],
+        "font-stretch": [
+          {
+            "font-stretch": [
+              "ultra-condensed",
+              "extra-condensed",
+              "condensed",
+              "semi-condensed",
+              "normal",
+              "semi-expanded",
+              "expanded",
+              "extra-expanded",
+              "ultra-expanded",
+              Eo,
+              $,
+            ],
+          },
+        ],
+        "font-family": [{ font: [Bm, zm, t] }],
+        "font-features": [{ "font-features": [$] }],
+        "fvn-normal": ["normal-nums"],
+        "fvn-ordinal": ["ordinal"],
+        "fvn-slashed-zero": ["slashed-zero"],
+        "fvn-figure": ["lining-nums", "oldstyle-nums"],
+        "fvn-spacing": ["proportional-nums", "tabular-nums"],
+        "fvn-fraction": ["diagonal-fractions", "stacked-fractions"],
+        tracking: [{ tracking: [o, W, $] }],
+        "line-clamp": [{ "line-clamp": [oe, "none", W, Ys] }],
+        leading: [{ leading: [i, ...I()] }],
+        "list-image": [{ "list-image": ["none", W, $] }],
+        "list-style-position": [{ list: ["inside", "outside"] }],
+        "list-style-type": [{ list: ["disc", "decimal", "none", W, $] }],
+        "text-alignment": [
+          { text: ["left", "center", "right", "justify", "start", "end"] },
+        ],
+        "placeholder-color": [{ placeholder: R() }],
+        "text-color": [{ text: R() }],
+        "text-decoration": [
+          "underline",
+          "overline",
+          "line-through",
+          "no-underline",
+        ],
+        "text-decoration-style": [{ decoration: [...Xe(), "wavy"] }],
+        "text-decoration-thickness": [
+          { decoration: [oe, "from-font", "auto", W, cn] },
+        ],
+        "text-decoration-color": [{ decoration: R() }],
+        "underline-offset": [{ "underline-offset": [oe, "auto", W, $] }],
+        "text-transform": [
+          "uppercase",
+          "lowercase",
+          "capitalize",
+          "normal-case",
+        ],
+        "text-overflow": ["truncate", "text-ellipsis", "text-clip"],
+        "text-wrap": [{ text: ["wrap", "nowrap", "balance", "pretty"] }],
+        indent: [{ indent: I() }],
+        "tab-size": [{ tab: [wt, W, $] }],
+        "vertical-align": [
+          {
+            align: [
+              "baseline",
+              "top",
+              "middle",
+              "bottom",
+              "text-top",
+              "text-bottom",
+              "sub",
+              "super",
+              W,
+              $,
+            ],
+          },
+        ],
+        whitespace: [
+          {
+            whitespace: [
+              "normal",
+              "nowrap",
+              "pre",
+              "pre-line",
+              "pre-wrap",
+              "break-spaces",
+            ],
+          },
+        ],
+        break: [{ break: ["normal", "words", "all", "keep"] }],
+        wrap: [{ wrap: ["break-word", "anywhere", "normal"] }],
+        hyphens: [{ hyphens: ["none", "manual", "auto"] }],
+        content: [{ content: ["none", W, $] }],
+        "bg-attachment": [{ bg: ["fixed", "local", "scroll"] }],
+        "bg-clip": [{ "bg-clip": ["border", "padding", "content", "text"] }],
+        "bg-origin": [{ "bg-origin": ["border", "padding", "content"] }],
+        "bg-position": [{ bg: Le() }],
+        "bg-repeat": [{ bg: Se() }],
+        "bg-size": [{ bg: Ce() }],
+        "bg-image": [
+          {
+            bg: [
+              "none",
+              {
+                linear: [
+                  { to: ["t", "tr", "r", "br", "b", "bl", "l", "tl"] },
+                  wt,
+                  W,
+                  $,
+                ],
+                radial: ["", W, $],
+                conic: [wt, W, $],
+              },
+              $m,
+              Fm,
+            ],
+          },
+        ],
+        "bg-color": [{ bg: R() }],
+        "gradient-from-pos": [{ from: Je() }],
+        "gradient-via-pos": [{ via: Je() }],
+        "gradient-to-pos": [{ to: Je() }],
+        "gradient-from": [{ from: R() }],
+        "gradient-via": [{ via: R() }],
+        "gradient-to": [{ to: R() }],
+        rounded: [{ rounded: pe() }],
+        "rounded-s": [{ "rounded-s": pe() }],
+        "rounded-e": [{ "rounded-e": pe() }],
+        "rounded-t": [{ "rounded-t": pe() }],
+        "rounded-r": [{ "rounded-r": pe() }],
+        "rounded-b": [{ "rounded-b": pe() }],
+        "rounded-l": [{ "rounded-l": pe() }],
+        "rounded-ss": [{ "rounded-ss": pe() }],
+        "rounded-se": [{ "rounded-se": pe() }],
+        "rounded-ee": [{ "rounded-ee": pe() }],
+        "rounded-es": [{ "rounded-es": pe() }],
+        "rounded-tl": [{ "rounded-tl": pe() }],
+        "rounded-tr": [{ "rounded-tr": pe() }],
+        "rounded-br": [{ "rounded-br": pe() }],
+        "rounded-bl": [{ "rounded-bl": pe() }],
+        "border-w": [{ border: fe() }],
+        "border-w-x": [{ "border-x": fe() }],
+        "border-w-y": [{ "border-y": fe() }],
+        "border-w-s": [{ "border-s": fe() }],
+        "border-w-e": [{ "border-e": fe() }],
+        "border-w-bs": [{ "border-bs": fe() }],
+        "border-w-be": [{ "border-be": fe() }],
+        "border-w-t": [{ "border-t": fe() }],
+        "border-w-r": [{ "border-r": fe() }],
+        "border-w-b": [{ "border-b": fe() }],
+        "border-w-l": [{ "border-l": fe() }],
+        "divide-x": [{ "divide-x": fe() }],
+        "divide-x-reverse": ["divide-x-reverse"],
+        "divide-y": [{ "divide-y": fe() }],
+        "divide-y-reverse": ["divide-y-reverse"],
+        "border-style": [{ border: [...Xe(), "hidden", "none"] }],
+        "divide-style": [{ divide: [...Xe(), "hidden", "none"] }],
+        "border-color": [{ border: R() }],
+        "border-color-x": [{ "border-x": R() }],
+        "border-color-y": [{ "border-y": R() }],
+        "border-color-s": [{ "border-s": R() }],
+        "border-color-e": [{ "border-e": R() }],
+        "border-color-bs": [{ "border-bs": R() }],
+        "border-color-be": [{ "border-be": R() }],
+        "border-color-t": [{ "border-t": R() }],
+        "border-color-r": [{ "border-r": R() }],
+        "border-color-b": [{ "border-b": R() }],
+        "border-color-l": [{ "border-l": R() }],
+        "divide-color": [{ divide: R() }],
+        "outline-style": [{ outline: [...Xe(), "none", "hidden"] }],
+        "outline-offset": [{ "outline-offset": [oe, W, $] }],
+        "outline-w": [{ outline: ["", oe, er, cn] }],
+        "outline-color": [{ outline: R() }],
+        shadow: [{ shadow: ["", "none", f, Ir, kr] }],
+        "shadow-color": [{ shadow: R() }],
+        "inset-shadow": [{ "inset-shadow": ["none", d, Ir, kr] }],
+        "inset-shadow-color": [{ "inset-shadow": R() }],
+        "ring-w": [{ ring: fe() }],
+        "ring-w-inset": ["ring-inset"],
+        "ring-color": [{ ring: R() }],
+        "ring-offset-w": [{ "ring-offset": [oe, cn] }],
+        "ring-offset-color": [{ "ring-offset": R() }],
+        "inset-ring-w": [{ "inset-ring": fe() }],
+        "inset-ring-color": [{ "inset-ring": R() }],
+        "text-shadow": [{ "text-shadow": ["none", m, Ir, kr] }],
+        "text-shadow-color": [{ "text-shadow": R() }],
+        opacity: [{ opacity: [oe, W, $] }],
+        "mix-blend": [
+          { "mix-blend": [...te(), "plus-darker", "plus-lighter"] },
+        ],
+        "bg-blend": [{ "bg-blend": te() }],
+        "mask-clip": [
+          {
+            "mask-clip": [
+              "border",
+              "padding",
+              "content",
+              "fill",
+              "stroke",
+              "view",
+            ],
+          },
+          "mask-no-clip",
+        ],
+        "mask-composite": [
+          { mask: ["add", "subtract", "intersect", "exclude"] },
+        ],
+        "mask-image-linear-pos": [{ "mask-linear": [oe] }],
+        "mask-image-linear-from-pos": [{ "mask-linear-from": ne() }],
+        "mask-image-linear-to-pos": [{ "mask-linear-to": ne() }],
+        "mask-image-linear-from-color": [{ "mask-linear-from": R() }],
+        "mask-image-linear-to-color": [{ "mask-linear-to": R() }],
+        "mask-image-t-from-pos": [{ "mask-t-from": ne() }],
+        "mask-image-t-to-pos": [{ "mask-t-to": ne() }],
+        "mask-image-t-from-color": [{ "mask-t-from": R() }],
+        "mask-image-t-to-color": [{ "mask-t-to": R() }],
+        "mask-image-r-from-pos": [{ "mask-r-from": ne() }],
+        "mask-image-r-to-pos": [{ "mask-r-to": ne() }],
+        "mask-image-r-from-color": [{ "mask-r-from": R() }],
+        "mask-image-r-to-color": [{ "mask-r-to": R() }],
+        "mask-image-b-from-pos": [{ "mask-b-from": ne() }],
+        "mask-image-b-to-pos": [{ "mask-b-to": ne() }],
+        "mask-image-b-from-color": [{ "mask-b-from": R() }],
+        "mask-image-b-to-color": [{ "mask-b-to": R() }],
+        "mask-image-l-from-pos": [{ "mask-l-from": ne() }],
+        "mask-image-l-to-pos": [{ "mask-l-to": ne() }],
+        "mask-image-l-from-color": [{ "mask-l-from": R() }],
+        "mask-image-l-to-color": [{ "mask-l-to": R() }],
+        "mask-image-x-from-pos": [{ "mask-x-from": ne() }],
+        "mask-image-x-to-pos": [{ "mask-x-to": ne() }],
+        "mask-image-x-from-color": [{ "mask-x-from": R() }],
+        "mask-image-x-to-color": [{ "mask-x-to": R() }],
+        "mask-image-y-from-pos": [{ "mask-y-from": ne() }],
+        "mask-image-y-to-pos": [{ "mask-y-to": ne() }],
+        "mask-image-y-from-color": [{ "mask-y-from": R() }],
+        "mask-image-y-to-color": [{ "mask-y-to": R() }],
+        "mask-image-radial": [{ "mask-radial": [W, $] }],
+        "mask-image-radial-from-pos": [{ "mask-radial-from": ne() }],
+        "mask-image-radial-to-pos": [{ "mask-radial-to": ne() }],
+        "mask-image-radial-from-color": [{ "mask-radial-from": R() }],
+        "mask-image-radial-to-color": [{ "mask-radial-to": R() }],
+        "mask-image-radial-shape": [{ "mask-radial": ["circle", "ellipse"] }],
+        "mask-image-radial-size": [
+          {
+            "mask-radial": [
+              { closest: ["side", "corner"], farthest: ["side", "corner"] },
+            ],
+          },
+        ],
+        "mask-image-radial-pos": [{ "mask-radial-at": w() }],
+        "mask-image-conic-pos": [{ "mask-conic": [oe] }],
+        "mask-image-conic-from-pos": [{ "mask-conic-from": ne() }],
+        "mask-image-conic-to-pos": [{ "mask-conic-to": ne() }],
+        "mask-image-conic-from-color": [{ "mask-conic-from": R() }],
+        "mask-image-conic-to-color": [{ "mask-conic-to": R() }],
+        "mask-mode": [{ mask: ["alpha", "luminance", "match"] }],
+        "mask-origin": [
+          {
+            "mask-origin": [
+              "border",
+              "padding",
+              "content",
+              "fill",
+              "stroke",
+              "view",
+            ],
+          },
+        ],
+        "mask-position": [{ mask: Le() }],
+        "mask-repeat": [{ mask: Se() }],
+        "mask-size": [{ mask: Ce() }],
+        "mask-type": [{ "mask-type": ["alpha", "luminance"] }],
+        "mask-image": [{ mask: ["none", W, $] }],
+        filter: [{ filter: ["", "none", W, $] }],
+        blur: [{ blur: ve() }],
+        brightness: [{ brightness: [oe, W, $] }],
+        contrast: [{ contrast: [oe, W, $] }],
+        "drop-shadow": [{ "drop-shadow": ["", "none", y, Ir, kr] }],
+        "drop-shadow-color": [{ "drop-shadow": R() }],
+        grayscale: [{ grayscale: ["", oe, W, $] }],
+        "hue-rotate": [{ "hue-rotate": [oe, W, $] }],
+        invert: [{ invert: ["", oe, W, $] }],
+        saturate: [{ saturate: [oe, W, $] }],
+        sepia: [{ sepia: ["", oe, W, $] }],
+        "backdrop-filter": [{ "backdrop-filter": ["", "none", W, $] }],
+        "backdrop-blur": [{ "backdrop-blur": ve() }],
+        "backdrop-brightness": [{ "backdrop-brightness": [oe, W, $] }],
+        "backdrop-contrast": [{ "backdrop-contrast": [oe, W, $] }],
+        "backdrop-grayscale": [{ "backdrop-grayscale": ["", oe, W, $] }],
+        "backdrop-hue-rotate": [{ "backdrop-hue-rotate": [oe, W, $] }],
+        "backdrop-invert": [{ "backdrop-invert": ["", oe, W, $] }],
+        "backdrop-opacity": [{ "backdrop-opacity": [oe, W, $] }],
+        "backdrop-saturate": [{ "backdrop-saturate": [oe, W, $] }],
+        "backdrop-sepia": [{ "backdrop-sepia": ["", oe, W, $] }],
+        "border-collapse": [{ border: ["collapse", "separate"] }],
+        "border-spacing": [{ "border-spacing": I() }],
+        "border-spacing-x": [{ "border-spacing-x": I() }],
+        "border-spacing-y": [{ "border-spacing-y": I() }],
+        "table-layout": [{ table: ["auto", "fixed"] }],
+        caption: [{ caption: ["top", "bottom"] }],
+        transition: [
+          {
+            transition: [
+              "",
+              "all",
+              "colors",
+              "opacity",
+              "shadow",
+              "transform",
+              "none",
+              W,
+              $,
+            ],
+          },
+        ],
+        "transition-behavior": [{ transition: ["normal", "discrete"] }],
+        duration: [{ duration: [oe, "initial", W, $] }],
+        ease: [{ ease: ["linear", "initial", S, W, $] }],
+        delay: [{ delay: [oe, W, $] }],
+        animate: [{ animate: ["none", x, W, $] }],
+        backface: [{ backface: ["hidden", "visible"] }],
+        perspective: [{ perspective: [v, W, $] }],
+        "perspective-origin": [{ "perspective-origin": k() }],
+        rotate: [{ rotate: ce() }],
+        "rotate-x": [{ "rotate-x": ce() }],
+        "rotate-y": [{ "rotate-y": ce() }],
+        "rotate-z": [{ "rotate-z": ce() }],
+        scale: [{ scale: se() }],
+        "scale-x": [{ "scale-x": se() }],
+        "scale-y": [{ "scale-y": se() }],
+        "scale-z": [{ "scale-z": se() }],
+        "scale-3d": ["scale-3d"],
+        skew: [{ skew: ae() }],
+        "skew-x": [{ "skew-x": ae() }],
+        "skew-y": [{ "skew-y": ae() }],
+        transform: [{ transform: [W, $, "", "none", "gpu", "cpu"] }],
+        "transform-origin": [{ origin: k() }],
+        "transform-style": [{ transform: ["3d", "flat"] }],
+        translate: [{ translate: ze() }],
+        "translate-x": [{ "translate-x": ze() }],
+        "translate-y": [{ "translate-y": ze() }],
+        "translate-z": [{ "translate-z": ze() }],
+        "translate-none": ["translate-none"],
+        zoom: [{ zoom: [wt, W, $] }],
+        accent: [{ accent: R() }],
+        appearance: [{ appearance: ["none", "auto"] }],
+        "caret-color": [{ caret: R() }],
+        "color-scheme": [
+          {
+            scheme: [
+              "normal",
+              "dark",
+              "light",
+              "light-dark",
+              "only-dark",
+              "only-light",
+            ],
+          },
+        ],
+        cursor: [
+          {
+            cursor: [
+              "auto",
+              "default",
+              "pointer",
+              "wait",
+              "text",
+              "move",
+              "help",
+              "not-allowed",
+              "none",
+              "context-menu",
+              "progress",
+              "cell",
+              "crosshair",
+              "vertical-text",
+              "alias",
+              "copy",
+              "no-drop",
+              "grab",
+              "grabbing",
+              "all-scroll",
+              "col-resize",
+              "row-resize",
+              "n-resize",
+              "e-resize",
+              "s-resize",
+              "w-resize",
+              "ne-resize",
+              "nw-resize",
+              "se-resize",
+              "sw-resize",
+              "ew-resize",
+              "ns-resize",
+              "nesw-resize",
+              "nwse-resize",
+              "zoom-in",
+              "zoom-out",
+              W,
+              $,
+            ],
+          },
+        ],
+        "field-sizing": [{ "field-sizing": ["fixed", "content"] }],
+        "pointer-events": [{ "pointer-events": ["auto", "none"] }],
+        resize: [{ resize: ["none", "", "y", "x"] }],
+        "scroll-behavior": [{ scroll: ["auto", "smooth"] }],
+        "scrollbar-thumb-color": [{ "scrollbar-thumb": R() }],
+        "scrollbar-track-color": [{ "scrollbar-track": R() }],
+        "scrollbar-gutter": [
+          { "scrollbar-gutter": ["auto", "stable", "both"] },
+        ],
+        "scrollbar-w": [{ scrollbar: ["auto", "thin", "none"] }],
+        "scroll-m": [{ "scroll-m": I() }],
+        "scroll-mx": [{ "scroll-mx": I() }],
+        "scroll-my": [{ "scroll-my": I() }],
+        "scroll-ms": [{ "scroll-ms": I() }],
+        "scroll-me": [{ "scroll-me": I() }],
+        "scroll-mbs": [{ "scroll-mbs": I() }],
+        "scroll-mbe": [{ "scroll-mbe": I() }],
+        "scroll-mt": [{ "scroll-mt": I() }],
+        "scroll-mr": [{ "scroll-mr": I() }],
+        "scroll-mb": [{ "scroll-mb": I() }],
+        "scroll-ml": [{ "scroll-ml": I() }],
+        "scroll-p": [{ "scroll-p": I() }],
+        "scroll-px": [{ "scroll-px": I() }],
+        "scroll-py": [{ "scroll-py": I() }],
+        "scroll-ps": [{ "scroll-ps": I() }],
+        "scroll-pe": [{ "scroll-pe": I() }],
+        "scroll-pbs": [{ "scroll-pbs": I() }],
+        "scroll-pbe": [{ "scroll-pbe": I() }],
+        "scroll-pt": [{ "scroll-pt": I() }],
+        "scroll-pr": [{ "scroll-pr": I() }],
+        "scroll-pb": [{ "scroll-pb": I() }],
+        "scroll-pl": [{ "scroll-pl": I() }],
+        "snap-align": [{ snap: ["start", "end", "center", "align-none"] }],
+        "snap-stop": [{ snap: ["normal", "always"] }],
+        "snap-type": [{ snap: ["none", "x", "y", "both"] }],
+        "snap-strictness": [{ snap: ["mandatory", "proximity"] }],
+        touch: [{ touch: ["auto", "none", "manipulation"] }],
+        "touch-x": [{ "touch-pan": ["x", "left", "right"] }],
+        "touch-y": [{ "touch-pan": ["y", "up", "down"] }],
+        "touch-pz": ["touch-pinch-zoom"],
+        select: [{ select: ["none", "text", "all", "auto"] }],
+        "will-change": [
+          { "will-change": ["auto", "scroll", "contents", "transform", W, $] },
+        ],
+        fill: [{ fill: ["none", ...R()] }],
+        "stroke-w": [{ stroke: [oe, er, cn, Ys] }],
+        stroke: [{ stroke: ["none", ...R()] }],
+        "forced-color-adjust": [{ "forced-color-adjust": ["auto", "none"] }],
+      },
+      conflictingClassGroups: {
+        "container-named": ["container-type"],
+        overflow: ["overflow-x", "overflow-y"],
+        overscroll: ["overscroll-x", "overscroll-y"],
+        inset: [
+          "inset-x",
+          "inset-y",
+          "inset-bs",
+          "inset-be",
+          "start",
+          "end",
+          "top",
+          "right",
+          "bottom",
+          "left",
+        ],
+        "inset-x": ["right", "left"],
+        "inset-y": ["top", "bottom"],
+        flex: ["basis", "grow", "shrink"],
+        gap: ["gap-x", "gap-y"],
+        p: ["px", "py", "ps", "pe", "pbs", "pbe", "pt", "pr", "pb", "pl"],
+        px: ["pr", "pl"],
+        py: ["pt", "pb"],
+        m: ["mx", "my", "ms", "me", "mbs", "mbe", "mt", "mr", "mb", "ml"],
+        mx: ["mr", "ml"],
+        my: ["mt", "mb"],
+        size: ["w", "h"],
+        "font-size": ["leading"],
+        "fvn-normal": [
+          "fvn-ordinal",
+          "fvn-slashed-zero",
+          "fvn-figure",
+          "fvn-spacing",
+          "fvn-fraction",
+        ],
+        "fvn-ordinal": ["fvn-normal"],
+        "fvn-slashed-zero": ["fvn-normal"],
+        "fvn-figure": ["fvn-normal"],
+        "fvn-spacing": ["fvn-normal"],
+        "fvn-fraction": ["fvn-normal"],
+        "line-clamp": ["display", "overflow"],
+        rounded: [
+          "rounded-s",
+          "rounded-e",
+          "rounded-t",
+          "rounded-r",
+          "rounded-b",
+          "rounded-l",
+          "rounded-ss",
+          "rounded-se",
+          "rounded-ee",
+          "rounded-es",
+          "rounded-tl",
+          "rounded-tr",
+          "rounded-br",
+          "rounded-bl",
+        ],
+        "rounded-s": ["rounded-ss", "rounded-es"],
+        "rounded-e": ["rounded-se", "rounded-ee"],
+        "rounded-t": ["rounded-tl", "rounded-tr"],
+        "rounded-r": ["rounded-tr", "rounded-br"],
+        "rounded-b": ["rounded-br", "rounded-bl"],
+        "rounded-l": ["rounded-tl", "rounded-bl"],
+        "border-spacing": ["border-spacing-x", "border-spacing-y"],
+        "border-w": [
+          "border-w-x",
+          "border-w-y",
+          "border-w-s",
+          "border-w-e",
+          "border-w-bs",
+          "border-w-be",
+          "border-w-t",
+          "border-w-r",
+          "border-w-b",
+          "border-w-l",
+        ],
+        "border-w-x": ["border-w-r", "border-w-l"],
+        "border-w-y": ["border-w-t", "border-w-b"],
+        "border-color": [
+          "border-color-x",
+          "border-color-y",
+          "border-color-s",
+          "border-color-e",
+          "border-color-bs",
+          "border-color-be",
+          "border-color-t",
+          "border-color-r",
+          "border-color-b",
+          "border-color-l",
+        ],
+        "border-color-x": ["border-color-r", "border-color-l"],
+        "border-color-y": ["border-color-t", "border-color-b"],
+        translate: ["translate-x", "translate-y", "translate-none"],
+        "translate-none": [
+          "translate",
+          "translate-x",
+          "translate-y",
+          "translate-z",
+        ],
+        "scroll-m": [
+          "scroll-mx",
+          "scroll-my",
+          "scroll-ms",
+          "scroll-me",
+          "scroll-mbs",
+          "scroll-mbe",
+          "scroll-mt",
+          "scroll-mr",
+          "scroll-mb",
+          "scroll-ml",
+        ],
+        "scroll-mx": ["scroll-mr", "scroll-ml"],
+        "scroll-my": ["scroll-mt", "scroll-mb"],
+        "scroll-p": [
+          "scroll-px",
+          "scroll-py",
+          "scroll-ps",
+          "scroll-pe",
+          "scroll-pbs",
+          "scroll-pbe",
+          "scroll-pt",
+          "scroll-pr",
+          "scroll-pb",
+          "scroll-pl",
+        ],
+        "scroll-px": ["scroll-pr", "scroll-pl"],
+        "scroll-py": ["scroll-pt", "scroll-pb"],
+        touch: ["touch-x", "touch-y", "touch-pz"],
+        "touch-x": ["touch"],
+        "touch-y": ["touch"],
+        "touch-pz": ["touch"],
+      },
+      conflictingClassGroupModifiers: { "font-size": ["leading"] },
+      postfixLookupClassGroups: ["container-type"],
+      orderSensitiveModifiers: [
+        "*",
+        "**",
+        "after",
+        "backdrop",
+        "before",
+        "details-content",
+        "file",
+        "first-letter",
+        "first-line",
+        "marker",
+        "placeholder",
+        "selection",
+      ],
+    };
+  },
+  Gm = Cm(Hm);
+function De(...e) {
+  return Gm(Rl(e));
+}
+function Zm(e) {
+  return e
+    ? e.startsWith("http://") || e.startsWith("https://")
+      ? e
+      : encodeURI(e).replace(/\+/g, "%2B")
+    : "";
+}
+function Jm({
+  id: e,
+  title: t,
+  category: n,
+  description: r,
+  image: o,
+  icon: i = Qd,
+  onBookDemo: s,
+}) {
+  const a = Ud(),
+    c = (f) => {
+      (f.stopPropagation(), a(`/programs/${e}`));
+    },
+    u = (f) => {
+      (f.stopPropagation(), s ? s(n) : a(`/programs/${e}`));
+    };
+  return l.jsxs(Q.div, {
+    onClick: () => a(`/programs/${e}`),
+    whileHover: { y: -4 },
+    transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+    className:
+      "group bg-db-surface rounded-2xl border border-black/[0.05] shadow-[0_8px_32px_-16px_rgba(0,0,0,0.18)] transition-all duration-400 overflow-hidden cursor-pointer flex flex-col h-full",
+    children: [
+      l.jsxs("div", {
+        className: "relative h-44 overflow-hidden shrink-0",
+        children: [
+          l.jsx("img", {
+            src: Zm(o),
+            alt: t,
+            className:
+              "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out",
+          }),
+          l.jsx("div", {
+            className:
+              "absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+          }),
+          l.jsx("div", {
+            className: "absolute top-3 left-3",
+            children: l.jsx("span", {
+              className:
+                "text-[10px] font-bold tracking-[0.12em] uppercase text-db-accent bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-sm shadow-sm",
+              children: n,
+            }),
+          }),
+          l.jsx("div", {
+            className: "absolute top-3 right-3",
+            children: l.jsx(Q.div, {
+              className:
+                "bg-white/80 backdrop-blur-sm p-2 rounded-lg border border-black/[0.05] shadow-sm",
+              whileHover: { rotate: 12, scale: 1.1 },
+              children: l.jsx(i, { className: "w-3.5 h-3.5 text-db-accent" }),
+            }),
+          }),
+        ],
+      }),
+      l.jsxs("div", {
+        className: "p-4 flex flex-col flex-grow",
+        children: [
+          l.jsx("h3", {
+            className:
+              "text-[15px] font-bold text-db-text mb-2 leading-tight line-clamp-2 min-h-[2.5rem] group-hover:text-db-accent transition-colors duration-300",
+            children: t,
+          }),
+          l.jsx("p", {
+            className:
+              "text-db-muted text-[13px] leading-relaxed mb-6 line-clamp-2 min-h-[2.25rem] flex-grow",
+            children: r,
+          }),
+          l.jsx("div", { className: "h-px bg-black/[0.05] mb-3" }),
+          l.jsxs("div", {
+            className: "flex gap-2.5",
+            children: [
+              l.jsx("button", {
+                onClick: c,
+                className:
+                  "flex-1 flex items-center justify-center gap-1 PX-2.5 py-1.5 rounded-lg text-[9.5px] font-bold tracking-[0.08em] uppercase border border-black/[0.08] text-db-muted hover:text-db-text hover:border-black/[0.15] hover:bg-black/[0.02] transition-all duration-300",
+                children: "View Program",
+              }),
+              l.jsx("button", {
+                onClick: u,
+                className:
+                  "flex-1 flex items-center justify-center px-2.5 py-1.5 rounded-lg text-[9.5px] font-bold tracking-[0.08em] uppercase bg-[#0F0F0F] text-white hover:bg-[#2A2A2A] transition-all duration-300 shadow-sm active:scale-[0.98]",
+                children: "Book Free Demo",
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
+const $i = [
+    "Job Ready Programs",
+    "Cloud & DevOps",
+    "AI & Data Science",
+    "Cyber Security",
+    "Networking & Infrastructure",
+    "IT Infrastructure & Support",
+    "Software Development",
+    "CRM & Enterprise Platforms",
+    "Project Management",
+    "Software Testing",
+    "ServiceNow",
+  ],
+  Km = [
+    {
+      id: "ai-engineer",
+      title: "AI Engineer Program",
+      category: "AI & Data Science",
+      description:
+        "This program focuses on building strong AI fundamentals with practical implementation. You'll learn how AI models work, how to build intelligent systems, and how real-world AI applications are deployed.",
+      icon: ni,
+      image: "/images/AI & Data Science/AI Engineer Program.webp",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/AI Engineer Program_20260608_182038_0000.pdf",
+      learningTools: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "TensorFlow",
+        "OpenCV",
+        "NLP Basics",
+        "Jupyter Notebook",
+        "APIs",
+        "Git",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "AI Chatbot Development",
+          description:
+            "Build intelligent conversational chatbots using NLP techniques.",
+          icon: ti,
+        },
+        {
+          title: "Image Classification Model",
+          description:
+            "Train models to identify objects and patterns in images.",
+          icon: Xd,
+        },
+        {
+          title: "Recommendation System",
+          description: "Create systems like Netflix/Spotify recommendations.",
+          icon: lt,
+        },
+        {
+          title: "AI Automation Workflow",
+          description: "Automate tasks using AI-powered decision systems.",
+          icon: Te,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: AI Fundamentals",
+          items: [
+            "Introduction to AI & Machine Learning",
+            "Types of AI (Narrow, General)",
+            "AI Use Cases in Industry",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Python for AI",
+          items: [
+            "Python Basics",
+            "Data Structures & Libraries",
+            "NumPy & Pandas",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Machine Learning",
+          items: [
+            "Supervised vs Unsupervised Learning",
+            "Regression & Classification",
+            "Model Evaluation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Deep Learning Basics",
+          items: [
+            "Neural Networks",
+            "TensorFlow Introduction",
+            "Model Training",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Computer Vision",
+          items: [
+            "Image Processing",
+            "Object Detection Basics",
+            "OpenCV Implementation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Natural Language Processing",
+          items: ["Text Processing", "Sentiment Analysis", "Chatbot Logic"],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Model Deployment",
+          items: ["API Integration", "Model Hosting", "Real-World AI Systems"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Use Cases",
+          items: [
+            "AI Chatbot",
+            "Recommendation System",
+            "AI-Based Automation Project",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "ai-data-science-analytics",
+      title: "Data Science & Analytics Program",
+      category: "AI & Data Science",
+      description:
+        "This program focuses on building strong data fundamentals with practical exposure. You'll learn how to analyze data, create insights, and work with real-world datasets used in industry.",
+      icon: lt,
+      image: "/images/AI & Data Science/Data Science & Analytics Program.webp",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/Data Science & Analytics Program_20260608_182020_0000.pdf",
+      learningTools: [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "SQL",
+        "Excel",
+        "Power BI / Tableau",
+        "Jupyter Notebook",
+        "Scikit-learn (Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Data Cleaning & Preprocessing",
+          description:
+            "Work with raw datasets and prepare them for analysis using industry techniques.",
+          icon: Ro,
+        },
+        {
+          title: "Exploratory Data Analysis (EDA)",
+          description:
+            "Analyze datasets to find patterns, trends, and insights using visualization tools.",
+          icon: Wr,
+        },
+        {
+          title: "Dashboard Creation (Power BI/Tableau)",
+          description:
+            "Build interactive dashboards to present business insights effectively.",
+          icon: fn,
+        },
+        {
+          title: "Predictive Analysis (Basic ML)",
+          description:
+            "Create basic machine learning models for forecasting and predictions.",
+          icon: zs,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Data Science Fundamentals",
+          items: [
+            "Introduction to Data Science",
+            "Data Types & Lifecycle",
+            "Business Understanding of Data",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Python for Data Analysis",
+          items: [
+            "Python Basics for Data Science",
+            "Working with Pandas & NumPy",
+            "Data Manipulation Techniques",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Data Visualization",
+          items: [
+            "Matplotlib & Seaborn",
+            "Creating Graphs & Charts",
+            "Storytelling with Data",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Data Analysis & SQL",
+          items: [
+            "SQL Basics (Queries, Joins, Aggregations)",
+            "Working with Databases",
+            "Real-World Data Queries",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Advanced Analytics",
+          items: [
+            "Exploratory Data Analysis (EDA)",
+            "Feature Engineering Basics",
+            "Data Cleaning Techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Machine Learning Basics",
+          items: [
+            "Supervised vs Unsupervised Learning",
+            "Regression & Classification Models",
+            "Model Evaluation Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Dashboarding & Reporting",
+          items: [
+            "Power BI / Tableau Basics",
+            "Building Interactive Dashboards",
+            "Business Reporting Techniques",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End Data Analysis Project",
+            "Business Insights Dashboard",
+            "Real-World Dataset Analysis",
+            "Case Study-Based Learning",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "ai-python-ds",
+      title: "Python for Data Science Program",
+      category: "AI & Data Science",
+      description:
+        "This program focuses on building strong Python foundations specifically for data science. You'll learn how to write efficient code, handle data, and perform analysis using Python tools used in real-world environments.",
+      icon: Qe,
+      image: "/images/AI & Data Science/Python for Data Science Program.webp",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/Python for Data Science Program_20260608_182056_0000.pdf",
+      learningTools: [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Jupyter Notebook",
+        "VS Code",
+        "CSV/JSON Handling",
+        "APIs (Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Data Analysis with Python",
+          description: "Work on real datasets using Pandas and NumPy.",
+          icon: Ro,
+        },
+        {
+          title: "Data Visualization Projects",
+          description:
+            "Create meaningful visual insights using Matplotlib and Seaborn.",
+          icon: fn,
+        },
+        {
+          title: "Automation Scripts",
+          description:
+            "Build scripts for data processing and repetitive tasks.",
+          icon: Te,
+        },
+        {
+          title: "Mini Data Science Projects",
+          description:
+            "Apply Python in real-world use cases like sales analysis and trend prediction.",
+          icon: pn,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Python Fundamentals",
+          items: [
+            "Introduction to Python",
+            "Variables, Data Types & Operators",
+            "Control Statements (Loops, Conditions)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Data Structures in Python",
+          items: [
+            "Lists, Tuples, Sets, Dictionaries",
+            "Functions & Modules",
+            "File Handling",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Python for Data Handling",
+          items: [
+            "Working with CSV & JSON",
+            "Introduction to Pandas",
+            "Data Cleaning Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Numerical Computing",
+          items: [
+            "NumPy Arrays",
+            "Mathematical Operations",
+            "Data Transformation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Data Visualization",
+          items: [
+            "Matplotlib Basics",
+            "Seaborn Advanced Visuals",
+            "Charts & Graphs Creation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Working with Real Data",
+          items: [
+            "Data Analysis Workflow",
+            "Exploratory Data Analysis (EDA)",
+            "Handling Missing Data",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Automation & APIs",
+          items: [
+            "Writing Automation Scripts",
+            "Working with APIs (Basics)",
+            "Real-World Use Cases",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End Data Analysis Project",
+            "Automation Project",
+            "Visualization Dashboard",
+            "Real Dataset Problem Solving",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "ai-governance",
+      title: "AI Governance Program",
+      category: "AI & Data Science",
+      description:
+        "This program focuses on building strong foundations in AI governance, risk, and compliance. You'll learn how AI systems are managed, how to identify risks, and how real-world organizations ensure ethical and secure AI usage.",
+      icon: En,
+      image: "/images/AI & Data Science/AI Governance Program.webp",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/AI Governance Program_20260608_182117_0000.pdf",
+      learningTools: [
+        "NIST AI RMF",
+        "ISO/IEC 42001",
+        "GDPR Basics",
+        "Model Cards",
+        "Risk Assessment Templates",
+        "AI Audit Frameworks",
+        "Fairness & Bias Tools",
+        "Data Governance Tools",
+        "Python (Basics for AI Analysis)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "AI Risk Assessment & Documentation",
+          description:
+            "Identify, analyze, and document risks in AI systems using structured frameworks.",
+          icon: tt,
+        },
+        {
+          title: "Bias & Fairness Evaluation",
+          description:
+            "Assess AI models for bias, fairness, and ethical concerns using real datasets.",
+          icon: Wr,
+        },
+        {
+          title: "AI Policy & Compliance Framework Setup",
+          description:
+            "Design governance policies aligned with industry standards like GDPR, ISO, and NIST.",
+          icon: zi,
+        },
+        {
+          title: "AI Incident Response Simulation",
+          description:
+            "Handle real-world scenarios involving AI failures, misuse, or ethical violations.",
+          icon: vt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: AI Fundamentals & Governance Basics",
+          items: [
+            "Introduction to AI & Machine Learning",
+            "What is AI Governance",
+            "Importance of Ethical AI",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: AI Risk & Compliance",
+          items: [
+            "Types of AI Risks (Bias, Privacy, Security)",
+            "Introduction to AI Regulations (GDPR, EU AI Act Basics)",
+            "Risk Assessment Methodologies",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Governance Frameworks",
+          items: [
+            "NIST AI Risk Management Framework",
+            "ISO/IEC 42001 Overview",
+            "Policy Design & Implementation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Data Governance & Privacy",
+          items: [
+            "Data Lifecycle Management",
+            "Data Privacy & Protection Concepts",
+            "Data Quality & Integrity",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Bias, Fairness & Explainability",
+          items: [
+            "Understanding Bias in AI",
+            "Fairness Metrics & Techniques",
+            "Explainable AI (XAI) Concepts",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Monitoring & Auditing AI Systems",
+          items: [
+            "AI Model Monitoring",
+            "Audit Processes & Documentation",
+            "Incident Handling in AI Systems",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Tools & Practical Implementation",
+          items: [
+            "Using AI Governance Tools",
+            "Risk Assessment Templates & Reporting",
+            "Basic Python for AI Analysis",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "AI Risk Assessment Report Creation",
+            "Bias Detection in ML Models",
+            "AI Governance Framework Implementation",
+            "Real-World AI Incident Simulation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "ai-data-engineering",
+      title: "Data Engineering Program",
+      category: "AI & Data Science",
+      description:
+        "This program covers the end-to-end design, construction, and management of scalable data pipelines and data warehouses using modern big data technologies.",
+      icon: lt,
+      image: "/images/Network Engineer Program/Data Engineering Program.png",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/Data Science & Analytics Program_20260608_182020_0000.pdf",
+      learningTools: [
+        "Python",
+        "SQL",
+        "Apache Spark (PySpark)",
+        "Apache Airflow",
+        "Snowflake / BigQuery",
+        "Kafka",
+        "Docker",
+        "dbt",
+        "AWS S3 / Redshift",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Real-Time Streaming Data Pipeline",
+          description:
+            "Ingest and process real-time streaming data using Kafka and PySpark.",
+          icon: Te,
+        },
+        {
+          title: "Cloud Data Warehouse Modeling",
+          description:
+            "Design star and snowflake schemas in Snowflake / BigQuery.",
+          icon: lt,
+        },
+        {
+          title: "Automated DAG Orchestration with Airflow",
+          description:
+            "Build schedule-triggered ETL/ELT data pipelines with error alerts.",
+          icon: zs,
+        },
+        {
+          title: "Data Transformation with dbt & SQL",
+          description:
+            "Transform raw cloud data into analytics-ready models with automated testing.",
+          icon: Ro,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Data Engineering Fundamentals",
+          items: [
+            "Data Architecture & Lifecycle",
+            "ETL vs ELT Concepts",
+            "Relational vs NoSQL Warehouses",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Advanced SQL & Data Modeling",
+          items: [
+            "Complex Joins & Window Functions",
+            "Star & Snowflake Schema Design",
+            "Query Optimization",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Big Data Processing with Spark",
+          items: [
+            "Spark Architecture & DataFrames",
+            "PySpark Transformations",
+            "Handling Large-Scale Datasets",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Pipeline Orchestration with Airflow",
+          items: [
+            "Airflow DAG Creation",
+            "Task Dependencies & Operators",
+            "Monitoring & Scheduling",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Real-Time Streaming with Kafka",
+          items: [
+            "Producers & Consumers",
+            "Kafka Topics & Partitions",
+            "Stream Processing Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Cloud Data Warehousing",
+          items: [
+            "Snowflake / BigQuery Architecture",
+            "Staging & Ingestion",
+            "Cost Optimization",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Modern Data Stack (dbt)",
+          items: [
+            "dbt Models & Testing",
+            "Documentation Generation",
+            "Version Control for Transformations",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Capstone Pipeline",
+          items: [
+            "End-to-End Streaming & Batch Pipeline",
+            "Cloud Warehouse Integration",
+            "Production Deployment",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "ai-powerbi-visualization",
+      title: "Power BI & Data Visualization Program",
+      category: "AI & Data Science",
+      description:
+        "Master business intelligence, interactive dashboard creation, DAX calculations, and data storytelling using Microsoft Power BI and advanced visualization frameworks.",
+      icon: fn,
+      image:
+        "/images/Network Engineer Program/Power BI & Data Visualization Program.png",
+      syllabusUrl:
+        "/pdfs/AI & Data Science/Data Science & Analytics Program_20260608_182020_0000.pdf",
+      learningTools: [
+        "Power BI Desktop",
+        "Power BI Service",
+        "DAX",
+        "Power Query (M)",
+        "SQL",
+        "Excel",
+        "Data Modeling",
+        "Row-Level Security (RLS)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Executive Financial & Sales Dashboard",
+          description:
+            "Build interactive dashboards tracking KPIs, revenues, and regional performance.",
+          icon: fn,
+        },
+        {
+          title: "Advanced Data Modeling & DAX Suite",
+          description:
+            "Create complex measures, time intelligence, and custom column logic.",
+          icon: pn,
+        },
+        {
+          title: "Customer Churn & Retention Analytics",
+          description:
+            "Visualize customer behavior trends and predict churn risks.",
+          icon: Wr,
+        },
+        {
+          title: "Automated Refresh & Row-Level Security",
+          description:
+            "Publish workspace reports with role-based access control and scheduled refreshes.",
+          icon: tt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Business Intelligence Foundations",
+          items: [
+            "Introduction to BI & Analytics",
+            "Power BI Ecosystem Overview",
+            "Connecting to Data Sources",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Data Cleaning in Power Query",
+          items: [
+            "M Language Basics",
+            "Pivoting & Unpivoting Data",
+            "Custom Columns & Transformations",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Data Modeling & Relationships",
+          items: [
+            "Star Schema Setup",
+            "Managing Cardinailty (1:N, N:M)",
+            "Active vs Inactive Relationships",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: DAX Fundamentals",
+          items: [
+            "Calculated Columns vs Measures",
+            "SUM, AVERAGE, COUNT Functions",
+            "CALCULATE & Filter Context",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Advanced DAX & Time Intelligence",
+          items: [
+            "YTD, QTD, MTD Calculations",
+            "SAMEPERIODLASTYEAR & Moving Averages",
+            "Variables & Performance Tuning",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Report Design & UX Best Practices",
+          items: [
+            "Visual Selection & Hierarchy",
+            "Bookmarks, Tooltips & Drillthrough",
+            "Custom Themes & Branding",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Power BI Service & Administration",
+          items: [
+            "Publishing & Workspace Management",
+            "Scheduled Data Refreshes",
+            "Row-Level Security (RLS) Setup",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Enterprise Dashboard Capstone",
+          items: [
+            "End-to-End Enterprise BI Dashboard",
+            "Executive Storytelling Presentation",
+            "Live Service Deployment",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  qm = [
+    {
+      id: "cloud-aws-engineer",
+      title: "AWS Cloud Engineer Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program focuses on building strong cloud fundamentals with practical exposure. You'll learn how AWS services work, how to deploy applications, and how real-world cloud environments are structured.",
+      icon: On,
+      image: "/images/Cloud & DevOps/AWS Cloud Engineer Program.webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/AWS Cloud Engineer Program _20260608_181737_0000.pdf",
+      learningTools: [
+        "AWS EC2",
+        "S3",
+        "IAM",
+        "VPC",
+        "RDS",
+        "Lambda",
+        "CloudWatch",
+        "CloudFront",
+        "Route 53",
+        "Auto Scaling",
+        "Elastic Load Balancer",
+        "AWS CLI",
+        "Terraform (Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "EC2 (Cloud Server Deployment)",
+          description:
+            "Launch and manage scalable virtual servers with proper security and configurations.",
+          icon: Ue,
+        },
+        {
+          title: "S3 (Storage & Static Hosting)",
+          description:
+            "Host websites and manage cloud storage with secure access and lifecycle policies.",
+          icon: lt,
+        },
+        {
+          title: "VPC (Network Architecture Setup)",
+          description:
+            "Design secure cloud networks with subnets, routing tables, NAT gateways, and security groups.",
+          icon: or,
+        },
+        {
+          title: "IAM (Identity & Access Management)",
+          description:
+            "Create roles, policies, and secure access control for cloud resources.",
+          icon: tt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cloud Computing Fundamentals",
+          items: [
+            "Introduction to Cloud & AWS",
+            "Types of Cloud (Public, Private, Hybrid)",
+            "AWS Global Infrastructure",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: AWS Core Services",
+          items: [
+            "EC2 (Virtual Machines)",
+            "S3 (Storage Services)",
+            "IAM (Users, Roles, Policies)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Networking in AWS",
+          items: [
+            "VPC & Subnets",
+            "Internet Gateway & NAT Gateway",
+            "Security Groups & NACLs",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Storage & Databases",
+          items: [
+            "S3 Advanced Features",
+            "EBS (Elastic Block Storage)",
+            "RDS (Managed Databases)",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Monitoring & Security",
+          items: [
+            "CloudWatch Monitoring & Alerts",
+            "CloudTrail Logging",
+            "AWS Shared Responsibility Model",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Deployment & Automation",
+          items: [
+            "Auto Scaling",
+            "Elastic Load Balancer",
+            "Infrastructure as Code (Terraform Basics)",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Serverless & Advanced Services",
+          items: ["AWS Lambda", "API Gateway", "CloudFront (CDN)"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Deploy Scalable Web Application",
+            "Secure VPC Architecture Setup",
+            "CI/CD Pipeline Basics",
+            "Real-Time Cloud Deployment Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-azure-engineer",
+      title: "Azure Cloud Engineer Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program focuses on building strong cloud fundamentals with practical exposure. You'll learn how Microsoft Azure services work, how to deploy applications, and how real-world cloud environments are structured.",
+      icon: Ue,
+      image: "/images/Cloud & DevOps/Azure Cloud Engineer Program.webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/Azure Cloud Engineer Program_20260608_181756_0000.pdf",
+      learningTools: [
+        "Azure Virtual Machines",
+        "Blob Storage",
+        "Azure AD",
+        "Virtual Network",
+        "Azure SQL Database",
+        "Azure Functions",
+        "Azure Monitor",
+        "Azure CDN",
+        "Azure DNS",
+        "Scale Sets",
+        "Load Balancer",
+        "Azure CLI",
+        "ARM Templates (Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Virtual Machines (Cloud Server Deployment)",
+          description:
+            "Launch and manage scalable Azure VMs with proper security and configurations.",
+          icon: Ue,
+        },
+        {
+          title: "Blob Storage (Storage & Static Hosting)",
+          description:
+            "Host websites and manage cloud storage with secure access and lifecycle management.",
+          icon: lt,
+        },
+        {
+          title: "Virtual Network (Network Architecture Setup)",
+          description:
+            "Design secure cloud networks with subnets, routing, NSGs, and gateways.",
+          icon: or,
+        },
+        {
+          title: "Azure Active Directory (Identity & Access Management)",
+          description:
+            "Manage users, roles, and secure access to resources using Azure AD.",
+          icon: tt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cloud Computing Fundamentals",
+          items: [
+            "Introduction to Cloud & Azure",
+            "Types of Cloud (Public, Private, Hybrid)",
+            "Azure Global Infrastructure",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Azure Core Services",
+          items: [
+            "Virtual Machines (Compute)",
+            "Blob Storage (Storage Services)",
+            "Azure Active Directory (Users, Roles, Access Control)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Networking in Azure",
+          items: [
+            "Virtual Network & Subnets",
+            "Internet Connectivity & Gateways",
+            "Network Security Groups (NSGs) & Firewall",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Storage & Databases",
+          items: [
+            "Blob Storage Advanced Features",
+            "Managed Disks",
+            "Azure SQL Database",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Monitoring & Security",
+          items: [
+            "Azure Monitor & Alerts",
+            "Azure Activity Logs",
+            "Azure Security Best Practices",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Deployment & Automation",
+          items: [
+            "Virtual Machine Scale Sets",
+            "Azure Load Balancer",
+            "Infrastructure as Code (ARM Templates Basics)",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Serverless & Advanced Services",
+          items: ["Azure Functions", "API Management", "Azure CDN"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Deploy Scalable Web Application on Azure",
+            "Secure Virtual Network Architecture",
+            "CI/CD Pipeline Basics with Azure DevOps",
+            "Real-Time Cloud Deployment Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-solutions-architect",
+      title: "Cloud Solutions Architect Program (AWS + Azure)",
+      category: "Cloud & DevOps",
+      description:
+        "This program is designed to build strong multi-cloud expertise with both AWS and Azure. You'll learn how to design scalable architectures, deploy enterprise-grade applications, and manage real-world cloud environments across platforms.",
+      icon: On,
+      image:
+        "/images/Cloud & DevOps/Cloud Solutions Architect Program (AWS Azure).webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/Cloud Solutions Architect Program (AWS   Azure)_20260608_180049_0000.pdf",
+      learningTools: [
+        "AWS EC2",
+        "S3",
+        "IAM",
+        "VPC",
+        "RDS",
+        "Lambda",
+        "CloudWatch",
+        "CloudFront",
+        "Route 53",
+        "Azure Virtual Machines",
+        "Blob Storage",
+        "Azure AD",
+        "Virtual Network",
+        "Azure SQL",
+        "Azure Functions",
+        "Monitor",
+        "Load Balancer",
+        "Application Gateway",
+        "Terraform (Basics)",
+        "AWS CLI",
+        "Azure CLI",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Multi-Tier Application Deployment (AWS + Azure)",
+          description:
+            "Design and deploy scalable applications across both cloud platforms with load balancing and fault tolerance.",
+          icon: mn,
+        },
+        {
+          title: "Hybrid Cloud Architecture Setup",
+          description:
+            "Connect on-premise infrastructure with AWS and Azure using secure networking solutions.",
+          icon: or,
+        },
+        {
+          title: "Cloud Migration Project",
+          description:
+            "Migrate a traditional application to cloud with minimal downtime and optimized cost.",
+          icon: Te,
+        },
+        {
+          title: "High Availability Architecture Design",
+          description:
+            "Implement failover strategies and disaster recovery solutions across regions.",
+          icon: vt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cloud & Architecture Fundamentals",
+          items: [
+            "Introduction to Cloud Computing",
+            "AWS vs Azure Overview",
+            "Cloud Service Models (IaaS, PaaS, SaaS)",
+            "Well-Architected Framework Principles",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: AWS Core Architecture",
+          items: [
+            "EC2 (Compute Services)",
+            "S3 (Storage & Hosting)",
+            "IAM (Identity & Access Management)",
+            "VPC Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Azure Core Architecture",
+          items: [
+            "Azure Virtual Machines",
+            "Azure Blob Storage",
+            "Azure Active Directory (Azure AD)",
+            "Virtual Network (VNet)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Networking & Hybrid Cloud",
+          items: [
+            "VPC & VNet Design",
+            "Subnets, Routing & Gateways",
+            "VPN & Hybrid Connectivity",
+            "Security Groups & NSGs",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Storage & Databases",
+          items: [
+            "AWS RDS & Azure SQL",
+            "EBS & Azure Disk Storage",
+            "S3 Advanced & Azure Blob Features",
+            "Backup & Disaster Recovery",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Monitoring & Security",
+          items: [
+            "CloudWatch & Azure Monitor",
+            "CloudTrail & Azure Activity Logs",
+            "Identity & Access Best Practices",
+            "Shared Responsibility Model",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Deployment & Automation",
+          items: [
+            "Auto Scaling (AWS & Azure)",
+            "Load Balancers & Application Gateways",
+            "Infrastructure as Code (Terraform Basics)",
+            "CI/CD Pipeline Basics",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Architecture Design & Live Projects",
+          items: [
+            "Design Scalable Multi-Cloud Architecture",
+            "Deploy Hybrid Cloud Solutions",
+            "High Availability & Fault Tolerance Setup",
+            "Real-Time Cloud Architect Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-devops-engineer",
+      title: "Cloud DevOps Engineer Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program focuses on building strong DevOps and cloud automation skills with practical exposure. You'll learn how modern deployment pipelines work, how to automate infrastructure, and how real-world DevOps environments are managed.",
+      icon: Yt,
+      image: "/images/Cloud & DevOps/Cloud DevOps Engineer Program.webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/Cloud DevOps Program_20260608_180140_0000.pdf",
+      learningTools: [
+        "Linux",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Terraform",
+        "Ansible (Basics)",
+        "AWS (EC2, S3, IAM, VPC)",
+        "CI/CD Pipelines",
+        "Shell Scripting",
+        "Monitoring Tools (Prometheus, Grafana Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "CI/CD Pipeline Setup",
+          description:
+            "Build automated pipelines using Git, Jenkins, and deployment workflows.",
+          icon: Te,
+        },
+        {
+          title: "Docker Containerization",
+          description:
+            "Containerize applications and manage environments efficiently using Docker.",
+          icon: mn,
+        },
+        {
+          title: "Kubernetes Deployment",
+          description:
+            "Deploy and manage scalable containerized applications using Kubernetes clusters.",
+          icon: Ue,
+        },
+        {
+          title: "Infrastructure Automation",
+          description:
+            "Automate infrastructure provisioning using Terraform and configuration management tools.",
+          icon: Qe,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: DevOps Fundamentals",
+          items: [
+            "Introduction to DevOps & SDLC",
+            "DevOps Lifecycle & Practices",
+            "Linux Basics & Command Line",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Version Control Systems",
+          items: [
+            "Git Fundamentals",
+            "Branching & Merging",
+            "GitHub Workflow & Collaboration",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Continuous Integration",
+          items: [
+            "Introduction to CI/CD",
+            "Jenkins Setup & Configuration",
+            "Build Automation & Pipeline Creation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Containerization",
+          items: [
+            "Docker Fundamentals",
+            "Docker Images & Containers",
+            "Docker Compose",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Orchestration with Kubernetes",
+          items: [
+            "Kubernetes Architecture",
+            "Pods, Deployments, Services",
+            "Scaling & Load Management",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Infrastructure as Code",
+          items: [
+            "Terraform Basics",
+            "Provisioning Infrastructure on Cloud",
+            "State Management & Modules",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Configuration Management",
+          items: [
+            "Ansible Basics",
+            "Playbooks & Automation",
+            "Server Configuration Management",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Monitoring & Deployment",
+          items: [
+            "Prometheus & Grafana Basics",
+            "Application Monitoring & Alerts",
+            "CI/CD Deployment Strategies",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End CI/CD Pipeline Setup",
+            "Dockerized Application Deployment",
+            "Kubernetes Cluster Deployment",
+            "Infrastructure Automation Project",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-docker-k8s",
+      title: "Docker & Kubernetes Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program focuses on building strong containerization and orchestration fundamentals with practical exposure. You'll learn how Docker and Kubernetes work, how to deploy scalable applications, and how modern DevOps environments are structured.",
+      icon: Ue,
+      image: "/images/Cloud & DevOps/Docker & Kubernetes Program.webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/Docker & Kubernetes Program_20260608_180112_0000.pdf",
+      learningTools: [
+        "Docker",
+        "Docker Compose",
+        "Kubernetes",
+        "kubectl",
+        "Helm",
+        "Minikube",
+        "Git",
+        "GitHub",
+        "Jenkins (Basics)",
+        "YAML",
+        "Prometheus (Basics)",
+        "Grafana (Basics)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Docker (Application Containerization)",
+          description:
+            "Build, package, and run applications using Docker containers with optimized images.",
+          icon: mn,
+        },
+        {
+          title: "Docker Compose (Multi-Container Setup)",
+          description:
+            "Manage multi-service applications with proper networking and configurations.",
+          icon: Te,
+        },
+        {
+          title: "Kubernetes (Container Orchestration)",
+          description:
+            "Deploy, scale, and manage containerized applications using Kubernetes clusters.",
+          icon: Ue,
+        },
+        {
+          title: "CI/CD with Containers",
+          description:
+            "Automate build, test, and deployment pipelines using container-based workflows.",
+          icon: vt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Containerization Fundamentals",
+          items: [
+            "Introduction to Containers & Virtualization",
+            "Docker Architecture & Components",
+            "Installing Docker & Basic Commands",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Docker Core Concepts",
+          items: [
+            "Images & Containers",
+            "Dockerfile Creation",
+            "Container Lifecycle Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Docker Advanced Concepts",
+          items: [
+            "Docker Networking",
+            "Volumes & Persistent Storage",
+            "Docker Compose (Multi-Container Apps)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Kubernetes Fundamentals",
+          items: [
+            "Introduction to Kubernetes Architecture",
+            "Setting up Kubernetes Cluster (Minikube)",
+            "Pods, Nodes, and Namespaces",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Kubernetes Core Concepts",
+          items: [
+            "Deployments & ReplicaSets",
+            "Services (ClusterIP, NodePort, LoadBalancer)",
+            "ConfigMaps & Secrets",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Kubernetes Networking & Storage",
+          items: [
+            "Ingress Controllers",
+            "Persistent Volumes & Claims",
+            "Service Discovery",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Monitoring & CI/CD",
+          items: [
+            "Basic CI/CD with Jenkins & Docker",
+            "Monitoring with Prometheus & Grafana",
+            "Logging & Debugging in Kubernetes",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Deploy Scalable Microservices Application",
+            "Kubernetes Cluster Setup & Management",
+            "CI/CD Pipeline with Docker & Kubernetes",
+            "Real-Time Containerized Deployment Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-devops-integrated",
+      title: "DevOps Engineer Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program focuses on building strong DevOps fundamentals with practical exposure. You'll learn how modern development and operations work together, how to automate workflows, and how real-world CI/CD pipelines are structured.",
+      icon: On,
+      image: "/images/Cloud & DevOps/DevOps Engineer Program.webp",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/DevOps Engineer Program _20260608_180019_0000.pdf",
+      learningTools: [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Git",
+        "GitHub",
+        "Terraform",
+        "Ansible",
+        "Linux",
+        "AWS (Basics)",
+        "CI/CD Pipelines",
+        "Prometheus",
+        "Grafana",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "CI/CD Pipeline Setup (Automation)",
+          description:
+            "Build automated pipelines for code integration, testing, and deployment using real DevOps tools.",
+          icon: Te,
+        },
+        {
+          title: "Docker (Containerization)",
+          description:
+            "Create and manage containers to ensure consistent application environments across systems.",
+          icon: mn,
+        },
+        {
+          title: "Kubernetes (Container Orchestration)",
+          description:
+            "Deploy, scale, and manage containerized applications using Kubernetes clusters.",
+          icon: Ue,
+        },
+        {
+          title: "Infrastructure Automation (Terraform)",
+          description:
+            "Provision and manage infrastructure using Infrastructure as Code practices.",
+          icon: Qe,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: DevOps Fundamentals",
+          items: [
+            "Introduction to DevOps & SDLC",
+            "DevOps Lifecycle & Principles",
+            "Version Control Basics (Git & GitHub)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Linux & Scripting",
+          items: [
+            "Linux Fundamentals & Commands",
+            "Shell Scripting Basics",
+            "User Management & Permissions",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Version Control & Collaboration",
+          items: [
+            "Git Workflow (Branching, Merging)",
+            "GitHub Repositories & Collaboration",
+            "Code Management Best Practices",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: CI/CD Pipelines",
+          items: [
+            "Introduction to CI/CD",
+            "Jenkins Setup & Configuration",
+            "Build & Deployment Automation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Containerization",
+          items: [
+            "Docker Fundamentals",
+            "Creating & Managing Containers",
+            "Docker Images & Docker Compose",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Container Orchestration",
+          items: [
+            "Kubernetes Architecture",
+            "Deployments & Services",
+            "Scaling & Managing Applications",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Infrastructure as Code & Configuration",
+          items: [
+            "Terraform Basics",
+            "Provisioning Infrastructure",
+            "Ansible for Configuration Management",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Monitoring & Real Projects",
+          items: [
+            "Prometheus & Grafana Monitoring",
+            "Log Management Basics",
+            "End-to-End CI/CD Pipeline Project",
+            "Real-Time DevOps Deployment Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cloud-devsecops-engineer",
+      title: "DevSecOps Engineer Program",
+      category: "Cloud & DevOps",
+      description:
+        "This program bridges the gap between software development, security, and operations. You'll learn how to integrate automated security controls, vulnerability scanning, and compliance into modern CI/CD pipelines.",
+      icon: Pt,
+      image: "/images/Network Engineer Program/DevSecOps Engineer Program.png",
+      syllabusUrl:
+        "/pdfs/Cloud Devops/Cloud DevOps Program_20260608_180140_0000.pdf",
+      learningTools: [
+        "Git & GitHub Actions",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "SonarQube",
+        "Trivy",
+        "HashiCorp Vault",
+        "OWASP ZAP",
+        "Terraform",
+        "AWS / Azure Security",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Automated DevSecOps Pipeline (SAST & DAST)",
+          description:
+            "Integrate static and dynamic security analysis into GitHub Actions & Jenkins pipelines.",
+          icon: Te,
+        },
+        {
+          title: "Container Security & Image Vulnerability Scanning",
+          description:
+            "Scan Docker images using Trivy and enforce admission controller policies in Kubernetes.",
+          icon: Ue,
+        },
+        {
+          title: "Secrets Management with HashiCorp Vault",
+          description:
+            "Centralize credentials, API keys, and certificates with dynamic secret generation.",
+          icon: tt,
+        },
+        {
+          title: "Infrastructure as Code Security Auditing",
+          description:
+            "Audit Terraform scripts for misconfigurations and security vulnerabilities using Checkov.",
+          icon: Qe,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Introduction to DevSecOps & Security Culture",
+          items: [
+            "Shift-Left Security Concepts",
+            "DevSecOps vs Traditional DevOps",
+            "Security Guiding Principles in CI/CD",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Threat Modeling & Secure Coding",
+          items: [
+            "STRIDE & OWASP Top 10 Overview",
+            "Secure Code Review Techniques",
+            "Integrating Code Scanners in IDEs",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: SAST, DAST & Dependency Scanning",
+          items: [
+            "SonarQube Setup & Rule Configuration",
+            "OWASP ZAP Dynamic Scanning",
+            "Software Bill of Materials (SBOM) & Dependency Check",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Container & Orchestration Security",
+          items: [
+            "Docker Base Image Hardening",
+            "Trivy & Clair Container Scans",
+            "Kubernetes RBAC, Pod Security Standards & OPA Gatekeeper",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Secrets & Identity Management",
+          items: [
+            "HashiCorp Vault Architecture & Deployment",
+            "Dynamic Secret Generation & Injection",
+            "Eliminating Hardcoded Secrets in Git",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Infrastructure as Code (IaC) Security",
+          items: [
+            "Terraform Static Security Analysis (tfsec / Checkov)",
+            "Cloud Security Posture Management (CSPM) Basics",
+            "Automated Compliance Enforcement",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Continuous Monitoring & Incident Response",
+          items: [
+            "Runtime Security with Falco",
+            "Centralized SIEM & Log Auditing",
+            "Automated Remediation Workflows",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real-World Capstone",
+          items: [
+            "End-to-End DevSecOps Pipeline Build",
+            "Zero-Trust Cloud Infrastructure Deployment",
+            "Real-Time Attack Simulation & Remediation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  Ym = [
+    {
+      id: "cyber-soc-analyst",
+      title: "SOC Analyst Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on building strong cybersecurity fundamentals with real-world SOC exposure. You'll learn how security operations work, how to detect and respond to threats, and how real-time monitoring environments are structured.",
+      icon: Jt,
+      image: "/images/Cyber security/SOC Analyst Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/SOC Analyst Program_20260608_175835_0000.pdf",
+      learningTools: [
+        "Splunk",
+        "Wazuh",
+        "ELK Stack",
+        "Wireshark",
+        "Nmap",
+        "Metasploit",
+        "Burp Suite",
+        "VirusTotal",
+        "OSINT Tools",
+        "Linux",
+        "Windows Security",
+        "SIEM Fundamentals",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "SIEM Monitoring & Log Analysis",
+          description:
+            "Monitor and analyze logs to detect suspicious activities using real-time dashboards.",
+          icon: Xn,
+        },
+        {
+          title: "Incident Detection & Response",
+          description:
+            "Identify threats, investigate alerts, and perform incident response procedures.",
+          icon: Pr,
+        },
+        {
+          title: "Phishing Analysis & Email Investigation",
+          description:
+            "Analyze malicious emails and identify phishing attacks.",
+          icon: Jt,
+        },
+        {
+          title: "Threat Hunting & Attack Simulation",
+          description:
+            "Simulate cyber attacks and proactively hunt threats in a controlled environment.",
+          icon: vt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cybersecurity Fundamentals",
+          items: [
+            "Introduction to Cybersecurity",
+            "Understanding Threats, Vulnerabilities & Risks",
+            "Security Basics (CIA Triad)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Networking Fundamentals",
+          items: [
+            "OSI Model & TCP/IP",
+            "Common Network Protocols",
+            "Network Traffic Analysis Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: SOC Fundamentals",
+          items: [
+            "What is SOC & SOC Roles",
+            "Security Monitoring Concepts",
+            "Introduction to SIEM",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Log Analysis & SIEM",
+          items: [
+            "Log Types & Sources",
+            "SIEM Tools (Splunk / Wazuh Basics)",
+            "Alert Investigation & Correlation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Incident Response",
+          items: [
+            "Incident Response Lifecycle",
+            "Detection, Analysis & Containment",
+            "Case Handling & Documentation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Threat Intelligence & Analysis",
+          items: [
+            "Introduction to Threat Intelligence",
+            "Indicators of Compromise (IOCs)",
+            "Using OSINT Tools for Investigation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Security Tools & Hands-on Labs",
+          items: [
+            "Wireshark Packet Analysis",
+            "Nmap Scanning & Enumeration",
+            "Basic Exploitation (Metasploit Intro)",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Real-Time SOC Monitoring Simulation",
+            "Phishing Attack Investigation",
+            "Log Correlation & Threat Detection",
+            "Incident Response Scenario Handling",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-ethical-hacking",
+      title: "Ethical Hacking & Penetration Testing Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on building strong offensive security skills with real-world attack simulations. You'll learn how hackers think, identify vulnerabilities, and secure systems through practical penetration testing techniques.",
+      icon: Ar,
+      image:
+        "/images/Cyber security/Ethical Hacking & Penetration Testing Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/Ethical Hacking & Penetration Testing Program_20260608_175623_0000.pdf",
+      learningTools: [
+        "Kali Linux",
+        "Nmap",
+        "Metasploit",
+        "Burp Suite",
+        "Wireshark",
+        "Nikto",
+        "Hydra",
+        "John the Ripper",
+        "OWASP ZAP",
+        "Netcat",
+        "Aircrack-ng",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Web Application Penetration Testing",
+          description:
+            "Identify vulnerabilities like SQL Injection, XSS, and broken authentication.",
+          icon: ar,
+        },
+        {
+          title: "Network Penetration Testing",
+          description:
+            "Perform scanning, enumeration, and exploitation on real-world network setups.",
+          icon: tt,
+        },
+        {
+          title: "Vulnerability Assessment",
+          description:
+            "Use tools to scan, analyze, and prioritize system vulnerabilities.",
+          icon: Ar,
+        },
+        {
+          title: "Privilege Escalation & Post Exploitation",
+          description:
+            "Gain deeper access and simulate real attacker behavior.",
+          icon: lr,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cybersecurity Fundamentals",
+          items: [
+            "Introduction to Cybersecurity",
+            "Types of Cyber Attacks",
+            "Ethical Hacking Concepts",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Networking & Reconnaissance",
+          items: [
+            "Networking Basics (TCP/IP, DNS, HTTP)",
+            "Footprinting & Information Gathering",
+            "Scanning & Enumeration",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: System Hacking",
+          items: [
+            "Password Cracking Techniques",
+            "Privilege Escalation",
+            "Maintaining Access",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Web Application Security",
+          items: [
+            "OWASP Top 10 Vulnerabilities",
+            "SQL Injection & XSS",
+            "Authentication & Session Attacks",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Wireless & Network Security",
+          items: [
+            "Wi-Fi Hacking Techniques",
+            "Man-in-the-Middle Attacks",
+            "Sniffing & Spoofing",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Tools & Exploitation",
+          items: [
+            "Metasploit Framework",
+            "Burp Suite Hands-on",
+            "Custom Exploit Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Advanced Attacks",
+          items: ["Social Engineering", "DoS/DDoS Concepts", "Malware Basics"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Full Web App Pentest",
+            "Internal Network Assessment",
+            "Real-World Attack Simulation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-cloud-security",
+      title: "Cloud Security Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on securing cloud environments and protecting infrastructure from real-world threats. You'll learn how to identify misconfigurations, implement security controls, and manage cloud risk.",
+      icon: tt,
+      image: "/images/Cyber security/Cloud Security Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/Cloud Security Program_20260608_175653_0000.pdf",
+      learningTools: [
+        "AWS IAM",
+        "AWS Security Hub",
+        "GuardDuty",
+        "CloudTrail",
+        "CloudWatch",
+        "AWS Config",
+        "SIEM Basics",
+        "Azure Security Concepts",
+        "GCP Basics",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Secure AWS Infrastructure",
+          description: "Implement IAM policies, encryption, and monitoring.",
+          icon: On,
+        },
+        {
+          title: "Cloud Misconfiguration Assessment",
+          description: "Identify and fix security gaps in cloud setups.",
+          icon: Pt,
+        },
+        {
+          title: "Incident Detection & Response",
+          description: "Monitor logs and respond to suspicious activities.",
+          icon: Xn,
+        },
+        {
+          title: "Compliance & Risk Assessment",
+          description: "Apply frameworks like ISO, NIST in cloud environments.",
+          icon: En,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cloud Security Fundamentals",
+          items: [
+            "Introduction to Cloud Security",
+            "Shared Responsibility Model",
+            "Cloud Threat Landscape",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Identity & Access Management",
+          items: [
+            "IAM Policies & Roles",
+            "Least Privilege Principle",
+            "Multi-Factor Authentication",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Network Security in Cloud",
+          items: [
+            "Secure VPC Architecture",
+            "Firewalls & Security Groups",
+            "Private vs Public Access",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Monitoring & Logging",
+          items: [
+            "CloudTrail & CloudWatch",
+            "Log Analysis",
+            "Threat Detection Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Data Protection",
+          items: [
+            "Encryption at Rest & Transit",
+            "Key Management (KMS)",
+            "Secure Storage Practices",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Risk & Compliance",
+          items: [
+            "ISO 27001, NIST Basics",
+            "Cloud Compliance Frameworks",
+            "Risk Assessment Techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Incident Response",
+          items: [
+            "Security Incident Lifecycle",
+            "Cloud Breach Scenarios",
+            "Response & Mitigation",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Secure AWS Deployment",
+            "Cloud Security Audit",
+            "Real-Time Threat Simulation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-it-audit-grc",
+      title: "GRC & IT Audit Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on governance, risk management, and compliance with real-world frameworks. You'll learn how organizations manage risk, ensure compliance, and conduct IT audits.",
+      icon: En,
+      image: "/images/Cyber security/GRC & IT Audit Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/GRC & IT Audit Program_20260608_175712_0000.pdf",
+      learningTools: [
+        "ISO 27001",
+        "NIST",
+        "SOC 2",
+        "PCI-DSS",
+        "Risk Registers",
+        "Excel for GRC",
+        "Audit Documentation Tools",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Risk Assessment & Management",
+          description: "Identify and evaluate business and IT risks.",
+          icon: Pr,
+        },
+        {
+          title: "Policy & Compliance Implementation",
+          description: "Create and implement security policies.",
+          icon: Cl,
+        },
+        {
+          title: "Audit Simulation",
+          description: "Perform IT audits and document findings.",
+          icon: Pt,
+        },
+        {
+          title: "Compliance Mapping",
+          description: "Map controls with ISO, NIST, and SOC 2 frameworks.",
+          icon: Jt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: GRC Fundamentals",
+          items: [
+            "Introduction to Governance, Risk & Compliance",
+            "Importance in Organizations",
+            "Regulatory Landscape",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Risk Management",
+          items: [
+            "Risk Identification",
+            "Risk Analysis & Mitigation",
+            "Risk Registers",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Compliance Frameworks",
+          items: ["ISO 27001", "NIST Framework", "SOC 2 Basics"],
+          color: "green",
+        },
+        {
+          title: "Module 4: Policy & Documentation",
+          items: [
+            "Security Policies",
+            "Procedures & Standards",
+            "Documentation Practices",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: IT Audit Fundamentals",
+          items: ["Audit Lifecycle", "Control Testing", "Evidence Collection"],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Third-Party Risk",
+          items: [
+            "Vendor Risk Assessment",
+            "Due Diligence",
+            "Compliance Checks",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Governance Practices",
+          items: [
+            "Corporate Governance",
+            "Internal Controls",
+            "Reporting & Metrics",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Full Risk Assessment Project",
+            "Mock IT Audit",
+            "Compliance Implementation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-comptia-sec",
+      title: "CompTIA Security+ Certification Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on building strong cybersecurity fundamentals with practical exposure. You'll learn how security frameworks work, how to detect threats, and how real-world security operations are handled.",
+      icon: Jt,
+      image:
+        "/images/Cyber security/CompTIA Security Certification Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/CompTIA Security  Certification Program_20260608_175731_0000.pdf",
+      learningTools: [
+        "Wireshark",
+        "Nmap",
+        "Nessus",
+        "Metasploit (Basics)",
+        "Burp Suite (Intro)",
+        "Splunk (Basics)",
+        "Linux",
+        "SIEM Tools",
+        "TCP/IP",
+        "Firewalls",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Network Security Implementation",
+          description:
+            "Configure firewalls, IDS/IPS, and secure network architecture.",
+          icon: tt,
+        },
+        {
+          title: "Threat Detection & Analysis",
+          description: "Identify malware, phishing, and common attack vectors.",
+          icon: Xn,
+        },
+        {
+          title: "Access Control Management",
+          description:
+            "Implement authentication, authorization, and identity controls.",
+          icon: Fs,
+        },
+        {
+          title: "Incident Response Simulation",
+          description:
+            "Handle real-world cyber attack scenarios and response workflows.",
+          icon: Pr,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Security Fundamentals",
+          items: [
+            "Introduction to Cybersecurity",
+            "Threat Types & Attack Vectors",
+            "CIA Triad & Risk Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Network Security",
+          items: [
+            "Secure Network Design",
+            "Firewalls & VPNs",
+            "IDS/IPS Concepts",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Identity & Access Management",
+          items: [
+            "Authentication Methods",
+            "Role-Based Access Control",
+            "Multi-Factor Authentication",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Threats & Vulnerabilities",
+          items: [
+            "Malware Types",
+            "Social Engineering Attacks",
+            "Vulnerability Scanning",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Cryptography & PKI",
+          items: [
+            "Encryption Concepts",
+            "SSL/TLS & Certificates",
+            "Hashing & Digital Signatures",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Security Operations",
+          items: [
+            "Incident Response",
+            "Logging & Monitoring",
+            "Security Policies",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Risk Management & Compliance",
+          items: [
+            "Risk Assessment",
+            "Security Frameworks",
+            "Governance & Compliance",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Network Security Setup",
+            "Threat Detection Lab",
+            "Incident Response Simulation",
+            "Security Hardening Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-comptia-cysa",
+      title: "CompTIA CySA+ (Cybersecurity Analyst) Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on advanced threat detection, analysis, and response with real-world SOC exposure. You'll learn how analysts monitor, investigate, and respond to cyber threats in real environments.",
+      icon: Ar,
+      image:
+        "/images/Cyber security/CompTIA CySA (Cybersecurity Analyst) Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/CompTIA CySA  (Cybersecurity Analyst) Program_20260608_175752_0000.pdf",
+      learningTools: [
+        "Splunk",
+        "ELK Stack",
+        "Wireshark",
+        "Nmap",
+        "Nessus",
+        "Security Onion",
+        "Sysmon",
+        "Linux",
+        "MITRE ATT&CK Framework",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "SIEM Monitoring & Log Analysis",
+          description:
+            "Analyze logs using SIEM tools and detect suspicious activities.",
+          icon: Xn,
+        },
+        {
+          title: "Threat Hunting & Investigation",
+          description: "Identify advanced threats using real-world techniques.",
+          icon: Ar,
+        },
+        {
+          title: "Incident Response Handling",
+          description:
+            "Investigate and respond to cyber incidents step-by-step.",
+          icon: Pr,
+        },
+        {
+          title: "Vulnerability Assessment",
+          description: "Scan and analyze system weaknesses.",
+          icon: Pt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: SOC & Analyst Fundamentals",
+          items: [
+            "Role of SOC Analyst",
+            "Security Monitoring Basics",
+            "Log Analysis Introduction",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Threat Detection & Analysis",
+          items: [
+            "Indicators of Compromise (IoCs)",
+            "Threat Intelligence",
+            "Behavior Analysis",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: SIEM & Log Management",
+          items: ["Splunk / ELK Basics", "Log Correlation", "Alert Handling"],
+          color: "green",
+        },
+        {
+          title: "Module 4: Vulnerability Management",
+          items: [
+            "Vulnerability Scanning",
+            "Risk Prioritization",
+            "Patch Management",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Incident Response",
+          items: ["Incident Lifecycle", "Forensics Basics", "Case Handling"],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Threat Hunting",
+          items: [
+            "Proactive Threat Detection",
+            "MITRE ATT&CK Mapping",
+            "Real-world Attack Simulation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Security Automation",
+          items: ["SOAR Basics", "Automation Playbooks", "Alert Optimization"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "SOC Monitoring Simulation",
+            "Threat Hunting Lab",
+            "Incident Investigation",
+            "Real-time SIEM Alerts Handling",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-app-sec",
+      title: "Application Security Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on securing web applications by identifying and fixing vulnerabilities. You'll learn how attackers exploit apps and how to prevent those attacks in real-world environments.",
+      icon: tt,
+      image: "/images/Cyber security/Application Security Program.webp",
+      syllabusUrl:
+        "/pdfs/Cyber security/Application Security Program_20260608_175812_0000.pdf",
+      learningTools: [
+        "Burp Suite",
+        "OWASP ZAP",
+        "Postman",
+        "Nmap",
+        "SQLmap",
+        "Nikto",
+        "Linux",
+        "Browser DevTools",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Web App Vulnerability Testing",
+          description: "Identify OWASP Top 10 vulnerabilities in real apps.",
+          icon: ar,
+        },
+        {
+          title: "Burp Suite Hands-on Labs",
+          description: "Perform interception and attack simulations.",
+          icon: Qe,
+        },
+        {
+          title: "Secure Coding Practices",
+          description: "Fix vulnerabilities in sample applications.",
+          icon: Te,
+        },
+        {
+          title: "API Security Testing",
+          description:
+            "Test REST APIs for authentication and data exposure issues.",
+          icon: lt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Web Fundamentals",
+          items: [
+            "HTTP/HTTPS Basics",
+            "Client-Server Architecture",
+            "Web Application Flow",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: OWASP Top 10",
+          items: ["SQL Injection", "XSS (Cross-Site Scripting)", "CSRF"],
+          color: "green",
+        },
+        {
+          title: "Module 3: Authentication & Session Security",
+          items: ["Session Management", "Cookies & Tokens", "JWT Security"],
+          color: "green",
+        },
+        {
+          title: "Module 4: Testing Tools & Techniques",
+          items: ["Burp Suite Usage", "Manual Testing", "Automated Scanning"],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: API Security",
+          items: [
+            "REST API Testing",
+            "Authentication Flaws",
+            "Data Exposure Risks",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Secure Coding Basics",
+          items: [
+            "Input Validation",
+            "Error Handling",
+            "Security Best Practices",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Advanced Exploitation",
+          items: [
+            "Business Logic Flaws",
+            "File Upload Attacks",
+            "Privilege Escalation",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Full Web App Pentest",
+            "Bug Hunting Simulation",
+            "API Security Testing",
+            "Vulnerability Reporting",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-network-security",
+      title: "Network Security Engineer Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on designing, implementing, and securing complex enterprise networks. You'll gain hands-on experience with next-generation firewalls, VPNs, IDS/IPS systems, and zero-trust network architecture.",
+      icon: or,
+      image:
+        "/images/Network Engineer Program/Network Security Engineer Program.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Cloud Security Program_20260608_175653_0000.pdf",
+      learningTools: [
+        "Palo Alto NGFW",
+        "Fortinet FortiGate",
+        "Cisco Firepower",
+        "Wireshark",
+        "IPsec & SSL VPN",
+        "Snort / Suricata",
+        "Nmap",
+        "AAA / RADIUS / TACACS+",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Enterprise Next-Gen Firewall Configuration",
+          description:
+            "Deploy Palo Alto / Fortinet firewalls with strict security policies and SSL decryption.",
+          icon: Jt,
+        },
+        {
+          title: "Multi-Site IPsec VPN Architecture",
+          description:
+            "Design and configure site-to-site VPN tunnels with high availability.",
+          icon: ri,
+        },
+        {
+          title: "Intrusion Detection & Prevention (IDS/IPS)",
+          description:
+            "Set up Snort rules to detect network anomalies and prevent exploit payloads.",
+          icon: Xn,
+        },
+        {
+          title: "Zero-Trust Network Segmentation",
+          description:
+            "Implement micro-segmentation and strict access control for internal subnets.",
+          icon: tt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Network Security Architecture",
+          items: [
+            "Perimeter Security Principles",
+            "OSI Security Layers",
+            "DMZ Design & Micro-segmentation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Next-Gen Firewalls (NGFW)",
+          items: [
+            "App-ID & User-ID Rules",
+            "SSL Decryption Policies",
+            "Threat Prevention Profiles",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Virtual Private Networks (VPN)",
+          items: [
+            "IPsec Tunnel Negotiation (Phase 1 & 2)",
+            "SSL VPN & Remote Access",
+            "High Availability VPN Clusters",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Intrusion Prevention (IDS/IPS)",
+          items: [
+            "Signature vs Anomaly Detection",
+            "Writing Custom Snort Rules",
+            "Inline Traffic Inspection",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Network Access Control & AAA",
+          items: [
+            "RADIUS & TACACS+ Setup",
+            "802.1X Authentication",
+            "Guest Network Isolation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Network Traffic Analysis",
+          items: [
+            "Wireshark Deep Packet Inspection",
+            "PCAP Capture Analysis",
+            "Identifying Malicious Protocols",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Cloud & Hybrid Network Security",
+          items: [
+            "Cloud Firewalls & WAF",
+            "AWS Transit Gateway Security",
+            "Hybrid VPN Architecture",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Enterprise Hardening",
+          items: [
+            "Enterprise NGFW Deployment",
+            "Multi-Site VPN Setup",
+            "Real-Time Intrusion Simulation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "cyber-iam-security",
+      title: "IAM & Identity Security Program",
+      category: "Cyber Security",
+      description:
+        "This program focuses on Identity and Access Management (IAM), Privileged Access Management (PAM), and single sign-on (SSO) governance across enterprise and cloud environments.",
+      icon: Fs,
+      image:
+        "/images/Network Engineer Program/IAM & Identity Security Program.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/GRC & IT Audit Program_20260608_175712_0000.pdf",
+      learningTools: [
+        "Okta",
+        "Microsoft Entra ID (Azure AD)",
+        "SailPoint",
+        "CyberArk (PAM)",
+        "SAML 2.0 / OAuth 2.0 / OIDC",
+        "Active Directory",
+        "Ping Identity",
+        "Python",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Okta & Entra ID SSO & MFA Setup",
+          description:
+            "Configure single sign-on, adaptive MFA, and conditional access policies.",
+          icon: tt,
+        },
+        {
+          title: "Privileged Access Vaulting with CyberArk",
+          description:
+            "Vault credentials, manage session recording, and enforce password rotation.",
+          icon: Pt,
+        },
+        {
+          title: "Identity Lifecycle Automation",
+          description:
+            "Automate user onboarding, role provisioning, and deprovisioning workflows.",
+          icon: Te,
+        },
+        {
+          title: "Access Recertification Audit",
+          description:
+            "Perform access governance reviews and audit privileged user entitlements.",
+          icon: En,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: IAM Fundamentals & Architecture",
+          items: [
+            "Core IAM Principles",
+            "Identity Lifecycle (JML Process)",
+            "Authentication vs Authorization",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Federation Protocols",
+          items: [
+            "SAML 2.0 Assertions",
+            "OAuth 2.0 Flows",
+            "OpenID Connect (OIDC) Tokens",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Enterprise SSO & MFA",
+          items: [
+            "Okta & Entra ID Setup",
+            "Adaptive MFA Policies",
+            "Passwordless Authentication",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Privileged Access Management (PAM)",
+          items: [
+            "CyberArk Vaulting",
+            "Just-In-Time (JIT) Privileges",
+            "Session Monitoring & Recording",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Identity Governance & Administration (IGA)",
+          items: [
+            "Role-Based Access Control (RBAC)",
+            "Attribute-Based Access Control (ABAC)",
+            "Access Certifications",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Cloud & API Identity Security",
+          items: [
+            "AWS IAM Policies & Roles",
+            "Azure Entra ID Roles",
+            "Securing API Access Tokens",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Directory Services & Sync",
+          items: [
+            "Active Directory & LDAP",
+            "Azure AD Connect Sync",
+            "Directory Security Hardening",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Identity Capstone",
+          items: [
+            "Enterprise SSO Deployment",
+            "PAM Vault Implementation",
+            "Identity Governance Audit",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  Qm = [
+    {
+      id: "jrp-soc",
+      title: "SOC Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "This program doesn’t just teach theory. It trains you like a real SOC analyst, working on live attack scenarios, real tools, and real-time monitoring environments.",
+      icon: Jt,
+      image: "/images/Job Ready Program/SOC Analyst Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/SOC Job Ready Program_20260608_174839_0000.pdf",
+      learningTools: [
+        "Splunk",
+        "IBM QRadar",
+        "Wireshark",
+        "Kali Linux",
+        "VirusTotal",
+        "Burp Suite",
+        "ELK Stack",
+        "Nmap",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications Support",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "Splunk – Log Monitoring & Threat Detection",
+          description:
+            "Learn Splunk to monitor, analyze, and generate alerts from real-time security logs.",
+          icon: vt,
+        },
+        {
+          title: "Wireshark – Network Traffic Analysis",
+          description:
+            "Capture and analyze network traffic to detect suspicious activity and identify threats.",
+          icon: or,
+        },
+        {
+          title: "Linux – Security Log Analysis",
+          description:
+            "Use tools like grep, awk, and journalctl to identify unauthorized access and threats.",
+          icon: lr,
+        },
+        {
+          title: "Burp Suite – Web Security Testing",
+          description:
+            "Learn to identify and test web vulnerabilities like XSS and SQL injection using Burp Suite.",
+          icon: ar,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cybersecurity Fundamentals",
+          items: [
+            "Introduction to Cybersecurity & SOC",
+            "Types of Cyber Attacks",
+            "Security Concepts & Terminologies",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Networking Fundamentals",
+          items: [
+            "TCP/IP & OSI Model",
+            "Ports & Protocols (HTTP, DNS, FTP, SSH)",
+            "Packet Flow & Network Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: System Fundamentals",
+          items: [
+            "Linux Basics (Commands, File System)",
+            "Windows Basics & Event Logs",
+            "System Monitoring Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Log Management & Analysis",
+          items: [
+            "Understanding Log Sources",
+            "Log Analysis Techniques",
+            "Detecting Suspicious Activities",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: SIEM & Monitoring",
+          items: [
+            "Introduction to SIEM (Splunk / ELK)",
+            "Log Collection & Correlation",
+            "Real-Time Monitoring & Alerting",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: SOC Analyst L1 Skills",
+          items: [
+            "Alert Triage & Investigation",
+            "Incident Detection (Phishing, Brute Force, Malware)",
+            "IOC Analysis & Threat Intelligence",
+            "Ticketing & Escalation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: SOC Analyst L2 Skills",
+          items: [
+            "Deep Incident Investigation",
+            "Threat Hunting Techniques",
+            "Network Analysis (Wireshark)",
+            "MITRE ATT&CK Framework",
+            "Root Cause Analysis & Reporting",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Tools & Live Projects",
+          items: [
+            "Splunk Log Monitoring",
+            "Wireshark Traffic Analysis",
+            "Linux Log Investigation",
+            "Burp Suite Web Security Testing",
+            "Real SOC Attack Simulations",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-cloud-engineer",
+      title: "Cloud Engineer Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "This program goes beyond concepts, immersing you in real cloud engineering workflows, live deployments, and production-grade infrastructure environments.",
+      icon: On,
+      image: "/images/Job Ready Program/Cloud Engineer Job Ready Program_.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/Cloud Engineer Job Ready Program_20260608_174904_0000.pdf",
+      learningTools: [
+        "AWS (EC2, S3, IAM, VPC)",
+        "Microsoft Azure",
+        "Google Cloud Platform (GCP)",
+        "Terraform",
+        "Docker",
+        "Kubernetes",
+        "Git & GitHub",
+        "Jenkins",
+        "Linux",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications Support",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "AWS EC2 – Cloud Server Deployment",
+          description:
+            "Launch and manage virtual servers, configure security groups, and deploy applications.",
+          icon: Ue,
+        },
+        {
+          title: "AWS S3 – Storage & Backup Management",
+          description:
+            "Work with scalable cloud storage, manage data, and implement backup solutions.",
+          icon: lt,
+        },
+        {
+          title: "CI/CD Pipeline – Automation Deployment",
+          description:
+            "Build pipelines using GitHub Actions / Jenkins for automated deployment.",
+          icon: Te,
+        },
+        {
+          title: "Infrastructure as Code – Terraform",
+          description:
+            "Provision and manage infrastructure using Terraform scripts in real-time projects.",
+          icon: Qe,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cloud Computing Fundamentals",
+          items: [
+            "Introduction to cloud computing concepts",
+            "Deployment models: Public, Private, Hybrid",
+            "Core concepts: scalability, elasticity, availability",
+            "Overview of AWS, Azure, GCP",
+            "Cloud architecture basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Networking for Cloud",
+          items: [
+            "Networking fundamentals (TCP/IP, DNS, HTTP/HTTPS)",
+            "Virtual networks and subnets",
+            "IP addressing and routing concepts",
+            "Load balancing and traffic management",
+            "Network security basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Linux for Cloud Engineers",
+          items: [
+            "Linux fundamentals and CLI",
+            "File systems and permissions",
+            "Process and service management",
+            "Shell scripting basics",
+            "System monitoring and troubleshooting",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Cloud Services (AWS/Azure)",
+          items: [
+            "Compute services (VMs, EC2, App Services)",
+            "Storage services (S3, Blob storage, disks)",
+            "Database services (RDS, NoSQL, managed DBs)",
+            "Identity and access management (IAM)",
+            "Monitoring and logging services",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Infrastructure as Code (IaC)",
+          items: [
+            "Introduction to IaC",
+            "Writing infrastructure configurations",
+            "Working with Terraform / ARM templates",
+            "Automating infrastructure provisioning",
+            "Version control for infrastructure",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: DevOps Fundamentals",
+          items: [
+            "CI/CD concepts and pipelines",
+            "Version control with Git",
+            "Build and release management",
+            "Automation tools and workflows",
+            "Introduction to DevOps culture",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Containers & Orchestration",
+          items: [
+            "Containerization concepts and Docker",
+            "Building and managing container images",
+            "Kubernetes fundamentals",
+            "Container orchestration and scaling",
+            "Managing microservices architecture",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Cloud Security",
+          items: [
+            "Cloud security fundamentals",
+            "Shared responsibility model",
+            "Identity and access management (IAM)",
+            "Network and application security",
+            "Encryption and data protection",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Monitoring & Optimization",
+          items: [
+            "Monitoring cloud resources",
+            "Logging and alerting systems",
+            "Performance tuning and cost optimization",
+            "Auto-scaling and high availability",
+            "Troubleshooting cloud environments",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Career Preparation",
+          items: [
+            "Designing scalable architectures",
+            "Disaster recovery strategies",
+            "Real-world cloud use cases",
+            "Resume building and portfolio",
+            "Interview preparation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-cyber-security",
+      title: "Cyber Security Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "Step into the role of a cybersecurity professional by working with real attack scenarios, security tools, and industry-level environments.",
+      icon: Jt,
+      image:
+        "/images/Job Ready Program/Cyber Security Specialist Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/Cyber Security Specialist Job Ready Program_20260608_175004_0000.pdf",
+      learningTools: [
+        "Nmap",
+        "Nessus",
+        "Burp Suite",
+        "Wireshark",
+        "Metasploit",
+        "Kali Linux",
+        "Splunk",
+        "ELK Stack",
+        "OpenVAS",
+        "Nikto",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications Support",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "Vulnerability Assessment & Penetration Testing (VAPT)",
+          description:
+            "Identify, exploit, and report vulnerabilities in real-world systems and applications.",
+          icon: Pt,
+        },
+        {
+          title: "SIEM Monitoring & Incident Response",
+          description:
+            "Work on real-time threat detection, alert analysis, and incident response scenarios.",
+          icon: ef,
+        },
+        {
+          title: "Network Security Implementation",
+          description:
+            "Configure firewalls, IDS/IPS, and secure network architectures.",
+          icon: tt,
+        },
+        {
+          title: "Web Application Security Testing",
+          description:
+            "Test real applications for vulnerabilities like XSS, SQL Injection, and authentication flaws.",
+          icon: Wr,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Cyber Security Fundamentals",
+          items: [
+            "Introduction to security principles",
+            "Threat landscape and attack vectors",
+            "CIA triad (Confidentiality, Integrity, Availability)",
+            "Types of hackers and cyber attacks",
+            "Basics of networking and security architecture",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Networking & System Security",
+          items: [
+            "Network fundamentals (TCP/IP, OSI model)",
+            "Common network protocols and ports",
+            "Firewalls, IDS/IPS, and controls",
+            "System hardening techniques",
+            "Endpoint security fundamentals",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Linux & Windows Security",
+          items: [
+            "Linux fundamentals and CLI",
+            "Windows system architecture",
+            "User and privilege management",
+            "File permissions and system logs",
+            "Hardening Linux and Windows systems",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Security Operations (SOC)",
+          items: [
+            "Introduction to SOC",
+            "Monitoring and analyzing events",
+            "SIEM tools and log management",
+            "Incident detection and alert handling",
+            "SOC workflows and processes",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Threat Detection & Incident Response",
+          items: [
+            "Types of security incidents",
+            "Incident response lifecycle",
+            "Malware analysis basics",
+            "Log analysis and threat hunting",
+            "Digital forensics fundamentals",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: VAPT",
+          items: [
+            "Vulnerability scanning concepts",
+            "Identifying system and network vulnerabilities",
+            "Basics of pen testing methodology",
+            "Common tools and techniques",
+            "Reporting vulnerabilities and remediation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Web Application Security",
+          items: [
+            "Web application architecture",
+            "OWASP Top 10 vulnerabilities",
+            "SQL injection, XSS, CSRF attacks",
+            "Authentication and session management",
+            "Secure coding practices",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Cloud Security & Modern Threats",
+          items: [
+            "Cloud computing security fundamentals",
+            "Shared responsibility model",
+            "Identity and access management (IAM)",
+            "Securing cloud environments",
+            "Container and DevSecOps basics",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Governance, Risk & Compliance (GRC)",
+          items: [
+            "Risk management and assessment",
+            "Security policies and procedures",
+            "Compliance standards (ISO 27001, NIST, GDPR)",
+            "Audit and risk frameworks",
+            "Business continuity and disaster recovery",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Security Architecture & Career",
+          items: [
+            "Designing secure systems",
+            "Defense-in-depth strategies",
+            "Security best practices for enterprises",
+            "Resume building",
+            "Interview preparation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-it-audit-grc",
+      title: "IT Audit & GRC Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "Designed to prepare you for real IT Auditor and GRC roles with hands-on experience in compliance, risk analysis, and governance practices.",
+      icon: En,
+      image: "/images/Job Ready Program/IT Audit & GRC Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/IT Audit & GRC Job Ready Program_20260608_175056_0000.pdf",
+      learningTools: [
+        "ServiceNow GRC",
+        "RSA Archer",
+        "Advanced Excel",
+        "Jira",
+        "AuditBoard",
+        "OneTrust",
+        "RiskWatch",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications Support",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "Risk Assessment & Control Testing",
+          description:
+            "Perform real-world risk assessments and evaluate internal controls for compliance.",
+          icon: tf,
+        },
+        {
+          title: "Audit Documentation & Reporting",
+          description:
+            "Learn how to document audit findings, create reports, and present insights.",
+          icon: Pl,
+        },
+        {
+          title: "Compliance Framework Implementation",
+          description:
+            "Work on frameworks like ISO 27001, NIST, and GDPR for organizational compliance.",
+          icon: zi,
+        },
+        {
+          title: "Policy Creation & Gap Analysis",
+          description:
+            "Draft security policies and perform gap analysis against industry standards.",
+          icon: nf,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: IT Audit & GRC Fundamentals",
+          items: [
+            "Introduction to IT Audit, GRC",
+            "Role of IT Auditor in organizations",
+            "Business processes and IT environments",
+            "Regulatory requirements overview",
+            "Key terminologies and concepts",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: IT Governance Frameworks",
+          items: [
+            "Principles of IT Governance",
+            "COBIT framework fundamentals",
+            "ITIL basics for service management",
+            "Aligning IT with business objectives",
+            "Governance structures and policies",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Risk Management & Assessment",
+          items: [
+            "Risk identification and classification",
+            "Qualitative & quantitative methodologies",
+            "Risk register and risk matrix",
+            "Risk mitigation and treatment",
+            "Enterprise Risk Management (ERM)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Compliance Frameworks & Standards",
+          items: [
+            "Overview of ISO 27001, NIST, SOC 2, PCI DSS",
+            "Regulatory compliance requirements",
+            "Control objectives and implementation",
+            "Mapping controls across frameworks",
+            "Audit readiness basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: IT Audit Process",
+          items: [
+            "Audit lifecycle: planning, execution, reporting",
+            "Internal vs external audits",
+            "Audit documentation and evidence",
+            "Control testing and validation",
+            "Writing audit findings and reports",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Information Security & Controls",
+          items: [
+            "Information security principles",
+            "Access control and identity management",
+            "Network and system security controls",
+            "Application security basics",
+            "Data protection and privacy controls",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Risk & Control Evaluation",
+          items: [
+            "Control design and effectiveness",
+            "Preventive, detective, and corrective controls",
+            "KRI and KCI indicators",
+            "Gap analysis and remediation planning",
+            "Continuous monitoring of controls",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: GRC Tools & Automation",
+          items: [
+            "Introduction to GRC platforms",
+            "Working with ServiceNow GRC, Archer, OneTrust",
+            "Risk and compliance tracking systems",
+            "Workflow automation in GRC",
+            "Dashboarding and reporting",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Policies & Governance",
+          items: [
+            "Creating and managing IT policies",
+            "Standard Operating Procedures (SOPs)",
+            "Compliance documentation",
+            "Vendor risk management",
+            "Third-party compliance",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Audit Reporting & Career",
+          items: [
+            "Preparing audit reports",
+            "Communicating risks to stakeholders",
+            "Remediation tracking",
+            "Interview preparation",
+            "Resume building",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-project-management",
+      title: "Project Management Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "Master project management through real-time collaboration, industry tools, and practical project execution strategies.",
+      icon: Al,
+      image:
+        "/images/Job Ready Program/Project Management Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/Project Management Job Ready Program_20260608_175026_0000.pdf",
+      learningTools: [
+        "Jira",
+        "Trello",
+        "Asana",
+        "Microsoft Project",
+        "ClickUp",
+        "Slack",
+        "Notion",
+        "Google Workspace",
+        "Monday.com",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications Support",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "Project Planning & Execution",
+          description:
+            "Create project plans, timelines, and execute real-world project scenarios.",
+          icon: qr,
+        },
+        {
+          title: "Agile Sprint Management",
+          description:
+            "Manage sprints, stand-ups, and backlog using Agile methodologies.",
+          icon: vn,
+        },
+        {
+          title: "Risk & Resource Management",
+          description:
+            "Identify risks, allocate resources, and manage project constraints effectively.",
+          icon: fn,
+        },
+        {
+          title: "Stakeholder Communication",
+          description:
+            "Handle real client communication, reporting, and status updates professionally.",
+          icon: ti,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Project Management Fundamentals",
+          items: [
+            "Introduction to lifecycle",
+            "Scope, time, cost, and quality",
+            "Project vs operations",
+            "Roles of a PM",
+            "Agile, Waterfall, Hybrid overview",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Project Initiation & Planning",
+          items: [
+            "Project charter development",
+            "Stakeholder analysis",
+            "Defining scope and objectives",
+            "Work Breakdown Structure (WBS)",
+            "Planning frameworks",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Scheduling & Resource Management",
+          items: [
+            "Creating schedules and timelines",
+            "Gantt charts and milestones",
+            "Resource allocation",
+            "Capacity planning",
+            "Critical Path Method (CPM)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Budgeting & Cost Management",
+          items: [
+            "Cost estimation techniques",
+            "Budget planning and allocation",
+            "Cost control and tracking",
+            "Financial forecasting",
+            "Managing constraints",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Risk & Issue Management",
+          items: [
+            "Identifying and analyzing risks",
+            "Mitigation and contingency planning",
+            "Issue tracking and resolution",
+            "Root cause analysis",
+            "Change management processes",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Agile & Scrum",
+          items: [
+            "Agile principles and frameworks",
+            "Scrum roles, artifacts, and ceremonies",
+            "Sprint planning and execution",
+            "Managing Agile teams",
+            "Hybrid approaches",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Tools for Project Management",
+          items: [
+            "Working with Jira",
+            "Microsoft Project basics",
+            "Trello, Asana, and collaboration tools",
+            "Task management dashboards",
+            "Documentation tools",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Team Management & Leadership",
+          items: [
+            "Leadership styles and dynamics",
+            "Communication strategies",
+            "Conflict resolution and negotiation",
+            "Performance management",
+            "Building high-performing teams",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Monitoring & Execution",
+          items: [
+            "Tracking project progress",
+            "KPIs and project metrics",
+            "Quality assurance and control",
+            "Reporting and documentation",
+            "Managing project delivery",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-devops-engineer",
+      title: "DevOps Engineer Job Ready Program",
+      category: "Job Ready Programs",
+      description:
+        "This program focuses on building strong DevOps fundamentals with practical exposure. You'll learn how modern development and operations work together, how to automate workflows, and how real-world CI/CD pipelines are structured.",
+      icon: Yt,
+      image: "/images/Job Ready Program/DevOps Engineer Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/DevOps Engineer Job Ready Program_20260608_174938_0000.pdf",
+      learningTools: [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Git",
+        "GitHub",
+        "Terraform",
+        "Ansible",
+        "Linux",
+        "AWS (Basics)",
+        "CI/CD Pipelines",
+        "Prometheus",
+        "Grafana",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "CI/CD Pipeline Setup (Automation)",
+          description:
+            "Build automated pipelines for code integration, testing, and deployment using real DevOps tools.",
+          icon: Te,
+        },
+        {
+          title: "Docker (Containerization)",
+          description:
+            "Create and manage containers to ensure consistent application environments across systems.",
+          icon: mn,
+        },
+        {
+          title: "Kubernetes (Container Orchestration)",
+          description:
+            "Deploy, scale, and manage containerized applications using Kubernetes clusters.",
+          icon: Ue,
+        },
+        {
+          title: "Infrastructure Automation (Terraform)",
+          description:
+            "Provision and manage infrastructure using Infrastructure as Code practices.",
+          icon: Qe,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: DevOps Fundamentals",
+          items: [
+            "Introduction to DevOps & SDLC",
+            "DevOps Lifecycle & Principles",
+            "Version Control Basics (Git & GitHub)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Linux & Scripting",
+          items: [
+            "Linux Fundamentals & Commands",
+            "Shell Scripting Basics",
+            "User Management & Permissions",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Version Control & Collaboration",
+          items: [
+            "Git Workflow (Branching, Merging)",
+            "GitHub Repositories & Collaboration",
+            "Code Management Best Practices",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: CI/CD Pipelines",
+          items: [
+            "Introduction to CI/CD",
+            "Jenkins Setup & Configuration",
+            "Build & Deployment Automation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Containerization",
+          items: [
+            "Docker Fundamentals",
+            "Creating & Managing Containers",
+            "Docker Images & Docker Compose",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Container Orchestration",
+          items: [
+            "Kubernetes Architecture",
+            "Deployments & Services",
+            "Scaling & Managing Applications",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Infrastructure as Code & Configuration",
+          items: [
+            "Terraform Basics",
+            "Provisioning Infrastructure",
+            "Ansible for Configuration Management",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Monitoring & Real Projects",
+          items: [
+            "Prometheus & Grafana Monitoring",
+            "Log Management Basics",
+            "End-to-End CI/CD Pipeline Project",
+            "Real-Time DevOps Deployment Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "jrp-scrum-master",
+      title: "Scrum Master Job Ready Program",
+      category: "Job Ready Programs",
+      icon: pn,
+      image: "/images/Job Ready Program/Scrum Master Job Ready Program.webp",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/Scrum Master Job Ready Program_20260608_175124_0000.pdf",
+      description:
+        "Learn Scrum Mastery by practicing real Agile processes, team collaboration, and sprint management just like in top tech companies.",
+      learningTools: [
+        "Jira",
+        "Confluence",
+        "Trello",
+        "Azure DevOps",
+        "Miro",
+        "Slack",
+        "ClickUp",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications (CSM, PSM, SAFe)",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & Interview Preparation",
+      ],
+      modules: [
+        {
+          title: "Module 1: Agile Fundamentals & Mindset",
+          items: [
+            "Agile principles and values (Agile Manifesto)",
+            "Agile vs Traditional (Waterfall) methodologies",
+            "Understanding iterative and incremental development",
+            "Agile frameworks overview (Scrum, Kanban, SAFe)",
+            "Agile mindset and cultural transformation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Scrum Framework Deep Dive",
+          items: [
+            "Scrum pillars: Transparency, Inspection, Adaptation",
+            "Scrum roles: Product Owner, Scrum Master, Development Team",
+            "Scrum artifacts: Product Backlog, Sprint Backlog, Increment",
+            "Scrum events: Sprint, Sprint Planning, Daily Scrum, Review, Retrospective",
+            "Definition of Done (DoD) and Definition of Ready (DoR)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Scrum Master Role & Responsibilities",
+          items: [
+            "Core responsibilities of a Scrum Master",
+            "Servant leadership and facilitation skills",
+            "Coaching teams and removing impediments",
+            "Stakeholder communication and alignment",
+            "Scaling Scrum practices in organizations",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Agile Planning & Estimation",
+          items: [
+            "User stories and acceptance criteria",
+            "Story writing techniques and backlog structuring",
+            "Estimation techniques: Story points, Planning Poker",
+            "Sprint planning and backlog refinement",
+            "Velocity and capacity planning",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Sprint Execution & Team Collaboration",
+          items: [
+            "Conducting Daily Stand-ups effectively",
+            "Managing sprint execution and progress tracking",
+            "Handling blockers and dependencies",
+            "Cross-functional team collaboration",
+            "Agile ceremonies facilitation techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Agile Metrics & Reporting",
+          items: [
+            "Key Agile metrics: Velocity, Burn-down, Burn-up charts",
+            "Measuring team performance and productivity",
+            "Sprint tracking and reporting",
+            "Data-driven decision making",
+            "Continuous improvement using metrics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Agile Tools & Project Management Platforms",
+          items: [
+            "Working with Jira for Agile project management",
+            "Creating and managing boards, backlogs, and sprints",
+            "Tracking issues, epics, and user stories",
+            "Using tools like Trello, Azure DevOps",
+            "Dashboard creation and reporting",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Advanced Agile Practices",
+          items: [
+            "Kanban principles and workflow management",
+            "Lean Agile concepts",
+            "SAFe (Scaled Agile Framework) basics",
+            "Managing multiple teams and scaling Agile",
+            "Agile transformation strategies",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Risk Management & Problem Solving",
+          items: [
+            "Identifying and managing project risks",
+            "Conflict resolution within teams",
+            "Handling scope changes and stakeholder expectations",
+            "Root cause analysis techniques",
+            "Decision-making frameworks in Agile",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Agile Delivery & Career Preparation",
+          items: [
+            "End-to-end Agile project lifecycle understanding",
+            "Collaboration with Product Owners and stakeholders",
+            "Release planning and delivery management",
+            "Resume building and portfolio structuring",
+            "Interview preparation for Scrum Master roles",
+          ],
+          color: "red",
+        },
+      ],
+      projects: [
+        {
+          title: "Sprint Planning & Execution",
+          description:
+            "Plan, execute, and manage sprints in real Agile environments.",
+          icon: qr,
+        },
+        {
+          title: "Daily Stand-ups & Coordination",
+          description:
+            "Facilitate stand-ups, remove blockers, and ensure smooth team communication.",
+          icon: vn,
+        },
+        {
+          title: "Agile Ceremonies Management",
+          description:
+            "Handle sprint reviews, retrospectives, and backlog refinement sessions.",
+          icon: Te,
+        },
+        {
+          title: "Stakeholder Communication",
+          description:
+            "Manage client expectations and ensure transparency across teams.",
+          icon: ti,
+        },
+      ],
+    },
+    {
+      id: "jrp-ai-ml",
+      title: "AI & ML Job Ready Program",
+      category: "Job Ready Programs",
+      icon: ni,
+      image: "/images/Job Ready Program/AI & ML Job Ready Program.webp",
+      description:
+        "Learn by building real AI systems, deploying models, and solving industry-level challenges from day one.",
+      syllabusUrl:
+        "/pdfs/Job Ready Program/AI & ML Job Ready Program _20260608_205606_0000.pdf",
+      learningTools: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Scikit-learn",
+        "TensorFlow",
+        "Keras",
+        "OpenCV",
+        "Jupyter Notebook",
+        "Google Colab",
+        "Flask",
+        "Git",
+        "SQL",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Industry Tools Implementation",
+        "Job-Oriented Curriculum",
+        "Globally Recognized Certifications (AWS, Azure, Google Cloud)",
+        "3 Months Job Application Support",
+        "Resume, LinkedIn & AI/ML Interview Coaching",
+      ],
+      projects: [
+        {
+          title: "Machine Learning Models (Prediction & Classification)",
+          description:
+            "Build models like regression, classification, and clustering using real datasets.",
+          icon: ni,
+        },
+        {
+          title: "Deep Learning (Neural Networks)",
+          description:
+            "Work with neural networks for image recognition and NLP tasks.",
+          icon: Te,
+        },
+        {
+          title: "Data Analysis (Insights & Visualization)",
+          description:
+            "Analyze datasets and generate actionable insights using Python libraries.",
+          icon: fn,
+        },
+        {
+          title: "Model Deployment (Real Applications)",
+          description:
+            "Deploy ML models using APIs and cloud platforms for real-world use.",
+          icon: On,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Python & AI Foundations",
+          items: [
+            "Python syntax, variables, data types, and control structures",
+            "Functions, modules, and object-oriented programming (OOP)",
+            "Data handling using NumPy and Pandas",
+            "Working with Jupyter Notebook and development environments",
+            "Version control using Git & GitHub",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Mathematics for Machine Learning",
+          items: [
+            "Linear algebra: vectors, matrices, and transformations",
+            "Probability concepts and distributions",
+            "Descriptive and inferential statistics",
+            "Calculus fundamentals for optimization",
+            "Understanding loss functions and gradient-based learning",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Data Analysis & Preprocessing",
+          items: [
+            "Data cleaning and handling missing values",
+            "Exploratory Data Analysis (EDA) techniques",
+            "Feature engineering and feature selection",
+            "Data transformation and normalization",
+            "Data visualization using modern libraries",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Machine Learning Fundamentals",
+          items: [
+            "Supervised learning: regression and classification models",
+            "Unsupervised learning: clustering and dimensionality reduction",
+            "Model training, testing, and validation techniques",
+            "Evaluation metrics: accuracy, precision, recall, F1-score",
+            "Bias-variance tradeoff and overfitting handling",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Advanced Machine Learning",
+          items: [
+            "Ensemble learning: bagging and boosting techniques",
+            "Algorithms like Random Forest, XGBoost, and Gradient Boosting",
+            "Hyperparameter tuning and model optimization",
+            "Feature importance and model interpretability",
+            "Time series forecasting fundamentals",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Deep Learning",
+          items: [
+            "Artificial Neural Networks (ANN) architecture",
+            "Activation functions and backpropagation",
+            "Convolutional Neural Networks (CNN)",
+            "Recurrent Neural Networks (RNN) and LSTM",
+            "Working with TensorFlow and PyTorch frameworks",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Generative AI & LLMs",
+          items: [
+            "Introduction to Generative AI concepts",
+            "Large Language Models (LLMs) architecture",
+            "Prompt engineering techniques",
+            "Working with OpenAI APIs and HuggingFace",
+            "Embeddings and Retrieval-Augmented Generation (RAG)",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: NLP & Computer Vision",
+          items: [
+            "Natural Language Processing fundamentals",
+            "Text preprocessing and tokenization",
+            "Transformer models and BERT basics",
+            "Image processing and feature extraction",
+            "Object detection and OpenCV basics",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: MLOps & Deployment",
+          items: [
+            "Model packaging and deployment concepts",
+            "Building APIs using Flask and FastAPI",
+            "Containerization using Docker",
+            "CI/CD pipelines for ML workflows",
+            "Introduction to cloud platforms (AWS, Azure, GCP)",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  Xm = [
+    {
+      id: "pm-pmp",
+      title: "PMP Certification Program",
+      category: "Project Management",
+      description:
+        "This program is designed to build strong project management fundamentals aligned with global standards. You'll learn how to manage projects, teams, timelines, and risks using real-world frameworks and practices.",
+      icon: Al,
+      image: "/images/Project Management/PMP Certification Program.webp",
+      syllabusUrl:
+        "/pdfs/Project Management/PMP Certification Program_20260608_182340_0000.pdf",
+      learningTools: [
+        "MS Project",
+        "Jira",
+        "Trello",
+        "Asana",
+        "Risk Management Tools",
+        "Agile Boards",
+        "Gantt Charts",
+        "Project Documentation Tools",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Project Planning & Execution",
+          description:
+            "Create project plans, define scope, and manage execution timelines.",
+          icon: Pl,
+        },
+        {
+          title: "Risk Management & Mitigation",
+          description:
+            "Identify risks and build mitigation strategies for real-world projects.",
+          icon: rf,
+        },
+        {
+          title: "Agile & Hybrid Project Management",
+          description:
+            "Implement Agile and hybrid methodologies in project scenarios.",
+          icon: qr,
+        },
+        {
+          title: "Stakeholder & Team Management",
+          description:
+            "Handle communication, reporting, and team coordination effectively.",
+          icon: vn,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Project Management Fundamentals",
+          items: [
+            "Introduction to Project Management",
+            "Project Lifecycle & Frameworks",
+            "PMI Standards & PMP Overview",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Project Integration Management",
+          items: [
+            "Project Charter & Planning",
+            "Execution & Monitoring",
+            "Change Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Scope, Time & Cost Management",
+          items: [
+            "Work Breakdown Structure (WBS)",
+            "Scheduling & Timeline Planning",
+            "Budgeting & Cost Control",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Quality & Resource Management",
+          items: [
+            "Quality Assurance & Control",
+            "Team Management & Leadership",
+            "Resource Allocation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Risk & Communication Management",
+          items: [
+            "Risk Identification & Mitigation",
+            "Communication Planning",
+            "Stakeholder Engagement",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Agile & Hybrid Approaches",
+          items: [
+            "Agile Principles & Scrum Basics",
+            "Hybrid Project Models",
+            "Adaptive Project Management",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Tools & Practical Implementation",
+          items: [
+            "Jira & Project Tracking Tools",
+            "Gantt Charts & Reporting",
+            "Real-Time Project Monitoring",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Case Studies",
+          items: [
+            "End-to-End Project Execution",
+            "Risk Handling Simulation",
+            "Agile Project Implementation",
+            "Real Business Case Studies",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "pm-scrum",
+      title: "Scrum Master Certification Program",
+      category: "Project Management",
+      description:
+        "This program focuses on Agile and Scrum methodologies with practical exposure. You'll learn how to manage Agile teams, run sprints, and deliver projects efficiently in real-world environments.",
+      icon: Yt,
+      image:
+        "/images/Project Management/Scrum Master Certification Program.webp",
+      syllabusUrl:
+        "/pdfs/Project Management/Scrum Master Certification Program_20260608_182323_0000.pdf",
+      learningTools: [
+        "Jira",
+        "Trello",
+        "ClickUp",
+        "Agile Boards",
+        "Scrum Framework Tools",
+        "Burndown Charts",
+        "Sprint Tracking Tools",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Sprint Planning & Execution",
+          description:
+            "Plan, execute, and review sprints in Agile environments.",
+          icon: of,
+        },
+        {
+          title: "Scrum Ceremonies Implementation",
+          description:
+            "Conduct daily standups, retrospectives, and sprint reviews.",
+          icon: vn,
+        },
+        {
+          title: "Agile Team Collaboration",
+          description: "Manage cross-functional teams and workflows.",
+          icon: sf,
+        },
+        {
+          title: "Backlog & Product Management",
+          description:
+            "Handle product backlog, user stories, and prioritization.",
+          icon: af,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Agile & Scrum Fundamentals",
+          items: [
+            "Introduction to Agile",
+            "Scrum Framework Overview",
+            "Roles in Scrum (SM, PO, Team)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Scrum Events & Artifacts",
+          items: [
+            "Sprint Planning",
+            "Daily Standups",
+            "Sprint Review & Retrospective",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Backlog & User Stories",
+          items: [
+            "Product Backlog Management",
+            "Writing User Stories",
+            "Prioritization Techniques",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Agile Tools & Implementation",
+          items: [
+            "Jira Setup & Usage",
+            "Agile Boards & Workflows",
+            "Sprint Tracking",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Team Facilitation & Leadership",
+          items: [
+            "Servant Leadership",
+            "Conflict Resolution",
+            "Team Collaboration Techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Agile Metrics & Reporting",
+          items: [
+            "Burndown Charts",
+            "Velocity Tracking",
+            "Performance Metrics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Scaling Agile",
+          items: [
+            "Introduction to SAFe",
+            "Managing Multiple Teams",
+            "Enterprise Agile Concepts",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Full Sprint Cycle Simulation",
+            "Real Agile Team Scenarios",
+            "Backlog to Delivery Execution",
+            "Industry Case Studies",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "pm-agile",
+      title: "Agile Project Management Program",
+      category: "Project Management",
+      description:
+        "This program focuses on building strong project management fundamentals with practical Agile exposure. You'll learn how to manage teams, deliver projects efficiently, and work in real-world Agile environments.",
+      icon: En,
+      image: "/images/Project Management/Agile Project Management Program.webp",
+      syllabusUrl:
+        "/pdfs/Project Management/Agile Project Management Program_20260608_182400_0000.pdf",
+      learningTools: [
+        "Jira",
+        "Trello",
+        "ClickUp",
+        "Confluence",
+        "Miro",
+        "Slack",
+        "Agile Boards",
+        "Burndown Charts",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Sprint Planning & Execution",
+          description:
+            "Plan, execute, and deliver tasks using Agile sprint cycles.",
+          icon: fn,
+        },
+        {
+          title: "Scrum Implementation",
+          description:
+            "Work in Scrum teams with roles like Scrum Master and Product Owner.",
+          icon: qr,
+        },
+        {
+          title: "Agile Project Tracking",
+          description:
+            "Track progress using tools like Jira and manage backlogs effectively.",
+          icon: pn,
+        },
+        {
+          title: "Retrospective & Process Improvement",
+          description:
+            "Analyze performance and improve team productivity using Agile practices.",
+          icon: kl,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Introduction to Project Management",
+          items: [
+            "Basics of Project Management",
+            "Project Lifecycle",
+            "Traditional vs Agile Methodologies",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Agile Fundamentals",
+          items: [
+            "Agile Principles & Values",
+            "Scrum Framework",
+            "Roles (Scrum Master, Product Owner, Team)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Scrum Practices",
+          items: [
+            "Sprint Planning",
+            "Daily Standups",
+            "Sprint Review & Retrospective",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Agile Tools & Implementation",
+          items: [
+            "Jira Boards & Workflow",
+            "Backlog Management",
+            "User Stories & Epics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Agile Metrics & Reporting",
+          items: [
+            "Burndown Charts",
+            "Velocity Tracking",
+            "Performance Metrics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Team Collaboration & Communication",
+          items: [
+            "Stakeholder Communication",
+            "Conflict Management",
+            "Team Collaboration Techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Advanced Agile Concepts",
+          items: [
+            "Kanban Framework",
+            "Scaled Agile (SAFe Basics)",
+            "Agile Risk Management",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End Agile Project Simulation",
+            "Sprint Execution with Tools",
+            "Real Team Collaboration Scenarios",
+            "Agile Delivery Case Studies",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  ep = [
+    {
+      id: "snow-admin",
+      title: "ServiceNow Administrator Program",
+      category: "ServiceNow",
+      description:
+        "This program focuses on building strong ServiceNow platform fundamentals with practical exposure. You'll learn how to manage the platform, configure modules, and handle real-world IT service workflows.",
+      icon: Ue,
+      image: "/images/ServiceNow/ServiceNow Administrator Program.webp",
+      syllabusUrl:
+        "/pdfs/Service Now/ServiceNow Administrator Program_20260608_184311_0000.pdf",
+      learningTools: [
+        "ServiceNow Platform",
+        "Incident Management",
+        "Problem Management",
+        "Change Management",
+        "CMDB",
+        "Service Catalog",
+        "Flow Designer",
+        "SLA Management",
+        "Reporting & Dashboards",
+        "Access Control (ACLs)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Incident Management System Setup",
+          description:
+            "Configure incident workflows, SLAs, and automate ticket handling.",
+          icon: vt,
+        },
+        {
+          title: "User & Access Management",
+          description:
+            "Manage users, roles, groups, and access permissions securely.",
+          icon: tt,
+        },
+        {
+          title: "Service Catalog Implementation",
+          description:
+            "Design and deploy service request workflows with approvals.",
+          icon: pn,
+        },
+        {
+          title: "CMDB (Configuration Management Database)",
+          description:
+            "Manage and maintain configuration items and relationships.",
+          icon: lt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: ServiceNow Fundamentals",
+          items: [
+            "Introduction to ServiceNow Platform",
+            "Navigation & User Interface",
+            "Instance Setup & Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Core Administration",
+          items: [
+            "User & Group Management",
+            "Roles & Permissions",
+            "Basic Configurations",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: ITSM Fundamentals",
+          items: [
+            "Incident Management",
+            "Problem Management",
+            "Change Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Service Catalog & Workflows",
+          items: [
+            "Catalog Items & Record Producers",
+            "Workflow Design",
+            "Approval Processes",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: CMDB & Asset Management",
+          items: [
+            "CMDB Structure",
+            "Configuration Items (CI)",
+            "Relationships & Asset Tracking",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Security & Access Control",
+          items: [
+            "ACLs (Access Control Lists)",
+            "Data Security",
+            "Role-Based Access",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Reporting & Automation",
+          items: [
+            "Reports & Dashboards",
+            "Flow Designer Basics",
+            "Automation of Tasks",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Full ITSM Implementation",
+            "Incident to Resolution Lifecycle",
+            "Service Catalog Deployment",
+            "Real-Time Admin Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "snow-dev",
+      title: "ServiceNow Developer Program",
+      category: "ServiceNow",
+      description:
+        "This program focuses on building strong ServiceNow development skills with practical exposure. You'll learn scripting, automation, and how to build custom applications on the platform.",
+      icon: Qe,
+      image: "/images/ServiceNow/ServiceNow Developer Program.webp",
+      learningTools: [
+        "ServiceNow Studio",
+        "JavaScript",
+        "Glide API",
+        "Business Rules",
+        "Script Includes",
+        "UI Policies",
+        "Client Scripts",
+        "Flow Designer",
+        "REST APIs",
+        "IntegrationHub",
+        "ATF (Automated Test Framework)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Custom Application Development",
+          description: "Build end-to-end applications using ServiceNow Studio.",
+          icon: Qe,
+        },
+        {
+          title: "Business Rules & Automation",
+          description: "Automate workflows using scripts and logic.",
+          icon: Te,
+        },
+        {
+          title: "Integration with External Systems",
+          description: "Connect ServiceNow with APIs and third-party tools.",
+          icon: Ue,
+        },
+        {
+          title: "Advanced Workflow Automation",
+          description:
+            "Develop complex workflows using Flow Designer and scripting.",
+          icon: vt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: ServiceNow Development Fundamentals",
+          items: [
+            "Introduction to ServiceNow Development",
+            "Platform Architecture",
+            "Development Environment Setup",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: JavaScript for ServiceNow",
+          items: [
+            "Core JavaScript Concepts",
+            "Server-side vs Client-side Scripts",
+            "Debugging Techniques",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Scripting in ServiceNow",
+          items: ["Business Rules", "Client Scripts", "Script Includes"],
+          color: "green",
+        },
+        {
+          title: "Module 4: UI & Form Customization",
+          items: ["UI Policies", "UI Actions", "Form Design & Customization"],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Workflow & Automation",
+          items: ["Flow Designer", "Workflow Editor", "Automation Logic"],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Integrations & APIs",
+          items: [
+            "REST & SOAP APIs",
+            "IntegrationHub",
+            "External System Integration",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Testing & Deployment",
+          items: [
+            "Update Sets",
+            "ATF (Automated Testing)",
+            "Version Control Basics",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Build Custom ServiceNow App",
+            "End-to-End Workflow Automation",
+            "API Integration Project",
+            "Real-Time Development Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "snow-itsm",
+      title: "ServiceNow ITSM Program",
+      category: "ServiceNow",
+      description:
+        "This program focuses on building strong IT Service Management (ITSM) skills using ServiceNow with practical exposure. You'll learn how enterprise workflows operate, how incidents and requests are managed, and how real-world IT operations are structured.",
+      icon: Yt,
+      image: "/images/ServiceNow/ServiceNow ITSM Program.webp",
+      learningTools: [
+        "ServiceNow ITSM",
+        "Incident Management",
+        "Problem Management",
+        "Change Management",
+        "Service Catalog",
+        "CMDB",
+        "SLA Management",
+        "Workflow Automation",
+        "Reporting & Dashboards",
+        "Integration Basics",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Incident Management System",
+          description:
+            "Handle, track, and resolve incidents efficiently using real-world ITSM workflows.",
+          icon: vt,
+        },
+        {
+          title: "Service Catalog Implementation",
+          description:
+            "Design and manage service request catalogs with automated workflows.",
+          icon: pn,
+        },
+        {
+          title: "Change Management Workflow",
+          description:
+            "Implement structured change processes with approvals and risk handling.",
+          icon: Te,
+        },
+        {
+          title: "Problem Management Setup",
+          description:
+            "Identify root causes and implement long-term fixes using ServiceNow tools.",
+          icon: Yt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: ITSM Fundamentals",
+          items: [
+            "Introduction to ITSM",
+            "ITIL Basics & Concepts",
+            "Overview of ServiceNow Platform",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Core ITSM Processes",
+          items: [
+            "Incident Management",
+            "Problem Management",
+            "Change Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: ServiceNow Platform Basics",
+          items: [
+            "Navigation & User Interface",
+            "Forms, Lists & Tables",
+            "Users, Roles & Groups",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Service Catalog & Request Management",
+          items: [
+            "Creating Catalog Items",
+            "Request Workflows",
+            "Approval Processes",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: CMDB & Asset Management",
+          items: [
+            "Configuration Management Database",
+            "CI Relationships",
+            "Asset Lifecycle Management",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Automation & Workflows",
+          items: [
+            "Business Rules",
+            "Flow Designer Basics",
+            "Notifications & SLA Setup",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Reporting & Integrations",
+          items: [
+            "Reports & Dashboards",
+            "Performance Analytics Basics",
+            "Integration Fundamentals",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End ITSM Implementation",
+            "Incident to Resolution Workflow",
+            "Service Catalog Deployment",
+            "Real-Time Enterprise Use Cases",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "snow-fundamentals",
+      title: "ServiceNow Fundamentals Program",
+      category: "ServiceNow",
+      description:
+        "This program focuses on building a strong foundation in ServiceNow platform basics with practical exposure. You'll learn how the platform works, how to configure modules, and how real enterprise systems are built and customized.",
+      icon: pn,
+      image: "/images/ServiceNow/ServiceNow Fundamentals Program.webp",
+      learningTools: [
+        "ServiceNow Platform",
+        "Tables & Forms",
+        "Flow Designer",
+        "Business Rules",
+        "UI Policies",
+        "Data Management",
+        "ServiceNow Studio",
+        "Access Control (ACL)",
+        "Reports & Dashboards",
+        "Integration Basics",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Custom Application Development",
+          description:
+            "Build and deploy a custom application using ServiceNow Studio.",
+          icon: Qe,
+        },
+        {
+          title: "Form & Workflow Automation",
+          description:
+            "Design forms and automate workflows for business processes.",
+          icon: Te,
+        },
+        {
+          title: "User & Role Management System",
+          description: "Create secure role-based access control systems.",
+          icon: tt,
+        },
+        {
+          title: "Basic ITSM Setup",
+          description:
+            "Implement foundational ITSM modules for real-world scenarios.",
+          icon: Yt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: ServiceNow Introduction",
+          items: [
+            "What is ServiceNow",
+            "Platform Overview",
+            "Navigation & UI Basics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Data Model & Tables",
+          items: [
+            "Tables & Fields",
+            "Schema & Relationships",
+            "Data Management",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Forms & User Interface",
+          items: ["Form Design", "UI Policies", "Client Scripts Basics"],
+          color: "green",
+        },
+        {
+          title: "Module 4: Business Logic",
+          items: [
+            "Business Rules",
+            "Script Includes Basics",
+            "Server-Side Logic",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Flow Designer & Automation",
+          items: [
+            "Flow Designer",
+            "Approvals & Notifications",
+            "Workflow Automation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Security & Access Control",
+          items: [
+            "Users, Roles & Groups",
+            "Access Control (ACL)",
+            "Data Security",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Reporting & Dashboards",
+          items: ["Creating Reports", "Dashboards", "Data Visualization"],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Custom App Development",
+            "Workflow Automation Project",
+            "Role-Based Access System",
+            "Real-Time Business Use Cases",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  tp = [
+    {
+      id: "test-career",
+      title: "Software Testing Career Program",
+      category: "Software Testing",
+      description:
+        "This program focuses on building strong software testing fundamentals with hands-on practical exposure. You'll learn how to identify bugs, test applications, and ensure software quality in real-world environments.",
+      icon: Bs,
+      image: "/images/Software Testing_/Software Testing Career Program.webp",
+      syllabusUrl:
+        "/pdfs/Software Engineer/Software Testing Career Program_20260608_182505_0000.pdf",
+      learningTools: [
+        "Selenium",
+        "JIRA",
+        "TestNG",
+        "Postman",
+        "Cypress (Basics)",
+        "Git",
+        "Browser DevTools",
+        "API Testing Tools",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Manual Testing Projects",
+          description:
+            "Perform functional, UI, and regression testing on real applications.",
+          icon: zi,
+        },
+        {
+          title: "Bug Tracking & Reporting",
+          description: "Identify, log, and track bugs using industry tools.",
+          icon: Bs,
+        },
+        {
+          title: "Automation Testing Basics",
+          description: "Write basic test scripts and automate workflows.",
+          icon: Yt,
+        },
+        {
+          title: "End-to-End Testing Scenarios",
+          description: "Test complete applications from user perspective.",
+          icon: kl,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Software Testing Fundamentals",
+          items: [
+            "Introduction to Software Testing",
+            "SDLC & STLC",
+            "Types of Testing",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Manual Testing",
+          items: [
+            "Test Case Writing",
+            "Bug Life Cycle",
+            "Functional & Non-Functional Testing",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Bug Tracking & Tools",
+          items: [
+            "JIRA for Bug Tracking",
+            "Test Management Tools",
+            "Reporting & Documentation",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: API Testing",
+          items: [
+            "Introduction to APIs",
+            "Testing using Postman",
+            "Status Codes & Validation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Automation Testing Basics",
+          items: [
+            "Introduction to Selenium",
+            "Writing Basic Test Scripts",
+            "Automation Framework Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Version Control & CI Basics",
+          items: ["Git & GitHub", "Basic CI/CD Concepts", "Test Integration"],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Advanced Testing Concepts",
+          items: [
+            "Performance Testing Basics",
+            "Security Testing Basics",
+            "Cross-Browser Testing",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Test Real Web Applications",
+            "End-to-End QA Workflow",
+            "Automation Practice Project",
+            "Real Bug Reporting Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "test-automation",
+      title: "Automation Testing Program",
+      category: "Software Testing",
+      description:
+        "This program focuses on building strong testing fundamentals with practical automation exposure. You'll learn how to write test scripts, automate workflows, and work with real-world testing frameworks used in the industry.",
+      icon: Yt,
+      image: "/images/Software Testing_/Automation Testing Program.webp",
+      syllabusUrl:
+        "/pdfs/Software Engineer/Automation Testing Program_20260608_182520_0000.pdf",
+      learningTools: [
+        "Selenium",
+        "TestNG",
+        "JUnit",
+        "Maven",
+        "Jenkins",
+        "Git",
+        "Java (Basics)",
+        "Cucumber (BDD)",
+        "Postman (Basics)",
+        "Docker (Intro)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Web Application Automation",
+          description:
+            "Automate test cases for real-world web applications using Selenium and frameworks.",
+          icon: mn,
+        },
+        {
+          title: "Test Framework Development",
+          description:
+            "Build scalable automation frameworks like Page Object Model (POM).",
+          icon: Te,
+        },
+        {
+          title: "CI/CD Integration Testing",
+          description:
+            "Integrate automated test suites with Jenkins pipelines.",
+          icon: vt,
+        },
+        {
+          title: "Cross-Browser Testing",
+          description:
+            "Execute automated tests across multiple browsers and environments.",
+          icon: lr,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Testing Fundamentals",
+          items: [
+            "Introduction to Software Testing",
+            "SDLC & STLC",
+            "Types of Testing (Manual, Automation, Functional)",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Programming Basics for Automation",
+          items: ["Java/Python Basics", "OOP Concepts", "Exception Handling"],
+          color: "green",
+        },
+        {
+          title: "Module 3: Selenium Automation",
+          items: [
+            "WebDriver Architecture",
+            "Locators & Web Elements",
+            "Handling Alerts, Frames, Windows",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Test Frameworks",
+          items: [
+            "TestNG / JUnit",
+            "Page Object Model (POM)",
+            "Data-Driven Testing",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: CI/CD & Version Control",
+          items: [
+            "Git & GitHub",
+            "Jenkins Integration",
+            "Automation in CI/CD Pipelines",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: BDD & Advanced Testing",
+          items: [
+            "Cucumber (BDD Framework)",
+            "Gherkin Syntax",
+            "Behavior-Driven Development",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Advanced Automation Concepts",
+          items: [
+            "Parallel Execution",
+            "Cross-Browser Testing",
+            "Headless Testing",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "Automation Framework Development",
+            "End-to-End Web Automation",
+            "CI/CD Integrated Testing",
+            "Real-Time Industry Scenarios",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "test-api-perf",
+      title: "API & Performance Testing Program",
+      category: "Software Testing",
+      description:
+        "This program focuses on mastering API testing and performance testing with real-world tools. You'll learn how to validate APIs, simulate load, and analyze system performance under real conditions.",
+      icon: Qe,
+      image: "/images/Software Testing_/API & Performance Testing Program.webp",
+      syllabusUrl:
+        "/pdfs/Software Engineer/API & Performance Testing Program_20260608_182542_0000.pdf",
+      learningTools: [
+        "Postman",
+        "Newman",
+        "JMeter",
+        "REST Assured",
+        "Swagger",
+        "JSON",
+        "Git",
+        "Jenkins",
+        "Basics of SQL",
+        "API Security Testing (Intro)",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "REST API Testing",
+          description:
+            "Validate endpoints, request/response handling, and authentication mechanisms.",
+          icon: ar,
+        },
+        {
+          title: "Performance Testing with JMeter",
+          description:
+            "Simulate user load and analyze application performance under stress.",
+          icon: vt,
+        },
+        {
+          title: "API Automation Framework",
+          description:
+            "Build reusable API test frameworks using Postman/Newman.",
+          icon: Qe,
+        },
+        {
+          title: "Load & Stress Testing Scenarios",
+          description: "Identify bottlenecks and optimize system performance.",
+          icon: Jt,
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: API Testing Fundamentals",
+          items: [
+            "What is API Testing",
+            "HTTP Methods (GET, POST, PUT, DELETE)",
+            "Status Codes & Headers",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Postman & API Tools",
+          items: [
+            "Postman Interface",
+            "Collections & Environments",
+            "Automation with Newman",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: API Automation",
+          items: [
+            "REST Assured Basics",
+            "Assertions & Validations",
+            "Data-Driven API Testing",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Performance Testing Basics",
+          items: [
+            "Introduction to Performance Testing",
+            "Load vs Stress vs Spike Testing",
+            "Performance Metrics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: JMeter Implementation",
+          items: [
+            "Test Plan Creation",
+            "Thread Groups & Samplers",
+            "Listeners & Reports",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Advanced Performance Testing",
+          items: [
+            "Distributed Testing",
+            "Bottleneck Analysis",
+            "Performance Optimization Techniques",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: CI/CD Integration",
+          items: [
+            "API Testing in Pipelines",
+            "Jenkins Integration",
+            "Automated Test Execution",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Live Projects & Real Use Cases",
+          items: [
+            "End-to-End API Testing",
+            "Performance Testing of Web Apps",
+            "Real-Time Load Simulation",
+            "Industry-Based Case Studies",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  np = [
+    {
+      id: "networking-engineer",
+      title: "Network Engineer Program",
+      category: "Networking & Infrastructure",
+      description:
+        "This program focuses on building strong networking fundamentals with hands-on enterprise infrastructure experience. You’ll learn how modern networks are designed, configured, secured, monitored, and troubleshot through practical labs, enterprise simulations, and real-world network engineering scenarios.",
+      icon: ri,
+      image: "/images/Network Engineer Program/Network Engineer_.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Network Engineer Program_20260608_180000_0000.pdf",
+      learningTools: [
+        "Cisco IOS",
+        "Cisco Packet Tracer",
+        "GNS3",
+        "Wireshark",
+        "Nmap",
+        "pfSense",
+        "Linux",
+        "Windows Server",
+        "TCP/IP",
+        "VLANs",
+        "OSPF",
+        "DHCP",
+        "DNS",
+        "NAT",
+        "VPN",
+        "Firewalls",
+        "Network Monitoring",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Tool-Based Implementation",
+        "Enterprise Live Projects",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Enterprise Network Design & Deployment",
+          description:
+            "Design and implement a complete enterprise network with multiple departments, VLANs, routing, and network services.",
+          icon: Ue,
+          tech: ["Cisco IOS", "VLANs", "Subnetting", "Packet Tracer"],
+        },
+        {
+          title: "Routing & Switching Implementation",
+          description:
+            "Configure VLANs, trunking, inter-VLAN routing, OSPF, and enterprise switching environments.",
+          icon: ri,
+          tech: ["OSPF", "Inter-VLAN", "Trunking", "STP"],
+        },
+        {
+          title: "Network Monitoring & Troubleshooting",
+          description:
+            "Analyze network traffic, identify connectivity problems, investigate performance issues, and perform root-cause analysis.",
+          icon: vt,
+          tech: ["Wireshark", "Nmap", "Log Analysis", "Root Cause"],
+        },
+        {
+          title: "Network Security Implementation",
+          description:
+            "Implement ACLs, firewall policies, segmentation, secure configurations, and simulated network security controls.",
+          icon: Pt,
+          tech: ["pfSense", "Firewalls", "ACLs", "VPN"],
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Network Engineering Foundations",
+          items: [
+            "Enterprise Networking Architecture",
+            "OSI & TCP/IP Deep Dive",
+            "Network Devices & Infrastructure",
+            "Ethernet & Network Communication",
+            "Network Topologies & Architecture",
+            "Practical: Build a complete network topology from scratch",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: IP Addressing, Subnetting & Network Design",
+          items: [
+            "IPv4 & IPv6",
+            "CIDR & VLSM",
+            "Advanced Subnetting",
+            "Public vs Private Addressing",
+            "IP Address Planning",
+            "Network Segmentation",
+            "Practical: Design an IP addressing scheme for a multi-department enterprise",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Switching, VLANs & Layer 2 Engineering",
+          items: [
+            "Cisco Switching Fundamentals",
+            "MAC Address Tables",
+            "VLAN Architecture",
+            "Access & Trunk Ports",
+            "Inter-VLAN Routing",
+            "STP & Loop Prevention",
+            "EtherChannel Concepts",
+            "Practical: Build and configure a multi-VLAN enterprise network",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Routing & Layer 3 Engineering",
+          items: [
+            "Static & Default Routing",
+            "Dynamic Routing Concepts",
+            "OSPF Configuration",
+            "Route Selection & Metrics",
+            "Routing Tables",
+            "Network Convergence",
+            "Practical: Configure and troubleshoot an enterprise OSPF network",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Enterprise Network Services",
+          items: [
+            "DHCP Architecture & Configuration",
+            "DNS Fundamentals & Troubleshooting",
+            "NAT & PAT",
+            "Network Time Protocol",
+            "Proxy & Network Services",
+            "VPN Fundamentals",
+            "Practical: Deploy core network services across an enterprise environment",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Network Security Engineering",
+          items: [
+            "Network Security Architecture",
+            "Firewall Fundamentals",
+            "Access Control Lists",
+            "Secure Network Segmentation",
+            "Port Security",
+            "VPN & Secure Remote Access",
+            "Common Network Attacks",
+            "Practical: Secure an enterprise network against simulated attacks",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Network Monitoring & Traffic Analysis",
+          items: [
+            "Network Monitoring Architecture",
+            "Wireshark Deep-Dive",
+            "Packet Capture & Analysis",
+            "Nmap Network Discovery",
+            "Network Performance Monitoring",
+            "Bandwidth & Latency Analysis",
+            "Log & Event Analysis",
+            "Practical: Investigate a simulated network outage using packet captures and monitoring data",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Advanced Troubleshooting & Incident Response",
+          items: [
+            "Network Troubleshooting Methodology",
+            "Layer-by-Layer Troubleshooting",
+            "Routing & Switching Failures",
+            "DNS & DHCP Troubleshooting",
+            "Connectivity & Performance Issues",
+            "Network Incident Investigation",
+            "Root Cause Analysis",
+            "Practical: Resolve real-world enterprise network failure scenarios",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Enterprise Network Architecture",
+          items: [
+            "Enterprise LAN/WAN Design",
+            "Data Center Networking Concepts",
+            "Network Redundancy & High Availability",
+            "Load Balancing Concepts",
+            "Network Scalability",
+            "Cloud Networking Fundamentals",
+            "Hybrid Network Architecture",
+            "Practical: Architect a scalable enterprise network for a growing organization",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Live Capstone",
+          items: [
+            "Business Requirements Analysis",
+            "Complete Network Architecture Design",
+            "IP Addressing & Subnetting",
+            "VLAN & Routing Implementation",
+            "Network Security Controls",
+            "Network Monitoring",
+            "Failure & Attack Simulation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  rp = [
+    {
+      id: "it-support-sysadmin",
+      title: "IT Support & System Administrator Program",
+      category: "IT Infrastructure & Support",
+      description:
+        "Master enterprise IT support, Windows Server & Linux administration, Active Directory, Office 365, hardware troubleshooting, ticketing systems, and IT infrastructure operations.",
+      icon: Ue,
+      image:
+        "/images/Network Engineer Program/IT Support & System Administrator Program.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Network Engineer Program_20260608_180000_0000.pdf",
+      learningTools: [
+        "Windows Server",
+        "Active Directory",
+        "Office 365",
+        "Linux (Ubuntu/RHEL)",
+        "PowerShell",
+        "Jira Service Management",
+        "ServiceNow",
+        "DHCP & DNS",
+        "VirtualBox / VMware",
+        "Remote Desktop",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Practical Learning",
+        "Enterprise Helpdesk & Ticketing Labs",
+        "Real-World System Admin Simulations",
+        "Resume & LinkedIn Support",
+        "Interview Preparation Guidance",
+      ],
+      projects: [
+        {
+          title: "Active Directory & Group Policy Deployment",
+          description:
+            "Deploy domain controllers, user accounts, OU structures, and enterprise security policies.",
+          icon: vn,
+          tech: ["Windows Server", "Active Directory", "GPO", "DNS"],
+        },
+        {
+          title: "Enterprise Helpdesk & Service Desk Setup",
+          description:
+            "Configure Jira/ServiceNow ticketing workflow, SLAs, and incident management handling.",
+          icon: Ue,
+          tech: ["Jira Service Desk", "ServiceNow", "ITIL", "SLA"],
+        },
+        {
+          title: "Linux & Windows Server Hardening",
+          description:
+            "Configure user permissions, firewall rules, automated backup scripts, and patching.",
+          icon: Pt,
+          tech: ["Linux", "Ubuntu", "Bash", "PowerShell"],
+        },
+        {
+          title: "Hybrid Office 365 & Cloud Identity Setup",
+          description:
+            "Manage Azure AD/Entra ID integration, MFA, and user provisioning.",
+          icon: lf,
+          tech: ["Office 365", "Entra ID", "MFA", "Exchange Online"],
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: IT Fundamentals & Hardware Architecture",
+          items: [
+            "Computer Hardware & Peripheral Components",
+            "Operating System Architecture (Windows/Linux)",
+            "Motherboards, RAM, Storage (SSD/RAID)",
+            "BIOS/UEFI Configuration & Boot Options",
+            "Troubleshooting Hardware Failures",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Windows Client OS & Desktop Management",
+          items: [
+            "Windows 10/11 Enterprise Administration",
+            "Disk Management & File Systems (NTFS/ReFS)",
+            "Local User Accounts & Permissions",
+            "Remote Desktop & Assistance Tools",
+            "Windows Performance Diagnostics",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Windows Server & Active Directory (AD DS)",
+          items: [
+            "Windows Server Installation & Roles",
+            "Active Directory Domain Services (AD DS)",
+            "Creating Users, Groups & Organizational Units (OUs)",
+            "Group Policy Objects (GPO) Implementation",
+            "Domain Controller Management & Backup",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Linux System Administration Essentials",
+          items: [
+            "Linux CLI Fundamentals (Ubuntu / RHEL)",
+            "File Permissions, Ownership & Sudo Access",
+            "Package Management (apt / yum / dnf)",
+            "Systemd Services & Process Management",
+            "SSH Configuration & Remote Access Security",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Networking Services (DHCP, DNS, VPN)",
+          items: [
+            "TCP/IP & IPv4 Subnetting Essentials",
+            "DHCP Server Setup & Scope Reservation",
+            "DNS Forward & Reverse Lookup Zones",
+            "VPN Client Configuration & Remote Access",
+            "Network Troubleshooting Commands (ping, tracert, nslookup)",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Enterprise ITSM & Helpdesk Operations",
+          items: [
+            "ITIL Framework Essentials",
+            "Incident, Problem & Service Request Management",
+            "Ticketing Platforms (Jira Service Desk & ServiceNow)",
+            "Service Level Agreements (SLAs) & Escalation",
+            "Customer Service & Communication Skills",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Cloud Administration (M365 & Entra ID)",
+          items: [
+            "Microsoft 365 Admin Center Navigation",
+            "User Provisioning & License Management",
+            "Azure Active Directory (Entra ID) Synchronization",
+            "Exchange Online & Mailbox Administration",
+            "Multi-Factor Authentication (MFA) Setup",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Security, Backup & Disaster Recovery",
+          items: [
+            "Endpoint Antivirus & EDR Management",
+            "Data Backup Solutions & Retention Policies",
+            "Disaster Recovery Planning",
+            "Patch Management & System Updates",
+            "System Hardening Best Practices",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: PowerShell Scripting & Automation",
+          items: [
+            "PowerShell Fundamentals & Cmdlets",
+            "Automating User Account Creation",
+            "Bulk Object Management Scripts",
+            "Automated Health & Status Reporting",
+            "Scheduled Tasks Integration",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Capstone: Enterprise IT Infrastructure Setup",
+          items: [
+            "End-to-End AD Domain Setup",
+            "Server Role Integration (DNS/DHCP/File)",
+            "Ticket Handling & SLAs Simulation",
+            "Disaster Recovery Failover Test",
+            "Final Technical Infrastructure Defense",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  op = [
+    {
+      id: "fullstack-developer",
+      title: "Full Stack Developer Program",
+      category: "Software Development",
+      description:
+        "Become a job-ready Full Stack Web Developer by mastering modern frontend and backend technologies including React, Node.js, Express, Next.js, PostgreSQL, MongoDB, REST APIs, and Cloud Deployment.",
+      icon: Qe,
+      image:
+        "/images/Network Engineer Program/Full Stack Developer Program.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Network Engineer Program_20260608_180000_0000.pdf",
+      learningTools: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Tailwind CSS",
+        "Git & GitHub",
+        "Docker",
+        "Vercel / AWS",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Coding & Architecture",
+        "Production-Ready Full Stack Projects",
+        "Code Reviews & Portfolio Building",
+        "Resume & LinkedIn Support",
+        "Technical Interview & DSA Prep",
+      ],
+      projects: [
+        {
+          title: "E-Commerce Platform with Payment Gateway",
+          description:
+            "Build full stack e-commerce web app with React, Node.js, PostgreSQL, and Stripe integration.",
+          icon: Cl,
+          tech: ["React", "Node.js", "PostgreSQL", "Stripe API"],
+        },
+        {
+          title: "Real-Time Collaborative Workspace",
+          description:
+            "Develop web sockets based live collaboration platform with Next.js & WebSockets.",
+          icon: Qe,
+          tech: ["Next.js", "TypeScript", "WebSockets", "Tailwind"],
+        },
+        {
+          title: "SaaS Product Dashboard & Authentication",
+          description:
+            "Implement multi-tenant SaaS dashboard with OAuth, JWT, and role-based permissions.",
+          icon: Ue,
+          tech: ["Node.js", "Express", "JWT", "MongoDB"],
+        },
+        {
+          title: "Microservices API Gateway",
+          description:
+            "Build scalable backend microservices with Node.js, Express, Docker & MongoDB.",
+          icon: lt,
+          tech: ["Node.js", "Docker", "MongoDB", "Redis"],
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: HTML5, Modern CSS3 & Responsive Web Design",
+          items: [
+            "Semantic HTML5 Architecture",
+            "CSS Grid & Flexbox Layout Systems",
+            "Tailwind CSS Integration",
+            "Responsive Design & Mobile-First Approach",
+            "Web Accessibility (a11y) Best Practices",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: JavaScript ES6+ & TypeScript Essentials",
+          items: [
+            "Modern ES6+ Syntax (Arrow Functions, Destructuring, Promises)",
+            "Async / Await & Fetch API",
+            "DOM Manipulation & Event Handling",
+            "TypeScript Types, Interfaces & Generics",
+            "Functional Programming Concepts",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Frontend Web Development with React",
+          items: [
+            "React Component Architecture & JSX",
+            "State Management (useState, useReducer, Context API)",
+            "Hooks & Lifecycle Management (useEffect, useMemo)",
+            "React Router DOM & Single Page Apps (SPA)",
+            "Component UI Libraries & Styling",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Next.js & Server-Side Rendering (SSR)",
+          items: [
+            "App Router & File-based Routing",
+            "Server Components vs Client Components",
+            "Static Site Generation (SSG) & SSR",
+            "API Routes & Server Actions",
+            "SEO & Web Vitals Optimization",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Backend Development with Node.js & Express",
+          items: [
+            "Node.js Architecture & Event Loop",
+            "Express Server Setup & Middleware",
+            "RESTful API Design & Best Practices",
+            "Authentication & Authorization (JWT, OAuth 2.0, bcrypt)",
+            "Error Handling & Input Validation",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Relational & NoSQL Databases",
+          items: [
+            "SQL vs NoSQL Database Selection",
+            "PostgreSQL Schema Design & Complex Queries",
+            "MongoDB Collections & Aggregation Framework",
+            "Prisma ORM & Mongoose ODM Integration",
+            "Database Indexing & Performance Tuning",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: API Architecture & Integration",
+          items: [
+            "REST API Consumption & Creation",
+            "GraphQL Basics (Queries & Mutations)",
+            "Third-party Payment Gateway Integration (Stripe)",
+            "Real-time Communication with WebSockets / Socket.io",
+            "Postman API Testing & Documentation",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: State Management & Code Quality",
+          items: [
+            "Redux Toolkit / Zustand State Management",
+            "Unit & Integration Testing (Jest & React Testing Library)",
+            "ESLint, Prettier & Git Workflows",
+            "Code Optimization & Lazy Loading",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Containerization & Cloud Deployment",
+          items: [
+            "Dockerizing Full Stack Web Applications",
+            "CI/CD Pipelines with GitHub Actions",
+            "Deployment to Vercel, Render & AWS EC2",
+            "Environment Variables & Security Best Practices",
+          ],
+          color: "red",
+        },
+        {
+          title: "Module 10: Live Capstone: Production SaaS Web Application",
+          items: [
+            "Full Stack Architecture Specification",
+            "Database Design & Migration",
+            "Secure Authentication & Payment Integration",
+            "Production Deployment & Monitoring",
+            "Code Review & Demo Presentation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+    {
+      id: "python-programming",
+      title: "Python Programming Program",
+      category: "Software Development",
+      description:
+        "Master Python from fundamentals to advanced concepts, object-oriented programming, data structures, web scraping, automation scripts, API development with FastAPI/Flask, and database integration.",
+      icon: lr,
+      image: "/images/Network Engineer Program/Python Programming_.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Network Engineer Program_20260608_180000_0000.pdf",
+      learningTools: [
+        "Python 3",
+        "PyCharm",
+        "VS Code",
+        "FastAPI",
+        "Flask",
+        "SQLite / PostgreSQL",
+        "Pandas",
+        "Web Scraping (BeautifulSoup/Selenium)",
+        "Git",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Practical Coding Exercises",
+        "Automation & Scripting Projects",
+        "API & Web Backend Building",
+        "Resume & LinkedIn Support",
+        "Python Developer Interview Preparation",
+      ],
+      projects: [
+        {
+          title: "Automated Data Extraction Pipeline",
+          description:
+            "Scrape, clean, process, and store unstructured web data automatically.",
+          icon: Te,
+          tech: ["Python", "BeautifulSoup", "Selenium", "Pandas"],
+        },
+        {
+          title: "RESTful Web API with FastAPI & Database",
+          description:
+            "Build high-performance asynchronous API with authentication and SQLite/PostgreSQL.",
+          icon: Ue,
+          tech: ["FastAPI", "Python", "SQLAlchemy", "PostgreSQL"],
+        },
+        {
+          title: "System Automation CLI Tool",
+          description:
+            "Build Python CLI tool for automated server backup, file management, and log reporting.",
+          icon: lr,
+          tech: ["Python", "Click", "Subprocess", "Logging"],
+        },
+        {
+          title: "Data Processing & Reporting Engine",
+          description:
+            "Develop data pipeline script utilizing Pandas for automated financial/operational reporting.",
+          icon: lt,
+          tech: ["Python", "Pandas", "OpenPyXL", "Matplotlib"],
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Python Fundamentals & Data Types",
+          items: [
+            "Python Installation & Environment Setup",
+            "Variables, Data Types (Int, Float, String, Bool)",
+            "Operators & Type Conversion",
+            "Console I/O & Formatting",
+            "Writing First Clean Python Scripts",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Control Flow & Logic",
+          items: [
+            "Conditional Statements (if / elif / else)",
+            "Looping Constructs (for, while, range)",
+            "Loop Control Statements (break, continue, pass)",
+            "List Comprehensions & Generator Expressions",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Data Structures & Built-in Collections",
+          items: [
+            "Lists & Mutability Operations",
+            "Tuples & Immutability Use Cases",
+            "Dictionaries & Key-Value Operations",
+            "Sets & Set Mathematics Operations",
+            "Sorting & Searching Algorithms",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Functions & Modular Programming",
+          items: [
+            "Defining Functions & Return Values",
+            "*args and **kwargs Variable Arguments",
+            "Lambda Functions & Higher-Order Functions (map, filter)",
+            "Modules, Packages & Virtual Environments (venv)",
+            "Scope (Local, Enclosing, Global, Built-in)",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Object-Oriented Programming (OOP)",
+          items: [
+            "Classes, Objects & Attributes",
+            "Constructor (__init__) & Magic Methods",
+            "Inheritance & Polymorphism",
+            "Encapsulation & Property Decorators",
+            "Abstract Classes & Interfaces",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: File Handling & Exception Management",
+          items: [
+            "Reading & Writing Text/JSON/CSV Files",
+            "Context Managers (with statement)",
+            "Try, Except, Else, Finally Blocks",
+            "Custom Exception Classes",
+            "Logging Framework Integration",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Web Scraping & Data Extraction",
+          items: [
+            "HTTP Requests with requests Module",
+            "HTML Parsing with BeautifulSoup4",
+            "Handling Dynamic JS Pages with Selenium / Playwright",
+            "API Rate Limiting & User-Agent Rotation",
+            "Storing Extracted Data to Databases",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Web API Development with FastAPI / Flask",
+          items: [
+            "FastAPI Architecture & Routing",
+            "Request & Response Models (Pydantic)",
+            "Dependency Injection & Authentication",
+            "SQLAlchemy ORM & Database Migration (Alembic)",
+            "OpenAPI (Swagger) Documentation",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Automated Testing & Packaging",
+          items: [
+            "Unit Testing with PyTest",
+            "Mocking & Fixtures",
+            "Packaging Python Code (setup.py / poetry)",
+            "Code Quality Tools (Flake8, Black, MyPy)",
+          ],
+          color: "red",
+        },
+        {
+          title:
+            "Module 10: Capstone: Enterprise Python Automation & API Suite",
+          items: [
+            "Full Requirement Analysis",
+            "Web Scraping & Data Cleaning Pipeline",
+            "FastAPI Backend Service Deployment",
+            "Automated PyTest Suite",
+            "Final Project Presentation",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  ip = [
+    {
+      id: "salesforce-admin-dev",
+      title: "Salesforce Administrator & Developer Program",
+      category: "CRM & Enterprise Platforms",
+      description:
+        "Comprehensive training covering Salesforce Administration (Sales Cloud, Service Cloud, Security, Flows) and Salesforce Development (Apex, Lightning Web Components (LWC), SOQL/SOSL, Integration, and APIs).",
+      icon: lt,
+      image:
+        "/images/Network Engineer Program/Salesforce Administrator & Developer Program_.png",
+      syllabusUrl:
+        "/pdfs/Cyber security/Network Engineer Program_20260608_180000_0000.pdf",
+      learningTools: [
+        "Salesforce Lightning",
+        "Salesforce Admin Console",
+        "Flow Builder",
+        "Apex Programming",
+        "Lightning Web Components (LWC)",
+        "SOQL & SOSL",
+        "VS Code & Salesforce CLI",
+        "Postman",
+      ],
+      benefits: [
+        "Live 1-on-1 Personalized Training",
+        "Hands-on Salesforce Developer Org Work",
+        "Real Enterprise CRM Use Cases",
+        "Salesforce ADM-201 & PD1 Certification Guidance",
+        "Resume & LinkedIn Support",
+        "Salesforce Consultant Interview Prep",
+      ],
+      projects: [
+        {
+          title: "Enterprise Sales Cloud & Lead Automation",
+          description:
+            "Configure custom objects, validation rules, automated flow triggers, and approval processes.",
+          icon: Te,
+          tech: ["Sales Cloud", "Flow Builder", "Validation Rules", "Profiles"],
+        },
+        {
+          title: "Customer Service Portal with Service Cloud",
+          description:
+            "Set up case management, web-to-case, omni-channel routing, and knowledge base.",
+          icon: mn,
+          tech: [
+            "Service Cloud",
+            "Case Management",
+            "Knowledge",
+            "Omni-Channel",
+          ],
+        },
+        {
+          title: "Apex Trigger & Business Logic Automation",
+          description:
+            "Write bulkified Apex triggers, handler classes, and unit tests with high code coverage.",
+          icon: Qe,
+          tech: ["Apex", "SOQL", "Triggers", "Unit Testing"],
+        },
+        {
+          title: "Custom Lightning Web Component (LWC) Portal",
+          description:
+            "Develop custom reactive UI components using LWC, Apex controllers, and wire service.",
+          icon: Pt,
+          tech: ["LWC", "JavaScript", "HTML/CSS", "Salesforce API"],
+        },
+      ],
+      modules: [
+        {
+          title: "Module 1: Salesforce Architecture & Ecosystem",
+          items: [
+            "Multi-Tenant Architecture Concepts",
+            "Salesforce Editions & Developer Org Setup",
+            "Standard Objects (Accounts, Contacts, Leads, Opportunities)",
+            "Salesforce Navigation & Setup Interface",
+            "Company Profile & Currency Configuration",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 2: Data Modeling & Customization",
+          items: [
+            "Creating Custom Objects & Custom Fields",
+            "Field Types & Formula Fields",
+            "Master-Detail vs Lookup Relationships",
+            "Roll-Up Summary Fields",
+            "Schema Builder & Data Validation Rules",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 3: Security & Data Access Control",
+          items: [
+            "Organization-Wide Defaults (OWD)",
+            "Profiles & Permission Sets",
+            "Role Hierarchy & Sharing Rules",
+            "Manual Sharing & Field-Level Security (FLS)",
+            "Audit Trails & Session Security",
+          ],
+          color: "green",
+        },
+        {
+          title: "Module 4: Process Automation with Flow Builder",
+          items: [
+            "Record-Triggered Flows Architecture",
+            "Screen Flows for Guided User Input",
+            "Schedule-Triggered & Autolaunched Flows",
+            "Approval Processes & Email Alerts",
+            "Migrating Legacy Workflows to Salesforce Flow",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 5: Sales Cloud & Service Cloud Operations",
+          items: [
+            "Lead Management & Assignment Rules",
+            "Opportunity Management & Sales Stages",
+            "Case Management & Web-to-Case Automation",
+            "Entitlements, Service Contracts & Knowledge Base",
+            "Omni-Channel Routing Basics",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 6: Reports, Dashboards & Analytics",
+          items: [
+            "Report Types (Tabular, Summary, Matrix, Joined)",
+            "Custom Report Types Creation",
+            "Report Filters, Bucket Fields & Summary Formulas",
+            "Dynamic Dashboards & Component Layouts",
+            "Scheduling & Subscribing to Reports",
+          ],
+          color: "yellow",
+        },
+        {
+          title: "Module 7: Apex Programming Fundamentals",
+          items: [
+            "Apex Data Types, Variables & Collections (List, Set, Map)",
+            "Apex Control Flow & Methods",
+            "Object-Oriented Apex (Classes, Interfaces)",
+            "SOQL (Salesforce Object Query Language) Queries",
+            "SOSL (Salesforce Object Search Language) Searches",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 8: Apex Triggers & DML Operations",
+          items: [
+            "Trigger Events (Before/After Insert, Update, Delete)",
+            "Trigger Context Variables (Trigger.new, Trigger.old)",
+            "Bulkification Best Practices & Avoiding Governor Limits",
+            "Trigger Handler Design Pattern",
+            "Apex Unit Testing & Test Coverage Requirements",
+          ],
+          color: "orange",
+        },
+        {
+          title: "Module 9: Lightning Web Components (LWC) Development",
+          items: [
+            "LWC Architecture & Component Bundle Structure",
+            "HTML Template Syntax & Component Directives",
+            "JavaScript Decorators (@api, @track, @wire)",
+            "Connecting LWC to Apex Controllers",
+            "Component Communication (Custom Events & LMS)",
+          ],
+          color: "red",
+        },
+        {
+          title:
+            "Module 10: Capstone: Enterprise Salesforce CRM Implementation",
+          items: [
+            "End-to-End Business Requirement Analysis",
+            "Custom Data Model & Security Model Design",
+            "Complex Automation with Flow Builder & Apex",
+            "Custom LWC Interface Deployment",
+            "Salesforce ADM-201 & PD1 Practice Review",
+          ],
+          color: "red",
+        },
+      ],
+    },
+  ],
+  si = [
+    ...Qm,
+    ...qm,
+    ...Ym,
+    ...np,
+    ...rp,
+    ...op,
+    ...ip,
+    ...Km,
+    ...Xm,
+    ...tp,
+    ...ep,
+  ];
+si.filter((e) =>
+  [
+    "jrp-soc",
+    "jrp-cloud-engineer",
+    "jrp-devops-engineer",
+    "cloud-aws-engineer",
+    "cloud-azure-engineer",
+    "cyber-ethical-hacking",
+    "ai-engineer",
+    "ai-data-science-analytics",
+  ].includes(e.id),
+);
+var br = (e) => e.type === "checkbox",
+  mo = (e) => e.type === "file",
+  qt = (e) => e instanceof Date,
+  Fe = (e) => e == null;
+const Wi = (e) => typeof e == "object";
+var Ae = (e) => !Fe(e) && !Array.isArray(e) && Wi(e) && !qt(e),
+  ai = (e) =>
+    Ae(e) && e.target
+      ? br(e.target)
+        ? e.target.checked
+        : mo(e.target)
+          ? e.target.files
+          : e.target.value
+      : e;
+const sp = /[.[\]'"]/;
+var wn = (e) => e.split(sp).filter(Boolean);
+function ap(e, t) {
+  const n = wn(t);
+  let r = e._formValues,
+    o = e._defaultValues;
+  for (let i = 0; i < n.length - 1; i++) {
+    const s = n[i];
+    if (
+      ((r = r == null ? r : r[s]),
+      (o = o == null ? o : o[s]),
+      r === null || o === null)
+    )
+      return null;
+  }
+}
+var Kl = (e, t) =>
+    t
+      .split(".")
+      .some((n, r, o) => !isNaN(Number(n)) && e.has(o.slice(0, r).join("."))),
+  po =
+    typeof window < "u" &&
+    typeof window.HTMLElement < "u" &&
+    typeof document < "u";
+function ge(e) {
+  if (e === null || typeof e != "object") return e;
+  if (e instanceof Date) return new Date(e);
+  const t = typeof FileList < "u" && e instanceof FileList;
+  if (po && (e instanceof Blob || t)) return e;
+  const n = Array.isArray(e);
+  if (!n && e.constructor !== Object) return e;
+  const r = n ? [] : Object.create(Object.getPrototypeOf(e));
+  for (const o in e)
+    Object.prototype.hasOwnProperty.call(e, o) && (r[o] = ge(e[o]));
+  return r;
+}
+const Zt = {
+    BLUR: "blur",
+    FOCUS_OUT: "focusout",
+    CHANGE: "change",
+    SUBMIT: "submit",
+    TRIGGER: "trigger",
+    VALID: "valid",
+  },
+  gt = {
+    onBlur: "onBlur",
+    onChange: "onChange",
+    onSubmit: "onSubmit",
+    onTouched: "onTouched",
+    all: "all",
+  },
+  mt = {
+    max: "max",
+    min: "min",
+    maxLength: "maxLength",
+    minLength: "minLength",
+    pattern: "pattern",
+    required: "required",
+    validate: "validate",
+  },
+  ql = "root",
+  Ui = ["__proto__", "constructor", "prototype"],
+  lp = /^\w*$/;
+var xn = (e) => lp.test(e),
+  de = (e) => e === void 0,
+  E = (e, t, n) => {
+    if (!t || !Ae(e)) return n;
+    const r = xn(t) ? [t] : wn(t);
+    if (r.some((i) => Ui.includes(i))) return n;
+    const o = r.reduce((i, s) => (Fe(i) ? void 0 : i[s]), e);
+    return de(o) || o === e ? (de(e[t]) ? n : e[t]) : o;
+  },
+  it = (e) => typeof e == "boolean",
+  Ze = (e) => typeof e == "function",
+  ue = (e, t, n) => {
+    let r = -1;
+    const o = xn(t) ? [t] : wn(t),
+      i = o.length,
+      s = i - 1;
+    for (; ++r < i;) {
+      const a = o[r];
+      let c = n;
+      if (r !== s) {
+        const u = e[a];
+        c = Ae(u) || Array.isArray(u) ? u : isNaN(+o[r + 1]) ? {} : [];
+      }
+      if (Ui.includes(a)) return;
+      ((e[a] = c), (e = e[a]));
+    }
+  };
+const Hi = q.createContext(null);
+Hi.displayName = "HookFormControlContext";
+const Gi = () => q.useContext(Hi);
+var Yl = (e, t, n, r = !0) => {
+  const o = {};
+  for (const i in e)
+    Object.defineProperty(o, i, {
+      get: () => {
+        const s = i;
+        return (
+          t._proxyFormState[s] !== gt.all &&
+            (t._proxyFormState[s] = !r || gt.all),
+          n && (n[s] = !0),
+          e[s]
+        );
+      },
+    });
+  return o;
+};
+const Zi = po ? q.useLayoutEffect : q.useEffect;
+var cp = (e) => {
+    const t = e.constructor && e.constructor.prototype;
+    return Ae(t) && t.hasOwnProperty("isPrototypeOf");
+  },
+  li = (e) => Fe(e) || !Wi(e);
+const ea = (e, t) => t.length === 0 && !Array.isArray(e) && !cp(e);
+function et(e, t, n = new WeakMap()) {
+  if (e === t) return !0;
+  if (li(e) || li(t)) return Object.is(e, t);
+  if (qt(e) && qt(t)) return Object.is(e.getTime(), t.getTime());
+  const r = Object.keys(e),
+    o = Object.keys(t);
+  if (r.length !== o.length) return !1;
+  if (ea(e, r) || ea(t, o)) return Object.is(e, t);
+  if (!r.length && Array.isArray(e) !== Array.isArray(t)) return !1;
+  const i = n.get(e);
+  if (i && i.has(t)) return !0;
+  if (i) i.add(t);
+  else {
+    const s = new WeakSet();
+    (s.add(t), n.set(e, s));
+  }
+  for (const s of r) {
+    const a = e[s];
+    if (!(s in t)) return !1;
+    if (s !== "ref") {
+      const c = t[s];
+      if (
+        (qt(a) && qt(c)) ||
+        ((Ae(a) || Array.isArray(a)) && (Ae(c) || Array.isArray(c)))
+          ? !et(a, c, n)
+          : !Object.is(a, c)
+      )
+        return !1;
+    }
+  }
+  return !0;
+}
+function Ji(e) {
+  const t = q.useRef(!1),
+    n = q.useRef(!1),
+    r = q.useRef(void 0),
+    o = q.useRef(0);
+  (o.current++, !n.current && e && ((n.current = !0), (r.current = ge(e()))));
+  const i = q.useCallback((a, c, u) => {
+      if (a && (t.current || (n.current && o.current > 1))) {
+        const f = c();
+        et(r.current, f) || u(f);
+      }
+      t.current = !0;
+    }, []),
+    s = q.useCallback((a, c) => {
+      a && (r.current = ge(c()));
+    }, []);
+  return { resyncIfNeeded: i, snapshot: s };
+}
+function up(e) {
+  const t = Gi(),
+    { control: n = t, disabled: r, name: o, exact: i } = e || {},
+    s = () => ({ ...n._formState, defaultValues: n._defaultValues }),
+    [a, c] = q.useState(s),
+    u = q.useRef({
+      isDirty: !1,
+      isLoading: !1,
+      dirtyFields: !1,
+      touchedFields: !1,
+      validatingFields: !1,
+      isValidating: !1,
+      isValid: !1,
+      errors: !1,
+    }),
+    { resyncIfNeeded: f, snapshot: d } = Ji(s);
+  return (
+    Zi(() => {
+      f(!r, s, c);
+      const m = n._subscribe({
+        name: o,
+        formState: u.current,
+        exact: i,
+        callback: (y) => {
+          !r && c({ ...n._formState, ...y, defaultValues: n._defaultValues });
+        },
+      });
+      return () => {
+        (m(), d(!r, s));
+      };
+    }, [o, r, i, f, d]),
+    q.useEffect(() => {
+      u.current.isValid && n._setValid(!0);
+    }, [n]),
+    q.useMemo(() => Yl(a, n, u.current, !1), [a, n])
+  );
+}
+var Be = (e) => typeof e == "string",
+  ci = (e, t, n, r, o) =>
+    Be(e)
+      ? (r && t.watch.add(e), E(n, e, o))
+      : Array.isArray(e)
+        ? e.map((i) => (r && t.watch.add(i), E(n, i, E(o, i))))
+        : (r && (t.watchAll = !0), n);
+function dp(e) {
+  const t = Gi(),
+    {
+      control: n = t,
+      name: r,
+      defaultValue: o,
+      disabled: i,
+      exact: s,
+      compute: a,
+    } = e || {},
+    c = q.useRef(o),
+    u = q.useRef(a),
+    f = q.useRef(void 0),
+    d = q.useRef(n),
+    m = q.useRef(r);
+  u.current = a;
+  const y = () => {
+      const N = n._getWatch(r, c.current);
+      return u.current ? u.current(N) : N;
+    },
+    [p, v] = q.useState(y),
+    h = q.useCallback(
+      (N) => {
+        const V = ci(r, n._names, N || n._formValues, !1, c.current);
+        return u.current ? u.current(V) : V;
+      },
+      [n._formValues, n._names, r],
+    ),
+    S = q.useCallback(
+      (N) => {
+        if (!i) {
+          const V = ci(r, n._names, N || n._formValues, !1, c.current);
+          if (u.current) {
+            const X = u.current(V);
+            et(X, f.current) || (v(X), (f.current = X));
+          } else v(V);
+        }
+      },
+      [n._formValues, n._names, i, r],
+    ),
+    { resyncIfNeeded: x, snapshot: C } = Ji(y),
+    w = q.useRef(S);
+  w.current = S;
+  const k = q.useRef(h);
+  ((k.current = h),
+    Zi(() => {
+      d.current !== n || !et(m.current, r)
+        ? ((d.current = n), (m.current = r), w.current())
+        : x(
+            !i,
+            () => k.current(),
+            (V) => {
+              (v(V), (f.current = V));
+            },
+          );
+      const N = n._subscribe({
+        name: r,
+        formState: { values: !0 },
+        exact: s,
+        callback: (V) => {
+          w.current(V.values);
+        },
+      });
+      return () => {
+        (N(), C(!i, () => k.current()));
+      };
+    }, [n, s, r, i, x, C]),
+    q.useEffect(() => n._removeUnmounted()));
+  const _ = d.current !== n,
+    D = m.current;
+  return q.useMemo(() => {
+    if (i) return !1;
+    const N = !_ && !et(D, r);
+    return _ || N;
+  }, [i, _, r, D])
+    ? h()
+    : p;
+}
+function fp(e) {
+  const t = Gi(),
+    {
+      name: n,
+      disabled: r,
+      control: o = t,
+      shouldUnregister: i,
+      defaultValue: s,
+      exact: a = !0,
+    } = e,
+    c = Kl(o._names.array, n),
+    u = q.useMemo(() => {
+      const w = E(o._formValues, n, E(o._defaultValues, n, s));
+      return de(w) ? ap(o, n) : w;
+    }, [o, n, s]),
+    f = dp({ control: o, name: n, defaultValue: u, exact: a }),
+    d = up({ control: o, name: n, exact: a }),
+    m = q.useRef(e),
+    y = q.useRef(null),
+    p = q.useRef(
+      o.register(n, {
+        ...e.rules,
+        value: f,
+        ...(it(e.disabled) ? { disabled: e.disabled } : {}),
+      }),
+    );
+  m.current = e;
+  const v = q.useMemo(
+      () =>
+        Object.defineProperties(
+          {},
+          {
+            invalid: { enumerable: !0, get: () => !!E(d.errors, n) },
+            isDirty: { enumerable: !0, get: () => !!E(d.dirtyFields, n) },
+            isTouched: { enumerable: !0, get: () => !!E(d.touchedFields, n) },
+            isValidating: {
+              enumerable: !0,
+              get: () => !!E(d.validatingFields, n),
+            },
+            error: { enumerable: !0, get: () => E(d.errors, n) },
+          },
+        ),
+      [d, n],
+    ),
+    h = q.useCallback(
+      (w) => {
+        const k = ai(w);
+        return (
+          E(o._fields, n) ||
+            (p.current = o.register(n, { ...m.current.rules, value: k })),
+          p.current.onChange({
+            target: { value: ai(w), name: n },
+            type: Zt.CHANGE,
+          })
+        );
+      },
+      [n, o],
+    ),
+    S = q.useCallback(
+      () =>
+        p.current.onBlur({
+          target: { value: E(o._formValues, n), name: n },
+          type: Zt.BLUR,
+        }),
+      [n, o._formValues],
+    ),
+    x = q.useCallback(
+      (w) => {
+        w &&
+          (y.current = {
+            focus: () => Ze(w.focus) && w.focus(),
+            select: () => Ze(w.select) && w.select(),
+            setCustomValidity: (_) =>
+              Ze(w.setCustomValidity) && w.setCustomValidity(_),
+            reportValidity: () => Ze(w.reportValidity) && w.reportValidity(),
+          });
+        const k = E(o._fields, n);
+        k && k._f && w && (k._f.ref = y.current);
+      },
+      [o._fields, n],
+    ),
+    C = q.useMemo(
+      () => ({
+        name: n,
+        value: f,
+        ...(it(r) || d.disabled ? { disabled: d.disabled || r } : {}),
+        onChange: h,
+        onBlur: S,
+        ref: x,
+      }),
+      [n, r, d.disabled, h, S, x, f],
+    );
+  return (
+    q.useEffect(() => {
+      const w = o._options.shouldUnregister || i;
+      p.current = o.register(n, {
+        ...m.current.rules,
+        ...(it(m.current.disabled) ? { disabled: m.current.disabled } : {}),
+      });
+      const k = (_, D) => {
+        const I = E(o._fields, _);
+        I && I._f && (I._f.mount = D);
+      };
+      if ((k(n, !0), w)) {
+        const _ = ge(
+          E(
+            i ? o._defaultValues : o._options.values || o._defaultValues,
+            n,
+            E(o._options.defaultValues, n, m.current.defaultValue),
+          ),
+        );
+        (ue(o._defaultValues, n, _),
+          de(E(o._formValues, n)) && ue(o._formValues, n, _));
+      }
+      if ((!c && o.register(n), y.current)) {
+        const _ = E(o._fields, n);
+        _ && _._f && (_._f.ref = y.current);
+      }
+      return () => {
+        (c ? w && !o._state.action : w) ? o.unregister(n) : k(n, !1);
+      };
+    }, [n, o, c, i]),
+    q.useEffect(() => {
+      o._setDisabledField({ disabled: r, name: n });
+    }, [r, n, o]),
+    q.useMemo(() => ({ field: C, formState: d, fieldState: v }), [C, d, v])
+  );
+}
+const mp = (e) => e.render(fp(e));
+var _r = (e) => ({
+    isOnSubmit: !e || e === gt.onSubmit,
+    isOnBlur: e === gt.onBlur,
+    isOnChange: e === gt.onChange,
+    isOnAll: e === gt.all,
+    isOnTouch: e === gt.onTouched,
+  }),
+  Oo = (e, t, n) => {
+    if (n) return !1;
+    if (t.watchAll || t.watch.has(e)) return !0;
+    for (const r of t.watch)
+      if (e.startsWith(r) && e.charAt(r.length) === ".") return !0;
+    return !1;
+  };
+const ir = (e, t, n, r) => {
+  for (const o of n || Object.keys(e)) {
+    if (o === "_f") continue;
+    const i = n ? E(e, o) : e[o];
+    if (i) {
+      const { _f: s } = i;
+      if (s) {
+        if (s.refs && s.refs[0] && t(s.refs[0], o) && !r) return !0;
+        if (s.ref && t(s.ref, s.name) && !r) return !0;
+        if (ir(i, t)) break;
+      } else if ((Ae(i) || Array.isArray(i)) && ir(i, t)) break;
+    }
+  }
+};
+var ta = (e, t, n) => {
+    const r = E(e, n),
+      o = Array.isArray(r) ? r : [];
+    return (ue(o, ql, t[n]), ue(e, n, o), e);
+  },
+  We = (e) => Ae(e) && !Object.keys(e).length,
+  Qr = (e) => {
+    if (!po) return !1;
+    const t = e ? e.ownerDocument : 0;
+    return (
+      e instanceof
+      (t && t.defaultView ? t.defaultView.HTMLElement : HTMLElement)
+    );
+  },
+  Ki = (e) => e.type === "radio",
+  Xr = (e) => e instanceof RegExp,
+  qi = (e, t, n, r, o) =>
+    t
+      ? {
+          ...n[e],
+          types: { ...(n[e] && n[e].types ? n[e].types : {}), [r]: o || !0 },
+        }
+      : {};
+const na = { value: !1, isValid: !1 },
+  ra = { value: !0, isValid: !0 };
+var Ql = (e) => {
+  if (!Array.isArray(e)) return na;
+  if (e.length > 1) {
+    const n = e
+      .filter((r) => r && r.checked && !r.disabled)
+      .map((r) => r.value);
+    return { value: n, isValid: !!n.length };
+  }
+  const t = e[0];
+  return !t || !t.checked || t.disabled
+    ? na
+    : !t.attributes ||
+        !("value" in t.attributes) ||
+        de(t.value) ||
+        t.value === ""
+      ? ra
+      : { value: t.value, isValid: !0 };
+};
+const oa = { isValid: !1, value: null };
+var Xl = (e) =>
+  Array.isArray(e)
+    ? e.reduce(
+        (t, n) =>
+          n && n.checked && !n.disabled ? { isValid: !0, value: n.value } : t,
+        oa,
+      )
+    : oa;
+function ia(e, t, n = "validate") {
+  if (Be(e) || (Array.isArray(e) && e.every(Be)) || (it(e) && !e))
+    return { type: n, message: Be(e) ? e : "", ref: t };
+}
+var Tn = (e) => (Ae(e) && !Xr(e) ? e : { value: e, message: "" }),
+  sa = async (e, t, n, r, o, i) => {
+    const {
+        ref: s,
+        refs: a,
+        required: c,
+        maxLength: u,
+        minLength: f,
+        min: d,
+        max: m,
+        pattern: y,
+        validate: p,
+        name: v,
+        valueAsNumber: h,
+        mount: S,
+      } = e._f,
+      x = E(n, v);
+    if (!S || t.has(v)) return {};
+    const C = a ? a[0] : s,
+      w = (O) => {
+        if (o && C.reportValidity) {
+          const B = it(O) ? "" : O || "";
+          (a
+            ? a.forEach((H) => H.setCustomValidity(B))
+            : C.setCustomValidity(B),
+            C.reportValidity());
+        }
+      },
+      k = {},
+      _ = Ki(s),
+      D = br(s),
+      I = _ || D,
+      N =
+        ((h || mo(s)) && de(s.value) && de(x)) ||
+        (Qr(s) && s.value === "") ||
+        x === "" ||
+        (Array.isArray(x) && !x.length),
+      V = qi.bind(null, v, r, k),
+      X = (O, B, H, G = mt.maxLength, Y = mt.minLength) => {
+        const Z = O ? B : H;
+        k[v] = { type: O ? G : Y, message: Z, ref: s, ...V(O ? G : Y, Z) };
+      };
+    if (
+      i
+        ? !Array.isArray(x) || !x.length
+        : c &&
+          ((!I && (N || Fe(x))) ||
+            (it(x) && !x) ||
+            (D && !Ql(a).isValid) ||
+            (_ && !Xl(a).isValid))
+    ) {
+      const { value: O, message: B } = Be(c)
+        ? { value: !!c, message: c }
+        : Tn(c);
+      if (
+        O &&
+        ((k[v] = {
+          type: mt.required,
+          message: B,
+          ref: C,
+          ...V(mt.required, B),
+        }),
+        !r)
+      )
+        return (w(B), k);
+    }
+    if (!N && (!Fe(d) || !Fe(m))) {
+      let O, B;
+      const H = Tn(m),
+        G = Tn(d);
+      if (!Fe(x) && !qt(x) && !isNaN(x)) {
+        const Y = s.valueAsNumber || (x && +x);
+        (Fe(H.value) || (O = Y > H.value), Fe(G.value) || (B = Y < G.value));
+      } else {
+        const Y = s.valueAsDate || new Date(x),
+          Z = (Le) => new Date(new Date().toDateString() + " " + Le),
+          ie = s.type == "time",
+          R = s.type == "week";
+        (Be(H.value) &&
+          x &&
+          (O = ie
+            ? Z(x) > Z(H.value)
+            : R
+              ? x > H.value
+              : Y > new Date(H.value)),
+          Be(G.value) &&
+            x &&
+            (B = ie
+              ? Z(x) < Z(G.value)
+              : R
+                ? x < G.value
+                : Y < new Date(G.value)));
+      }
+      if ((O || B) && (X(!!O, H.message, G.message, mt.max, mt.min), !r))
+        return (w(k[v].message), k);
+    }
+    if ((u || f) && !N && (Be(x) || (i && Array.isArray(x)))) {
+      const O = Tn(u),
+        B = Tn(f),
+        H = !Fe(O.value) && x.length > +O.value,
+        G = !Fe(B.value) && x.length < +B.value;
+      if ((H || G) && (X(H, O.message, B.message), !r))
+        return (w(k[v].message), k);
+    }
+    if (y && !N && Be(x)) {
+      const { value: O, message: B } = Tn(y);
+      if (
+        Xr(O) &&
+        !x.match(O) &&
+        ((k[v] = { type: mt.pattern, message: B, ref: s, ...V(mt.pattern, B) }),
+        !r)
+      )
+        return (w(B), k);
+    }
+    if (p) {
+      if (Ze(p)) {
+        const O = await p(x, n),
+          B = ia(O, C);
+        if (B && ((k[v] = { ...B, ...V(mt.validate, B.message) }), !r))
+          return (w(B.message), k);
+      } else if (Ae(p)) {
+        let O = {};
+        for (const B in p) {
+          if (!We(O) && !r) break;
+          const H = ia(await p[B](x, n), C, B);
+          H &&
+            ((O = { ...H, ...V(B, H.message) }), w(H.message), r && (k[v] = O));
+        }
+        if (!We(O) && ((k[v] = { ref: C, ...O }), !r)) return k;
+      }
+    }
+    const U = k[v];
+    return (w(U ? U.message : !0), k);
+  },
+  Ur = (e) => (Array.isArray(e) ? e : [e]),
+  ec = (e) => (Array.isArray(e) ? e.filter(Boolean) : []);
+function pp(e, t) {
+  const n = t.length - 1;
+  let r = 0;
+  for (; r < n;) {
+    if (Fe(e)) {
+      e = void 0;
+      break;
+    }
+    ((e = e[t[r]]), r++);
+  }
+  return e;
+}
+function gp(e) {
+  for (const t in e) if (e.hasOwnProperty(t) && !de(e[t])) return !1;
+  return !0;
+}
+function Ie(e, t) {
+  if (Be(t) && Object.prototype.hasOwnProperty.call(e, t))
+    return (delete e[t], e);
+  const n = Array.isArray(t) ? t : xn(t) ? [t] : wn(t);
+  if (n.some((s) => Ui.includes(String(s)))) return e;
+  const r = n.length === 1 ? e : pp(e, n),
+    o = n.length - 1,
+    i = n[o];
+  return (
+    r && delete r[i],
+    o !== 0 &&
+      ((Ae(r) && We(r)) || (Array.isArray(r) && gp(r))) &&
+      Ie(e, n.slice(0, -1)),
+    e
+  );
+}
+const Yi = q.createContext(null);
+Yi.displayName = "HookFormContext";
+const hp = () => q.useContext(Yi),
+  yp = ({
+    children: e,
+    watch: t,
+    getValues: n,
+    getErrors: r,
+    getFieldState: o,
+    setError: i,
+    clearErrors: s,
+    setValue: a,
+    setValues: c,
+    trigger: u,
+    formState: f,
+    resetField: d,
+    reset: m,
+    resetDefaultValues: y,
+    handleSubmit: p,
+    unregister: v,
+    control: h,
+    register: S,
+    setFocus: x,
+    subscribe: C,
+  }) => {
+    const w = q.useMemo(
+      () => ({
+        watch: t,
+        getValues: n,
+        getErrors: r,
+        getFieldState: o,
+        setError: i,
+        clearErrors: s,
+        setValue: a,
+        setValues: c,
+        trigger: u,
+        formState: f,
+        resetField: d,
+        reset: m,
+        resetDefaultValues: y,
+        handleSubmit: p,
+        unregister: v,
+        control: h,
+        register: S,
+        setFocus: x,
+        subscribe: C,
+      }),
+      [s, h, f, r, o, n, p, S, m, y, d, i, x, a, c, C, u, v, t],
+    );
+    return q.createElement(
+      Yi.Provider,
+      { value: w },
+      q.createElement(Hi.Provider, { value: w.control }, e),
+    );
+  };
+var aa = () => {
+  let e = [];
+  return {
+    get observers() {
+      return e;
+    },
+    next: (o) => {
+      for (const i of e) i.next && i.next(o);
+    },
+    subscribe: (o) => (
+      e.push(o),
+      {
+        unsubscribe: () => {
+          e = e.filter((i) => i !== o);
+        },
+      }
+    ),
+    unsubscribe: () => {
+      e = [];
+    },
+  };
+};
+function tc(e, t) {
+  const n = {};
+  for (const r in e)
+    if (e.hasOwnProperty(r)) {
+      const o = e[r],
+        i = t[r];
+      if (o && Ae(o) && i) {
+        const s = tc(o, i);
+        Ae(s) && (n[r] = s);
+      } else e[r] && (n[r] = i);
+    }
+  return n;
+}
+const la = (e, t) =>
+  e !== null && Wi(e) && Object.prototype.hasOwnProperty.call(e, t);
+var vp = (e, t) => {
+    if (!t) return !1;
+    let n = e;
+    for (const r of xn(t) ? [t] : wn(t)) {
+      if (!la(n, r)) return la(e, t);
+      n = n[r];
+    }
+    return !0;
+  },
+  nc = (e) => e.type === "select-multiple",
+  bp = (e) => Ki(e) || br(e),
+  Lo = (e) => Qr(e) && e.isConnected;
+function ca(e) {
+  return Array.isArray(e) || Ae(e);
+}
+function rc(e, t, n = "", r = []) {
+  for (const o in e) {
+    const i = n ? `${n}.${o}` : o,
+      s = e[o];
+    ca(s) && ca(E(t, i)) ? rc(s, t, i, r) : r.push(i);
+  }
+  return r;
+}
+var wp = (e) => {
+  for (const t in e) if (Ze(e[t])) return !0;
+  return !1;
+};
+function oc(e) {
+  return Array.isArray(e) || (Ae(e) && !wp(e));
+}
+function ic(e) {
+  return !!(e && "_f" in e);
+}
+function sc(e) {
+  return Array.isArray(e) ? !e.some((t) => !de(t)) : !Object.keys(e).length;
+}
+function ui(e, t) {
+  Array.isArray(e) ? (e[t] = void 0) : delete e[t];
+}
+function di(e, t = {}, n) {
+  for (const r in e) {
+    const o = e[r],
+      i = n && n[r];
+    oc(o) && (!Array.isArray(o) || !ic(i))
+      ? ((t[r] = Array.isArray(o) ? [] : {}),
+        di(o, t[r], i),
+        sc(t[r]) && ui(t, r))
+      : de(o) || (t[r] = !0);
+  }
+  return t;
+}
+function dn(e, t, n, r) {
+  n || (n = di(t, {}, r));
+  for (const o in e) {
+    const i = e[o],
+      s = r && r[o];
+    oc(i) && (!Array.isArray(i) || !ic(s))
+      ? (de(t) || li(n[o])
+          ? (n[o] = di(i, Array.isArray(i) ? [] : {}, s))
+          : dn(i, Fe(t) ? {} : t[o], n[o], s),
+        sc(n[o]) && ui(n, o))
+      : et(i, t[o])
+        ? ui(n, o)
+        : (n[o] = !0);
+  }
+  return n;
+}
+var xp = (e, t) => {
+    const n = t.split("."),
+      r = [];
+    let o = n[0];
+    for (let i = 1; i < n.length; o += "." + n[i++])
+      !isNaN(+n[i]) && e.has(o) && r.push(`${o}.${n[i]}`);
+    return r;
+  },
+  ac = (e, { valueAsNumber: t, valueAsDate: n, setValueAs: r }) =>
+    de(e)
+      ? e
+      : t
+        ? e === ""
+          ? NaN
+          : e && +e
+        : n && Be(e)
+          ? new Date(e)
+          : r
+            ? r(e)
+            : e;
+function ua(e) {
+  const t = e.ref;
+  return mo(t)
+    ? t.files
+    : Ki(t)
+      ? Xl(e.refs).value
+      : nc(t)
+        ? [...t.selectedOptions].map(({ value: n }) => n)
+        : br(t)
+          ? Ql(e.refs).value
+          : ac(t.value, e);
+}
+var Sp = (e, t, n, r) => {
+    const o = {};
+    for (const i of e) {
+      const s = E(t, i);
+      s && ue(o, i, s._f);
+    }
+    return {
+      criteriaMode: n,
+      names: [...e],
+      fields: o,
+      shouldUseNativeValidation: r,
+    };
+  },
+  tr = (e) =>
+    de(e)
+      ? e
+      : Xr(e)
+        ? e.source
+        : Ae(e)
+          ? Xr(e.value)
+            ? e.value.source
+            : e.value
+          : e;
+const da = "AsyncFunction";
+var Cp = (e) => {
+    if (!e || !e.validate) return !1;
+    if (Ze(e.validate)) return e.validate.constructor.name === da;
+    if (Ae(e.validate)) {
+      for (const t in e.validate)
+        if (e.validate[t].constructor.name === da) return !0;
+    }
+    return !1;
+  },
+  Pp = (e) =>
+    e.mount &&
+    (e.required ||
+      (!de(e.required) && e.required !== !1) ||
+      !de(e.min) ||
+      !de(e.max) ||
+      !de(e.maxLength) ||
+      !de(e.minLength) ||
+      e.pattern ||
+      e.validate);
+function fa(e, t, n) {
+  const r = E(e, n);
+  if (r || xn(n)) return { error: r, name: n };
+  const o = n.split(".");
+  for (; o.length;) {
+    const i = o.join("."),
+      s = E(t, i),
+      a = E(e, i);
+    if (s && !Array.isArray(s) && n !== i) return { name: n };
+    if (a && a.type) return { name: i, error: a };
+    if (a && a.root && a.root.type) return { name: `${i}.root`, error: a.root };
+    o.pop();
+  }
+  return { name: n };
+}
+var Ap = (e, t, n, r) => {
+    n(e);
+    const o = Object.keys(e).filter((i) => i !== "name");
+    return (
+      !o.length ||
+      (r && o.length >= Object.keys(t).length) ||
+      o.find((i) => t[i] === (!r || gt.all))
+    );
+  },
+  kp = (e, t, n) =>
+    !e ||
+    !t ||
+    e === t ||
+    Ur(e).some(
+      (r) =>
+        r &&
+        (n
+          ? r === t || r.startsWith(t + ".")
+          : r.startsWith(t) || t.startsWith(r)),
+    ),
+  Ip = (e, t, n, r, o) =>
+    o.isOnAll
+      ? !1
+      : !n && o.isOnTouch
+        ? !(t || e)
+        : (n ? r.isOnBlur : o.isOnBlur)
+          ? !e
+          : (n ? r.isOnChange : o.isOnChange)
+            ? e
+            : !0,
+  _p = (e, t) => {
+    const n = E(e, t);
+    !ec(n).length && !(n != null && n.root) && Ie(e, t);
+  };
+const Tp = {
+    mode: gt.onSubmit,
+    reValidateMode: gt.onChange,
+    shouldFocusError: !0,
+  },
+  zo = "form",
+  Mp = (e, t) => {
+    for (const n in e) n in t || delete e[n];
+    Object.assign(e, t);
+  },
+  lc = {
+    submitCount: 0,
+    isDirty: !1,
+    isReady: !1,
+    isValidating: !1,
+    isSubmitted: !1,
+    isSubmitting: !1,
+    isSubmitSuccessful: !1,
+    isValid: !1,
+    touchedFields: {},
+    dirtyFields: {},
+    validatingFields: {},
+  };
+function Dp(e = {}) {
+  let t = { ...Tp, ...e },
+    n = {
+      ...ge(lc),
+      isLoading: Ze(t.defaultValues),
+      errors: t.errors || {},
+      disabled: t.disabled || !1,
+    },
+    r = {},
+    o =
+      Ae(t.defaultValues) || Ae(t.values)
+        ? ge(t.defaultValues || t.values) || {}
+        : {},
+    i = t.shouldUnregister ? {} : ge(o),
+    s = {
+      action: !1,
+      actionArrayLengths: new Map(),
+      mount: !1,
+      watch: !1,
+      keepIsValid: !1,
+    },
+    a = {
+      mount: new Set(),
+      disabled: new Set(),
+      unMount: new Set(),
+      array: new Set(),
+      watch: new Set(),
+      registerName: new Set(),
+    };
+  const c = {},
+    u = {};
+  let f = 0,
+    d = _r(t.mode),
+    m = _r(t.reValidateMode);
+  const y = {
+      isDirty: !1,
+      dirtyFields: !1,
+      validatingFields: !1,
+      touchedFields: !1,
+      isValidating: !1,
+      isValid: !1,
+      errors: !1,
+    },
+    p = { ...y };
+  let v = { ...p };
+  const h = { array: aa(), state: aa() };
+  let S = 0;
+  const x = t.criteriaMode === gt.all,
+    C = (b, A) => (P) => {
+      (clearTimeout(u[b]), (u[b] = setTimeout(A, P)));
+    },
+    w = async (b) => {
+      if (!s.keepIsValid && !t.disabled && (p.isValid || v.isValid || b)) {
+        const A = ++S;
+        let P;
+        (t.resolver
+          ? ((P = We((await H()).errors)), A === S && k())
+          : (P = await Z({
+              fields: r,
+              onlyCheckValid: !0,
+              eventType: Zt.VALID,
+            })),
+          A === S && P !== n.isValid && h.state.next({ isValid: P }));
+      }
+    },
+    k = (b, A) => {
+      !t.disabled &&
+        (p.isValidating ||
+          p.validatingFields ||
+          v.isValidating ||
+          v.validatingFields) &&
+        ((b || a.mount).forEach((P) => {
+          P && (A ? ue(n.validatingFields, P, A) : Ie(n.validatingFields, P));
+        }),
+        h.state.next({
+          validatingFields: n.validatingFields,
+          isValidating: !We(n.validatingFields),
+        }));
+    },
+    _ = () => {
+      n.dirtyFields = dn(o, i, void 0, r);
+    },
+    D = (b, A = [], P, M, j = !0, L = !0) => {
+      if (M && P && !t.disabled) {
+        s.action = !0;
+        const z = E(r, b);
+        if (
+          (s.actionArrayLengths.has(b) ||
+            s.actionArrayLengths.set(b, Array.isArray(z) ? z.length : 0),
+          L && Array.isArray(z))
+        ) {
+          const ee = P(z, M.argA, M.argB);
+          j && ue(r, b, ee);
+        }
+        const F = E(n.errors, b);
+        if (L && Array.isArray(F)) {
+          const ee = F.root,
+            be = P(F, M.argA, M.argB) || F;
+          (ee && (be.root = ee), j && ue(n.errors, b, be), _p(n.errors, b));
+        }
+        const K = E(n.touchedFields, b);
+        if ((p.touchedFields || v.touchedFields) && L && Array.isArray(K)) {
+          const ee = P(K, M.argA, M.argB);
+          j && ue(n.touchedFields, b, ee);
+        }
+        ((p.dirtyFields || v.dirtyFields) && _(),
+          h.state.next({
+            name: b,
+            isDirty: R(b, A),
+            dirtyFields: n.dirtyFields,
+            errors: n.errors,
+            isValid: n.isValid,
+          }));
+      } else ue(i, b, A);
+    },
+    I = (b, A) => {
+      (ue(n.errors, b, A),
+        (n.errors = { ...n.errors }),
+        h.state.next({ errors: n.errors }));
+    },
+    N = (b) => {
+      ((n.errors = b), h.state.next({ errors: n.errors, isValid: !1 }));
+    },
+    V = (b) => {
+      const A = xn(b) ? [b] : wn(b);
+      let P = i,
+        M = o;
+      for (let j = 0; j < A.length - 1; j++) {
+        const L = A[j];
+        if (
+          ((P = Fe(P) ? P : P[L]),
+          (M = Fe(M) ? M : M[L]),
+          P === null && M !== null)
+        )
+          return !0;
+      }
+      return !1;
+    },
+    X = (b) => {
+      if (!s.actionArrayLengths.size) return !1;
+      const A = xn(b) ? [b] : wn(b);
+      let P = i,
+        M = "",
+        j = -1,
+        L = 0;
+      for (let z = 0; z < A.length; z++) {
+        if (Fe(P)) return !1;
+        const F = A[z];
+        if (((M = M ? `${M}.${F}` : F), Array.isArray(P) && +F >= P.length))
+          return j === -1 ? !1 : z === j ? +F < L : !0;
+        (s.actionArrayLengths.has(M) &&
+          ((j = z + 1), (L = s.actionArrayLengths.get(M))),
+          (P = P[F]));
+      }
+      return !1;
+    },
+    U = (b, A, P, M) => {
+      const j = E(r, b);
+      if (j) {
+        if (V(b) || X(b)) return;
+        const L = de(E(i, b)),
+          z = E(i, b, de(P) ? E(o, b) : P);
+        (de(z) || (M && M.defaultChecked) || A
+          ? ue(i, b, A ? z : ua(j._f))
+          : Ce(b, z),
+          s.mount &&
+            !s.action &&
+            (w(),
+            L &&
+              n.isDirty &&
+              (p.isDirty || v.isDirty) &&
+              (R() || ((n.isDirty = !1), h.state.next({ ...n }))),
+            e.shouldUnregister &&
+              L &&
+              !de(E(i, b)) &&
+              Oo(b, a) &&
+              (s.watch = !0)));
+      }
+    },
+    O = (b, A, P, M, j) => {
+      let L = !1,
+        z = !1;
+      const F = { name: b };
+      if (!t.disabled || M === !0) {
+        if (!P || M) {
+          const K = et(E(o, b), A);
+          ((p.isDirty || v.isDirty) &&
+            ((z = n.isDirty),
+            (n.isDirty = F.isDirty = !K || R()),
+            (L = z !== F.isDirty)),
+            (z = !!E(n.dirtyFields, b)),
+            K !== n.isDirty
+              ? Mp(n.dirtyFields, dn(o, i, void 0, r))
+              : K
+                ? Ie(n.dirtyFields, b)
+                : ue(n.dirtyFields, b, !0),
+            (F.dirtyFields = n.dirtyFields),
+            (L = L || ((p.dirtyFields || v.dirtyFields) && z !== !K)));
+        }
+        if (P) {
+          const K = E(n.touchedFields, b);
+          K ||
+            (ue(n.touchedFields, b, P),
+            (F.touchedFields = n.touchedFields),
+            (L = L || ((p.touchedFields || v.touchedFields) && K !== P)));
+        }
+        L && j && h.state.next(F);
+      }
+      return L ? F : {};
+    },
+    B = (b, A, P, M) => {
+      const j = E(n.errors, b),
+        L = (p.isValid || v.isValid) && it(A) && n.isValid !== A;
+      if (
+        (t.delayError && P
+          ? ((c[b] = C(b, () => I(b, P))), c[b](t.delayError))
+          : (clearTimeout(u[b]),
+            delete c[b],
+            P ? ue(n.errors, b, P) : Ie(n.errors, b),
+            (n.errors = { ...n.errors })),
+        (P ? !et(j, P) : j) || !We(M) || L)
+      ) {
+        const z = {
+          ...M,
+          ...(L && it(A) ? { isValid: A } : {}),
+          errors: n.errors,
+          name: b,
+        };
+        h.state.next(z);
+      }
+    },
+    H = async (b) => (
+      k(b, !0),
+      await t.resolver(
+        i,
+        t.context,
+        Sp(b || a.mount, r, t.criteriaMode, t.shouldUseNativeValidation),
+      )
+    ),
+    G = async (b) => {
+      const { errors: A } = await H(b);
+      if ((k(b), b)) {
+        for (const P of b) {
+          const M = E(A, P);
+          M
+            ? a.array.has(P) &&
+              Ae(M) &&
+              !Object.keys(M).some((j) => !Number.isNaN(Number(j)))
+              ? ta(n.errors, { [P]: M }, P)
+              : ue(n.errors, P, M)
+            : Ie(n.errors, P);
+        }
+        n.errors = { ...n.errors };
+      } else n.errors = A;
+      return A;
+    },
+    Y = async ({ name: b, eventType: A }) => {
+      if (e.validate) {
+        const P = await e.validate({
+          formValues: i,
+          formState: n,
+          name: b,
+          eventType: A,
+        });
+        if (Ae(P))
+          for (const M in P) {
+            const j = P[M];
+            j &&
+              Ke(`${zo}.${M}`, {
+                message: Be(j.message) ? j.message : "",
+                type: j.type || mt.validate,
+              });
+          }
+        else
+          Be(P) || !P
+            ? Ke(zo, { message: P || "", type: mt.validate })
+            : ze(zo);
+        return P;
+      }
+      return !0;
+    },
+    Z = async ({
+      fields: b,
+      onlyCheckValid: A,
+      name: P,
+      eventType: M,
+      context: j = { valid: !0, runRootValidation: !1 },
+    }) => {
+      if (
+        e.validate &&
+        ((j.runRootValidation = !0),
+        !(await Y({ name: P, eventType: M })) && ((j.valid = !1), A))
+      )
+        return j.valid;
+      for (const L in b) {
+        const z = b[L];
+        if (z) {
+          const { _f: F, ...K } = z;
+          if (F) {
+            const ee = a.array.has(F.name),
+              be = z._f && Cp(z._f),
+              rt =
+                p.validatingFields ||
+                p.isValidating ||
+                v.validatingFields ||
+                v.isValidating;
+            be && rt && k([F.name], !0);
+            const dt = await sa(
+              z,
+              a.disabled,
+              i,
+              x,
+              t.shouldUseNativeValidation && !A,
+              ee,
+            );
+            if (
+              (be && rt && k([F.name]),
+              (dt[F.name] && ((j.valid = !1), A)) ||
+                (!A &&
+                  (E(dt, F.name)
+                    ? ee
+                      ? ta(n.errors, dt, F.name)
+                      : ue(n.errors, F.name, dt[F.name])
+                    : Ie(n.errors, F.name)),
+                e.shouldUseNativeValidation && dt[F.name]))
+            )
+              break;
+          }
+          !We(K) &&
+            (await Z({
+              context: j,
+              onlyCheckValid: A,
+              fields: K,
+              name: L,
+              eventType: M,
+            }));
+        }
+      }
+      return j.valid;
+    },
+    ie = () => {
+      for (const b of a.unMount) {
+        const A = E(r, b);
+        A &&
+          (A._f.refs ? A._f.refs.every((P) => !Lo(P)) : !Lo(A._f.ref)) &&
+          Kn(b);
+      }
+      a.unMount = new Set();
+    },
+    R = (b, A) => (b && A && ue(i, b, A), !et(s.mount ? i : o, o)),
+    Le = (b, A, P) =>
+      ci(b, a, { ...(s.mount ? i : de(A) || Be(b) ? o : A) }, P, A),
+    Se = (b) =>
+      ec(E(s.mount ? i : o, b, t.shouldUnregister ? E(o, b, []) : [])),
+    Ce = (b, A, P = {}, M = !1, j = !1, L = !1) => {
+      const z = E(r, b);
+      let F = A;
+      if (z) {
+        const K = z._f;
+        K &&
+          (!K.disabled && ue(i, b, ac(A, K)),
+          (F = Qr(K.ref) && Fe(A) ? "" : A),
+          nc(K.ref)
+            ? [...K.ref.options].forEach(
+                (ee) => (ee.selected = F.includes(ee.value)),
+              )
+            : K.refs
+              ? br(K.ref)
+                ? K.refs.forEach((ee) => {
+                    (!ee.defaultChecked || !ee.disabled) &&
+                      (Array.isArray(F)
+                        ? (ee.checked = !!F.find((be) => be === ee.value))
+                        : (ee.checked = F === ee.value || !!F));
+                  })
+                : K.refs.forEach((ee) => (ee.checked = ee.value === F))
+              : mo(K.ref)
+                ? (K.ref.value = "")
+                : ((K.ref.value = F),
+                  !K.ref.type &&
+                    !j &&
+                    !L &&
+                    h.state.next({ name: b, values: M ? i : ge(i) })));
+      }
+      ((P.shouldDirty || P.shouldTouch) &&
+        O(b, F, P.shouldTouch, P.shouldDirty, !j),
+        P.shouldValidate && ve(b, { delayError: P.delayError }));
+    },
+    Je = (b, A, P, M = !1, j = !1, L = !1) => {
+      a.array.has(b) && h.array.next({ name: b, values: M ? i : ge(i) });
+      for (const z in A) {
+        if (!A.hasOwnProperty(z)) continue;
+        const F = A[z],
+          K = b + "." + z,
+          ee = E(r, K);
+        (a.array.has(b) || Ae(F) || (ee && !ee._f)) && !qt(F)
+          ? Je(K, F, P, M, j, L)
+          : Ce(K, F, P, M, j, L);
+      }
+    },
+    pe = (b, A, P, M, j = !1) => {
+      const L = E(r, b),
+        z = a.array.has(b),
+        F = M ? A : ge(A),
+        K = E(i, b),
+        ee = et(K, F);
+      if ((ee || ue(i, b, F), z))
+        (h.array.next({ name: b, values: M ? i : ge(i) }),
+          (p.isDirty || p.dirtyFields || v.isDirty || v.dirtyFields) &&
+            P.shouldDirty &&
+            (_(),
+            j ||
+              h.state.next({
+                name: b,
+                dirtyFields: n.dirtyFields,
+                isDirty: R(b, F),
+              })));
+      else {
+        const be = (Array.isArray(F) && !F.length) || We(F),
+          rt = !ee && !j;
+        !L || L._f || Fe(F) || be
+          ? Ce(b, F, P, M, j, rt)
+          : Je(b, F, P, M, j, rt);
+      }
+      if (!ee && !j) {
+        const be = Oo(b, a),
+          rt = M ? i : ge(i);
+        if (
+          (h.state.next({
+            ...(be && n),
+            name: s.mount || be ? b : void 0,
+            values: rt,
+          }),
+          !z)
+        )
+          for (const dt of xp(a.array, b))
+            h.state.next({ name: dt, values: rt });
+      }
+    },
+    fe = (b, A, P = {}) => pe(b, A, P, !1),
+    Xe = (b, A = {}) => {
+      const P = Ze(b) ? b(i) : b;
+      if (!et(i, P)) {
+        i = { ...i, ...P };
+        for (const M of a.mount) vp(P, M) && pe(M, E(P, M), A, !0, !0);
+        (h.state.next({
+          ...n,
+          name: void 0,
+          type: void 0,
+          ...(f ? { values: i } : {}),
+        }),
+          A.shouldValidate && w());
+      }
+    },
+    te = async (b) => {
+      s.mount = !0;
+      const A = b.target;
+      let P = A.name,
+        M = !0;
+      const j = E(r, P),
+        L = (z) => {
+          M =
+            Number.isNaN(z) ||
+            (qt(z) && isNaN(z.getTime())) ||
+            et(z, E(i, P, z));
+        };
+      if (j) {
+        let z, F;
+        const K = A.type ? ua(j._f) : ai(b),
+          ee = b.type === Zt.BLUR || b.type === Zt.FOCUS_OUT,
+          be =
+            !Pp(j._f) &&
+            !e.validate &&
+            !t.resolver &&
+            !E(n.errors, P) &&
+            !j._f.deps,
+          rt = be || Ip(ee, E(n.touchedFields, P), n.isSubmitted, m, d),
+          dt = Oo(P, a, ee);
+        if ((ue(i, P, ge(K)), ee)) {
+          if (!A || !A.readOnly) {
+            j._f.onBlur && j._f.onBlur(b);
+            const Qn = c[P];
+            Qn && Qn(0);
+          }
+        } else j._f.onChange && j._f.onChange(b);
+        const Yn = O(P, K, ee),
+          Bd = !We(Yn) || dt;
+        if (
+          (!ee &&
+            h.state.next({
+              name: P,
+              type: b.type,
+              ...(f ? { values: ge(i) } : {}),
+            }),
+          rt)
+        )
+          return (
+            (!be || !n.isValid) &&
+              (p.isValid || v.isValid) &&
+              (t.mode === "onBlur" ? ee && w() : ee || w()),
+            Bd && h.state.next({ name: P, ...(dt ? {} : Yn) })
+          );
+        if (
+          (!t.resolver &&
+            e.validate &&
+            (await Y({ name: P, eventType: b.type })),
+          !ee && dt && h.state.next({ ...n }),
+          t.resolver)
+        ) {
+          const { errors: Qn } = await H([P]);
+          if ((k([P]), L(K), !M)) {
+            !We(Yn) && h.state.next(Yn);
+            return;
+          }
+          const Vd = fa(n.errors, r, P),
+            js = fa(Qn, r, Vd.name || P);
+          ((z = js.error), (P = js.name), (F = We(Qn)));
+        } else
+          (k([P], !0),
+            (z = (await sa(j, a.disabled, i, x, t.shouldUseNativeValidation))[
+              P
+            ]),
+            k([P]),
+            L(K),
+            M &&
+              (z
+                ? (F = !1)
+                : (p.isValid || v.isValid) &&
+                  (F = await Z({
+                    fields: r,
+                    onlyCheckValid: !0,
+                    name: P,
+                    eventType: b.type,
+                  }))));
+        M &&
+          (j._f.deps &&
+            (!Array.isArray(j._f.deps) || j._f.deps.length > 0) &&
+            ve(j._f.deps),
+          B(P, F, z, Yn));
+      }
+    },
+    ne = (b, A) => {
+      if (E(n.errors, A) && b.focus) return (b.focus(), 1);
+    },
+    ve = async (b, A = {}) => {
+      let P, M;
+      const j = Ur(b);
+      if (t.resolver) {
+        const L = await G(de(b) ? b : j);
+        ((P = We(L)), (M = b ? !j.some((z) => E(L, z)) : P));
+      } else
+        b
+          ? ((M = (
+              await Promise.all(
+                j.map(async (L) => {
+                  const z = E(r, L);
+                  return await Z({
+                    fields: z && z._f ? { [L]: z } : z,
+                    eventType: Zt.TRIGGER,
+                  });
+                }),
+              )
+            ).every(Boolean)),
+            !(!M && !n.isValid) && w())
+          : (M = P = await Z({ fields: r, name: b, eventType: Zt.TRIGGER }));
+      if (A.delayError && t.delayError && Be(b)) {
+        const L = E(n.errors, b);
+        L
+          ? (Ie(n.errors, b), (c[b] = C(b, () => I(b, L))), c[b](t.delayError))
+          : (clearTimeout(u[b]), delete c[b]);
+      }
+      if (A.shouldTouch)
+        for (const L of b ? j : a.mount)
+          !a.array.has(L) && ue(n.touchedFields, L, !0);
+      return (
+        h.state.next({
+          ...(!Be(b) || ((p.isValid || v.isValid) && P !== n.isValid)
+            ? {}
+            : { name: b }),
+          ...(t.resolver || !b ? { isValid: P } : {}),
+          ...(A.shouldTouch && (p.touchedFields || v.touchedFields)
+            ? { touchedFields: n.touchedFields }
+            : {}),
+          errors: n.errors,
+        }),
+        A.shouldFocus && !M && ir(r, ne, b ? j : a.mount),
+        M
+      );
+    },
+    ce = (b, A) => {
+      let P = { ...(s.mount ? i : o) };
+      return (
+        A && (P = tc(A.dirtyFields ? n.dirtyFields : n.touchedFields, P)),
+        de(b) ? P : Be(b) ? E(P, b) : b.map((M) => E(P, M))
+      );
+    },
+    se = (b) =>
+      de(b)
+        ? { ...n.errors }
+        : Be(b)
+          ? E(n.errors, b)
+          : b.map((A) => E(n.errors, A)),
+    ae = (b, A) => {
+      const P = A || n,
+        M = E(P.errors, b);
+      return {
+        invalid: !!M,
+        isDirty: !!E(P.dirtyFields, b),
+        error: M,
+        isValidating: !!E(n.validatingFields, b),
+        isTouched: !!E(P.touchedFields, b),
+      };
+    },
+    ze = (b) => {
+      const A = b ? Ur(b) : void 0;
+      (A == null || A.forEach((P) => Ie(n.errors, P)),
+        A
+          ? A.forEach((P) => {
+              h.state.next({ name: P, errors: n.errors });
+            })
+          : ((n.errors = {}), h.state.next({ errors: n.errors })));
+    },
+    Ke = (b, A, P) => {
+      const M = (E(r, b, { _f: {} })._f || {}).ref,
+        j = E(n.errors, b) || {},
+        { ref: L, message: z, type: F, ...K } = j;
+      (ue(n.errors, b, { ...K, ...A, ref: M }),
+        h.state.next({ name: b, errors: n.errors, isValid: !1 }),
+        P && P.shouldFocus && M && M.focus && M.focus());
+    },
+    jt = (b, A) => {
+      if (Ze(b)) {
+        f++;
+        const { unsubscribe: P } = h.state.subscribe({
+          next: (j) => "values" in j && b(j.values || Le(void 0, A), j),
+        });
+        let M = !1;
+        return {
+          unsubscribe: () => {
+            M || ((M = !0), f--, P());
+          },
+        };
+      }
+      return Le(b, A, !0);
+    },
+    Nt = (b) => {
+      var A;
+      const P = !!(!((A = b.formState) === null || A === void 0) && A.values);
+      P && f++;
+      const { unsubscribe: M } = h.state.subscribe({
+        next: (L) => {
+          if (
+            kp(b.name, L.name, b.exact) &&
+            Ap(L, b.formState || p, Ms, b.reRenderRoot)
+          ) {
+            const z = { ...i };
+            b.callback({ values: z, ...n, ...L, defaultValues: o });
+          }
+        },
+      });
+      if (!P) return M;
+      let j = !1;
+      return () => {
+        j || ((j = !0), f--, M());
+      };
+    },
+    ln = (b) => (
+      (s.mount = !0),
+      (v = { ...v, ...b.formState }),
+      Nt({ ...b, formState: { ...y, ...b.formState } })
+    ),
+    Kn = (b, A = {}) => {
+      for (const P of b ? Ur(b) : a.mount)
+        (a.mount.delete(P),
+          a.array.delete(P),
+          A.keepValue || (Ie(r, P), Ie(i, P)),
+          !A.keepError && Ie(n.errors, P),
+          !A.keepDirty && Ie(n.dirtyFields, P),
+          !A.keepTouched && Ie(n.touchedFields, P),
+          !A.keepIsValidating && Ie(n.validatingFields, P),
+          !t.shouldUnregister && !A.keepDefaultValue && Ie(o, P));
+      (f && h.state.next({ values: ge(i) }),
+        h.state.next({ ...n, ...(A.keepDirty ? {} : { isDirty: R() }) }),
+        !A.keepIsValid && w());
+    },
+    Cr = ({ disabled: b, name: A }) => {
+      if ((it(b) && s.mount) || b || a.disabled.has(A)) {
+        const j = a.disabled.has(A) !== !!b;
+        (b ? a.disabled.add(A) : a.disabled.delete(A),
+          j && s.mount && !s.action && w());
+      }
+    },
+    qn = (b, A = {}) => {
+      let P = E(r, b);
+      const M = it(A.disabled) || it(t.disabled),
+        j = !a.registerName.has(b) && P && P._f && !P._f.mount;
+      return (
+        ue(r, b, {
+          ...(P || {}),
+          _f: {
+            ...(P && P._f ? P._f : { ref: { name: b } }),
+            name: b,
+            mount: !0,
+            ...A,
+          },
+        }),
+        a.mount.add(b),
+        P && !j
+          ? Cr({ disabled: it(A.disabled) ? A.disabled : t.disabled, name: b })
+          : U(b, !0, A.value),
+        {
+          ...(M ? { disabled: A.disabled || t.disabled } : {}),
+          ...(t.progressive
+            ? {
+                required: !!A.required,
+                min: tr(A.min),
+                max: tr(A.max),
+                minLength: tr(A.minLength),
+                maxLength: tr(A.maxLength),
+                pattern: tr(A.pattern),
+              }
+            : {}),
+          name: b,
+          onChange: te,
+          onBlur: te,
+          ref: (L) => {
+            if (L) {
+              (a.registerName.add(b),
+                qn(b, A),
+                a.registerName.delete(b),
+                (P = E(r, b)));
+              const z =
+                  (de(L.value) &&
+                    L.querySelectorAll &&
+                    L.querySelectorAll("input,select,textarea")[0]) ||
+                  L,
+                F = bp(z),
+                K = P._f.refs || [];
+              if (F ? K.find((be) => be === z) : z === P._f.ref) return;
+              const ee = { ...P._f };
+              (F
+                ? ((ee.refs = [
+                    ...K.filter(Lo),
+                    z,
+                    ...(Array.isArray(E(o, b)) ? [{}] : []),
+                  ]),
+                  (ee.ref = { type: z.type, name: b }))
+                : ((ee.ref = z), delete ee.refs),
+                ue(r, b, { _f: ee }),
+                U(b, !1, void 0, z));
+            } else
+              ((P = E(r, b, {})),
+                P._f && (P._f.mount = !1),
+                (t.shouldUnregister || A.shouldUnregister) &&
+                  !(Kl(a.array, b) && s.action) &&
+                  a.unMount.add(b));
+          },
+        }
+      );
+    },
+    Wt = () =>
+      t.shouldFocusError && !t.shouldUseNativeValidation && ir(r, ne, a.mount),
+    Ld = (b) => {
+      it(b) &&
+        (h.state.next({ disabled: b }),
+        ir(
+          r,
+          (A, P) => {
+            const M = E(r, P);
+            M &&
+              ((A.disabled = M._f.disabled || b),
+              Array.isArray(M._f.refs) &&
+                M._f.refs.forEach((j) => {
+                  j.disabled = M._f.disabled || b;
+                }));
+          },
+          0,
+          !1,
+        ));
+    },
+    Is = (b, A) => async (P) => {
+      let M, j;
+      P && (P.preventDefault && P.preventDefault(), P.persist && P.persist());
+      let L = ge(i);
+      if ((h.state.next({ isSubmitting: !0 }), t.resolver)) {
+        const { errors: z, values: F } = await H();
+        (k(), (n.errors = z), (L = ge(F)));
+      } else await Z({ fields: r, eventType: Zt.SUBMIT });
+      if (a.disabled.size) for (const z of a.disabled) Ie(L, z);
+      if ((Ie(n.errors, ql), We(n.errors))) {
+        h.state.next({ errors: {} });
+        try {
+          M = await b(L, P);
+        } catch (z) {
+          j = z;
+        }
+      } else (A && (await A({ ...n.errors }, P)), Wt(), setTimeout(Wt));
+      if (
+        (h.state.next({
+          isSubmitted: !0,
+          isSubmitting: !1,
+          isSubmitSuccessful: We(n.errors) && !j,
+          submitCount: n.submitCount + 1,
+          errors: n.errors,
+        }),
+        j)
+      )
+        throw j;
+      return M;
+    },
+    zd = (b, A = {}) => {
+      E(r, b) &&
+        (de(A.defaultValue)
+          ? fe(b, ge(E(o, b)))
+          : (fe(b, A.defaultValue), ue(o, b, ge(A.defaultValue))),
+        A.keepTouched || Ie(n.touchedFields, b),
+        A.keepDirty ||
+          (Ie(n.dirtyFields, b),
+          (n.isDirty = A.defaultValue ? R(b, ge(E(o, b))) : R())),
+        A.keepError || (Ie(n.errors, b), w()),
+        h.state.next({ ...n }));
+    },
+    _s = (b, A = {}) => {
+      const P = b ? ge(b) : o,
+        M = ge(P),
+        j = We(b),
+        L = M,
+        z = r;
+      if ((A.keepDefaultValues || (o = P), !A.keepValues)) {
+        if (A.keepDirtyValues) {
+          const F = new Set([
+            ...a.mount,
+            ...rc(dn(o, i, void 0, z), n.dirtyFields),
+          ]);
+          for (const K of F) {
+            const ee = E(n.dirtyFields, K),
+              be = E(i, K),
+              rt = E(L, K);
+            ee && !de(be) ? ue(L, K, be) : !ee && !de(rt) && fe(K, rt);
+          }
+        } else {
+          if (po && de(b))
+            for (const F of a.mount) {
+              const K = E(r, F);
+              if (K && K._f) {
+                const ee = Array.isArray(K._f.refs) ? K._f.refs[0] : K._f.ref;
+                if (Qr(ee)) {
+                  const be = ee.closest("form");
+                  if (be) {
+                    be.reset();
+                    break;
+                  }
+                }
+              }
+            }
+          if (A.keepFieldsRef) for (const F of a.mount) fe(F, E(L, F));
+          else r = {};
+        }
+        if (t.shouldUnregister) {
+          if (((i = A.keepDefaultValues ? ge(o) : {}), A.keepFieldsRef))
+            for (const F of a.mount) ue(i, F, E(L, F));
+        } else i = ge(L);
+        (h.array.next({ values: { ...L } }),
+          h.state.next({ name: void 0, type: void 0, values: { ...L } }));
+      }
+      ((a = {
+        mount: A.keepDirtyValues ? a.mount : new Set(),
+        unMount: new Set(),
+        array: new Set(),
+        registerName: new Set(),
+        disabled: new Set(),
+        watch: new Set(),
+        watchAll: !1,
+        focus: "",
+      }),
+        (s.mount =
+          !p.isValid ||
+          !!A.keepIsValid ||
+          !!A.keepDirtyValues ||
+          (!t.shouldUnregister && !We(L))),
+        (s.watch = !!t.shouldUnregister),
+        (s.keepIsValid = !!A.keepIsValid),
+        (s.action = !1),
+        s.actionArrayLengths.clear(),
+        A.keepErrors || (n.errors = {}),
+        h.state.next({
+          submitCount: A.keepSubmitCount ? n.submitCount : 0,
+          isDirty: j
+            ? !1
+            : A.keepDirty
+              ? n.isDirty
+              : A.keepValues
+                ? R()
+                : !!(A.keepDefaultValues && !et(b, o)),
+          isSubmitted: A.keepIsSubmitted ? n.isSubmitted : !1,
+          dirtyFields: j
+            ? {}
+            : A.keepDirtyValues
+              ? A.keepDefaultValues && i
+                ? dn(o, i, void 0, z)
+                : n.dirtyFields
+              : A.keepDefaultValues && b
+                ? dn(o, b, void 0, z)
+                : A.keepDirty
+                  ? n.dirtyFields
+                  : {},
+          touchedFields: A.keepTouched ? n.touchedFields : {},
+          errors: A.keepErrors ? n.errors : {},
+          isSubmitSuccessful: A.keepIsSubmitSuccessful
+            ? n.isSubmitSuccessful
+            : !1,
+          isSubmitting: !1,
+          defaultValues: o,
+        }));
+    },
+    Ts = (b, A) => _s(Ze(b) ? b(i) : b, { ...t.resetOptions, ...A }),
+    Fd = (b, A = {}) => {
+      const P = E(r, b),
+        M = P && P._f;
+      if (M) {
+        const j = M.refs ? M.refs[0] : M.ref;
+        j.focus &&
+          setTimeout(() => {
+            (j.focus(), A.shouldSelect && Ze(j.select) && j.select());
+          });
+      }
+    },
+    Ms = (b) => {
+      const { name: A, type: P, values: M, ...j } = b;
+      n = { ...n, ...j };
+    };
+  h.state.subscribe({ next: Ms });
+  const Ds = {
+    control: {
+      register: qn,
+      unregister: Kn,
+      getFieldState: ae,
+      handleSubmit: Is,
+      setError: Ke,
+      _subscribe: Nt,
+      _runSchema: H,
+      _updateIsValidating: k,
+      _focusError: Wt,
+      _getWatch: Le,
+      _getDirty: R,
+      _setValid: w,
+      _setFieldArray: D,
+      _setDisabledField: Cr,
+      _setErrors: N,
+      _getFieldArray: Se,
+      _reset: _s,
+      _resetDefaultValues: () =>
+        Ze(t.defaultValues) &&
+        t.defaultValues().then((b) => {
+          (Ts(b, t.resetOptions), h.state.next({ isLoading: !1 }));
+        }),
+      _removeUnmounted: ie,
+      _disableForm: Ld,
+      _subjects: h,
+      _proxyFormState: p,
+      get _fields() {
+        return r;
+      },
+      get _formValues() {
+        return i;
+      },
+      get _state() {
+        return s;
+      },
+      set _state(b) {
+        s = b;
+      },
+      get _defaultValues() {
+        return o;
+      },
+      get _names() {
+        return a;
+      },
+      set _names(b) {
+        a = b;
+      },
+      get _formState() {
+        return n;
+      },
+      get _options() {
+        return t;
+      },
+      set _options(b) {
+        ((t = { ...t, ...b }), (d = _r(t.mode)), (m = _r(t.reValidateMode)));
+      },
+    },
+    subscribe: ln,
+    trigger: ve,
+    register: qn,
+    handleSubmit: Is,
+    watch: jt,
+    setValue: fe,
+    setValues: Xe,
+    getValues: ce,
+    getErrors: se,
+    reset: Ts,
+    resetField: zd,
+    resetDefaultValues: (b, A = {}) => {
+      if (((o = ge(b)), !A.keepDirty)) {
+        const P = dn(o, i, void 0, r);
+        ((n.dirtyFields = P), (n.isDirty = !We(P)));
+      }
+      (A.keepIsValid || w(), h.state.next({ ...n, defaultValues: o }));
+    },
+    clearErrors: ze,
+    unregister: Kn,
+    setError: Ke,
+    setFocus: Fd,
+    getFieldState: ae,
+  };
+  return { ...Ds, formControl: Ds };
+}
+function cc(e = {}) {
+  const t = q.useRef(void 0),
+    n = q.useRef(void 0),
+    r = q.useRef(e.formControl),
+    [o, i] = q.useState(() => ({
+      ...ge(lc),
+      isLoading: Ze(e.defaultValues),
+      errors: e.errors || {},
+      disabled: e.disabled || !1,
+      defaultValues: Ze(e.defaultValues) ? void 0 : e.defaultValues,
+    }));
+  if (!t.current || (e.formControl && r.current !== e.formControl))
+    if (((r.current = e.formControl), e.formControl))
+      ((t.current = { ...e.formControl, formState: o }),
+        e.defaultValues &&
+          !Ze(e.defaultValues) &&
+          e.formControl.reset(e.defaultValues, e.resetOptions));
+    else {
+      const { formControl: u, ...f } = Dp(e);
+      t.current = { ...f, formState: o };
+    }
+  const s = t.current.control;
+  s._options = e;
+  const { resyncIfNeeded: a, snapshot: c } = Ji();
+  return (
+    Zi(() => {
+      const u = () => ({ ...s._formState, defaultValues: s._defaultValues });
+      a(!0, u, i);
+      const f = s._subscribe({
+        formState: s._proxyFormState,
+        callback: () => i({ ...s._formState, defaultValues: s._defaultValues }),
+        reRenderRoot: !0,
+      });
+      return (
+        i((d) => ({ ...d, isReady: !0 })),
+        (s._formState.isReady = !0),
+        () => {
+          (f(), c(!0, u));
+        }
+      );
+    }, [s, a, c]),
+    q.useEffect(() => s._disableForm(e.disabled), [s, e.disabled]),
+    q.useEffect(() => {
+      (e.mode && (s._options.mode = e.mode),
+        e.reValidateMode && (s._options.reValidateMode = e.reValidateMode));
+    }, [s, e.mode, e.reValidateMode]),
+    q.useEffect(() => {
+      e.errors && (s._setErrors(e.errors), s._focusError());
+    }, [s, e.errors]),
+    q.useEffect(() => {
+      e.shouldUnregister && s._subjects.state.next({ values: s._getWatch() });
+    }, [s, e.shouldUnregister]),
+    q.useEffect(() => {
+      if (s._proxyFormState.isDirty) {
+        const u = s._getDirty();
+        u !== o.isDirty && s._subjects.state.next({ isDirty: u });
+      }
+    }, [s, o.isDirty]),
+    q.useEffect(() => {
+      var u;
+      e.values && !et(e.values, n.current)
+        ? (s._reset(e.values, {
+            keepFieldsRef: !0,
+            ...s._options.resetOptions,
+          }),
+          (!((u = s._options.resetOptions) === null || u === void 0) &&
+            u.keepIsValid) ||
+            s._setValid(),
+          (n.current = e.values),
+          i((f) => ({ ...f })))
+        : s._resetDefaultValues();
+    }, [s, e.values]),
+    q.useEffect(() => {
+      (s._state.mount || (s._setValid(), (s._state.mount = !0)),
+        s._state.watch &&
+          ((s._state.watch = !1), s._subjects.state.next({ ...s._formState })),
+        s._removeUnmounted());
+    }),
+    (t.current.formState = q.useMemo(() => Yl(o, s), [s, o])),
+    t.current
+  );
+}
+const ma = (e, t, n) => {
+    if (e && "reportValidity" in e) {
+      const r = E(n, t);
+      (e.setCustomValidity((r && r.message) || ""), e.reportValidity());
+    }
+  },
+  fi = (e, t) => {
+    for (const n in t.fields) {
+      const r = t.fields[n];
+      r && r.ref && "reportValidity" in r.ref
+        ? ma(r.ref, n, e)
+        : r && r.refs && r.refs.forEach((o) => ma(o, n, e));
+    }
+  },
+  pa = (e, t) => {
+    t.shouldUseNativeValidation && fi(e, t);
+    const n = {};
+    for (const r in e) {
+      const o = E(t.fields, r),
+        i = Object.assign(e[r] || {}, {
+          ref: o && o.refs ? o.refs[0] : o && o.ref,
+        });
+      if (jp(t.names || Object.keys(e), r)) {
+        const s = Object.assign({}, E(n, r));
+        (ue(s, "root", i), ue(n, r, s));
+      } else ue(n, r, i);
+    }
+    return n;
+  },
+  jp = (e, t) => {
+    const n = ga(t).replace(/[.*+?^${}()|\\]/g, "\\$&");
+    return e.some((r) => ga(r).match(`^${n}\\.\\d+`));
+  };
+function ga(e) {
+  return e.replace(/\[(\d+)]/g, ".$1").replace(/[[\]]/g, "");
+}
+function mi() {
+  return (
+    (mi = Object.assign
+      ? Object.assign.bind()
+      : function (e) {
+          for (var t = 1; t < arguments.length; t++) {
+            var n = arguments[t];
+            for (var r in n) ({}).hasOwnProperty.call(n, r) && (e[r] = n[r]);
+          }
+          return e;
+        }),
+    mi.apply(null, arguments)
+  );
+}
+function ha(e, t) {
+  try {
+    var n = e();
+  } catch (r) {
+    return t(r);
+  }
+  return n && n.then ? n.then(void 0, t) : n;
+}
+function Np(e, t) {
+  for (var n = Object.create(null); e.length;) {
+    var r = e[0],
+      o = r.code,
+      i = r.message,
+      s = r.path.join(".");
+    if (!n[s])
+      if ("unionErrors" in r) {
+        var a,
+          c,
+          u = r.unionErrors.reduce(function (m, y) {
+            return y.errors.length < m.errors.length ? y : m;
+          }).errors[0];
+        n[s] = {
+          message: (a = u == null ? void 0 : u.message) != null ? a : i,
+          type: (c = u == null ? void 0 : u.code) != null ? c : o,
+        };
+      } else n[s] = { message: i, type: o };
+    if (
+      ("unionErrors" in r &&
+        r.unionErrors.forEach(function (m) {
+          return m.errors.forEach(function (y) {
+            return e.push(y);
+          });
+        }),
+      t)
+    ) {
+      var f = n[s].types,
+        d = f && f[r.code];
+      n[s] = qi(s, t, n, o, d ? [].concat(d, r.message) : r.message);
+    }
+    e.shift();
+  }
+  return n;
+}
+function Rp(e, t) {
+  for (
+    var n = Object.create(null),
+      r = function () {
+        var o = e[0],
+          i = o.code,
+          s = o.message,
+          a = o.path.join(".");
+        if (!n[a])
+          if (o.code === "invalid_union" && o.errors.length > 0) {
+            var c,
+              u,
+              f = o.errors.reduce(function (y, p) {
+                return p.length < y.length ? p : y;
+              })[0];
+            n[a] = {
+              message: (c = f == null ? void 0 : f.message) != null ? c : s,
+              type: (u = f == null ? void 0 : f.code) != null ? u : i,
+            };
+          } else n[a] = { message: s, type: i };
+        if (
+          (o.code === "invalid_union" &&
+            o.errors.forEach(function (y) {
+              return y.forEach(function (p) {
+                return e.push(mi({}, p, { path: [].concat(o.path, p.path) }));
+              });
+            }),
+          t)
+        ) {
+          var d = n[a].types,
+            m = d && d[o.code];
+          n[a] = qi(a, t, n, i, m ? [].concat(m, o.message) : o.message);
+        }
+        e.shift();
+      };
+    e.length;
+  )
+    r();
+  return n;
+}
+function uc(e, t, n) {
+  if (
+    (n === void 0 && (n = {}),
+    (function (r) {
+      return "_zod" in r && typeof r._zod == "object";
+    })(e))
+  )
+    return function (r, o, i) {
+      try {
+        return Promise.resolve(
+          ha(
+            function () {
+              function s(c) {
+                return (
+                  i.shouldUseNativeValidation && fi({}, i),
+                  { errors: {}, values: n.raw ? Object.assign({}, r) : c }
+                );
+              }
+              var a = e;
+              return n.mode === "sync"
+                ? s(a.parse(r, t))
+                : Promise.resolve(a.parseAsync(r, t)).then(s);
+            },
+            function (s) {
+              if (
+                (function (a) {
+                  var c;
+                  return !(
+                    a == null ||
+                    (c = a._zod) == null ||
+                    (c = c.traits) == null ||
+                    !c.has("$ZodError")
+                  );
+                })(s)
+              )
+                return {
+                  values: {},
+                  errors: pa(
+                    Rp(
+                      s.issues,
+                      !i.shouldUseNativeValidation && i.criteriaMode === "all",
+                    ),
+                    i,
+                  ),
+                };
+              throw s;
+            },
+          ),
+        );
+      } catch (s) {
+        return Promise.reject(s);
+      }
+    };
+  if (
+    (function (r) {
+      return "_def" in r && typeof r._def == "object";
+    })(e)
+  )
+    return function (r, o, i) {
+      try {
+        return Promise.resolve(
+          ha(
+            function () {
+              return Promise.resolve(
+                e[n.mode === "sync" ? "parse" : "parseAsync"](r, t),
+              ).then(function (s) {
+                return (
+                  i.shouldUseNativeValidation && fi({}, i),
+                  { errors: {}, values: n.raw ? Object.assign({}, r) : s }
+                );
+              });
+            },
+            function (s) {
+              if (
+                (function (a) {
+                  return Array.isArray(a == null ? void 0 : a.issues);
+                })(s)
+              )
+                return {
+                  values: {},
+                  errors: pa(
+                    Np(
+                      s.errors,
+                      !i.shouldUseNativeValidation && i.criteriaMode === "all",
+                    ),
+                    i,
+                  ),
+                };
+              throw s;
+            },
+          ),
+        );
+      } catch (s) {
+        return Promise.reject(s);
+      }
+    };
+  throw new Error("Invalid input: not a Zod schema");
+}
+function dc(e) {
+  const t = Object.values(e).filter((r) => typeof r == "number");
+  return Object.entries(e)
+    .filter(([r, o]) => t.indexOf(+r) === -1)
+    .map(([r, o]) => o);
+}
+function ya(e, t = "|") {
+  return e.map((n) => pc(n)).join(t);
+}
+function pi(e, t) {
+  return typeof t == "bigint" ? t.toString() : t;
+}
+function Qi(e) {
+  return {
+    get value() {
+      {
+        const t = e();
+        return (Object.defineProperty(this, "value", { value: t }), t);
+      }
+    },
+  };
+}
+function Ep(e) {
+  return e == null;
+}
+function Xi(e) {
+  const t = e.startsWith("^") ? 1 : 0,
+    n = e.endsWith("$") ? e.length - 1 : e.length;
+  return e.slice(t, n);
+}
+function st(e, t, n) {
+  Object.defineProperty(e, t, {
+    value: n,
+    writable: !0,
+    enumerable: !0,
+    configurable: !0,
+  });
+}
+function nn(...e) {
+  const t = {};
+  for (const n of e) {
+    const r = Object.getOwnPropertyDescriptors(n);
+    Object.assign(t, r);
+  }
+  return Object.defineProperties({}, t);
+}
+function Op(e) {
+  return JSON.stringify(e);
+}
+function Lp(e) {
+  return e
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+const fc =
+  "captureStackTrace" in Error ? Error.captureStackTrace : (...e) => {};
+function eo(e) {
+  return typeof e == "object" && e !== null && !Array.isArray(e);
+}
+const zp = Qi(() => {
+  var e;
+  if (
+    kt.jitless ||
+    (typeof navigator < "u" &&
+      (e = navigator == null ? void 0 : navigator.userAgent) != null &&
+      e.includes("Cloudflare"))
+  )
+    return !1;
+  try {
+    const t = Function;
+    return (new t(""), !0);
+  } catch {
+    return !1;
+  }
+});
+function cr(e) {
+  if (eo(e) === !1) return !1;
+  const t = e.constructor;
+  if (t === void 0 || typeof t != "function") return !0;
+  const n = t.prototype;
+  return !(
+    eo(n) === !1 ||
+    Object.prototype.hasOwnProperty.call(n, "isPrototypeOf") === !1
+  );
+}
+function mc(e) {
+  return cr(e)
+    ? { ...e }
+    : Array.isArray(e)
+      ? [...e]
+      : e instanceof Map
+        ? new Map(e)
+        : e instanceof Set
+          ? new Set(e)
+          : e;
+}
+const Fp = new Set(["string", "number", "symbol"]);
+function go(e) {
+  return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function rn(e, t, n) {
+  const r = new e._zod.constr(t ?? e._zod.def);
+  return ((!t || (n != null && n.parent)) && (r._zod.parent = e), r);
+}
+function re(e) {
+  const t = e;
+  if (!t) return {};
+  if (typeof t == "string") return { error: () => t };
+  if ((t == null ? void 0 : t.message) !== void 0) {
+    if ((t == null ? void 0 : t.error) !== void 0)
+      throw new Error("Cannot specify both `message` and `error` params");
+    t.error = t.message;
+  }
+  return (
+    delete t.message,
+    typeof t.error == "string" ? { ...t, error: () => t.error } : t
+  );
+}
+function pc(e) {
+  return typeof e == "bigint"
+    ? e.toString() + "n"
+    : typeof e == "string"
+      ? `"${e}"`
+      : `${e}`;
+}
+function Bp(e) {
+  return Object.keys(e).filter(
+    (t) => e[t]._zod.optin !== void 0 && e[t]._zod.optout === "optional",
+  );
+}
+function Vp(e, t) {
+  const n = e._zod.def,
+    r = n.checks;
+  if (r && r.length > 0)
+    throw new Error(
+      ".pick() cannot be used on object schemas containing refinements",
+    );
+  const i = nn(e._zod.def, {
+    get shape() {
+      const s = {};
+      for (const a of Reflect.ownKeys(t)) {
+        if (!Object.prototype.hasOwnProperty.call(n.shape, a))
+          throw new Error(`Unrecognized key: "${String(a)}"`);
+        t[a] && st(s, a, n.shape[a]);
+      }
+      return (st(this, "shape", s), s);
+    },
+    checks: [],
+  });
+  return rn(e, i);
+}
+function $p(e, t) {
+  const n = e._zod.def,
+    r = n.checks;
+  if (r && r.length > 0)
+    throw new Error(
+      ".omit() cannot be used on object schemas containing refinements",
+    );
+  const i = nn(e._zod.def, {
+    get shape() {
+      const s = { ...e._zod.def.shape };
+      for (const a of Reflect.ownKeys(t)) {
+        if (!Object.prototype.hasOwnProperty.call(n.shape, a))
+          throw new Error(`Unrecognized key: "${String(a)}"`);
+        t[a] && delete s[a];
+      }
+      return (st(this, "shape", s), s);
+    },
+    checks: [],
+  });
+  return rn(e, i);
+}
+function Wp(e, t) {
+  if (!cr(t))
+    throw new Error("Invalid input to extend: expected a plain object");
+  const n = e._zod.def.checks;
+  if (n && n.length > 0) {
+    const i = e._zod.def.shape;
+    for (const s of Reflect.ownKeys(t))
+      if (Object.getOwnPropertyDescriptor(i, s) !== void 0)
+        throw new Error(
+          "Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.",
+        );
+  }
+  const o = nn(e._zod.def, {
+    get shape() {
+      const i = { ...e._zod.def.shape, ...t };
+      return (st(this, "shape", i), i);
+    },
+  });
+  return rn(e, o);
+}
+function Up(e, t) {
+  if (!cr(t))
+    throw new Error("Invalid input to safeExtend: expected a plain object");
+  const n = nn(e._zod.def, {
+    get shape() {
+      const r = { ...e._zod.def.shape, ...t };
+      return (st(this, "shape", r), r);
+    },
+  });
+  return rn(e, n);
+}
+function Hp(e, t) {
+  var r, o;
+  if (!((r = t == null ? void 0 : t._zod) != null && r.def))
+    throw new Error(
+      "Invalid input to merge: expected an object schema. To merge a plain shape, use `.extend()`.",
+    );
+  if ((o = e._zod.def.checks) != null && o.length)
+    throw new Error(
+      ".merge() cannot be used on object schemas containing refinements. Use .safeExtend() instead.",
+    );
+  const n = nn(e._zod.def, {
+    get shape() {
+      const i = { ...e._zod.def.shape, ...t._zod.def.shape };
+      return (st(this, "shape", i), i);
+    },
+    get catchall() {
+      return t._zod.def.catchall;
+    },
+    checks: t._zod.def.checks ?? [],
+  });
+  return rn(e, n);
+}
+function va(e, t, n, r = "partial") {
+  const i = t._zod.def.checks;
+  if (i && i.length > 0)
+    throw new Error(
+      `.${r}() cannot be used on object schemas containing refinements`,
+    );
+  const a = nn(t._zod.def, {
+    get shape() {
+      const c = t._zod.def.shape,
+        u = { ...c };
+      if (n)
+        for (const f of Reflect.ownKeys(n)) {
+          if (!Object.prototype.hasOwnProperty.call(c, f))
+            throw new Error(`Unrecognized key: "${String(f)}"`);
+          n[f] &&
+            (u[f] = e ? new e({ type: "optional", innerType: c[f] }) : c[f]);
+        }
+      else
+        for (const f of Reflect.ownKeys(c))
+          u[f] = e ? new e({ type: "optional", innerType: c[f] }) : c[f];
+      return (st(this, "shape", u), u);
+    },
+    checks: [],
+  });
+  return rn(t, a);
+}
+function Gp(e, t, n) {
+  const r = nn(t._zod.def, {
+    get shape() {
+      const o = t._zod.def.shape,
+        i = { ...o };
+      if (n)
+        for (const s of Reflect.ownKeys(n)) {
+          if (!Object.prototype.hasOwnProperty.call(i, s))
+            throw new Error(`Unrecognized key: "${String(s)}"`);
+          n[s] && (i[s] = new e({ type: "nonoptional", innerType: o[s] }));
+        }
+      else
+        for (const s of Reflect.ownKeys(o))
+          i[s] = new e({ type: "nonoptional", innerType: o[s] });
+      return (st(this, "shape", i), i);
+    },
+  });
+  return rn(t, r);
+}
+function Rn(e, t = 0) {
+  var n;
+  if (e.aborted === !0) return !0;
+  for (let r = t; r < e.issues.length; r++)
+    if (((n = e.issues[r]) == null ? void 0 : n.continue) !== !0) return !0;
+  return !1;
+}
+function Zp(e, t = 0) {
+  var n;
+  if (e.aborted === !0) return !0;
+  for (let r = t; r < e.issues.length; r++)
+    if (((n = e.issues[r]) == null ? void 0 : n.continue) === !1) return !0;
+  return !1;
+}
+function gc(e, t) {
+  return t.map((n) => {
+    var r;
+    return ((r = n).path ?? (r.path = []), n.path.unshift(e), n);
+  });
+}
+function nr(e) {
+  return typeof e == "string" ? e : e == null ? void 0 : e.message;
+}
+function ba(e, t, n) {
+  var r;
+  for (let o = t; o < e.length; o++) (r = e[o]).schema ?? (r.schema = n);
+}
+function Wn(e, t, n) {
+  var m, y, p, v, h, S, x, C, w, k;
+  var r;
+  const o =
+    (y = (m = e.inst) == null ? void 0 : m._zod) == null ? void 0 : y.traits;
+  o != null &&
+    o.has("$ZodType") &&
+    (o.has("$ZodCheck")
+      ? ((r = e).schema ?? (r.schema = e.inst))
+      : (e.schema = e.inst));
+  const i =
+      e.schema !== e.inst
+        ? (v = (p = e.schema) == null ? void 0 : p._zod.def) == null
+          ? void 0
+          : v.error
+        : void 0,
+    s = e.message
+      ? e.message
+      : (nr(
+          (x =
+            (S = (h = e.inst) == null ? void 0 : h._zod.def) == null
+              ? void 0
+              : S.error) == null
+            ? void 0
+            : x.call(S, e),
+        ) ??
+        nr(i == null ? void 0 : i(e)) ??
+        nr(
+          (C = t == null ? void 0 : t.error) == null ? void 0 : C.call(t, e),
+        ) ??
+        nr((w = n.customError) == null ? void 0 : w.call(n, e)) ??
+        nr((k = n.localeError) == null ? void 0 : k.call(n, e)) ??
+        "Invalid input"),
+    { inst: a, schema: c, continue: u, input: f, ...d } = e;
+  return (
+    d.path ?? (d.path = []),
+    (d.message = s),
+    t != null && t.reportInput && (d.input = f),
+    d
+  );
+}
+const Jp = /[\uD800-\uDBFF]/;
+function es(e) {
+  const t = e.length;
+  if (!Jp.test(e)) return t;
+  let n = t;
+  for (let r = 0; r < t - 1; r++)
+    (e.charCodeAt(r) & 64512) === 55296 &&
+      (e.charCodeAt(r + 1) & 64512) === 56320 &&
+      (n--, r++);
+  return n;
+}
+function ts(e) {
+  return Array.isArray(e)
+    ? "array"
+    : typeof e == "string"
+      ? "string"
+      : "unknown";
+}
+function Kp(e) {
+  const t = typeof e;
+  switch (t) {
+    case "number":
+      return Number.isNaN(e) ? "nan" : "number";
+    case "object": {
+      if (e === null) return "null";
+      if (Array.isArray(e)) return "array";
+      const n = e;
+      if (
+        n &&
+        Object.getPrototypeOf(n) !== Object.prototype &&
+        "constructor" in n &&
+        n.constructor
+      )
+        return n.constructor.name;
+    }
+  }
+  return t;
+}
+function ur(...e) {
+  const [t, n, r] = e;
+  return typeof t == "string"
+    ? { message: t, code: "custom", input: n, inst: r }
+    : { ...t };
+}
+function qp(e, t) {
+  for (const n in t) {
+    const r = Object.getOwnPropertyDescriptor(t, n);
+    r.get
+      ? Object.defineProperty(e, n, { ...r, enumerable: !1 })
+      : Yp(e, n, r.value);
+  }
+}
+function Vn(e, t, n, r = !0) {
+  return (
+    Object.defineProperty(e, t, {
+      configurable: !0,
+      writable: !0,
+      enumerable: r,
+      value: n,
+    }),
+    n
+  );
+}
+function hc(e, t, n) {
+  return Vn(e, t, n, !1);
+}
+function Yp(e, t, n) {
+  Object.defineProperty(e, t, {
+    configurable: !0,
+    get() {
+      return this == null ? n : Vn(this, t, n.bind(this));
+    },
+    set(r) {
+      Vn(this, t, r);
+    },
+  });
+}
+function Qp(e, t) {
+  const n = Object.getPrototypeOf(e);
+  return t in n ? void 0 : n;
+}
+let Fo,
+  Gt = !1;
+const Xp = {
+  configurable: !0,
+  get() {
+    Gt = !0;
+  },
+};
+function me(e, t, n) {
+  const r = Object.getPrototypeOf(e._zod);
+  if (t in r && Fo !== e._zod) {
+    Fo = void 0;
+    return;
+  }
+  ((Fo = e._zod),
+    Object.defineProperty(r, t, {
+      configurable: !0,
+      get() {
+        Object.defineProperty(this, t, Xp);
+        const o = Gt;
+        Gt = !1;
+        try {
+          const i = n(this);
+          return (
+            Gt
+              ? delete this[t]
+              : Object.defineProperty(this, t, {
+                  configurable: !0,
+                  writable: !0,
+                  value: i,
+                }),
+            (Gt = Gt || o),
+            i
+          );
+        } catch (i) {
+          throw (delete this[t], (Gt = Gt || o), i);
+        }
+      },
+      set(o) {
+        Object.defineProperty(this, t, {
+          configurable: !0,
+          writable: !0,
+          value: o,
+        });
+      },
+    }));
+}
+function eg(e, t, n, r) {
+  const o = Qp(e, t);
+  o &&
+    Object.defineProperty(o, t, {
+      configurable: !0,
+      get() {
+        const i = {
+          configurable: !0,
+          writable: !0,
+          enumerable: r,
+          value: void 0,
+        };
+        return (
+          Object.defineProperty(this, t, i),
+          (i.value = n(this)),
+          Object.defineProperty(this, t, i),
+          i.value
+        );
+      },
+      set(i) {
+        Object.defineProperty(this, t, {
+          configurable: !0,
+          writable: !0,
+          enumerable: r,
+          value: i,
+        });
+      },
+    });
+}
+const tg = "~constantCatch";
+function ng(e) {
+  const t = () => e;
+  return ((t[tg] = !0), t);
+}
+var wa;
+const Bo = { value: void 0, enumerable: !1 };
+let xa = "captureStackTrace" in Error ? Error : null;
+function rg(e) {
+  const t = xa;
+  if (t) {
+    const n = t.stackTraceLimit;
+    if (typeof n == "number") {
+      try {
+        t.stackTraceLimit = 0;
+      } catch {
+        return ((xa = null), new e());
+      }
+      try {
+        return new e();
+      } finally {
+        t.stackTraceLimit = n;
+      }
+    }
+  }
+  return new e();
+}
+function T(e, t, n, r) {
+  const o = {};
+  function i(m) {
+    ((this.def = m), (this.constr = d), (this.traits = new Set()));
+  }
+  i.prototype = o;
+  const s = n,
+    a = s && new WeakSet();
+  function c(m, y) {
+    if (!m._zod) {
+      Bo.value = new i(y);
+      try {
+        Object.defineProperty(m, "_zod", Bo);
+      } finally {
+        Bo.value = void 0;
+      }
+    }
+    if (m._zod.traits.has(e)) return;
+    if ((m._zod.traits.add(e), t(m, y), a)) {
+      const v = Object.getPrototypeOf(m),
+        h = m._zod.constr.prototype;
+      let S = v;
+      for (; S && S !== h;) S = Object.getPrototypeOf(S);
+      const x = S ?? v;
+      a.has(x) || (a.add(x), qp(x, s));
+    }
+    const p = d.prototype;
+    for (const v in p)
+      Object.prototype.hasOwnProperty.call(p, v) &&
+        (v in m || (m[v] = p[v].bind(m)));
+  }
+  const u = (r == null ? void 0 : r.Parent) ?? Object;
+  class f extends u {}
+  Object.defineProperty(f, "name", { value: e });
+  function d(m) {
+    var h;
+    const y = r != null && r.Parent ? rg(f) : this;
+    c(y, m);
+    const p = y._zod.deferred;
+    if (p) {
+      for (const S of p) S();
+      y._zod.deferred = void 0;
+    }
+    const v =
+      (h = globalThis.__zod_globalConfig) == null ? void 0 : h.postProcessor;
+    return (v && v(y), y);
+  }
+  return (
+    Object.defineProperty(d, "init", { value: c }),
+    Object.defineProperty(d, Symbol.hasInstance, {
+      value: (m) => {
+        var y, p;
+        return r != null && r.Parent && m instanceof r.Parent
+          ? !0
+          : (p =
+                (y = m == null ? void 0 : m._zod) == null
+                  ? void 0
+                  : y.traits) == null
+            ? void 0
+            : p.has(e);
+      },
+    }),
+    Object.defineProperty(d, "name", { value: e }),
+    d
+  );
+}
+class Ln extends Error {
+  constructor() {
+    super(
+      "Encountered Promise during synchronous parse. Use .parseAsync() instead.",
+    );
+  }
+}
+class yc extends Error {
+  constructor(t) {
+    (super(`Encountered unidirectional transform during encode: ${t}`),
+      (this.name = "ZodEncodeError"));
+  }
+}
+(wa = globalThis).__zod_globalConfig ?? (wa.__zod_globalConfig = {});
+const kt = globalThis.__zod_globalConfig;
+function on(e) {
+  return (e && Object.assign(kt, e), kt);
+}
+function og() {
+  const e = this._zod;
+  return (e.message ?? (e.message = JSON.stringify(e.def, pi, 2)), e.message);
+}
+function ig(e) {
+  this._zod.message = e;
+}
+const sg = { get: og, set: ig, enumerable: !0, configurable: !0 },
+  Vo = { value: void 0, enumerable: !1 },
+  $o = { value: void 0, enumerable: !1 },
+  Sa = new WeakSet([Object.prototype, Error.prototype]),
+  vc = (e, t) => {
+    ((e.name = "$ZodError"),
+      (Vo.value = e._zod),
+      Object.defineProperty(e, "_zod", Vo),
+      ($o.value = t),
+      Object.defineProperty(e, "issues", $o),
+      (Vo.value = void 0),
+      ($o.value = void 0),
+      Object.defineProperty(e, "message", sg));
+    const n = Object.getPrototypeOf(e);
+    Sa.has(n) ||
+      (Sa.add(n),
+      Object.defineProperty(n, "toString", {
+        configurable: !0,
+        enumerable: !1,
+        get() {
+          const r = () => this.message;
+          return (
+            Object.defineProperty(this, "toString", {
+              value: r,
+              configurable: !0,
+              writable: !0,
+            }),
+            r
+          );
+        },
+        set(r) {
+          Object.defineProperty(this, "toString", {
+            value: r,
+            configurable: !0,
+            writable: !0,
+          });
+        },
+      }));
+  },
+  bc = T("$ZodError", vc),
+  wc = T("$ZodError", vc, void 0, { Parent: Error });
+function ag(e, t, n) {
+  return (
+    Object.prototype.hasOwnProperty.call(e, t) ||
+      (t === "__proto__"
+        ? Object.defineProperty(e, t, {
+            value: n(),
+            writable: !0,
+            enumerable: !0,
+            configurable: !0,
+          })
+        : (e[t] = n())),
+    e[t]
+  );
+}
+function lg(e, t = (n) => n.message) {
+  const n = {},
+    r = [];
+  for (const o of e.issues)
+    o.path.length > 0 ? ag(n, o.path[0], () => []).push(t(o)) : r.push(t(o));
+  return { formErrors: r, fieldErrors: n };
+}
+function cg(e, t = (n) => n.message) {
+  const n = { _errors: [] },
+    r = (o, i = []) => {
+      for (const s of o.issues)
+        if (s.code === "invalid_union" && s.errors.length)
+          s.errors.map((a) => r({ issues: a }, [...i, ...s.path]));
+        else if (s.code === "invalid_key")
+          r({ issues: s.issues }, [...i, ...s.path]);
+        else if (s.code === "invalid_element")
+          r({ issues: s.issues }, [...i, ...s.path]);
+        else {
+          const a = [...i, ...s.path];
+          if (a.length === 0) n._errors.push(t(s));
+          else {
+            let c = n,
+              u = 0;
+            for (; u < a.length;) {
+              const f = a[u],
+                d = u === a.length - 1;
+              if (f === "_errors") {
+                (d && c._errors.push(t(s)), u++);
+                continue;
+              }
+              Object.prototype.hasOwnProperty.call(c, f) ||
+                Object.defineProperty(c, f, {
+                  value: { _errors: [] },
+                  enumerable: !0,
+                  writable: !0,
+                  configurable: !0,
+                });
+              const m = c[f];
+              (d && m._errors.push(t(s)), (c = m), u++);
+            }
+          }
+        }
+    };
+  return (r(e), n);
+}
+function ho(e, t) {
+  return {
+    callee: (t == null ? void 0 : t.callee) ?? e,
+    Err: t == null ? void 0 : t.Err,
+  };
+}
+const ns = (e) => {
+    const t = (n, r, o, i) => {
+      const s = o ? { ...o, async: !1 } : { async: !1 },
+        a = n._zod.run({ value: r, issues: [] }, s);
+      if (a instanceof Promise) throw new Ln();
+      if (a.issues.length) {
+        const c = new ((i == null ? void 0 : i.Err) ?? e)(
+          a.issues.map((u) => Wn(u, s, on())),
+        );
+        throw (fc(c, (i == null ? void 0 : i.callee) ?? t), c);
+      }
+      return a.value;
+    };
+    return t;
+  },
+  rs = (e) => {
+    const t = async (n, r, o, i) => {
+      const s = o ? { ...o, async: !0 } : { async: !0 };
+      let a = n._zod.run({ value: r, issues: [] }, s);
+      if ((a instanceof Promise && (a = await a), a.issues.length)) {
+        const c = new ((i == null ? void 0 : i.Err) ?? e)(
+          a.issues.map((u) => Wn(u, s, on())),
+        );
+        throw (fc(c, (i == null ? void 0 : i.callee) ?? t), c);
+      }
+      return a.value;
+    };
+    return t;
+  },
+  yo = (e) => (t, n, r) => {
+    const o = r ? { ...r, async: !1 } : { async: !1 },
+      i = t._zod.run({ value: n, issues: [] }, o);
+    if (i instanceof Promise) throw new Ln();
+    return i.issues.length
+      ? {
+          success: !1,
+          error: new (e ?? bc)(i.issues.map((s) => Wn(s, o, on()))),
+        }
+      : { success: !0, data: i.value };
+  },
+  ug = yo(wc),
+  vo = (e) => async (t, n, r) => {
+    const o = r ? { ...r, async: !0 } : { async: !0 };
+    let i = t._zod.run({ value: n, issues: [] }, o);
+    return (
+      i instanceof Promise && (i = await i),
+      i.issues.length
+        ? { success: !1, error: new e(i.issues.map((s) => Wn(s, o, on()))) }
+        : { success: !0, data: i.value }
+    );
+  },
+  dg = vo(wc),
+  fg = (e) => {
+    const t = ns(e),
+      n = (r, o, i, s) => {
+        const a = i
+          ? { ...i, direction: "backward" }
+          : { direction: "backward" };
+        return t(r, o, a, ho(n, s));
+      };
+    return n;
+  },
+  mg = (e) => {
+    const t = ns(e),
+      n = (r, o, i, s) => t(r, o, i, ho(n, s));
+    return n;
+  },
+  pg = (e) => {
+    const t = rs(e),
+      n = async (r, o, i, s) => {
+        const a = i
+          ? { ...i, direction: "backward" }
+          : { direction: "backward" };
+        return await t(r, o, a, ho(n, s));
+      };
+    return n;
+  },
+  gg = (e) => {
+    const t = rs(e),
+      n = async (r, o, i, s) => await t(r, o, i, ho(n, s));
+    return n;
+  },
+  hg = (e) => (t, n, r) => {
+    const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
+    return yo(e)(t, n, o);
+  },
+  yg = (e) => (t, n, r) => yo(e)(t, n, r),
+  vg = (e) => async (t, n, r) => {
+    const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
+    return vo(e)(t, n, o);
+  },
+  bg = (e) => async (t, n, r) => vo(e)(t, n, r),
+  wg = /^[cC][0-9a-z]{6,}$/,
+  xg = /^[0-9a-z]+$/,
+  Sg = /^[0-7][0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{25}$/,
+  Cg = /^[0-9a-vA-V]{20}$/,
+  Pg = /^[A-Za-z0-9]{27}$/,
+  Ag = /^[a-zA-Z0-9_-]{21}$/;
+function kg(e) {
+  return new RegExp(`^[a-zA-Z0-9_-]{${e}}$`);
+}
+const Ig =
+    /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/,
+  _g =
+    /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/,
+  Ca = (e) =>
+    e
+      ? new RegExp(
+          `^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${e}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`,
+        )
+      : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/,
+  Tg =
+    /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/,
+  Mg = "^[\\p{Extended_Pictographic}\\p{Emoji_Component}]+$";
+function Dg() {
+  return new RegExp(Mg, "u");
+}
+const jg =
+    /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/,
+  Ng =
+    /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/,
+  Rg =
+    /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/,
+  Eg =
+    /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/,
+  Og =
+    /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/,
+  xc = /^[A-Za-z0-9_-]*$/,
+  Lg = /^https?$/,
+  zg = /^\+[1-9]\d{6,14}$/,
+  Sc =
+    "(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))";
+function Fg(e) {
+  return new RegExp(`^${e}$`);
+}
+const Bg = Fg(Sc);
+function gi(e) {
+  const t = "(?:[01]\\d|2[0-3]):[0-5]\\d";
+  return typeof e.precision == "number"
+    ? e.precision === -1
+      ? `${t}`
+      : e.precision === 0
+        ? `${t}:[0-5]\\d`
+        : `${t}:[0-5]\\d\\.\\d{${e.precision}}`
+    : e.seconds
+      ? `${t}:[0-5]\\d(?:\\.\\d+)?`
+      : `${t}(?::[0-5]\\d(?:\\.\\d+)?)?`;
+}
+function Vg(e) {
+  return new RegExp(`^${gi(e)}$`);
+}
+function $g(e) {
+  const t = ["Z"];
+  e.offset && t.push("([+-](?:[01]\\d|2[0-3]):[0-5]\\d)");
+  const n = `${gi({ precision: e.precision, seconds: !0 })}(?:${t.join("|")})`,
+    r = e.local ? `${n}|${gi({ precision: e.precision })}` : n;
+  return new RegExp(`^${Sc}T(?:${r})$`);
+}
+const Wg = (e) => {
+    const t = e
+      ? `[\\s\\S]{${(e == null ? void 0 : e.minimum) ?? 0},${(e == null ? void 0 : e.maximum) ?? ""}}`
+      : "[\\s\\S]*";
+    return new RegExp(`^${t}$`);
+  },
+  Ug = /^[^A-Z]*$/,
+  Hg = /^[^a-z]*$/,
+  Mt = T("$ZodCheck", (e, t) => {
+    var n;
+    (e._zod ?? (e._zod = {}),
+      (e._zod.def = t),
+      (n = e._zod).onattach ?? (n.onattach = []));
+  }),
+  os = (e) => {
+    const t = e.value;
+    return !Ep(t) && t.length !== void 0;
+  },
+  Gg = T("$ZodCheckMaxLength", (e, t) => {
+    var n;
+    (Mt.init(e, t),
+      (n = e._zod.def).when ?? (n.when = os),
+      e._zod.onattach.push((r) => {
+        const o = r._zod.bag.maximum ?? Number.POSITIVE_INFINITY;
+        t.maximum < o && (r._zod.bag.maximum = t.maximum);
+      }),
+      (e._zod.check = (r) => {
+        const o = r.value,
+          i = o.length;
+        if ((typeof o == "string" && i > t.maximum ? es(o) : i) <= t.maximum)
+          return;
+        const a = ts(o);
+        r.issues.push({
+          origin: a,
+          code: "too_big",
+          maximum: t.maximum,
+          inclusive: !0,
+          input: o,
+          inst: e,
+          continue: !t.abort,
+        });
+      }));
+  }),
+  Zg = T("$ZodCheckMinLength", (e, t) => {
+    var n;
+    (Mt.init(e, t),
+      (n = e._zod.def).when ?? (n.when = os),
+      e._zod.onattach.push((r) => {
+        const o = r._zod.bag.minimum ?? Number.NEGATIVE_INFINITY;
+        t.minimum > o && (r._zod.bag.minimum = t.minimum);
+      }),
+      (e._zod.check = (r) => {
+        const o = r.value,
+          i = o.length;
+        if (
+          (typeof o == "string" && i >= t.minimum && i < t.minimum * 2
+            ? es(o)
+            : i) >= t.minimum
+        )
+          return;
+        const a = ts(o);
+        r.issues.push({
+          origin: a,
+          code: "too_small",
+          minimum: t.minimum,
+          inclusive: !0,
+          input: o,
+          inst: e,
+          continue: !t.abort,
+        });
+      }));
+  }),
+  Jg = T("$ZodCheckLengthEquals", (e, t) => {
+    var n;
+    (Mt.init(e, t),
+      (n = e._zod.def).when ?? (n.when = os),
+      e._zod.onattach.push((r) => {
+        const o = r._zod.bag;
+        ((o.minimum = t.length), (o.maximum = t.length), (o.length = t.length));
+      }),
+      (e._zod.check = (r) => {
+        const o = r.value,
+          i = o.length,
+          s =
+            typeof o == "string" && i >= t.length && i <= t.length * 2
+              ? es(o)
+              : i;
+        if (s === t.length) return;
+        const a = ts(o),
+          c = s > t.length;
+        r.issues.push({
+          origin: a,
+          ...(c
+            ? { code: "too_big", maximum: t.length }
+            : { code: "too_small", minimum: t.length }),
+          inclusive: !0,
+          exact: !0,
+          input: r.value,
+          inst: e,
+          continue: !t.abort,
+        });
+      }));
+  }),
+  bo = T("$ZodCheckStringFormat", (e, t) => {
+    var n, r;
+    (Mt.init(e, t),
+      e._zod.onattach.push((o) => {
+        const i = o._zod.bag;
+        ((i.format = t.format),
+          t.pattern &&
+            (i.patterns ?? (i.patterns = new Set()),
+            i.patterns.add(t.pattern)));
+      }),
+      t.pattern
+        ? ((n = e._zod).check ??
+          (n.check = (o) => {
+            ((t.pattern.lastIndex = 0),
+              !t.pattern.test(o.value) &&
+                o.issues.push({
+                  origin: "string",
+                  code: "invalid_format",
+                  format: t.format,
+                  input: o.value,
+                  ...(t.pattern ? { pattern: t.pattern.toString() } : {}),
+                  inst: e,
+                  continue: !t.abort,
+                }));
+          }))
+        : ((r = e._zod).check ?? (r.check = () => {})));
+  }),
+  Kg = T("$ZodCheckRegex", (e, t) => {
+    (bo.init(e, t),
+      (e._zod.check = (n) => {
+        ((t.pattern.lastIndex = 0),
+          !t.pattern.test(n.value) &&
+            n.issues.push({
+              origin: "string",
+              code: "invalid_format",
+              format: "regex",
+              input: n.value,
+              pattern: t.pattern.toString(),
+              inst: e,
+              continue: !t.abort,
+            }));
+      }));
+  }),
+  qg = T("$ZodCheckLowerCase", (e, t) => {
+    (t.pattern ?? (t.pattern = Ug), bo.init(e, t));
+  }),
+  Yg = T("$ZodCheckUpperCase", (e, t) => {
+    (t.pattern ?? (t.pattern = Hg), bo.init(e, t));
+  }),
+  Qg = T("$ZodCheckIncludes", (e, t) => {
+    Mt.init(e, t);
+    const n = go(t.includes),
+      r = new RegExp(
+        typeof t.position == "number" ? `^.{${t.position},}${n}` : n,
+      );
+    ((t.pattern = r),
+      e._zod.onattach.push((o) => {
+        const i = o._zod.bag;
+        (i.patterns ?? (i.patterns = new Set()), i.patterns.add(r));
+      }),
+      (e._zod.check = (o) => {
+        o.value.includes(t.includes, t.position) ||
+          o.issues.push({
+            origin: "string",
+            code: "invalid_format",
+            format: "includes",
+            includes: t.includes,
+            input: o.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  Xg = T("$ZodCheckStartsWith", (e, t) => {
+    Mt.init(e, t);
+    const n = new RegExp(`^${go(t.prefix)}.*`);
+    (t.pattern ?? (t.pattern = n),
+      e._zod.onattach.push((r) => {
+        const o = r._zod.bag;
+        (o.patterns ?? (o.patterns = new Set()), o.patterns.add(n));
+      }),
+      (e._zod.check = (r) => {
+        r.value.startsWith(t.prefix) ||
+          r.issues.push({
+            origin: "string",
+            code: "invalid_format",
+            format: "starts_with",
+            prefix: t.prefix,
+            input: r.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  eh = T("$ZodCheckEndsWith", (e, t) => {
+    Mt.init(e, t);
+    const n = new RegExp(`.*${go(t.suffix)}$`);
+    (t.pattern ?? (t.pattern = n),
+      e._zod.onattach.push((r) => {
+        const o = r._zod.bag;
+        (o.patterns ?? (o.patterns = new Set()), o.patterns.add(n));
+      }),
+      (e._zod.check = (r) => {
+        r.value.endsWith(t.suffix) ||
+          r.issues.push({
+            origin: "string",
+            code: "invalid_format",
+            format: "ends_with",
+            suffix: t.suffix,
+            input: r.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  th = T("$ZodCheckOverwrite", (e, t) => {
+    (Mt.init(e, t),
+      (e._zod.check = (n) => {
+        n.value = t.tx(n.value);
+      }));
+  });
+class nh {
+  constructor(t = [], n = {}) {
+    ((this.content = []),
+      (this.indent = 0),
+      (this.args = t),
+      (this.closed = n));
+  }
+  indented(t) {
+    ((this.indent += 1), t(this), (this.indent -= 1));
+  }
+  write(t) {
+    if (typeof t == "function") {
+      (t(this, { execution: "sync" }), t(this, { execution: "async" }));
+      return;
+    }
+    const r = t
+        .split(
+          `
+`,
+        )
+        .filter((s) => s),
+      o = Math.min(...r.map((s) => s.length - s.trimStart().length)),
+      i = r.map((s) => s.slice(o)).map((s) => " ".repeat(this.indent * 2) + s);
+    for (const s of i) this.content.push(s);
+  }
+  compile() {
+    const t = Function,
+      n = (this == null ? void 0 : this.content) ?? [""];
+    return new t(
+      ...Object.keys(this.closed),
+      `return function (${this.args.join(", ")}) {
+${n.join(`
+`)}
+};`,
+    )(...Object.values(this.closed));
+  }
+}
+const rh = { major: 4, minor: 5, patch: 4 },
+  Ee = T(
+    "$ZodType",
+    (e, t) => {
+      var i;
+      var n;
+      (e ?? (e = {}),
+        (e._zod.def = t),
+        (e._zod.bag = e._zod.bag || {}),
+        (e._zod.version = rh));
+      const r = e._zod.def.checks,
+        o = e._zod.traits.has("$ZodCheck")
+          ? [e, ...(r ?? [])]
+          : r != null && r.length
+            ? [...r]
+            : [];
+      for (const s of o) for (const a of s._zod.onattach) a(e);
+      if (o.length === 0)
+        ((n = e._zod).deferred ?? (n.deferred = []),
+          (i = e._zod.deferred) == null ||
+            i.push(() => {
+              e._zod.run = e._zod.parse;
+            }));
+      else {
+        const s = (c, u, f) => {
+            if (c.memo) return c;
+            let d = Rn(c),
+              m;
+            for (const y of u) {
+              if (y._zod.def.when) {
+                if (Zp(c) || !y._zod.def.when(c)) continue;
+              } else if (d) continue;
+              const p = c.issues.length,
+                v = y._zod.check(c);
+              if (v instanceof Promise && (f == null ? void 0 : f.async) === !1)
+                throw new Ln();
+              if (m || v instanceof Promise)
+                m = (m ?? Promise.resolve()).then(async () => {
+                  (await v,
+                    c.issues.length !== p &&
+                      (ba(c.issues, p, e), d || (d = Rn(c, p))));
+                });
+              else {
+                if (c.issues.length === p) continue;
+                (ba(c.issues, p, e), d || (d = Rn(c, p)));
+              }
+            }
+            return m ? m.then(() => c) : c;
+          },
+          a = (c, u, f) => {
+            if (Rn(c)) return ((c.aborted = !0), c);
+            const d = s(u, o, f);
+            if (d instanceof Promise) {
+              if (f.async === !1) throw new Ln();
+              return d.then((m) => e._zod.parse(m, f));
+            }
+            return e._zod.parse(d, f);
+          };
+        e._zod.run = (c, u) => {
+          if (u.skipChecks) return e._zod.parse(c, u);
+          if (u.direction === "backward") {
+            const d = e._zod.parse(
+              { value: c.value, issues: [] },
+              { ...u, skipChecks: !0 },
+            );
+            return d instanceof Promise
+              ? d.then((m) => a(m, c, u))
+              : a(d, c, u);
+          }
+          const f = e._zod.parse(c, u);
+          if (f instanceof Promise) {
+            if (u.async === !1) throw new Ln();
+            return f.then((d) => s(d, o, u));
+          }
+          return s(f, o, u);
+        };
+      }
+    },
+    {
+      get "~standard"() {
+        return hc(this, "~standard", Cc(this));
+      },
+      set "~standard"(e) {
+        Vn(this, "~standard", e);
+      },
+    },
+  ),
+  Pa = (e) => {
+    var t;
+    return e.success
+      ? { value: e.data }
+      : { issues: (t = e.error) == null ? void 0 : t.issues };
+  };
+function Cc(e) {
+  return {
+    validate: (t) => {
+      try {
+        return Pa(ug(e, t));
+      } catch {
+        return dg(e, t).then(Pa);
+      }
+    },
+    vendor: "zod",
+    version: 1,
+  };
+}
+const is = T("$ZodString", (e, t) => {
+    var n;
+    (Ee.init(e, t),
+      (e._zod.pattern =
+        [
+          ...(((n = e == null ? void 0 : e._zod.bag) == null
+            ? void 0
+            : n.patterns) ?? []),
+        ].pop() ?? Wg(e._zod.bag)),
+      (e._zod.parse = (r, o) => {
+        if (t.coerce)
+          try {
+            r.value = String(r.value);
+          } catch {}
+        return (
+          typeof r.value == "string" ||
+            r.issues.push({
+              expected: "string",
+              code: "invalid_type",
+              input: r.value,
+              inst: e,
+            }),
+          r
+        );
+      }));
+  }),
+  ye = T("$ZodStringFormat", (e, t) => {
+    (bo.init(e, t), is.init(e, t));
+  }),
+  oh = T("$ZodGUID", (e, t) => {
+    (t.pattern ?? (t.pattern = _g), ye.init(e, t));
+  }),
+  ih = T("$ZodUUID", (e, t) => {
+    if (t.version) {
+      const r = { v1: 1, v2: 2, v3: 3, v4: 4, v5: 5, v6: 6, v7: 7, v8: 8 }[
+        t.version
+      ];
+      if (r === void 0) throw new Error(`Invalid UUID version: "${t.version}"`);
+      t.pattern ?? (t.pattern = Ca(r));
+    } else t.pattern ?? (t.pattern = Ca());
+    ye.init(e, t);
+  }),
+  sh = T("$ZodEmail", (e, t) => {
+    (t.pattern ?? (t.pattern = Tg), ye.init(e, t));
+  }),
+  Pc = 1,
+  Ac = 2;
+function ah(e, t) {
+  var n;
+  if (
+    !t.normalize &&
+    ((n = t.protocol) == null ? void 0 : n.source) === Lg.source &&
+    !/^https?:\/\//i.test(e)
+  )
+    return Pc;
+  try {
+    return new URL(e);
+  } catch {
+    return Ac;
+  }
+}
+const lh = /[\t\n\r]/g;
+function ch(e) {
+  return e.replace(lh, "");
+}
+function uh(e, t) {
+  return ((t.lastIndex = 0), t.test(e.hostname));
+}
+function dh(e, t) {
+  return (
+    (t.lastIndex = 0),
+    t.test(e.protocol.endsWith(":") ? e.protocol.slice(0, -1) : e.protocol)
+  );
+}
+const fh = T("$ZodURL", (e, t) => {
+    (ye.init(e, t),
+      (e._zod.check = (n) => {
+        try {
+          const r = n.value.trim(),
+            o = ah(r, t);
+          if (o === Pc) {
+            n.issues.push({
+              code: "invalid_format",
+              format: "url",
+              note: "Invalid URL format",
+              input: n.value,
+              inst: e,
+              continue: !t.abort,
+            });
+            return;
+          }
+          if (o === Ac) {
+            n.issues.push({
+              code: "invalid_format",
+              format: "url",
+              input: n.value,
+              inst: e,
+              continue: !t.abort,
+            });
+            return;
+          }
+          (t.hostname &&
+            !uh(o, t.hostname) &&
+            n.issues.push({
+              code: "invalid_format",
+              format: "url",
+              note: "Invalid hostname",
+              pattern: t.hostname.source,
+              input: n.value,
+              inst: e,
+              continue: !t.abort,
+            }),
+            t.protocol &&
+              !dh(o, t.protocol) &&
+              n.issues.push({
+                code: "invalid_format",
+                format: "url",
+                note: "Invalid protocol",
+                pattern: t.protocol.source,
+                input: n.value,
+                inst: e,
+                continue: !t.abort,
+              }),
+            (n.value = t.normalize ? o.href : ch(r)));
+          return;
+        } catch {
+          n.issues.push({
+            code: "invalid_format",
+            format: "url",
+            input: n.value,
+            inst: e,
+            continue: !t.abort,
+          });
+        }
+      }));
+  }),
+  mh = T("$ZodEmoji", (e, t) => {
+    (t.pattern ?? (t.pattern = Dg()), ye.init(e, t));
+  }),
+  ph = T("$ZodNanoID", (e, t) => {
+    if (t.length !== void 0 && (!Number.isInteger(t.length) || t.length < 1))
+      throw new Error(`Invalid nanoid length: ${t.length}`);
+    (t.pattern ?? (t.pattern = t.length === void 0 ? Ag : kg(t.length)),
+      ye.init(e, t));
+  }),
+  gh = T("$ZodCUID", (e, t) => {
+    (t.pattern ?? (t.pattern = wg), ye.init(e, t));
+  }),
+  hh = T("$ZodCUID2", (e, t) => {
+    (t.pattern ?? (t.pattern = xg), ye.init(e, t));
+  }),
+  yh = T("$ZodULID", (e, t) => {
+    (t.pattern ?? (t.pattern = Sg), ye.init(e, t));
+  }),
+  vh = T("$ZodXID", (e, t) => {
+    (t.pattern ?? (t.pattern = Cg), ye.init(e, t));
+  }),
+  bh = T("$ZodKSUID", (e, t) => {
+    (t.pattern ?? (t.pattern = Pg), ye.init(e, t));
+  }),
+  wh = T("$ZodISODateTime", (e, t) => {
+    (t.pattern ?? (t.pattern = $g(t)),
+      ye.init(e, t),
+      (t.local || t.precision === -1) &&
+        ((e._zod.bag.laxFormat = !0),
+        e._zod.onattach.push((n) => {
+          n._zod.bag.laxFormat = !0;
+        })));
+  }),
+  xh = T("$ZodISODate", (e, t) => {
+    (t.pattern ?? (t.pattern = Bg), ye.init(e, t));
+  }),
+  Sh = T("$ZodISOTime", (e, t) => {
+    (t.pattern ?? (t.pattern = Vg(t)), ye.init(e, t));
+  }),
+  Ch = T("$ZodISODuration", (e, t) => {
+    (t.pattern ?? (t.pattern = Ig), ye.init(e, t));
+  }),
+  Ph = T("$ZodIPv4", (e, t) => {
+    (t.pattern ?? (t.pattern = jg),
+      ye.init(e, t),
+      (e._zod.bag.format = "ipv4"));
+  }),
+  Ah = /^[0-9a-fA-F:.]+$/;
+function kc(e) {
+  if (!Ah.test(e)) return !1;
+  try {
+    return (new URL(`http://[${e}]`), !0);
+  } catch {
+    return !1;
+  }
+}
+const kh = T("$ZodIPv6", (e, t) => {
+    (t.pattern ?? (t.pattern = Ng),
+      ye.init(e, t),
+      (e._zod.bag.format = "ipv6"),
+      (e._zod.check = (n) => {
+        kc(n.value) ||
+          n.issues.push({
+            code: "invalid_format",
+            format: "ipv6",
+            input: n.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  Ih = T("$ZodCIDRv4", (e, t) => {
+    (t.pattern ?? (t.pattern = Rg), ye.init(e, t));
+  });
+function _h(e) {
+  const t = e.split("/");
+  if (t.length !== 2) return !1;
+  const [n, r] = t;
+  if (!r) return !1;
+  const o = Number(r);
+  return `${o}` !== r || o < 0 || o > 128 ? !1 : kc(n);
+}
+const Th = T("$ZodCIDRv6", (e, t) => {
+  (t.pattern ?? (t.pattern = Eg),
+    ye.init(e, t),
+    (e._zod.check = (n) => {
+      _h(n.value) ||
+        n.issues.push({
+          code: "invalid_format",
+          format: "cidrv6",
+          input: n.value,
+          inst: e,
+          continue: !t.abort,
+        });
+    }));
+});
+function Ic(e) {
+  if (e === "") return !0;
+  if (/\s/.test(e) || e.length % 4 !== 0) return !1;
+  try {
+    return (atob(e), !0);
+  } catch {
+    return !1;
+  }
+}
+const Mh = T("$ZodBase64", (e, t) => {
+  (t.pattern ?? (t.pattern = Og),
+    ye.init(e, t),
+    (e._zod.bag.contentEncoding = "base64"),
+    (e._zod.check = (n) => {
+      Ic(n.value) ||
+        n.issues.push({
+          code: "invalid_format",
+          format: "base64",
+          input: n.value,
+          inst: e,
+          continue: !t.abort,
+        });
+    }));
+});
+function Dh(e) {
+  if (!xc.test(e)) return !1;
+  const t = e.replace(/[-_]/g, (r) => (r === "-" ? "+" : "/")),
+    n = t.padEnd(Math.ceil(t.length / 4) * 4, "=");
+  return Ic(n);
+}
+const jh = T("$ZodBase64URL", (e, t) => {
+    (t.pattern ?? (t.pattern = xc),
+      ye.init(e, t),
+      (e._zod.bag.contentEncoding = "base64url"),
+      (e._zod.check = (n) => {
+        Dh(n.value) ||
+          n.issues.push({
+            code: "invalid_format",
+            format: "base64url",
+            input: n.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  Nh = T("$ZodE164", (e, t) => {
+    (t.pattern ?? (t.pattern = zg), ye.init(e, t));
+  });
+function Rh(e, t = null) {
+  try {
+    const n = e.split(".");
+    if (n.length !== 3) return !1;
+    const [r] = n;
+    if (!r) return !1;
+    const o = JSON.parse(atob(r));
+    return !(
+      ("typ" in o && (o == null ? void 0 : o.typ) !== "JWT") ||
+      !o.alg ||
+      (t && (!("alg" in o) || o.alg !== t))
+    );
+  } catch {
+    return !1;
+  }
+}
+const Eh = T("$ZodJWT", (e, t) => {
+    (ye.init(e, t),
+      (e._zod.check = (n) => {
+        Rh(n.value, t.alg) ||
+          n.issues.push({
+            code: "invalid_format",
+            format: "jwt",
+            input: n.value,
+            inst: e,
+            continue: !t.abort,
+          });
+      }));
+  }),
+  Oh = T("$ZodUnknown", (e, t) => {
+    (Ee.init(e, t), (e._zod.parse = (n) => n));
+  }),
+  Lh = T("$ZodNever", (e, t) => {
+    (Ee.init(e, t),
+      (e._zod.parse = (n, r) => (
+        n.issues.push({
+          expected: "never",
+          code: "invalid_type",
+          input: n.value,
+          inst: e,
+        }),
+        n
+      )));
+  });
+function Aa(e, t, n) {
+  (e.issues.length && t.issues.push(...gc(n, e.issues)),
+    (t.value[n] = e.value));
+}
+const zh = T("$ZodArray", (e, t) => {
+  Ee.init(e, t);
+  const n = kt.memoizer;
+  (n == null || n.attach(e),
+    (e._zod.parse = (r, o) => {
+      const i = r.value;
+      if (!Array.isArray(i))
+        return (
+          r.issues.push({
+            expected: "array",
+            code: "invalid_type",
+            input: i,
+            inst: e,
+          }),
+          r
+        );
+      r.value = n ? n.alloc(e, r, Array(i.length), o) : Array(i.length);
+      const s = [];
+      for (let a = 0; a < i.length; a++) {
+        const c = i[a],
+          u = t.element._zod.run({ value: c, issues: [] }, o);
+        u instanceof Promise ? s.push(u.then((f) => Aa(f, r, a))) : Aa(u, r, a);
+      }
+      return s.length ? Promise.all(s).then(() => r) : r;
+    }));
+});
+function to(e, t, n, r, o, i) {
+  const s = n in r,
+    a = i === "optional";
+  if (!(!s && a && o === "optional")) {
+    if (e.issues.length) {
+      if (o !== void 0 && a && !s) return;
+      t.issues.push(...gc(n, e.issues));
+    }
+    if (!s && o === void 0) {
+      e.issues.length ||
+        t.issues.push({
+          code: "invalid_type",
+          expected: "nonoptional",
+          input: void 0,
+          path: [n],
+        });
+      return;
+    }
+    e.value === void 0 ? s && (t.value[n] = void 0) : (t.value[n] = e.value);
+  }
+}
+const Fh = [];
+function _c(e) {
+  var s, a, c, u;
+  const t = Object.keys(e.shape),
+    n = Object.getOwnPropertySymbols(e.shape),
+    r = n.length ? n : Fh,
+    o = r.length ? [...t, ...r] : t;
+  for (const f of o)
+    if (!(
+      (u =
+        (c =
+          (a = (s = e.shape) == null ? void 0 : s[f]) == null
+            ? void 0
+            : a._zod) == null
+          ? void 0
+          : c.traits) != null && u.has("$ZodType")
+    ))
+      throw new Error(
+        `Invalid element at key "${String(f)}": expected a Zod schema`,
+      );
+  const i = Bp(e.shape);
+  return {
+    ...e,
+    allKeys: o,
+    symbolKeys: r,
+    keySet: new Set(t),
+    numKeys: t.length,
+    optionalKeys: new Set(i),
+  };
+}
+function Tc(e, t, n, r, o, i) {
+  const s = [],
+    a = o.keySet,
+    c = o.catchall._zod,
+    u = c.def.type,
+    f = c.optin,
+    d = c.optout;
+  for (const m in t) {
+    if (a.has(m)) continue;
+    if (m === "__proto__") {
+      u === "never" && s.push(m);
+      continue;
+    }
+    if (u === "never") {
+      s.push(m);
+      continue;
+    }
+    const y = c.run({ value: t[m], issues: [] }, r);
+    y instanceof Promise
+      ? e.push(y.then((p) => to(p, n, m, t, f, d)))
+      : to(y, n, m, t, f, d);
+  }
+  return (
+    s.length &&
+      n.issues.push({
+        code: "unrecognized_keys",
+        keys: s,
+        input: t,
+        inst: i,
+        continue: !0,
+      }),
+    e.length ? Promise.all(e).then(() => n) : n
+  );
+}
+const ka = new WeakMap(),
+  Bh = T("$ZodObject", (e, t) => {
+    Ee.init(e, t);
+    const n = Object.getOwnPropertyDescriptor(t, "shape");
+    if (!(n != null && n.get)) {
+      const c = t.shape;
+      (ka.set(t, c),
+        Object.defineProperty(t, "shape", {
+          get: () => {
+            const u = { ...c };
+            return (
+              Object.defineProperty(t, "shape", { value: u }),
+              ka.set(t, u),
+              u
+            );
+          },
+        }));
+    }
+    const r = Qi(() => _c(t));
+    me(e, "propValues", (c) => {
+      const u = c.def.shape,
+        f = {};
+      for (const d in u) {
+        const m = u[d]._zod;
+        if (m.values) {
+          Object.prototype.hasOwnProperty.call(f, d) || st(f, d, new Set());
+          for (const y of m.values) f[d].add(y);
+          m.optin !== void 0 && f[d].add(void 0);
+        }
+      }
+      return f;
+    });
+    const o = eo,
+      i = t.catchall;
+    let s;
+    const a = kt.memoizer;
+    (a == null || a.attach(e),
+      (e._zod.parse = (c, u) => {
+        s ?? (s = r.value);
+        const f = c.value;
+        if (!o(f))
+          return (
+            c.issues.push({
+              expected: "object",
+              code: "invalid_type",
+              input: f,
+              inst: e,
+            }),
+            c
+          );
+        c.value = a ? a.alloc(e, c, {}, u) : {};
+        const d = [],
+          m = s.shape;
+        for (const y of s.allKeys) {
+          if (y === "__proto__") continue;
+          const p = m[y],
+            v = p._zod.optin,
+            h = p._zod.optout,
+            S = p._zod.run({ value: f[y], issues: [] }, u);
+          S instanceof Promise
+            ? d.push(S.then((x) => to(x, c, y, f, v, h)))
+            : to(S, c, y, f, v, h);
+        }
+        return i
+          ? Tc(d, f, c, u, r.value, e)
+          : d.length
+            ? Promise.all(d).then(() => c)
+            : c;
+      }));
+  }),
+  Vh = T("$ZodObjectJIT", (e, t) => {
+    Bh.init(e, t);
+    const n = e._zod.parse,
+      r = Qi(() => _c(t)),
+      o = kt.memoizer,
+      i = (y) => {
+        var k, _;
+        const p = r.value,
+          v = p.symbolKeys,
+          h = new nh(["payload", "ctx"], {
+            shape: y,
+            inst: e,
+            memo: o,
+            syms: v,
+          }),
+          S = (D) =>
+            `shape[${D}]._zod.run({ value: input[${D}], issues: [] }, ctx)`,
+          x = (D, I) => `
+          for (let i = 0; i < ${D}.issues.length; i++) {
+            const iss = ${D}.issues[i];
+            iss.path = iss.path ? [${I}, ...iss.path] : [${I}];
+            payload.issues.push(iss);
+          }`;
+        h.write("const input = payload.value;");
+        const C = Object.create(null);
+        let w = 0;
+        for (const D of p.allKeys) C[D] = `key_${w++}`;
+        h.write(
+          o
+            ? "const newResult = memo.alloc(inst, payload, {}, ctx);"
+            : "const newResult = {};",
+        );
+        for (const D of p.allKeys) {
+          if (D === "__proto__") continue;
+          const I = C[D],
+            N = typeof D == "symbol" ? `syms[${v.indexOf(D)}]` : Op(D),
+            V = `${N} in input`,
+            X = y[D],
+            U = (k = X == null ? void 0 : X._zod) == null ? void 0 : k.optin,
+            O = U !== void 0,
+            B =
+              ((_ = X == null ? void 0 : X._zod) == null
+                ? void 0
+                : _.optout) === "optional";
+          if ((h.write(`const ${I} = ${S(N)};`), O && B)) {
+            const H =
+              U === "optional"
+                ? `${I}_present`
+                : `${I}.value !== undefined || ${I}_present`;
+            h.write(`
+        const ${I}_present = ${V};
+        if (!${I}.issues.length || ${I}_present) {
+          if (${I}.issues.length) {${x(I, N)}
+          }
+
+          if (${H}) {
+            newResult[${N}] = ${I}.value;
+          }
+        }
+
+      `);
+          } else
+            O
+              ? h.write(`
+        if (${I}.issues.length) {${x(I, N)}
+        }
+        
+        if (${I}.value === undefined) {
+          if (${V}) {
+            newResult[${N}] = undefined;
+          }
+        } else {
+          newResult[${N}] = ${I}.value;
+        }
+
+      `)
+              : h.write(`
+        const ${I}_present = ${V};
+        if (${I}.issues.length) {${x(I, N)}
+        }
+        if (!${I}_present && !${I}.issues.length) {
+          payload.issues.push({
+            code: "invalid_type",
+            expected: "nonoptional",
+            input: undefined,
+            path: [${N}]
+          });
+        }
+
+        if (${I}_present) {
+          newResult[${N}] = ${I}.value;
+        }
+
+      `);
+        }
+        return (
+          h.write("payload.value = newResult;"),
+          h.write("return payload;"),
+          h.compile()
+        );
+      };
+    let s;
+    const a = eo,
+      c = !kt.jitless,
+      f = c && zp.value,
+      d = t.catchall;
+    let m;
+    e._zod.parse = (y, p) => {
+      m ?? (m = r.value);
+      const v = y.value;
+      return a(v)
+        ? c && f && (p == null ? void 0 : p.async) === !1 && p.jitless !== !0
+          ? (s || (s = i(t.shape)),
+            (y = s(y, p)),
+            d ? Tc([], v, y, p, m, e) : y)
+          : n(y, p)
+        : (y.issues.push({
+            expected: "object",
+            code: "invalid_type",
+            input: v,
+            inst: e,
+          }),
+          y);
+    };
+  });
+function Ia(e, t, n, r) {
+  for (const i of e) if (i.issues.length === 0) return ((t.value = i.value), t);
+  const o = e.filter((i) => !Rn(i));
+  return o.length === 1
+    ? ((t.value = o[0].value), o[0])
+    : (t.issues.push({
+        code: "invalid_union",
+        input: t.value,
+        inst: n,
+        errors: e.map((i) => i.issues.map((s) => Wn(s, r, on()))),
+      }),
+      t);
+}
+const $h = T("$ZodUnion", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "optin", (r) =>
+        r.def.options.some((o) => o._zod.optin === "defaulted")
+          ? "defaulted"
+          : r.def.options.some((o) => o._zod.optin !== void 0)
+            ? "optional"
+            : void 0,
+      ),
+      me(e, "optout", (r) =>
+        r.def.options.some((o) => o._zod.optout === "optional")
+          ? "optional"
+          : void 0,
+      ),
+      me(e, "values", (r) => {
+        if (r.def.options.every((o) => o._zod.values))
+          return new Set(
+            r.def.options.flatMap((o) => Array.from(o._zod.values)),
+          );
+      }),
+      me(e, "pattern", (r) => {
+        if (r.def.options.every((o) => o._zod.pattern)) {
+          const o = r.def.options.map((i) => i._zod.pattern);
+          return new RegExp(`^(${o.map((i) => Xi(i.source)).join("|")})$`);
+        }
+      }));
+    const n = t.options.length === 1 ? t.options[0]._zod.run : null;
+    e._zod.parse = (r, o) => {
+      if (n) return n(r, o);
+      let i = !1;
+      const s = [];
+      for (const a of t.options) {
+        const c = a._zod.run({ value: r.value, issues: [] }, o);
+        if (c instanceof Promise) (s.push(c), (i = !0));
+        else {
+          if (c.issues.length === 0) return c;
+          s.push(c);
+        }
+      }
+      return i ? Promise.all(s).then((a) => Ia(a, r, e, o)) : Ia(s, r, e, o);
+    };
+  }),
+  Wh = T("$ZodIntersection", (e, t) => {
+    (Ee.init(e, t),
+      (e._zod.parse = (n, r) => {
+        const o = n.value,
+          i = t.left._zod.run({ value: o, issues: [] }, r),
+          s = t.right._zod.run({ value: o, issues: [] }, r);
+        return i instanceof Promise || s instanceof Promise
+          ? Promise.all([i, s]).then(([c, u]) => _a(n, c, u))
+          : _a(n, i, s);
+      }));
+  });
+function hi(e, t) {
+  if (e === t) return { valid: !0, data: e };
+  if (e instanceof Date && t instanceof Date && +e == +t)
+    return { valid: !0, data: e };
+  if (cr(e) && cr(t)) {
+    const n = Object.keys(t),
+      r = Object.keys(e).filter((i) => n.indexOf(i) !== -1),
+      o = { ...e, ...t };
+    Object.prototype.hasOwnProperty.call(o, "__proto__") && delete o.__proto__;
+    for (const i of r) {
+      if (i === "__proto__") continue;
+      const s = hi(e[i], t[i]);
+      if (!s.valid)
+        return { valid: !1, mergeErrorPath: [i, ...s.mergeErrorPath] };
+      o[i] = s.data;
+    }
+    return { valid: !0, data: o };
+  }
+  if (Array.isArray(e) && Array.isArray(t)) {
+    if (e.length !== t.length) return { valid: !1, mergeErrorPath: [] };
+    const n = [];
+    for (let r = 0; r < e.length; r++) {
+      const o = e[r],
+        i = t[r],
+        s = hi(o, i);
+      if (!s.valid)
+        return { valid: !1, mergeErrorPath: [r, ...s.mergeErrorPath] };
+      n.push(s.data);
+    }
+    return { valid: !0, data: n };
+  }
+  return { valid: !1, mergeErrorPath: [] };
+}
+function _a(e, t, n) {
+  const r = new Map();
+  let o;
+  const i = new Map(),
+    s = (u, f) => {
+      var m, y;
+      let d;
+      if (u.code === "unrecognized_keys" && !((m = u.path) != null && m.length))
+        (o ?? (o = u), (d = u.keys));
+      else if (
+        u.code === "invalid_key" &&
+        u.origin === "record" &&
+        ((y = u.path) == null ? void 0 : y.length) === 1
+      ) {
+        const p = String(u.path[0]);
+        (i.has(p) || i.set(p, u), (d = [p]));
+      } else return !1;
+      for (const p of d) (r.has(p) || r.set(p, {}), (r.get(p)[f] = !0));
+      return !0;
+    };
+  for (const u of t.issues) s(u, "l") || e.issues.push(u);
+  for (const u of n.issues) s(u, "r") || e.issues.push(u);
+  const a = [...r].filter(([, u]) => u.l && u.r).map(([u]) => u);
+  if (a.length) {
+    const u = o ? a.filter((f) => o.keys.includes(f)) : [];
+    u.length && e.issues.push({ ...o, keys: u });
+    for (const f of a) !u.includes(f) && i.has(f) && e.issues.push(i.get(f));
+  }
+  const c = hi(t.value, n.value);
+  if (!c.valid) {
+    if (Rn(e)) return e;
+    throw new Error(
+      `Unmergable intersection. Error path: ${JSON.stringify(c.mergeErrorPath)}`,
+    );
+  }
+  return ((e.value = c.data), e);
+}
+const Uh = T("$ZodEnum", (e, t) => {
+    Ee.init(e, t);
+    const n = dc(t.entries),
+      r = new Set(n);
+    e._zod.values = r;
+    const o = n.filter((i) => Fp.has(typeof i));
+    ((e._zod.pattern = new RegExp(
+      o.length
+        ? `^(${o.map((i) => go(i.toString())).join("|")})$`
+        : "^[^\\s\\S]$",
+    )),
+      (e._zod.parse = (i, s) => {
+        const a = i.value;
+        return (
+          r.has(a) ||
+            i.issues.push({
+              code: "invalid_value",
+              values: n,
+              input: a,
+              inst: e,
+            }),
+          i
+        );
+      }));
+  }),
+  Hh = T("$ZodTransform", (e, t) => {
+    var n;
+    (Ee.init(e, t),
+      (e._zod.optin = "optional"),
+      (n = kt.memoizer) == null || n.guard(e),
+      (e._zod.parse = (r, o) => {
+        if (o.direction === "backward") throw new yc(e.constructor.name);
+        const i = t.transform(r.value, r);
+        if (o.async)
+          return (i instanceof Promise ? i : Promise.resolve(i)).then(
+            (a) => ((r.value = a), r),
+          );
+        if (i instanceof Promise) throw new Ln();
+        return ((r.value = i), r);
+      }));
+  });
+function Ta(e, t) {
+  return ((e.value = t.issues.length ? void 0 : t.value), e);
+}
+const Mc = T("$ZodOptional", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "optin", (n) =>
+        n.def.innerType._zod.optin === "defaulted" ? "defaulted" : "optional",
+      ),
+      (e._zod.optout = "optional"),
+      me(e, "values", (n) => {
+        const r = n.def.innerType._zod.values;
+        return r ? new Set([...r, void 0]) : void 0;
+      }),
+      me(e, "pattern", (n) => {
+        const r = n.def.innerType._zod.pattern;
+        return r ? new RegExp(`^(${Xi(r.source)})?$`) : void 0;
+      }),
+      (e._zod.parse = (n, r) => {
+        if (n.value === void 0) {
+          if (t.innerType._zod.optin !== "defaulted") return n;
+          const o = t.innerType._zod.run({ value: n.value, issues: [] }, r);
+          return o instanceof Promise ? o.then((i) => Ta(n, i)) : Ta(n, o);
+        }
+        return t.innerType._zod.run(n, r);
+      }));
+  }),
+  Gh = T("$ZodExactOptional", (e, t) => {
+    (Mc.init(e, t),
+      me(e, "values", (n) => n.def.innerType._zod.values),
+      me(e, "pattern", (n) => n.def.innerType._zod.pattern),
+      (e._zod.parse = (n, r) => t.innerType._zod.run(n, r)));
+  }),
+  Zh = T("$ZodNullable", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "optin", (n) => n.def.innerType._zod.optin),
+      me(e, "optout", (n) => n.def.innerType._zod.optout),
+      me(e, "pattern", (n) => {
+        const r = n.def.innerType._zod.pattern;
+        return r ? new RegExp(`^(${Xi(r.source)}|null)$`) : void 0;
+      }),
+      me(e, "values", (n) =>
+        n.def.innerType._zod.values
+          ? new Set([...n.def.innerType._zod.values, null])
+          : void 0,
+      ),
+      (e._zod.parse = (n, r) =>
+        n.value === null ? n : t.innerType._zod.run(n, r)));
+  }),
+  Jh = T("$ZodDefault", (e, t) => {
+    (Ee.init(e, t),
+      (e._zod.optin = "defaulted"),
+      me(e, "values", (n) => n.def.innerType._zod.values),
+      (e._zod.parse = (n, r) => {
+        if (r.direction === "backward") return t.innerType._zod.run(n, r);
+        if (n.value === void 0) return ((n.value = t.defaultValue), n);
+        const o = t.innerType._zod.run(n, r);
+        return o instanceof Promise ? o.then((i) => Ma(i, t)) : Ma(o, t);
+      }));
+  });
+function Ma(e, t) {
+  return (e.value === void 0 && (e.value = t.defaultValue), e);
+}
+const Kh = T("$ZodPrefault", (e, t) => {
+    (Ee.init(e, t),
+      (e._zod.optin = "defaulted"),
+      me(e, "values", (n) => n.def.innerType._zod.values),
+      (e._zod.parse = (n, r) => (
+        r.direction === "backward" ||
+          (n.value === void 0 && (n.value = t.defaultValue)),
+        t.innerType._zod.run(n, r)
+      )));
+  }),
+  qh = T("$ZodNonOptional", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "values", (n) => {
+        const r = n.def.innerType._zod.values;
+        return r ? new Set([...r].filter((o) => o !== void 0)) : void 0;
+      }),
+      (e._zod.parse = (n, r) => {
+        const o = t.innerType._zod.run(n, r);
+        return o instanceof Promise ? o.then((i) => Da(i, e)) : Da(o, e);
+      }));
+  });
+function Da(e, t) {
+  return (
+    !e.issues.length &&
+      e.value === void 0 &&
+      e.issues.push({
+        code: "invalid_type",
+        expected: "nonoptional",
+        input: e.value,
+        inst: t,
+      }),
+    e
+  );
+}
+function ja(e, t, n, r) {
+  return t.issues.length
+    ? ((e.value = n.catchValue({
+        ...t,
+        value: e.value,
+        error: { issues: t.issues.map((o) => Wn(o, r, on())) },
+        input: e.value,
+      })),
+      e)
+    : ((e.value = t.value), t.memo && (e.memo = !0), e);
+}
+const Yh = T("$ZodCatch", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "optin", (n) =>
+        n.def.innerType._zod.optin === "defaulted" ? "defaulted" : "optional",
+      ),
+      me(e, "optout", (n) => n.def.innerType._zod.optout),
+      me(e, "values", (n) => n.def.innerType._zod.values),
+      (e._zod.parse = (n, r) => {
+        if (r.direction === "backward") return t.innerType._zod.run(n, r);
+        const o = t.innerType._zod.run({ value: n.value, issues: [] }, r);
+        return o instanceof Promise
+          ? o.then((i) => ja(n, i, t, r))
+          : ja(n, o, t, r);
+      }));
+  }),
+  Qh = T("$ZodPipe", (e, t) => {
+    (Ee.init(e, t),
+      me(e, "values", (n) => n.def.in._zod.values),
+      me(e, "optin", (n) => n.def.in._zod.optin),
+      me(e, "optout", (n) => n.def.out._zod.optout),
+      me(e, "propValues", (n) => n.def.in._zod.propValues),
+      (e._zod.parse = (n, r) => {
+        if (r.direction === "backward") {
+          const i = t.out._zod.run(n, r);
+          return i instanceof Promise
+            ? i.then((s) => Tr(s, t.in, r))
+            : Tr(i, t.in, r);
+        }
+        const o = t.in._zod.run(n, r);
+        return o instanceof Promise
+          ? o.then((i) => Tr(i, t.out, r))
+          : Tr(o, t.out, r);
+      }));
+  });
+function Tr(e, t, n) {
+  return e.issues.some((r) => r.code !== "unrecognized_keys")
+    ? ((e.aborted = !0), e)
+    : t._zod.run({ value: e.value, issues: e.issues }, n);
+}
+const Xh = T("$ZodReadonly", (e, t) => {
+  (Ee.init(e, t),
+    me(e, "propValues", (n) => n.def.innerType._zod.propValues),
+    me(e, "values", (n) => n.def.innerType._zod.values),
+    me(e, "optin", (n) => {
+      var r, o;
+      return (o = (r = n.def.innerType) == null ? void 0 : r._zod) == null
+        ? void 0
+        : o.optin;
+    }),
+    me(e, "optout", (n) => {
+      var r, o;
+      return (o = (r = n.def.innerType) == null ? void 0 : r._zod) == null
+        ? void 0
+        : o.optout;
+    }),
+    (e._zod.parse = (n, r) => {
+      if (r.direction === "backward") return t.innerType._zod.run(n, r);
+      const o = t.innerType._zod.run(n, r);
+      return o instanceof Promise ? o.then(Na) : Na(o);
+    }));
+});
+function Na(e) {
+  return (e.memo || (e.value = Object.freeze(e.value)), e);
+}
+const ey = T("$ZodCustom", (e, t) => {
+  (Mt.init(e, t),
+    Ee.init(e, t),
+    (e._zod.parse = (n, r) => n),
+    (e._zod.check = (n) => {
+      const r = n.value,
+        o = t.fn(r);
+      if (o instanceof Promise) return o.then((i) => Ra(i, n, r, e));
+      Ra(o, n, r, e);
+    }));
+});
+function Ra(e, t, n, r) {
+  if (!e) {
+    const o = {
+      code: "custom",
+      input: n,
+      inst: r,
+      path: [...(r._zod.def.path ?? [])],
+      continue: !r._zod.def.abort,
+    };
+    (r._zod.def.params && (o.params = r._zod.def.params), t.issues.push(ur(o)));
+  }
+}
+class ty extends Error {
+  constructor() {
+    (super("Cannot parse a reference cycle that closes through a transform"),
+      (this.name = "ZodCyclicError"));
+  }
+}
+const yi = "~memo",
+  Ea = [];
+function Wo(e) {
+  return e.map((t) => (t.path ? { ...t, path: t.path.slice() } : { ...t }));
+}
+const Oa = new WeakMap();
+function Dc(e, t) {
+  const n = Oa.get(e);
+  if (n !== void 0) return n;
+  if (t.has(e)) return !0;
+  t.add(e);
+  let r = !1;
+  const o = (a) => {
+      !r && a != null && a._zod && Dc(a, t) && (r = !0);
+    },
+    i = e._zod.def;
+  switch (i.type) {
+    case "object": {
+      for (const a of Reflect.ownKeys(i.shape)) o(i.shape[a]);
+      o(i.catchall);
+      break;
+    }
+    case "array":
+      o(i.element);
+      break;
+    case "tuple":
+      for (const a of i.items) o(a);
+      o(i.rest);
+      break;
+    case "record":
+    case "map":
+      (o(i.keyType), o(i.valueType));
+      break;
+    case "set":
+      o(i.valueType);
+      break;
+    case "union":
+      for (const a of i.options) o(a);
+      break;
+    case "intersection":
+      (o(i.left), o(i.right));
+      break;
+    case "optional":
+    case "nullable":
+    case "default":
+    case "prefault":
+    case "catch":
+    case "readonly":
+    case "nonoptional":
+    case "promise":
+    case "success":
+      o(i.innerType);
+      break;
+    case "pipe":
+      (o(i.in), o(i.out));
+      break;
+    case "function":
+      (o(i.input), o(i.output));
+      break;
+    case "lazy":
+      o(e._zod.innerType);
+      break;
+    case "template_literal":
+    case "string":
+    case "number":
+    case "int":
+    case "boolean":
+    case "bigint":
+    case "symbol":
+    case "undefined":
+    case "null":
+    case "void":
+    case "never":
+    case "any":
+    case "unknown":
+    case "date":
+    case "nan":
+    case "enum":
+    case "literal":
+    case "file":
+    case "transform":
+    case "custom":
+      break;
+    default:
+      for (const a in i) {
+        const c = Object.getOwnPropertyDescriptor(i, a);
+        if (!c || c.get) continue;
+        const u = c.value;
+        if (!(!u || typeof u != "object")) {
+          if (u._zod) o(u);
+          else if (Array.isArray(u)) for (const f of u) o(f);
+        }
+      }
+  }
+  return (t.delete(e), Oa.set(e, r), r);
+}
+function ny(e, t) {
+  let n = e.buckets.get(t);
+  return (n || ((n = new Map()), e.buckets.set(t, n)), n);
+}
+let Mr;
+const Dr = [],
+  ry = {
+    alloc(e, t, n) {
+      const r = Mr;
+      if (!r) return n;
+      Mr = void 0;
+      const o = { value: n, issues: null };
+      return (r.set(t.value, o), Dr.push(o), n);
+    },
+    guard(e) {
+      var t;
+      ((t = e._zod).deferred ?? (t.deferred = []),
+        e._zod.deferred.push(() => {
+          const n = e._zod.parse,
+            r = (o, i) => {
+              if (i.direction !== "backward" && iy(i, o.value)) throw new ty();
+              return n(o, i);
+            };
+          ((e._zod.parse = r), e._zod.run === n && (e._zod.run = r));
+        }));
+    },
+    attach(e) {
+      var t;
+      let n, r, o;
+      ((t = e._zod).deferred ?? (t.deferred = []),
+        e._zod.deferred.push(() => {
+          const i = e._zod.parse,
+            s = (a, c) => {
+              if (n === void 0 && ((n = Dc(e, new Set())), !n))
+                return (
+                  (e._zod.parse = i),
+                  e._zod.run === s && (e._zod.run = i),
+                  i(a, c)
+                );
+              const u = a.value;
+              if (u === null || typeof u != "object") return i(a, c);
+              let f = c[yi];
+              f ||
+                ((f = { buckets: new Map(), backEdges: void 0 }), (c[yi] = f));
+              let d;
+              r === c ? (d = o) : ((d = ny(f, e)), (r = c), (o = d));
+              const m = d.get(u);
+              if (m)
+                return (
+                  (a.value = m.value),
+                  m.issues
+                    ? m.issues.length && a.issues.push(...Wo(m.issues))
+                    : ((a.memo = !0),
+                      f.backEdges ?? (f.backEdges = new Set()),
+                      f.backEdges.add(m.value)),
+                  a
+                );
+              Mr = d;
+              const y = Dr.length,
+                p = i(a, c);
+              Mr = void 0;
+              const v = Dr.length > y ? Dr.pop() : void 0;
+              return p instanceof Promise
+                ? p.then(
+                    (h) => (
+                      v && (v.issues = h.issues.length ? Wo(h.issues) : Ea),
+                      h
+                    ),
+                  )
+                : (v && (v.issues = p.issues.length ? Wo(p.issues) : Ea), p);
+            };
+          ((e._zod.parse = s), e._zod.run === i && (e._zod.run = s));
+        }));
+    },
+  };
+function oy() {
+  return ry;
+}
+function iy(e, t) {
+  var r;
+  const n = (r = e[yi]) == null ? void 0 : r.backEdges;
+  return n !== void 0 && t !== null && typeof t == "object" && n.has(t);
+}
+const sy = () => {
+  const e = {
+    string: { unit: "characters", verb: "to have" },
+    file: { unit: "bytes", verb: "to have" },
+    array: { unit: "items", verb: "to have" },
+    set: { unit: "items", verb: "to have" },
+    map: { unit: "entries", verb: "to have" },
+  };
+  function t(i) {
+    return e[i] ?? null;
+  }
+  const n = {
+      regex: "input",
+      email: "email address",
+      url: "URL",
+      emoji: "emoji",
+      uuid: "UUID",
+      uuidv4: "UUIDv4",
+      uuidv6: "UUIDv6",
+      nanoid: "nanoid",
+      guid: "GUID",
+      cuid: "cuid",
+      cuid2: "cuid2",
+      ulid: "ULID",
+      xid: "XID",
+      ksuid: "KSUID",
+      datetime: "ISO datetime",
+      date: "ISO date",
+      time: "ISO time",
+      duration: "ISO duration",
+      ipv4: "IPv4 address",
+      ipv6: "IPv6 address",
+      mac: "MAC address",
+      cidrv4: "IPv4 range",
+      cidrv6: "IPv6 range",
+      base64: "base64-encoded string",
+      base64url: "base64url-encoded string",
+      json_string: "JSON string",
+      e164: "E.164 number",
+      credit_card: "credit card number",
+      jwt: "JWT",
+      template_literal: "input",
+    },
+    r = { nan: "NaN" };
+  function o(i, s) {
+    return i === "number" && typeof s == "number" && !Number.isFinite(s)
+      ? String(s)
+      : (r[i] ?? i);
+  }
+  return (i) => {
+    switch (i.code) {
+      case "invalid_type": {
+        const s = o(i.expected),
+          a = Kp(i.input),
+          c = o(a, i.input);
+        return `Invalid input: expected ${s}, received ${c}`;
+      }
+      case "invalid_value":
+        return i.values.length === 1
+          ? `Invalid input: expected ${pc(i.values[0])}`
+          : `Invalid option: expected one of ${ya(i.values, "|")}`;
+      case "too_big": {
+        const s = i.exact ? "exactly " : i.inclusive ? "<=" : "<",
+          a = t(i.origin);
+        return a
+          ? `Too big: expected ${i.origin ?? "value"} to have ${s}${i.maximum.toString()} ${a.unit ?? "elements"}`
+          : `Too big: expected ${i.origin ?? "value"} to be ${s}${i.maximum.toString()}`;
+      }
+      case "too_small": {
+        const s = i.exact ? "exactly " : i.inclusive ? ">=" : ">",
+          a = t(i.origin);
+        return a
+          ? `Too small: expected ${i.origin} to have ${s}${i.minimum.toString()} ${a.unit}`
+          : `Too small: expected ${i.origin} to be ${s}${i.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const s = i;
+        return s.format === "starts_with"
+          ? `Invalid string: must start with "${s.prefix}"`
+          : s.format === "ends_with"
+            ? `Invalid string: must end with "${s.suffix}"`
+            : s.format === "includes"
+              ? `Invalid string: must include "${s.includes}"`
+              : s.format === "regex"
+                ? `Invalid string: must match pattern ${s.pattern}`
+                : `Invalid ${n[s.format] ?? i.format}`;
+      }
+      case "not_multiple_of":
+        return `Invalid number: must be a multiple of ${i.divisor}`;
+      case "unrecognized_keys":
+        return `Unrecognized key${i.keys.length > 1 ? "s" : ""}: ${ya(i.keys, ", ")}`;
+      case "invalid_key":
+        return `Invalid key in ${i.origin}`;
+      case "invalid_union":
+        return i.options && Array.isArray(i.options) && i.options.length > 0
+          ? `Invalid discriminator value. Expected ${i.options.map((a) => `'${a}'`).join(" | ")}`
+          : i.inclusive === !1
+            ? "Invalid input: more than one option matched"
+            : "Invalid input";
+      case "invalid_element":
+        return `Invalid value in ${i.origin}`;
+      default:
+        return "Invalid input";
+    }
+  };
+};
+function ay() {
+  return { localeError: sy() };
+}
+var La;
+class ly {
+  constructor() {
+    ((this._map = new WeakMap()), (this._idmap = new Map()));
+  }
+  add(t, ...n) {
+    const r = n[0];
+    return (
+      this._map.set(t, r),
+      r && typeof r == "object" && "id" in r && this._idmap.set(r.id, t),
+      this
+    );
+  }
+  clear() {
+    return ((this._map = new WeakMap()), (this._idmap = new Map()), this);
+  }
+  remove(t) {
+    const n = this._map.get(t);
+    return (
+      n && typeof n == "object" && "id" in n && this._idmap.delete(n.id),
+      this._map.delete(t),
+      this
+    );
+  }
+  get(t) {
+    const n = t._zod.parent;
+    if (n) {
+      const r = { ...(this.get(n) ?? {}) };
+      delete r.id;
+      const o = { ...r, ...this._map.get(t) };
+      return Object.keys(o).length ? o : void 0;
+    }
+    return this._map.get(t);
+  }
+  has(t) {
+    return this._map.has(t);
+  }
+}
+function cy() {
+  return new ly();
+}
+(La = globalThis).__zod_globalRegistry ?? (La.__zod_globalRegistry = cy());
+const rr = globalThis.__zod_globalRegistry;
+function uy(e, t) {
+  return new e({ type: "string", ...re(t) });
+}
+function dy(e, t) {
+  return new e({
+    type: "string",
+    format: "email",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function fy(e, t) {
+  return new e({
+    type: "string",
+    format: "guid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function my(e, t) {
+  return new e({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function py(e, t) {
+  return new e({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: !1,
+    version: "v4",
+    ...re(t),
+  });
+}
+function gy(e, t) {
+  return new e({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: !1,
+    version: "v6",
+    ...re(t),
+  });
+}
+function hy(e, t) {
+  return new e({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: !1,
+    version: "v7",
+    ...re(t),
+  });
+}
+function yy(e, t) {
+  return new e({
+    type: "string",
+    format: "url",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function vy(e, t) {
+  return new e({
+    type: "string",
+    format: "emoji",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function by(e, t) {
+  return new e({
+    type: "string",
+    format: "nanoid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function wy(e, t) {
+  return new e({
+    type: "string",
+    format: "cuid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function xy(e, t) {
+  return new e({
+    type: "string",
+    format: "cuid2",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Sy(e, t) {
+  return new e({
+    type: "string",
+    format: "ulid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Cy(e, t) {
+  return new e({
+    type: "string",
+    format: "xid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Py(e, t) {
+  return new e({
+    type: "string",
+    format: "ksuid",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Ay(e, t) {
+  return new e({
+    type: "string",
+    format: "ipv4",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function ky(e, t) {
+  return new e({
+    type: "string",
+    format: "ipv6",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Iy(e, t) {
+  return new e({
+    type: "string",
+    format: "cidrv4",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function _y(e, t) {
+  return new e({
+    type: "string",
+    format: "cidrv6",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Ty(e, t) {
+  return new e({
+    type: "string",
+    format: "base64",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function My(e, t) {
+  return new e({
+    type: "string",
+    format: "base64url",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Dy(e, t) {
+  return new e({
+    type: "string",
+    format: "e164",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function jy(e, t) {
+  return new e({
+    type: "string",
+    format: "jwt",
+    check: "string_format",
+    abort: !1,
+    ...re(t),
+  });
+}
+function Ny(e, t) {
+  return new e({
+    type: "string",
+    format: "datetime",
+    check: "string_format",
+    offset: !1,
+    local: !1,
+    precision: null,
+    ...re(t),
+  });
+}
+function Ry(e, t) {
+  return new e({
+    type: "string",
+    format: "date",
+    check: "string_format",
+    ...re(t),
+  });
+}
+function Ey(e, t) {
+  return new e({
+    type: "string",
+    format: "time",
+    check: "string_format",
+    precision: null,
+    ...re(t),
+  });
+}
+function Oy(e, t) {
+  return new e({
+    type: "string",
+    format: "duration",
+    check: "string_format",
+    ...re(t),
+  });
+}
+function Ly(e) {
+  return new e({ type: "unknown" });
+}
+function zy(e, t) {
+  return new e({ type: "never", ...re(t) });
+}
+function jc(e, t) {
+  return new Gg({ check: "max_length", ...re(t), maximum: e });
+}
+function no(e, t) {
+  return new Zg({ check: "min_length", ...re(t), minimum: e });
+}
+function Nc(e, t) {
+  return new Jg({ check: "length_equals", ...re(t), length: e });
+}
+function Fy(e, t) {
+  return new Kg({
+    check: "string_format",
+    format: "regex",
+    ...re(t),
+    pattern: e,
+  });
+}
+function By(e) {
+  return new qg({ check: "string_format", format: "lowercase", ...re(e) });
+}
+function Vy(e) {
+  return new Yg({ check: "string_format", format: "uppercase", ...re(e) });
+}
+function $y(e, t) {
+  return new Qg({
+    check: "string_format",
+    format: "includes",
+    ...re(t),
+    includes: e,
+  });
+}
+function Wy(e, t) {
+  return new Xg({
+    check: "string_format",
+    format: "starts_with",
+    ...re(t),
+    prefix: e,
+  });
+}
+function Uy(e, t) {
+  return new eh({
+    check: "string_format",
+    format: "ends_with",
+    ...re(t),
+    suffix: e,
+  });
+}
+function Un(e) {
+  return new th({ check: "overwrite", tx: e });
+}
+function Hy(e) {
+  return Un((t) => t.normalize(e));
+}
+function Gy() {
+  return Un((e) => e.trim());
+}
+function Zy() {
+  return Un((e) => e.toLowerCase());
+}
+function Jy() {
+  return Un((e) => e.toUpperCase());
+}
+function Ky() {
+  return Un((e) => Lp(e));
+}
+function qy(e, t, n) {
+  return new e({ type: "array", element: t, ...re(n) });
+}
+function Yy(e, t, n) {
+  return new e({ type: "custom", check: "custom", fn: t, ...re(n) });
+}
+function Qy(e, t) {
+  const n = Xy(
+    (r) => (
+      (r.addIssue = (o) => {
+        if (typeof o == "string") r.issues.push(ur(o, r.value, n._zod.def));
+        else {
+          const i = o;
+          (i.fatal && (i.continue = !1),
+            i.code ?? (i.code = "custom"),
+            "input" in i || (i.input = r.value),
+            i.inst ?? (i.inst = n),
+            i.continue ?? (i.continue = !n._zod.def.abort),
+            r.issues.push(ur(i)));
+        }
+      }),
+      e(r.value, r)
+    ),
+    t,
+  );
+  return n;
+}
+function Xy(e, t) {
+  const n = new Mt({ check: "custom", ...re(t) });
+  return ((n._zod.check = e), n);
+}
+function sr(e, ...t) {
+  for (const n of t)
+    for (const r of Reflect.ownKeys(n))
+      Object.prototype.propertyIsEnumerable.call(n, r) && st(e, r, n[r]);
+  return e;
+}
+function Rc(e) {
+  let t = (e == null ? void 0 : e.target) ?? "draft-2020-12";
+  return (
+    t === "draft-4" && (t = "draft-04"),
+    t === "draft-7" && (t = "draft-07"),
+    {
+      processors: e.processors ?? {},
+      metadataRegistry: (e == null ? void 0 : e.metadata) ?? rr,
+      target: t,
+      unrepresentable: (e == null ? void 0 : e.unrepresentable) ?? "throw",
+      override: (e == null ? void 0 : e.override) ?? (() => {}),
+      io: (e == null ? void 0 : e.io) ?? "output",
+      counter: 0,
+      seen: new Map(),
+      sharedDefsExtractedFor: void 0,
+      sharedEmitDoneFor: void 0,
+      cycles: (e == null ? void 0 : e.cycles) ?? "ref",
+      reused: (e == null ? void 0 : e.reused) ?? "inline",
+      intersections: [],
+      deferred: [],
+      external: (e == null ? void 0 : e.external) ?? void 0,
+    }
+  );
+}
+function wr(e, t, n, r, o) {
+  const i =
+    typeof t.unrepresentable == "function"
+      ? t.unrepresentable({ zodSchema: e, path: r.path, message: o })
+      : t.unrepresentable;
+  if (i === "any") return !1;
+  if (i === void 0 || i === "throw") throw new Error(o);
+  return (Object.assign(n, i), !0);
+}
+function He(e, t, n = { path: [], schemaPath: [] }) {
+  var f, d;
+  var r;
+  const o = e._zod.def,
+    i = t.seen.get(e);
+  if (i)
+    return (
+      i.count++,
+      n.schemaPath.includes(e) && (i.cycle = n.path),
+      i.schema
+    );
+  const s = { schema: {}, count: 1, cycle: void 0, path: n.path };
+  (t.seen.set(e, s),
+    (t.sharedDefsExtractedFor = void 0),
+    (t.sharedEmitDoneFor = void 0));
+  const a = (d = (f = e._zod).toJSONSchema) == null ? void 0 : d.call(f);
+  if (a) s.schema = a;
+  else {
+    const m = { ...n, schemaPath: [...n.schemaPath, e], path: n.path };
+    if (e._zod.processJSONSchema) e._zod.processJSONSchema(t, s.schema, m);
+    else {
+      const p = s.schema,
+        v = t.processors[o.type];
+      if (!v)
+        throw new Error(
+          `[toJSONSchema]: Non-representable type encountered: ${o.type}`,
+        );
+      v(e, t, p, m);
+    }
+    const y = e._zod.parent;
+    y && (s.ref || (s.ref = y), He(y, t, m), (t.seen.get(y).isParent = !0));
+  }
+  const c = t.metadataRegistry.get(e);
+  return (
+    c && sr(s.schema, c),
+    t.io === "input" &&
+      qe(e) &&
+      (delete s.schema.examples, delete s.schema.default),
+    t.io === "input" &&
+      "_prefault" in s.schema &&
+      ((r = s.schema).default ?? (r.default = s.schema._prefault)),
+    delete s.schema._prefault,
+    t.seen.get(e).schema
+  );
+}
+function za(e) {
+  return e.replace(/~/g, "~0").replace(/\//g, "~1");
+}
+function Ec(e, t) {
+  var s, a, c, u;
+  const n = e.seen.get(t);
+  if (!n) throw new Error("Unprocessed schema. This is a bug in Zod.");
+  if (e.external && e.sharedDefsExtractedFor === e.external) return;
+  const r = new Map();
+  for (const f of e.seen.entries()) {
+    const d = (s = e.metadataRegistry.get(f[0])) == null ? void 0 : s.id;
+    if (d) {
+      const m = r.get(d);
+      if (m && m !== f[0])
+        throw new Error(
+          `Duplicate schema id "${d}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`,
+        );
+      r.set(d, f[0]);
+    }
+  }
+  const o = (f) => {
+      var v;
+      const d = e.target === "draft-2020-12" ? "$defs" : "definitions";
+      if (e.external) {
+        const h = (v = e.external.registry.get(f[0])) == null ? void 0 : v.id,
+          S = e.external.uri ?? ((C) => C);
+        if (h) return { ref: S(h) };
+        const x = f[1].defId ?? f[1].schema.id ?? `schema${e.counter++}`;
+        return (
+          (f[1].defId = x),
+          { defId: x, ref: `${S("__shared")}#/${d}/${za(x)}` }
+        );
+      }
+      const m = "#",
+        y = `${m}/${d}/`;
+      if (f[1] === n && !f[1].schema.id) return { ref: m };
+      const p = f[1].schema.id ?? `__schema${e.counter++}`;
+      return { defId: p, ref: y + za(p) };
+    },
+    i = (f) => {
+      if (f[1].schema.$ref) return;
+      const d = f[1],
+        { ref: m, defId: y } = o(f);
+      ((d.def = { ...d.schema }), y && (d.defId = y));
+      const p = d.schema;
+      for (const v in p) delete p[v];
+      p.$ref = m;
+    };
+  if (e.cycles === "throw")
+    for (const f of e.seen.entries()) {
+      const d = f[1];
+      if (d.cycle)
+        throw new Error(`Cycle detected: #/${(a = d.cycle) == null ? void 0 : a.join("/")}/<root>
+
+Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`);
+    }
+  for (const f of e.seen.entries()) {
+    const d = f[1];
+    if (t === f[0]) {
+      i(f);
+      continue;
+    }
+    if (e.external) {
+      const y = (c = e.external.registry.get(f[0])) == null ? void 0 : c.id;
+      if (t !== f[0] && y) {
+        i(f);
+        continue;
+      }
+    }
+    if ((u = e.metadataRegistry.get(f[0])) == null ? void 0 : u.id) {
+      i(f);
+      continue;
+    }
+    if (d.cycle) {
+      i(f);
+      continue;
+    }
+    if (d.count > 1 && e.reused === "ref") {
+      i(f);
+      continue;
+    }
+  }
+  e.external && (e.sharedDefsExtractedFor = e.external);
+}
+function Oc(e) {
+  const t = e.anyOf;
+  if (!Array.isArray(t) || t.length === 0 || e.type !== void 0) return;
+  const n = [];
+  for (const r of t) {
+    if (!r || typeof r != "object") return;
+    Oc(r);
+    const o = Object.keys(r);
+    if (o.length !== 1 || o[0] !== "type") return;
+    const i = r.type;
+    for (const s of Array.isArray(i) ? i : [i]) {
+      if (typeof s != "string") return;
+      n.includes(s) || n.push(s);
+    }
+  }
+  (delete e.anyOf, (e.type = n.length === 1 ? n[0] : n));
+}
+const Lc = new Set(["type", "properties", "required", "additionalProperties"]),
+  Fa = ["oneOf", "anyOf"];
+function Ba(e) {
+  const t = e.additionalProperties;
+  return t === void 0 || t === !1 || typeof t != "object" || t === null
+    ? null
+    : Object.keys(t).length
+      ? t
+      : null;
+}
+function vi(e) {
+  var i;
+  const t = [];
+  for (const s of e) {
+    if (typeof s != "object" || s.type !== "object") return null;
+    for (const a in s) if (!Lc.has(a)) return null;
+    t.push(s);
+  }
+  const n = {},
+    r = new Set();
+  for (const s of t) {
+    for (const a in s.properties) {
+      if (Object.prototype.hasOwnProperty.call(n, a)) continue;
+      const c = [];
+      for (const f of t) {
+        const d = ((i = f.properties) == null ? void 0 : i[a]) ?? Ba(f);
+        d != null &&
+          (c.some((m) => JSON.stringify(m) === JSON.stringify(d)) || c.push(d));
+      }
+      const u = c.length === 1 ? c[0] : (vi(c) ?? { allOf: c });
+      st(n, a, u);
+    }
+    for (const a of s.required ?? []) r.add(a);
+  }
+  const o = { type: "object", properties: n };
+  if (
+    (r.size && (o.required = [...r]),
+    t.every((s) => s.additionalProperties === !1))
+  )
+    o.additionalProperties = !1;
+  else {
+    const s = [];
+    for (const a of t) {
+      const c = Ba(a);
+      c && !s.some((u) => JSON.stringify(u) === JSON.stringify(c)) && s.push(c);
+    }
+    s.length === 1
+      ? (o.additionalProperties = s[0])
+      : s.length > 1 && (o.additionalProperties = { allOf: s });
+  }
+  return o;
+}
+function ev(e) {
+  const t = e.allOf;
+  if (!Array.isArray(t) || t.length < 2) return;
+  for (const o of Lc) if (o in e) return;
+  const n = t.filter((o) => Fa.some((i) => Array.isArray(o[i])));
+  let r = null;
+  if (!n.length) r = vi(t);
+  else {
+    const o = n[0],
+      i = Fa.find((c) => Array.isArray(o[c]));
+    if (Object.keys(o).length !== 1) return;
+    const s = t.filter((c) => c !== o),
+      a = o[i].map((c) => vi([...s, c]));
+    if (a.some((c) => !c)) return;
+    r = { [i]: a };
+  }
+  r && (delete e.allOf, sr(e, r));
+}
+function zc(e, t) {
+  var a, c, u, f;
+  const n = e.seen.get(t);
+  if (!n) throw new Error("Unprocessed schema. This is a bug in Zod.");
+  const r = (d) => {
+    const m = e.seen.get(d);
+    if (m.ref === null) return;
+    const y = m.def ?? m.schema,
+      p = { ...y },
+      v = m.ref;
+    if (((m.ref = null), v)) {
+      r(v);
+      const S = e.seen.get(v),
+        x = S.schema;
+      if (
+        (x.$ref &&
+        (e.target === "draft-07" ||
+          e.target === "draft-04" ||
+          e.target === "openapi-3.0")
+          ? ((y.allOf = y.allOf ?? []), y.allOf.push(x))
+          : sr(y, x),
+        sr(y, p),
+        d._zod.parent === v)
+      )
+        for (const w in y)
+          w === "$ref" || w === "allOf" || w in p || delete y[w];
+      if (x.$ref && S.def)
+        for (const w in y)
+          w === "$ref" ||
+            w === "allOf" ||
+            (w in S.def &&
+              JSON.stringify(y[w]) === JSON.stringify(S.def[w]) &&
+              delete y[w]);
+    }
+    const h = d._zod.parent;
+    if (h && h !== v) {
+      r(h);
+      const S = e.seen.get(h);
+      if (S != null && S.schema.$ref && ((y.$ref = S.schema.$ref), S.def))
+        for (const x in y)
+          x === "$ref" ||
+            x === "allOf" ||
+            (x in S.def &&
+              JSON.stringify(y[x]) === JSON.stringify(S.def[x]) &&
+              delete y[x]);
+    }
+    e.override({ zodSchema: d, jsonSchema: y, path: m.path ?? [] });
+  };
+  if (!e.external || e.sharedEmitDoneFor !== e.external) {
+    for (const d of [...e.seen.entries()].reverse()) r(d[0]);
+    if (e.target !== "openapi-3.0")
+      for (const d of e.seen.entries()) Oc(d[1].def ?? d[1].schema);
+    for (const d of e.deferred) d();
+    if (e.intersections.length) {
+      const d = new Map();
+      for (const m of e.seen.values())
+        for (const y of [m.schema, m.def]) {
+          const p = y == null ? void 0 : y.allOf;
+          if (!Array.isArray(p)) continue;
+          const v = d.get(p);
+          v ? v.push(y) : d.set(p, [y]);
+        }
+      for (const m of e.intersections) for (const y of d.get(m) ?? []) ev(y);
+    }
+  }
+  const o = {};
+  if (
+    (e.target === "draft-2020-12"
+      ? (o.$schema = "https://json-schema.org/draft/2020-12/schema")
+      : e.target === "draft-07"
+        ? (o.$schema = "http://json-schema.org/draft-07/schema#")
+        : e.target === "draft-04"
+          ? (o.$schema = "http://json-schema.org/draft-04/schema#")
+          : e.target,
+    (a = e.external) != null && a.uri)
+  ) {
+    const d = (c = e.external.registry.get(t)) == null ? void 0 : c.id;
+    if (!d) throw new Error("Schema is missing an `id` property");
+    o.$id = e.external.uri(d);
+  }
+  sr(o, n.defId ? n.schema : (n.def ?? n.schema));
+  const i = (u = e.metadataRegistry.get(t)) == null ? void 0 : u.id;
+  i !== void 0 && o.id === i && delete o.id;
+  const s = ((f = e.external) == null ? void 0 : f.defs) ?? {};
+  if (!e.external || e.sharedEmitDoneFor !== e.external)
+    for (const d of e.seen.entries()) {
+      const m = d[1];
+      m.def &&
+        m.defId &&
+        (m.def.id === m.defId && delete m.def.id, st(s, m.defId, m.def));
+    }
+  (e.external && (e.sharedEmitDoneFor = e.external),
+    e.external ||
+      (Object.keys(s).length > 0 &&
+        (e.target === "draft-2020-12" ? (o.$defs = s) : (o.definitions = s))));
+  try {
+    const d = JSON.parse(JSON.stringify(o));
+    return (
+      Object.defineProperty(d, "~standard", {
+        value: {
+          ...t["~standard"],
+          jsonSchema: {
+            input: ro(t, "input", e.processors),
+            output: ro(t, "output", e.processors),
+          },
+        },
+        enumerable: !1,
+        writable: !1,
+      }),
+      d
+    );
+  } catch {
+    throw new Error("Error converting schema to JSON.");
+  }
+}
+function qe(e, t) {
+  const n = t ?? { seen: new Set() };
+  if (n.seen.has(e)) return !1;
+  n.seen.add(e);
+  const r = e._zod.def;
+  if (r.type === "transform") return !0;
+  if (r.type === "array") return qe(r.element, n);
+  if (r.type === "set") return qe(r.valueType, n);
+  if (r.type === "lazy") return qe(r.getter(), n);
+  if (
+    r.type === "promise" ||
+    r.type === "optional" ||
+    r.type === "nonoptional" ||
+    r.type === "nullable" ||
+    r.type === "readonly" ||
+    r.type === "default" ||
+    r.type === "prefault" ||
+    r.type === "catch"
+  )
+    return qe(r.innerType, n);
+  if (r.type === "intersection") return qe(r.left, n) || qe(r.right, n);
+  if (r.type === "record" || r.type === "map")
+    return qe(r.keyType, n) || qe(r.valueType, n);
+  if (r.type === "pipe")
+    return e._zod.traits.has("$ZodCodec") ? !0 : qe(r.in, n) || qe(r.out, n);
+  if (r.type === "object") {
+    for (const o in r.shape) if (qe(r.shape[o], n)) return !0;
+    return !1;
+  }
+  if (r.type === "union") {
+    for (const o of r.options) if (qe(o, n)) return !0;
+    return !1;
+  }
+  if (r.type === "tuple") {
+    for (const o of r.items) if (qe(o, n)) return !0;
+    return !!(r.rest && qe(r.rest, n));
+  }
+  return !1;
+}
+const tv =
+    (e, t = {}) =>
+    (n) => {
+      const r = Rc({ ...n, processors: t });
+      return (He(e, r), Ec(r, e), zc(r, e));
+    },
+  ro =
+    (e, t, n = {}) =>
+    (r) => {
+      const { libraryOptions: o, target: i } = r ?? {},
+        s = Rc({ ...(o ?? {}), target: i, io: t, processors: n });
+      return (He(e, s), Ec(s, e), zc(s, e));
+    },
+  nv = {
+    guid: "uuid",
+    url: "uri",
+    datetime: "date-time",
+    json_string: "json-string",
+    regex: "",
+  },
+  rv = (e, t, n, r) => {
+    const o = n;
+    o.type = "string";
+    const {
+      minimum: i,
+      maximum: s,
+      format: a,
+      patterns: c,
+      contentEncoding: u,
+      laxFormat: f,
+    } = e._zod.bag;
+    if (
+      (typeof i == "number" && (o.minLength = i),
+      typeof s == "number" && (o.maxLength = s),
+      a &&
+        ((o.format = nv[a] ?? a),
+        o.format === "" && delete o.format,
+        (a === "time" || f) && delete o.format),
+      u && (o.contentEncoding = u),
+      c && c.size > 0)
+    ) {
+      const d = [...c];
+      d.length === 1
+        ? (o.pattern = d[0].source)
+        : d.length > 1 &&
+          (o.allOf = [
+            ...d.map((m) => ({
+              ...(t.target === "draft-07" ||
+              t.target === "draft-04" ||
+              t.target === "openapi-3.0"
+                ? { type: "string" }
+                : {}),
+              pattern: m.source,
+            })),
+          ]);
+    }
+  },
+  ov = (e, t, n, r) => {
+    n.not = {};
+  },
+  iv = (e, t, n, r) => {},
+  sv = (e, t, n, r) => {
+    const o = e._zod.def,
+      i = dc(o.entries);
+    if (i.length === 0) {
+      n.not = {};
+      return;
+    }
+    (i.every((s) => typeof s == "number") && (n.type = "number"),
+      i.every((s) => typeof s == "string") && (n.type = "string"),
+      (n.enum = i));
+  },
+  av = (e, t, n, r) => {
+    wr(e, t, n, r, "Custom types cannot be represented in JSON Schema");
+  },
+  lv = (e, t, n, r) => {
+    wr(e, t, n, r, "Transforms cannot be represented in JSON Schema");
+  },
+  cv = (e, t, n, r) => {
+    const o = n,
+      i = e._zod.def,
+      { minimum: s, maximum: a } = e._zod.bag;
+    (typeof s == "number" && (o.minItems = s),
+      typeof a == "number" && (o.maxItems = a),
+      (o.type = "array"),
+      (o.items = He(i.element, t, { ...r, path: [...r.path, "items"] })));
+  };
+function bi(e) {
+  const t = e._zod.def;
+  return t.type === "pipe" && t.in._zod.traits.has("$ZodTransform")
+    ? bi(t.out)
+    : t.type === "catch"
+      ? bi(t.innerType)
+      : e._zod.optin;
+}
+const uv = (e, t, n, r) => {
+    var f;
+    const o = n,
+      i = e._zod.def,
+      s = i.shape;
+    if (
+      Object.getOwnPropertySymbols(s).length &&
+      wr(e, t, o, r, "Symbol keys cannot be represented in JSON Schema")
+    )
+      return;
+    ((o.type = "object"), (o.properties = {}));
+    for (const d in s)
+      st(
+        o.properties,
+        d,
+        He(s[d], t, { ...r, path: [...r.path, "properties", d] }),
+      );
+    const c = new Set(Object.keys(s)),
+      u = new Set(
+        [...c].filter((d) => {
+          const m = i.shape[d];
+          return t.io === "input" ? bi(m) === void 0 : m._zod.optout === void 0;
+        }),
+      );
+    (u.size > 0 && (o.required = Array.from(u)),
+      ((f = i.catchall) == null ? void 0 : f._zod.def.type) === "never"
+        ? (o.additionalProperties = !1)
+        : i.catchall
+          ? i.catchall &&
+            (o.additionalProperties = He(i.catchall, t, {
+              ...r,
+              path: [...r.path, "additionalProperties"],
+            }))
+          : t.io === "output" && (o.additionalProperties = !1));
+  },
+  dv = (e, t, n, r) => {
+    const o = e._zod.def,
+      i = o.inclusive === !1,
+      s = o.options.map((a, c) =>
+        He(a, t, { ...r, path: [...r.path, i ? "oneOf" : "anyOf", c] }),
+      );
+    i ? (n.oneOf = s) : (n.anyOf = s);
+  },
+  fv = (e, t, n, r) => {
+    const o = e._zod.def,
+      i = He(o.left, t, { ...r, path: [...r.path, "allOf", 0] }),
+      s = He(o.right, t, { ...r, path: [...r.path, "allOf", 1] }),
+      a = (u) => "allOf" in u && Object.keys(u).length === 1,
+      c = [...(a(i) ? i.allOf : [i]), ...(a(s) ? s.allOf : [s])];
+    ((n.allOf = c), t.intersections.push(c));
+  },
+  mv = (e, t, n, r) => {
+    const o = e._zod.def,
+      i = He(o.innerType, t, r),
+      s = t.seen.get(e);
+    t.target === "openapi-3.0"
+      ? ((s.ref = o.innerType), (n.nullable = !0))
+      : (n.anyOf = [i, { type: "null" }]);
+  },
+  pv = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    i.ref = o.innerType;
+  },
+  ss = Symbol();
+function Fc(e, t, n, r, o) {
+  let i = !1;
+  const s = JSON.stringify(e, (a, c) =>
+    typeof c != "bigint" ? c : ((i = !0), null),
+  );
+  return i
+    ? (wr(t, n, r, o, "BigInt defaults cannot be represented in JSON Schema"),
+      ss)
+    : JSON.parse(s);
+}
+const gv = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    i.ref = o.innerType;
+    const s = Fc(o.defaultValue, e, t, n, r);
+    s !== ss && (n.default = s);
+  },
+  hv = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    if (((i.ref = o.innerType), t.io !== "input")) return;
+    const s = Fc(o.defaultValue, e, t, n, r);
+    s !== ss && (n._prefault = s);
+  },
+  yv = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    i.ref = o.innerType;
+    let s;
+    try {
+      s = o.catchValue(void 0);
+    } catch {
+      wr(e, t, n, r, "Dynamic catch values are not supported in JSON Schema");
+      return;
+    }
+    n.default = s;
+  },
+  vv = (e, t, n, r) => {
+    const o = e._zod.def,
+      i = o.in._zod.traits.has("$ZodTransform"),
+      s = t.io === "input" ? (i ? o.out : o.in) : o.out;
+    He(s, t, r);
+    const a = t.seen.get(e);
+    a.ref = s;
+  },
+  bv = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    ((i.ref = o.innerType), (n.readOnly = !0));
+  },
+  Bc = (e, t, n, r) => {
+    const o = e._zod.def;
+    He(o.innerType, t, r);
+    const i = t.seen.get(e);
+    i.ref = o.innerType;
+  },
+  Va = new WeakSet([Object.prototype, Error.prototype]);
+function jr(e, t, n) {
+  Object.defineProperty(e, t, {
+    configurable: !0,
+    enumerable: !1,
+    get() {
+      const r = n(this);
+      return (
+        Object.defineProperty(this, t, {
+          value: r,
+          configurable: !0,
+          writable: !0,
+        }),
+        r
+      );
+    },
+    set(r) {
+      Object.defineProperty(this, t, {
+        value: r,
+        configurable: !0,
+        writable: !0,
+      });
+    },
+  });
+}
+const wv = (e, t) => {
+    (bc.init(e, t), (e.name = "ZodError"));
+    const n = Object.getPrototypeOf(e);
+    Va.has(n) ||
+      (Va.add(n),
+      jr(n, "format", (r) => (o) => cg(r, o)),
+      jr(n, "flatten", (r) => (o) => lg(r, o)),
+      jr(n, "addIssue", (r) => (o) => {
+        (r.issues.push(o), (r.message = JSON.stringify(r.issues, pi, 2)));
+      }),
+      jr(n, "addIssues", (r) => (o) => {
+        (r.issues.push(...o), (r.message = JSON.stringify(r.issues, pi, 2)));
+      }),
+      Object.defineProperty(n, "isEmpty", {
+        configurable: !0,
+        enumerable: !1,
+        get() {
+          return this.issues.length === 0;
+        },
+      }));
+  },
+  ct = T("ZodError", wv, void 0, { Parent: Error }),
+  xv = ns(ct),
+  Sv = rs(ct),
+  Cv = yo(ct),
+  Pv = vo(ct),
+  Av = fg(ct),
+  kv = mg(ct),
+  Iv = pg(ct),
+  _v = gg(ct),
+  Tv = hg(ct),
+  Mv = yg(ct),
+  Dv = vg(ct),
+  jv = bg(ct);
+function Nv() {
+  kt.localeError || on(ay());
+}
+function as() {
+  kt.memoizer || on({ memoizer: oy() });
+}
+const Oe = T(
+    "ZodType",
+    (e, t) => (Nv(), Ee.init(e, t), (e.def = t), (e.type = t.type), e),
+    {
+      check(...e) {
+        const t = this.def;
+        return this.clone(
+          nn(t, {
+            checks: [
+              ...(t.checks ?? []),
+              ...e.map((n) =>
+                typeof n == "function"
+                  ? {
+                      _zod: {
+                        check: n,
+                        def: { check: "custom" },
+                        onattach: [],
+                      },
+                    }
+                  : n,
+              ),
+            ],
+          }),
+          { parent: !0 },
+        );
+      },
+      with(...e) {
+        return this.check(...e);
+      },
+      clone(e, t) {
+        return rn(this, e, t);
+      },
+      brand() {
+        return this;
+      },
+      register(e, t) {
+        return (e.add(this, t), this);
+      },
+      refine(e, t) {
+        return this.check(Tb(e, t));
+      },
+      superRefine(e, t) {
+        return this.check(Mb(e, t));
+      },
+      overwrite(e) {
+        return this.check(Un(e));
+      },
+      optional() {
+        return Wa(this);
+      },
+      exactOptional() {
+        return hb(this);
+      },
+      nullable() {
+        return Ua(this);
+      },
+      nullish() {
+        return Wa(Ua(this));
+      },
+      nonoptional(e) {
+        return Sb(this, e);
+      },
+      array() {
+        return ab(this);
+      },
+      or(e) {
+        return ub([this, e]);
+      },
+      and(e) {
+        return fb(this, e);
+      },
+      transform(e) {
+        return Ha(this, gb(e));
+      },
+      default(e) {
+        return bb(this, e);
+      },
+      prefault(e) {
+        return xb(this, e);
+      },
+      catch(e) {
+        return Pb(this, e);
+      },
+      pipe(e) {
+        return Ha(this, e);
+      },
+      readonly() {
+        return Ib(this);
+      },
+      describe(e) {
+        const t = this.clone();
+        return (rr.add(t, { description: e }), t);
+      },
+      meta(...e) {
+        if (e.length === 0) return rr.get(this);
+        const t = this.clone();
+        return (rr.add(t, e[0]), t);
+      },
+      isOptional() {
+        return this.safeParse(void 0).success;
+      },
+      isNullable() {
+        return this.safeParse(null).success;
+      },
+      apply(e, ...t) {
+        return t.length === 0 ? e(this) : e(this, ...t);
+      },
+      get "~standard"() {
+        return hc(this, "~standard", {
+          ...Cc(this),
+          jsonSchema: { input: ro(this, "input"), output: ro(this, "output") },
+        });
+      },
+      set "~standard"(e) {
+        Vn(this, "~standard", e);
+      },
+      parse: function e(t, n) {
+        return xv(this, t, n, { callee: e });
+      },
+      parseAsync: async function e(t, n) {
+        return await Sv(this, t, n, { callee: e });
+      },
+      safeParse(e, t) {
+        return Cv(this, e, t);
+      },
+      async safeParseAsync(e, t) {
+        return Pv(this, e, t);
+      },
+      get spa() {
+        return this == null ? void 0 : this.safeParseAsync;
+      },
+      set spa(e) {
+        Vn(this, "spa", e);
+      },
+      encode: function e(t, n) {
+        return Av(this, t, n, { callee: e });
+      },
+      decode: function e(t, n) {
+        return kv(this, t, n, { callee: e });
+      },
+      encodeAsync: async function e(t, n) {
+        return await Iv(this, t, n, { callee: e });
+      },
+      decodeAsync: async function e(t, n) {
+        return await _v(this, t, n, { callee: e });
+      },
+      safeEncode(e, t) {
+        return Tv(this, e, t);
+      },
+      safeDecode(e, t) {
+        return Mv(this, e, t);
+      },
+      async safeEncodeAsync(e, t) {
+        return Dv(this, e, t);
+      },
+      async safeDecodeAsync(e, t) {
+        return jv(this, e, t);
+      },
+      toJSONSchema(e) {
+        return tv(this, {})(e);
+      },
+      get description() {
+        var e;
+        return (e = rr.get(this)) == null ? void 0 : e.description;
+      },
+      get _def() {
+        return this._zod.def;
+      },
+    },
+  ),
+  Vc = T(
+    "_ZodString",
+    (e, t) => {
+      (is.init(e, t),
+        Oe.init(e, t),
+        (e._zod.processJSONSchema = (r, o, i) => rv(e, r, o)));
+      const n = e._zod.bag;
+      ((e.format = n.format ?? null),
+        (e.minLength = n.minimum ?? null),
+        (e.maxLength = n.maximum ?? null));
+    },
+    {
+      regex(...e) {
+        return this.check(Fy(...e));
+      },
+      includes(...e) {
+        return this.check($y(...e));
+      },
+      startsWith(...e) {
+        return this.check(Wy(...e));
+      },
+      endsWith(...e) {
+        return this.check(Uy(...e));
+      },
+      min(...e) {
+        return this.check(no(...e));
+      },
+      max(...e) {
+        return this.check(jc(...e));
+      },
+      length(...e) {
+        return this.check(Nc(...e));
+      },
+      nonempty(...e) {
+        return this.check(no(1, ...e));
+      },
+      lowercase(e) {
+        return this.check(By(e));
+      },
+      uppercase(e) {
+        return this.check(Vy(e));
+      },
+      trim() {
+        return this.check(Gy());
+      },
+      normalize(...e) {
+        return this.check(Hy(...e));
+      },
+      toLowerCase() {
+        return this.check(Zy());
+      },
+      toUpperCase() {
+        return this.check(Jy());
+      },
+      slugify() {
+        return this.check(Ky());
+      },
+    },
+  ),
+  Rv = T(
+    "ZodString",
+    (e, t) => {
+      (is.init(e, t), Vc.init(e, t));
+    },
+    {
+      email(e) {
+        return this.check(dy(Fv, e));
+      },
+      url(e) {
+        return this.check(yy(Vv, e));
+      },
+      jwt(e) {
+        return this.check(jy(nb, e));
+      },
+      emoji(e) {
+        return this.check(vy($v, e));
+      },
+      guid(e) {
+        return this.check(fy(Bv, e));
+      },
+      uuid(e) {
+        return this.check(my(Nr, e));
+      },
+      uuidv4(e) {
+        return this.check(py(Nr, e));
+      },
+      uuidv6(e) {
+        return this.check(gy(Nr, e));
+      },
+      uuidv7(e) {
+        return this.check(hy(Nr, e));
+      },
+      nanoid(e) {
+        return this.check(by(Wv, e));
+      },
+      cuid(e) {
+        return this.check(wy(Uv, e));
+      },
+      cuid2(e) {
+        return this.check(xy(Hv, e));
+      },
+      ulid(e) {
+        return this.check(Sy(Gv, e));
+      },
+      base64(e) {
+        return this.check(Ty(Xv, e));
+      },
+      base64url(e) {
+        return this.check(My(eb, e));
+      },
+      xid(e) {
+        return this.check(Cy(Zv, e));
+      },
+      ksuid(e) {
+        return this.check(Py(Jv, e));
+      },
+      ipv4(e) {
+        return this.check(Ay(Kv, e));
+      },
+      ipv6(e) {
+        return this.check(ky(qv, e));
+      },
+      cidrv4(e) {
+        return this.check(Iy(Yv, e));
+      },
+      cidrv6(e) {
+        return this.check(_y(Qv, e));
+      },
+      e164(e) {
+        return this.check(Dy(tb, e));
+      },
+      datetime(e) {
+        return this.check(Ny(Ev, e));
+      },
+      date(e) {
+        return this.check(Ry(Ov, e));
+      },
+      time(e) {
+        return this.check(Ey(Lv, e));
+      },
+      duration(e) {
+        return this.check(Oy(zv, e));
+      },
+    },
+  );
+function St(e) {
+  return uy(Rv, e);
+}
+const xe = T("ZodStringFormat", (e, t) => {
+    (ye.init(e, t), Vc.init(e, t));
+  }),
+  Ev = T("ZodISODateTime", (e, t) => {
+    (wh.init(e, t), xe.init(e, t));
+  }),
+  Ov = T("ZodISODate", (e, t) => {
+    (xh.init(e, t), xe.init(e, t));
+  }),
+  Lv = T("ZodISOTime", (e, t) => {
+    (Sh.init(e, t), xe.init(e, t));
+  }),
+  zv = T("ZodISODuration", (e, t) => {
+    (Ch.init(e, t), xe.init(e, t));
+  }),
+  Fv = T("ZodEmail", (e, t) => {
+    (sh.init(e, t), xe.init(e, t));
+  }),
+  Bv = T("ZodGUID", (e, t) => {
+    (oh.init(e, t), xe.init(e, t));
+  }),
+  Nr = T("ZodUUID", (e, t) => {
+    (ih.init(e, t), xe.init(e, t));
+  }),
+  Vv = T("ZodURL", (e, t) => {
+    (fh.init(e, t), xe.init(e, t));
+  }),
+  $v = T("ZodEmoji", (e, t) => {
+    (mh.init(e, t), xe.init(e, t));
+  }),
+  Wv = T("ZodNanoID", (e, t) => {
+    (ph.init(e, t), xe.init(e, t));
+  }),
+  Uv = T("ZodCUID", (e, t) => {
+    (gh.init(e, t), xe.init(e, t));
+  }),
+  Hv = T("ZodCUID2", (e, t) => {
+    (hh.init(e, t), xe.init(e, t));
+  }),
+  Gv = T("ZodULID", (e, t) => {
+    (yh.init(e, t), xe.init(e, t));
+  }),
+  Zv = T("ZodXID", (e, t) => {
+    (vh.init(e, t), xe.init(e, t));
+  }),
+  Jv = T("ZodKSUID", (e, t) => {
+    (bh.init(e, t), xe.init(e, t));
+  }),
+  Kv = T("ZodIPv4", (e, t) => {
+    (Ph.init(e, t), xe.init(e, t));
+  }),
+  qv = T("ZodIPv6", (e, t) => {
+    (kh.init(e, t), xe.init(e, t));
+  }),
+  Yv = T("ZodCIDRv4", (e, t) => {
+    (Ih.init(e, t), xe.init(e, t));
+  }),
+  Qv = T("ZodCIDRv6", (e, t) => {
+    (Th.init(e, t), xe.init(e, t));
+  }),
+  Xv = T("ZodBase64", (e, t) => {
+    (Mh.init(e, t), xe.init(e, t));
+  }),
+  eb = T("ZodBase64URL", (e, t) => {
+    (jh.init(e, t), xe.init(e, t));
+  }),
+  tb = T("ZodE164", (e, t) => {
+    (Nh.init(e, t), xe.init(e, t));
+  }),
+  nb = T("ZodJWT", (e, t) => {
+    (Eh.init(e, t), xe.init(e, t));
+  }),
+  rb = T("ZodUnknown", (e, t) => {
+    (Oh.init(e, t),
+      Oe.init(e, t),
+      (e._zod.processJSONSchema = (n, r, o) => iv()));
+  });
+function $a() {
+  return Ly(rb);
+}
+const ob = T("ZodNever", (e, t) => {
+  (Lh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => ov(e, n, r)));
+});
+function ib(e) {
+  return zy(ob, e);
+}
+const sb = T(
+  "ZodArray",
+  (e, t) => {
+    (as(),
+      zh.init(e, t),
+      Oe.init(e, t),
+      (e._zod.processJSONSchema = (n, r, o) => cv(e, n, r, o)),
+      (e.element = t.element));
+  },
+  {
+    min(e, t) {
+      return this.check(no(e, t));
+    },
+    nonempty(e) {
+      return this.check(no(1, e));
+    },
+    max(e, t) {
+      return this.check(jc(e, t));
+    },
+    length(e, t) {
+      return this.check(Nc(e, t));
+    },
+    unwrap() {
+      return this.element;
+    },
+  },
+);
+function ab(e, t) {
+  return qy(sb, e, t);
+}
+const lb = T(
+  "ZodObject",
+  (e, t) => {
+    (as(),
+      Vh.init(e, t),
+      Oe.init(e, t),
+      (e._zod.processJSONSchema = (n, r, o) => uv(e, n, r, o)),
+      eg(e, "shape", (n) => n._zod.def.shape, !1));
+  },
+  {
+    keyof() {
+      return mb(Object.keys(this._zod.def.shape));
+    },
+    catchall(e) {
+      return this.clone({ ...this._zod.def, catchall: e });
+    },
+    passthrough() {
+      return this.clone({ ...this._zod.def, catchall: $a() });
+    },
+    loose() {
+      return this.clone({ ...this._zod.def, catchall: $a() });
+    },
+    strict() {
+      return this.clone({ ...this._zod.def, catchall: ib() });
+    },
+    strip() {
+      return this.clone({ ...this._zod.def, catchall: void 0 });
+    },
+    extend(e) {
+      return Wp(this, e);
+    },
+    safeExtend(e) {
+      return Up(this, e);
+    },
+    merge(e) {
+      return Hp(this, e);
+    },
+    pick(e) {
+      return Vp(this, e);
+    },
+    omit(e) {
+      return $p(this, e);
+    },
+    partial(...e) {
+      return va(Wc, this, e[0]);
+    },
+    exactPartial(...e) {
+      return va(Uc, this, e[0], "exactPartial");
+    },
+    required(...e) {
+      return Gp(Hc, this, e[0]);
+    },
+  },
+);
+function $c(e, t) {
+  const n = { type: "object", shape: e ?? {}, ...re(t) };
+  return new lb(n);
+}
+const cb = T("ZodUnion", (e, t) => {
+  ($h.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => dv(e, n, r, o)),
+    (e.options = t.options));
+});
+function ub(e, t) {
+  return new cb({ type: "union", options: e, ...re(t) });
+}
+const db = T("ZodIntersection", (e, t) => {
+  (Wh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => fv(e, n, r, o)));
+});
+function fb(e, t) {
+  return new db({ type: "intersection", left: e, right: t });
+}
+const wi = T("ZodEnum", (e, t) => {
+  (Uh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (r, o, i) => sv(e, r, o)),
+    (e.enum = t.entries),
+    (e.options = Object.values(t.entries)));
+  const n = new Set(Object.keys(t.entries));
+  ((e.extract = (r, o) => {
+    const i = {};
+    for (const s of r)
+      if (n.has(s)) i[s] = t.entries[s];
+      else throw new Error(`Key ${s} not found in enum`);
+    return new wi({ ...t, checks: [], ...re(o), entries: i });
+  }),
+    (e.exclude = (r, o) => {
+      const i = { ...t.entries };
+      for (const s of r)
+        if (n.has(s)) delete i[s];
+        else throw new Error(`Key ${s} not found in enum`);
+      return new wi({ ...t, checks: [], ...re(o), entries: i });
+    }));
+});
+function mb(e, t) {
+  const n = Array.isArray(e) ? Object.fromEntries(e.map((r) => [r, r])) : e;
+  return new wi({ type: "enum", entries: n, ...re(t) });
+}
+const pb = T("ZodTransform", (e, t) => {
+  (as(),
+    Hh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => lv(e, n, r, o)),
+    (e._zod.parse = (n, r) => {
+      if (r.direction === "backward") throw new yc(e.constructor.name);
+      n.addIssue = (i) => {
+        if (typeof i == "string") n.issues.push(ur(i, n.value, t));
+        else {
+          const s = i;
+          (s.fatal && (s.continue = !1),
+            s.code ?? (s.code = "custom"),
+            "input" in s || (s.input = n.value),
+            s.inst ?? (s.inst = e),
+            n.issues.push(ur(s)));
+        }
+      };
+      const o = t.transform(n.value, n);
+      return o instanceof Promise
+        ? o.then((i) => ((n.value = i), n))
+        : ((n.value = o), n);
+    }));
+});
+function gb(e) {
+  return new pb({ type: "transform", transform: e });
+}
+const Wc = T("ZodOptional", (e, t) => {
+  (Mc.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => Bc(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function Wa(e) {
+  return new Wc({ type: "optional", innerType: e });
+}
+const Uc = T("ZodExactOptional", (e, t) => {
+  (Gh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => Bc(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function hb(e) {
+  return new Uc({ type: "optional", innerType: e });
+}
+const yb = T("ZodNullable", (e, t) => {
+  (Zh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => mv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function Ua(e) {
+  return new yb({ type: "nullable", innerType: e });
+}
+const vb = T("ZodDefault", (e, t) => {
+  (Jh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => gv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType),
+    (e.removeDefault = e.unwrap));
+});
+function bb(e, t) {
+  return new vb({
+    type: "default",
+    innerType: e,
+    get defaultValue() {
+      return typeof t == "function" ? t() : mc(t);
+    },
+  });
+}
+const wb = T("ZodPrefault", (e, t) => {
+  (Kh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => hv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function xb(e, t) {
+  return new wb({
+    type: "prefault",
+    innerType: e,
+    get defaultValue() {
+      return typeof t == "function" ? t() : mc(t);
+    },
+  });
+}
+const Hc = T("ZodNonOptional", (e, t) => {
+  (qh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => pv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function Sb(e, t) {
+  return new Hc({ type: "nonoptional", innerType: e, ...re(t) });
+}
+const Cb = T("ZodCatch", (e, t) => {
+  (Yh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => yv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType),
+    (e.removeCatch = e.unwrap));
+});
+function Pb(e, t) {
+  return new Cb({
+    type: "catch",
+    innerType: e,
+    catchValue: typeof t == "function" ? t : ng(t),
+  });
+}
+const Ab = T("ZodPipe", (e, t) => {
+  (Qh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => vv(e, n, r, o)),
+    (e.in = t.in),
+    (e.out = t.out));
+});
+function Ha(e, t) {
+  return new Ab({ type: "pipe", in: e, out: t });
+}
+const kb = T("ZodReadonly", (e, t) => {
+  (Xh.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => bv(e, n, r, o)),
+    (e.unwrap = () => e._zod.def.innerType));
+});
+function Ib(e) {
+  return new kb({ type: "readonly", innerType: e });
+}
+const _b = T("ZodCustom", (e, t) => {
+  (ey.init(e, t),
+    Oe.init(e, t),
+    (e._zod.processJSONSchema = (n, r, o) => av(e, n, r, o)));
+});
+function Tb(e, t = {}) {
+  return Yy(_b, e, t);
+}
+function Mb(e, t) {
+  return Qy(e, t);
+}
+const Db = "https://miwnlvqfuettgumhlnyx.supabase.co",
+  jb =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtuZ29uZ3Fobm5kZW5rZXlqYXJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NDQ5NjAsImV4cCI6MjA5MTIyMDk2MH0.jAY-mEBLMy6ccJ20BPanjPrxr4PU3eSwyv7AE8YIMw4",
+  Gc = vf(Db, jb);
+var Nb = Object.defineProperty,
+  Hn = (e, t) => Nb(e, "name", { value: t, configurable: !0 }),
+  Zc = !!(
+    typeof window < "u" &&
+    window.document &&
+    window.document.createElement
+  );
+function he(e, t, { checkForDefaultPrevented: n = !0 } = {}) {
+  return Hn(function (o) {
+    if ((e == null || e(o), n === !1 || !o || !o.defaultPrevented))
+      return t == null ? void 0 : t(o);
+  }, "handleEvent");
+}
+Hn(he, "composeEventHandlers");
+function Rb(e) {
+  var t;
+  if (!Zc) throw new Error("Cannot access window outside of the DOM");
+  return (
+    ((t = e == null ? void 0 : e.ownerDocument) == null
+      ? void 0
+      : t.defaultView) ?? window
+  );
+}
+Hn(Rb, "getOwnerWindow");
+function xi(e) {
+  if (!Zc) throw new Error("Cannot access document outside of the DOM");
+  return (e == null ? void 0 : e.ownerDocument) ?? document;
+}
+Hn(xi, "getOwnerDocument");
+function Jc(e, t = !1) {
+  const { activeElement: n } = xi(e);
+  if (!(n != null && n.nodeName)) return null;
+  if (Kc(n) && n.contentDocument) return Jc(n.contentDocument.body, t);
+  if (t) {
+    const r = n.getAttribute("aria-activedescendant");
+    if (r) {
+      const o = xi(n).getElementById(r);
+      if (o) return o;
+    }
+  }
+  return n;
+}
+Hn(Jc, "getActiveElement");
+function Kc(e) {
+  return e.tagName === "IFRAME";
+}
+Hn(Kc, "isFrame");
+var Eb = Object.defineProperty,
+  ls = (e, t) => Eb(e, "name", { value: t, configurable: !0 });
+function Si(e, t) {
+  if (typeof e == "function") return e(t);
+  e != null && (e.current = t);
+}
+ls(Si, "setRef");
+function qc(...e) {
+  return (t) => {
+    let n = !1;
+    const r = e.map((o) => {
+      const i = Si(o, t);
+      return (!n && typeof i == "function" && (n = !0), i);
+    });
+    if (n)
+      return () => {
+        for (let o = 0; o < r.length; o++) {
+          const i = r[o];
+          typeof i == "function" ? i() : Si(e[o], null);
+        }
+      };
+  };
+}
+ls(qc, "composeRefs");
+function we(...e) {
+  return g.useCallback(qc(...e), e);
+}
+ls(we, "useComposedRefs");
+var Ob = Object.defineProperty,
+  at = (e, t) => Ob(e, "name", { value: t, configurable: !0 });
+function Lb(e, t) {
+  const n = g.createContext(t);
+  n.displayName = e + "Context";
+  const r = at((i) => {
+    const { children: s, ...a } = i,
+      c = g.useMemo(() => a, Object.values(a));
+    return l.jsx(n.Provider, { value: c, children: s });
+  }, "Provider");
+  r.displayName = e + "Provider";
+  function o(i, s = {}) {
+    const { optional: a = !1 } = s,
+      c = g.useContext(n);
+    if (c) return c;
+    if (t !== void 0) return t;
+    if (!a) throw new Error(`\`${i}\` must be used within \`${e}\``);
+  }
+  return (at(o, "useContext"), [r, o]);
+}
+at(Lb, "createContext");
+function Gn(e, t = []) {
+  let n = [];
+  function r(i, s) {
+    const a = g.createContext(s);
+    a.displayName = i + "Context";
+    const c = n.length;
+    n = [...n, s];
+    const u = at((d) => {
+      var S;
+      const { scope: m, children: y, ...p } = d,
+        v = ((S = m == null ? void 0 : m[e]) == null ? void 0 : S[c]) || a,
+        h = g.useMemo(() => p, Object.values(p));
+      return l.jsx(v.Provider, { value: h, children: y });
+    }, "Provider");
+    u.displayName = i + "Provider";
+    function f(d, m, y = {}) {
+      var S;
+      const { optional: p = !1 } = y,
+        v = ((S = m == null ? void 0 : m[e]) == null ? void 0 : S[c]) || a,
+        h = g.useContext(v);
+      if (h) return h;
+      if (s !== void 0) return s;
+      if (!p) throw new Error(`\`${d}\` must be used within \`${i}\``);
+    }
+    return (at(f, "useContext"), [u, f]);
+  }
+  at(r, "createContext");
+  const o = at(() => {
+    const i = n.map((s) => g.createContext(s));
+    return at(function (a) {
+      const c = (a == null ? void 0 : a[e]) || i;
+      return g.useMemo(() => ({ [`__scope${e}`]: { ...a, [e]: c } }), [a, c]);
+    }, "useScope");
+  }, "createScope");
+  return ((o.scopeName = e), [r, Yc(o, ...t)]);
+}
+at(Gn, "createContextScope");
+function Yc(...e) {
+  const t = e[0];
+  if (e.length === 1) return t;
+  const n = at(() => {
+    const r = e.map((o) => ({ useScope: o(), scopeName: o.scopeName }));
+    return at(function (i) {
+      const s = r.reduce((a, { useScope: c, scopeName: u }) => {
+        const d = c(i)[`__scope${u}`];
+        return { ...a, ...d };
+      }, {});
+      return g.useMemo(() => ({ [`__scope${t.scopeName}`]: s }), [s]);
+    }, "useComposedScopes");
+  }, "createScope");
+  return ((n.scopeName = t.scopeName), n);
+}
+at(Yc, "composeContextScopes");
+var Me =
+    globalThis != null && globalThis.document ? g.useLayoutEffect : () => {},
+  zb = Object.defineProperty,
+  Fb = (e, t) => zb(e, "name", { value: t, configurable: !0 }),
+  Bb = hr[" useId ".trim().toString()] || (() => {}),
+  Vb = 0;
+function zn(e) {
+  const [t, n] = g.useState(Bb());
+  return (
+    Me(() => {
+      e || n((r) => r ?? String(Vb++));
+    }, [e]),
+    e || (t ? `radix-${t}` : "")
+  );
+}
+Fb(zn, "useId");
+var $b = Object.defineProperty,
+  Wb = (e, t) => $b(e, "name", { value: t, configurable: !0 }),
+  Ga = hr[" useEffectEvent ".trim().toString()],
+  Za = hr[" useInsertionEffect ".trim().toString()];
+function Qc(e) {
+  if (typeof Ga == "function") return Ga(e);
+  const t = g.useRef(() => {
+    throw new Error("Cannot call an event handler while rendering.");
+  });
+  return (
+    typeof Za == "function"
+      ? Za(() => {
+          t.current = e;
+        })
+      : Me(() => {
+          t.current = e;
+        }),
+    g.useMemo(
+      () =>
+        (...n) => {
+          var r;
+          return (r = t.current) == null ? void 0 : r.call(t, ...n);
+        },
+      [],
+    )
+  );
+}
+Wb(Qc, "useEffectEvent");
+var Ub = Object.defineProperty,
+  xr = (e, t) => Ub(e, "name", { value: t, configurable: !0 }),
+  Hb = hr[" useInsertionEffect ".trim().toString()] || Me;
+function oo({
+  prop: e,
+  defaultProp: t,
+  onChange: n = xr(() => {}, "onChange"),
+  caller: r,
+}) {
+  const [o, i, s] = Xc({ defaultProp: t, onChange: n }),
+    a = e !== void 0,
+    c = a ? e : o,
+    u = g.useCallback(
+      (f) => {
+        var d;
+        if (a) {
+          const m = eu(f) ? f(e) : f;
+          m !== e && ((d = s.current) == null || d.call(s, m));
+        } else i(f);
+      },
+      [a, e, i, s],
+    );
+  return [c, u];
+}
+xr(oo, "useControllableState");
+function Xc({ defaultProp: e, onChange: t }) {
+  const [n, r] = g.useState(e),
+    o = g.useRef(n),
+    i = g.useRef(t);
+  return (
+    Hb(() => {
+      i.current = t;
+    }, [t]),
+    g.useEffect(() => {
+      var s;
+      o.current !== n &&
+        ((s = i.current) == null || s.call(i, n), (o.current = n));
+    }, [n, o]),
+    [n, r, i]
+  );
+}
+xr(Xc, "useUncontrolledState");
+function eu(e) {
+  return typeof e == "function";
+}
+xr(eu, "isFunction");
+var Ja = Symbol("RADIX:SYNC_STATE");
+function Gb(e, t, n, r) {
+  const { prop: o, defaultProp: i, onChange: s, caller: a } = t,
+    c = o !== void 0,
+    u = Qc(s),
+    f = [{ ...n, state: i }];
+  r && f.push(r);
+  const [d, m] = g.useReducer(
+      (h, S) => {
+        if (S.type === Ja) return { ...h, state: S.state };
+        const x = e(h, S);
+        return (c && !Object.is(x.state, h.state) && u(x.state), x);
+      },
+      ...f,
+    ),
+    y = d.state,
+    p = g.useRef(y);
+  g.useEffect(() => {
+    p.current !== y && ((p.current = y), c || u(y));
+  }, [y, p, c]);
+  const v = g.useMemo(() => (o !== void 0 ? { ...d, state: o } : d), [d, o]);
+  return (
+    g.useEffect(() => {
+      c && !Object.is(o, d.state) && m({ type: Ja, state: o });
+    }, [o, d.state, c]),
+    [v, m]
+  );
+}
+xr(Gb, "useControllableStateReducer");
+var Zb = Object.defineProperty,
+  bt = (e, t) => Zb(e, "name", { value: t, configurable: !0 });
+function Ft(e) {
+  const t = g.forwardRef((n, r) => {
+    let { children: o, ...i } = n,
+      s = null,
+      a = !1;
+    const c = [];
+    (Ci(o) && typeof Rr == "function" && (o = Rr(o._payload)),
+      g.Children.forEach(o, (m) => {
+        var y;
+        if (iu(m)) {
+          a = !0;
+          const p = m;
+          let v = "child" in p.props ? p.props.child : p.props.children;
+          (Ci(v) && typeof Rr == "function" && (v = Rr(v._payload)),
+            (s = Kb(p, v)),
+            c.push(
+              (y = s == null ? void 0 : s.props) == null ? void 0 : y.children,
+            ));
+        } else c.push(m);
+      }),
+      s
+        ? (s = g.cloneElement(s, void 0, c))
+        : !a && g.Children.count(o) === 1 && g.isValidElement(o) && (s = o));
+    const u = s ? ou(s) : void 0,
+      f = we(r, u);
+    if (!s) {
+      if (o || o === 0) throw new Error(a ? Qb(e) : Yb(e));
+      return o;
+    }
+    const d = ru(i, s.props ?? {});
+    return (s.type !== g.Fragment && (d.ref = r ? f : u), g.cloneElement(s, d));
+  });
+  return ((t.displayName = `${e}.Slot`), t);
+}
+bt(Ft, "createSlot");
+var tu = Ft("Slot"),
+  nu = Symbol.for("radix.slottable");
+function Jb(e) {
+  const t = bt(
+    (n) => ("child" in n ? n.children(n.child) : n.children),
+    "Slottable",
+  );
+  return ((t.displayName = `${e}.Slottable`), (t.__radixId = nu), t);
+}
+bt(Jb, "createSlottable");
+var Kb = bt((e, t) => {
+  if ("child" in e.props) {
+    const n = e.props.child;
+    return g.isValidElement(n)
+      ? g.cloneElement(n, void 0, e.props.children(n.props.children))
+      : null;
+  }
+  return g.isValidElement(t) ? t : null;
+}, "getSlottableElementFromSlottable");
+function ru(e, t) {
+  const n = { ...t };
+  for (const r in t) {
+    const o = e[r],
+      i = t[r];
+    /^on[A-Z]/.test(r)
+      ? o && i
+        ? (n[r] = (...a) => {
+            const c = i(...a);
+            return (o(...a), c);
+          })
+        : o && (n[r] = o)
+      : r === "style"
+        ? (n[r] = { ...o, ...i })
+        : r === "className" && (n[r] = [o, i].filter(Boolean).join(" "));
+  }
+  return { ...e, ...n };
+}
+bt(ru, "mergeProps");
+function ou(e) {
+  var r, o;
+  let t =
+      (r = Object.getOwnPropertyDescriptor(e.props, "ref")) == null
+        ? void 0
+        : r.get,
+    n = t && "isReactWarning" in t && t.isReactWarning;
+  return n
+    ? e.ref
+    : ((t =
+        (o = Object.getOwnPropertyDescriptor(e, "ref")) == null
+          ? void 0
+          : o.get),
+      (n = t && "isReactWarning" in t && t.isReactWarning),
+      n ? e.props.ref : e.props.ref || e.ref);
+}
+bt(ou, "getElementRef");
+function iu(e) {
+  return (
+    g.isValidElement(e) &&
+    typeof e.type == "function" &&
+    "__radixId" in e.type &&
+    e.type.__radixId === nu
+  );
+}
+bt(iu, "isSlottable");
+var qb = Symbol.for("react.lazy");
+function Ci(e) {
+  return (
+    e != null &&
+    typeof e == "object" &&
+    "$$typeof" in e &&
+    e.$$typeof === qb &&
+    "_payload" in e &&
+    su(e._payload)
+  );
+}
+bt(Ci, "isLazyComponent");
+function su(e) {
+  return typeof e == "object" && e !== null && "then" in e;
+}
+bt(su, "isPromiseLike");
+var Yb = bt(
+    (e) =>
+      `${e} failed to slot onto its children. Expected a single React element child or \`Slottable\`.`,
+    "createSlotError",
+  ),
+  Qb = bt(
+    (e) =>
+      `${e} failed to slot onto its \`Slottable\`. Expected \`Slottable\` to receive a single React element child.`,
+    "createSlottableError",
+  ),
+  Rr = hr[" use ".trim().toString()],
+  Xb = Object.defineProperty,
+  ew = (e, t) => Xb(e, "name", { value: t, configurable: !0 }),
+  tw = [
+    "a",
+    "button",
+    "div",
+    "form",
+    "h2",
+    "h3",
+    "img",
+    "input",
+    "label",
+    "li",
+    "nav",
+    "ol",
+    "p",
+    "select",
+    "span",
+    "svg",
+    "ul",
+  ],
+  ke = tw.reduce((e, t) => {
+    const n = Ft(`Primitive.${t}`),
+      r = g.forwardRef((o, i) => {
+        const { asChild: s, ...a } = o,
+          c = s ? n : t;
+        return (
+          typeof window < "u" && (window[Symbol.for("radix-ui")] = !0),
+          l.jsx(c, { ...a, ref: i })
+        );
+      });
+    return ((r.displayName = `Primitive.${t}`), { ...e, [t]: r });
+  }, {});
+function au(e, t) {
+  e && yr.flushSync(() => e.dispatchEvent(t));
+}
+ew(au, "dispatchDiscreteCustomEvent");
+var nw = Object.defineProperty,
+  rw = (e, t) => nw(e, "name", { value: t, configurable: !0 });
+function It(e) {
+  const t = g.useRef(e);
+  return (
+    g.useEffect(() => {
+      t.current = e;
+    }),
+    g.useMemo(
+      () =>
+        (...n) => {
+          var r;
+          return (r = t.current) == null ? void 0 : r.call(t, ...n);
+        },
+      [],
+    )
+  );
+}
+rw(It, "useCallbackRef");
+var ow = Object.defineProperty,
+  Ve = (e, t) => ow(e, "name", { value: t, configurable: !0 }),
+  Pi = "dismissableLayer.update",
+  iw = "dismissableLayer.pointerDownOutside",
+  sw = "dismissableLayer.focusOutside",
+  Ka,
+  lu = g.createContext({
+    layers: new Set(),
+    layersWithOutsidePointerEventsDisabled: new Set(),
+    branches: new Set(),
+    dismissableSurfaces: new Set(),
+  }),
+  cu = g.forwardRef(
+    Ve(function (t, n) {
+      const {
+          disableOutsidePointerEvents: r = !1,
+          deferPointerDownOutside: o = !1,
+          onEscapeKeyDown: i,
+          onPointerDownOutside: s,
+          onFocusOutside: a,
+          onInteractOutside: c,
+          onDismiss: u,
+          ...f
+        } = t,
+        d = g.useContext(lu),
+        [m, y] = g.useState(null),
+        p =
+          (m == null ? void 0 : m.ownerDocument) ??
+          (globalThis == null ? void 0 : globalThis.document),
+        [, v] = g.useState({}),
+        h = we(n, y),
+        S = Array.from(d.layers),
+        [x] = [...d.layersWithOutsidePointerEventsDisabled].slice(-1),
+        C = x ? S.indexOf(x) : -1,
+        w = m ? S.indexOf(m) : -1,
+        k = d.layersWithOutsidePointerEventsDisabled.size > 0,
+        _ = w >= C,
+        D = g.useRef(!1),
+        I = du(
+          (U) => {
+            (s == null || s(U),
+              c == null || c(U),
+              U.defaultPrevented || u == null || u());
+          },
+          {
+            ownerDocument: p,
+            deferPointerDownOutside: o,
+            isDeferredPointerDownOutsideRef: D,
+            dismissableSurfaces: d.dismissableSurfaces,
+            shouldHandlePointerDownOutside: g.useCallback(
+              (U) => {
+                if (!(U instanceof Node)) return !1;
+                const O = [...d.branches].some((B) => B.contains(U));
+                return _ && !O;
+              },
+              [d.branches, _],
+            ),
+          },
+        ),
+        N = fu((U) => {
+          if (o && D.current) return;
+          const O = U.target;
+          [...d.branches].some((H) => H.contains(O)) ||
+            (a == null || a(U),
+            c == null || c(U),
+            U.defaultPrevented || u == null || u());
+        }, p),
+        V = m ? w === S.length - 1 : !1,
+        X = It((U) => {
+          U.key === "Escape" &&
+            (i == null || i(U),
+            !U.defaultPrevented && u && (U.preventDefault(), u()));
+        });
+      return (
+        g.useEffect(() => {
+          if (V)
+            return (
+              p.addEventListener("keydown", X, { capture: !0 }),
+              () => p.removeEventListener("keydown", X, { capture: !0 })
+            );
+        }, [p, V, X]),
+        g.useEffect(() => {
+          if (m)
+            return (
+              r &&
+                (d.layersWithOutsidePointerEventsDisabled.size === 0 &&
+                  ((Ka = p.body.style.pointerEvents),
+                  (p.body.style.pointerEvents = "none")),
+                d.layersWithOutsidePointerEventsDisabled.add(m)),
+              d.layers.add(m),
+              Ai(),
+              () => {
+                r &&
+                  (d.layersWithOutsidePointerEventsDisabled.delete(m),
+                  d.layersWithOutsidePointerEventsDisabled.size === 0 &&
+                    (p.body.style.pointerEvents = Ka));
+              }
+            );
+        }, [m, p, r, d]),
+        g.useEffect(
+          () => () => {
+            m &&
+              (d.layers.delete(m),
+              d.layersWithOutsidePointerEventsDisabled.delete(m),
+              Ai());
+          },
+          [m, d],
+        ),
+        g.useEffect(() => {
+          const U = Ve(() => v({}), "handleUpdate");
+          return (
+            document.addEventListener(Pi, U),
+            () => document.removeEventListener(Pi, U)
+          );
+        }, []),
+        l.jsx(ke.div, {
+          ...f,
+          ref: h,
+          style: {
+            pointerEvents: k ? (_ ? "auto" : "none") : void 0,
+            ...t.style,
+          },
+          onFocusCapture: he(t.onFocusCapture, N.onFocusCapture),
+          onBlurCapture: he(t.onBlurCapture, N.onBlurCapture),
+          onPointerDownCapture: he(
+            t.onPointerDownCapture,
+            I.onPointerDownCapture,
+          ),
+        })
+      );
+    }, "DismissableLayer"),
+  );
+function uu() {
+  const e = g.useContext(lu),
+    [t, n] = g.useState(null);
+  return (
+    g.useEffect(() => {
+      if (t)
+        return (
+          e.dismissableSurfaces.add(t),
+          () => {
+            e.dismissableSurfaces.delete(t);
+          }
+        );
+    }, [t, e.dismissableSurfaces]),
+    n
+  );
+}
+Ve(uu, "useDismissableLayerSurface");
+var aw = Ve(() => !0, "IS_TRUE");
+function du(e, t) {
+  const {
+      ownerDocument: n = globalThis == null ? void 0 : globalThis.document,
+      deferPointerDownOutside: r = !1,
+      isDeferredPointerDownOutsideRef: o,
+      dismissableSurfaces: i,
+      shouldHandlePointerDownOutside: s = aw,
+    } = t,
+    a = It(e),
+    c = g.useRef(!1),
+    u = g.useRef(!1),
+    f = g.useRef(new Map()),
+    d = g.useRef(() => {});
+  return (
+    g.useEffect(() => {
+      function m() {
+        ((u.current = !1), (o.current = !1), f.current.clear());
+      }
+      Ve(m, "resetOutsideInteraction");
+      function y() {
+        return Array.from(f.current.values()).some(Boolean);
+      }
+      Ve(y, "isOutsideInteractionIntercepted");
+      function p(C) {
+        if (!u.current) return;
+        const w = C.target;
+        ((w instanceof Node && [...i].some((_) => _.contains(w))) ||
+          f.current.set(C.type, !0),
+          C.type === "click" &&
+            window.setTimeout(() => {
+              u.current && d.current();
+            }, 0));
+      }
+      Ve(p, "handleInteractionCapture");
+      function v(C) {
+        u.current && f.current.set(C.type, !1);
+      }
+      Ve(v, "handleInteractionBubble");
+      const h = Ve((C) => {
+          if (C.target && !c.current) {
+            let w = function () {
+              n.removeEventListener("click", d.current);
+              const _ = y();
+              (m(), _ || cs(iw, a, k, { discrete: !0 }));
+            };
+            if (
+              (Ve(w, "handleAndDispatchPointerDownOutsideEvent"), !s(C.target))
+            ) {
+              (n.removeEventListener("click", d.current),
+                m(),
+                (c.current = !1));
+              return;
+            }
+            const k = { originalEvent: C };
+            ((u.current = !0),
+              (o.current = r && C.button === 0),
+              f.current.clear(),
+              !r || C.button !== 0
+                ? w()
+                : (n.removeEventListener("click", d.current),
+                  (d.current = w),
+                  n.addEventListener("click", d.current, { once: !0 })));
+          } else (n.removeEventListener("click", d.current), m());
+          c.current = !1;
+        }, "handlePointerDown"),
+        S = [
+          "pointerup",
+          "mousedown",
+          "mouseup",
+          "touchstart",
+          "touchend",
+          "click",
+        ];
+      for (const C of S)
+        (n.addEventListener(C, p, !0), n.addEventListener(C, v));
+      const x = window.setTimeout(() => {
+        n.addEventListener("pointerdown", h);
+      }, 0);
+      return () => {
+        (window.clearTimeout(x),
+          n.removeEventListener("pointerdown", h),
+          n.removeEventListener("click", d.current));
+        for (const C of S)
+          (n.removeEventListener(C, p, !0), n.removeEventListener(C, v));
+      };
+    }, [n, a, r, o, i, s]),
+    { onPointerDownCapture: Ve(() => (c.current = !0), "onPointerDownCapture") }
+  );
+}
+Ve(du, "usePointerDownOutside");
+function fu(e, t = globalThis == null ? void 0 : globalThis.document) {
+  const n = It(e),
+    r = g.useRef(!1);
+  return (
+    g.useEffect(() => {
+      const o = Ve((i) => {
+        i.target &&
+          !r.current &&
+          cs(sw, n, { originalEvent: i }, { discrete: !1 });
+      }, "handleFocus");
+      return (
+        t.addEventListener("focusin", o),
+        () => t.removeEventListener("focusin", o)
+      );
+    }, [t, n]),
+    {
+      onFocusCapture: Ve(() => (r.current = !0), "onFocusCapture"),
+      onBlurCapture: Ve(() => (r.current = !1), "onBlurCapture"),
+    }
+  );
+}
+Ve(fu, "useFocusOutside");
+function Ai() {
+  const e = new CustomEvent(Pi);
+  document.dispatchEvent(e);
+}
+Ve(Ai, "dispatchUpdate");
+function cs(e, t, n, { discrete: r }) {
+  const o = n.originalEvent.target,
+    i = new CustomEvent(e, { bubbles: !1, cancelable: !0, detail: n });
+  (t && o.addEventListener(e, t, { once: !0 }),
+    r ? au(o, i) : o.dispatchEvent(i));
+}
+Ve(cs, "handleAndDispatchCustomEvent");
+var lw = Object.defineProperty,
+  Ye = (e, t) => lw(e, "name", { value: t, configurable: !0 }),
+  Uo = "focusScope.autoFocusOnMount",
+  Ho = "focusScope.autoFocusOnUnmount",
+  qa = { bubbles: !1, cancelable: !0 },
+  mu = g.forwardRef(
+    Ye(function (t, n) {
+      const {
+          loop: r = !1,
+          trapped: o = !1,
+          onMountAutoFocus: i,
+          onUnmountAutoFocus: s,
+          ...a
+        } = t,
+        [c, u] = g.useState(null),
+        f = It(i),
+        d = It(s),
+        m = g.useRef(null),
+        y = we(n, u),
+        p = g.useRef({
+          paused: !1,
+          pause() {
+            this.paused = !0;
+          },
+          resume() {
+            this.paused = !1;
+          },
+        }).current;
+      (g.useEffect(() => {
+        if (o) {
+          let h = function (w) {
+              if (p.paused || !c) return;
+              const k = w.target;
+              c.contains(k) ? (m.current = k) : Et(m.current, { select: !0 });
+            },
+            S = function (w) {
+              if (p.paused || !c) return;
+              const k = w.relatedTarget;
+              k !== null && (c.contains(k) || Et(m.current, { select: !0 }));
+            },
+            x = function (w) {
+              if (document.activeElement === document.body)
+                for (const _ of w) _.removedNodes.length > 0 && Et(c);
+            };
+          (Ye(h, "handleFocusIn"),
+            Ye(S, "handleFocusOut"),
+            Ye(x, "handleMutations"),
+            document.addEventListener("focusin", h),
+            document.addEventListener("focusout", S));
+          const C = new MutationObserver(x);
+          return (
+            c && C.observe(c, { childList: !0, subtree: !0 }),
+            () => {
+              (document.removeEventListener("focusin", h),
+                document.removeEventListener("focusout", S),
+                C.disconnect());
+            }
+          );
+        }
+      }, [o, c, p.paused]),
+        g.useEffect(() => {
+          if (c) {
+            Ya.add(p);
+            const h = document.activeElement;
+            if (!c.contains(h)) {
+              const x = new CustomEvent(Uo, qa);
+              (c.addEventListener(Uo, f),
+                c.dispatchEvent(x),
+                x.defaultPrevented ||
+                  (pu(bu(us(c)), { select: !0 }),
+                  document.activeElement === h && Et(c)));
+            }
+            return () => {
+              (c.removeEventListener(Uo, f),
+                setTimeout(() => {
+                  const x = new CustomEvent(Ho, qa);
+                  (c.addEventListener(Ho, d),
+                    c.dispatchEvent(x),
+                    x.defaultPrevented ||
+                      Et(h ?? document.body, { select: !0 }),
+                    c.removeEventListener(Ho, d),
+                    Ya.remove(p));
+                }, 0));
+            };
+          }
+        }, [c, f, d, p]));
+      const v = g.useCallback(
+        (h) => {
+          if ((!r && !o) || p.paused) return;
+          const S = h.key === "Tab" && !h.altKey && !h.ctrlKey && !h.metaKey,
+            x = document.activeElement;
+          if (S && x) {
+            const C = h.currentTarget,
+              [w, k] = gu(C);
+            w && k
+              ? !h.shiftKey && x === k
+                ? (h.preventDefault(), r && Et(w, { select: !0 }))
+                : h.shiftKey &&
+                  x === w &&
+                  (h.preventDefault(), r && Et(k, { select: !0 }))
+              : x === C && h.preventDefault();
+          }
+        },
+        [r, o, p.paused],
+      );
+      return l.jsx(ke.div, { tabIndex: -1, ...a, ref: y, onKeyDown: v });
+    }, "FocusScope"),
+  );
+function pu(e, { select: t = !1 } = {}) {
+  const n = document.activeElement;
+  for (const r of e)
+    if ((Et(r, { select: t }), document.activeElement !== n)) return;
+}
+Ye(pu, "focusFirst");
+function gu(e) {
+  const t = us(e),
+    n = ki(t, e),
+    r = ki(t.reverse(), e);
+  return [n, r];
+}
+Ye(gu, "getTabbableEdges");
+function us(e) {
+  const t = [],
+    n = document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
+      acceptNode: Ye((r) => {
+        const o = r.tagName === "INPUT" && r.type === "hidden";
+        return r.disabled || r.hidden || o
+          ? NodeFilter.FILTER_SKIP
+          : r.tabIndex >= 0
+            ? NodeFilter.FILTER_ACCEPT
+            : NodeFilter.FILTER_SKIP;
+      }, "acceptNode"),
+    });
+  for (; n.nextNode();) t.push(n.currentNode);
+  return t;
+}
+Ye(us, "getTabbableCandidates");
+function ki(e, t) {
+  const n =
+    typeof t.checkVisibility == "function" &&
+    t.checkVisibility({ checkVisibilityCSS: !0 });
+  for (const r of e)
+    if (
+      !(n ? !r.checkVisibility({ checkVisibilityCSS: !0 }) : hu(r, { upTo: t }))
+    )
+      return r;
+}
+Ye(ki, "findVisible");
+function hu(e, { upTo: t }) {
+  if (getComputedStyle(e).visibility === "hidden") return !0;
+  for (; e;) {
+    if (t !== void 0 && e === t) return !1;
+    if (getComputedStyle(e).display === "none") return !0;
+    e = e.parentElement;
+  }
+  return !1;
+}
+Ye(hu, "isHidden");
+function yu(e) {
+  return e instanceof HTMLInputElement && "select" in e;
+}
+Ye(yu, "isSelectableInput");
+function Et(e, { select: t = !1 } = {}) {
+  if (e && e.focus) {
+    const n = document.activeElement;
+    (e.focus({ preventScroll: !0 }), e !== n && yu(e) && t && e.select());
+  }
+}
+Ye(Et, "focus");
+var Ya = vu();
+function vu() {
+  let e = [];
+  return {
+    add(t) {
+      const n = e[0];
+      (t !== n && (n == null || n.pause()), (e = Ii(e, t)), e.unshift(t));
+    },
+    remove(t) {
+      var n;
+      ((e = Ii(e, t)), (n = e[0]) == null || n.resume());
+    },
+  };
+}
+Ye(vu, "createFocusScopesStack");
+function Ii(e, t) {
+  const n = [...e],
+    r = n.indexOf(t);
+  return (r !== -1 && n.splice(r, 1), n);
+}
+Ye(Ii, "arrayRemove");
+function bu(e) {
+  return e.filter((t) => t.tagName !== "A");
+}
+Ye(bu, "removeLinks");
+var cw = Object.defineProperty,
+  uw = (e, t) => cw(e, "name", { value: t, configurable: !0 }),
+  wu = g.forwardRef(
+    uw(function (t, n) {
+      var c;
+      const { container: r, ...o } = t,
+        [i, s] = g.useState(!1);
+      Me(() => s(!0), []);
+      const a =
+        r ||
+        (i &&
+          ((c = globalThis == null ? void 0 : globalThis.document) == null
+            ? void 0
+            : c.body));
+      return a ? yr.createPortal(l.jsx(ke.div, { ...o, ref: n }), a) : null;
+    }, "Portal"),
+  ),
+  dw = Object.defineProperty,
+  Bt = (e, t) => dw(e, "name", { value: t, configurable: !0 });
+function xu(e, t) {
+  return g.useReducer((n, r) => t[n][r] ?? n, e);
+}
+Bt(xu, "useStateMachine");
+var wo = Bt((e) => {
+  const { present: t, children: n } = e,
+    r = Su(t),
+    o =
+      typeof n == "function" ? n({ present: r.isPresent }) : g.Children.only(n),
+    i = Cu(r.ref, Pu(o));
+  return typeof n == "function" || r.isPresent
+    ? g.cloneElement(o, { ref: i })
+    : null;
+}, "Presence");
+function Su(e) {
+  const [t, n] = g.useState(),
+    r = g.useRef(null),
+    o = g.useRef(e),
+    i = g.useRef("none"),
+    s = g.useRef(void 0),
+    a = e ? "mounted" : "unmounted",
+    [c, u] = xu(a, {
+      mounted: { UNMOUNT: "unmounted", ANIMATION_OUT: "unmountSuspended" },
+      unmountSuspended: { MOUNT: "mounted", ANIMATION_END: "unmounted" },
+      unmounted: { MOUNT: "mounted" },
+    });
+  return (
+    g.useEffect(() => {
+      c === "mounted"
+        ? ((i.current = s.current ?? Nn(r.current)), (s.current = void 0))
+        : (i.current = "none");
+    }, [c]),
+    Me(() => {
+      const f = r.current,
+        d = o.current;
+      if (d !== e) {
+        const y = i.current,
+          p = Nn(f);
+        (e
+          ? ((s.current = p), u("MOUNT"))
+          : p === "none" || (f == null ? void 0 : f.display) === "none"
+            ? u("UNMOUNT")
+            : u(d && y !== p ? "ANIMATION_OUT" : "UNMOUNT"),
+          (o.current = e));
+      }
+    }, [e, u]),
+    Me(() => {
+      if (t) {
+        let f;
+        const d = t.ownerDocument.defaultView ?? window,
+          m = Bt((p) => {
+            const h = Nn(r.current).includes(CSS.escape(p.animationName));
+            if (p.target === t && h && (u("ANIMATION_END"), !o.current)) {
+              const S = t.style.animationFillMode;
+              ((t.style.animationFillMode = "forwards"),
+                (f = d.setTimeout(() => {
+                  t.style.animationFillMode === "forwards" &&
+                    (t.style.animationFillMode = S);
+                })));
+            }
+          }, "handleAnimationEnd"),
+          y = Bt((p) => {
+            p.target === t && (i.current = Nn(r.current));
+          }, "handleAnimationStart");
+        return (
+          t.addEventListener("animationstart", y),
+          t.addEventListener("animationcancel", m),
+          t.addEventListener("animationend", m),
+          () => {
+            (d.clearTimeout(f),
+              t.removeEventListener("animationstart", y),
+              t.removeEventListener("animationcancel", m),
+              t.removeEventListener("animationend", m));
+          }
+        );
+      } else u("ANIMATION_END");
+    }, [t, u]),
+    {
+      isPresent: ["mounted", "unmountSuspended"].includes(c),
+      ref: g.useCallback((f) => {
+        if (f) {
+          const d = getComputedStyle(f);
+          ((r.current = d), (s.current = Nn(d)));
+        } else r.current = null;
+        n(f);
+      }, []),
+    }
+  );
+}
+Bt(Su, "usePresence");
+function _i(e, t) {
+  if (typeof e == "function") return e(t);
+  e != null && (e.current = t);
+}
+Bt(_i, "setRef");
+function Cu(...e) {
+  const t = g.useRef(e);
+  return (
+    (t.current = e),
+    g.useCallback((n) => {
+      const r = t.current;
+      let o = !1;
+      const i = r.map((s) => {
+        const a = _i(s, n);
+        return (!o && typeof a == "function" && (o = !0), a);
+      });
+      if (o)
+        return () => {
+          for (let s = 0; s < i.length; s++) {
+            const a = i[s];
+            typeof a == "function" ? a() : _i(r[s], null);
+          }
+        };
+    }, [])
+  );
+}
+Bt(Cu, "useStableComposedRefs");
+function Nn(e) {
+  return (e == null ? void 0 : e.animationName) || "none";
+}
+Bt(Nn, "getAnimationName");
+function Pu(e) {
+  var r, o;
+  let t =
+      (r = Object.getOwnPropertyDescriptor(e.props, "ref")) == null
+        ? void 0
+        : r.get,
+    n = t && "isReactWarning" in t && t.isReactWarning;
+  return n
+    ? e.ref
+    : ((t =
+        (o = Object.getOwnPropertyDescriptor(e, "ref")) == null
+          ? void 0
+          : o.get),
+      (n = t && "isReactWarning" in t && t.isReactWarning),
+      n ? e.props.ref : e.props.ref || e.ref);
+}
+Bt(Pu, "getElementRef");
+var fw = Object.defineProperty,
+  ds = (e, t) => fw(e, "name", { value: t, configurable: !0 }),
+  Er = 0,
+  xt = null;
+function mw(e) {
+  return (xo(), e.children);
+}
+ds(mw, "FocusGuards");
+function xo() {
+  g.useEffect(() => {
+    xt || (xt = { start: Ti(), end: Ti() });
+    const { start: e, end: t } = xt;
+    return (
+      document.body.firstElementChild !== e &&
+        document.body.insertAdjacentElement("afterbegin", e),
+      document.body.lastElementChild !== t &&
+        document.body.insertAdjacentElement("beforeend", t),
+      Er++,
+      () => {
+        (Er === 1 &&
+          (xt == null || xt.start.remove(),
+          xt == null || xt.end.remove(),
+          (xt = null)),
+          (Er = Math.max(0, Er - 1)));
+      }
+    );
+  }, []);
+}
+ds(xo, "useFocusGuards");
+function Ti() {
+  const e = document.createElement("span");
+  return (
+    e.setAttribute("data-radix-focus-guard", ""),
+    (e.tabIndex = 0),
+    (e.style.outline = "none"),
+    (e.style.opacity = "0"),
+    (e.style.position = "fixed"),
+    (e.style.pointerEvents = "none"),
+    e
+  );
+}
+ds(Ti, "createFocusGuard");
+var Hr = "right-scroll-bar-position",
+  Gr = "width-before-scroll-bar",
+  pw = "with-scroll-bars-hidden",
+  gw = "--removed-body-scroll-bar-size";
+function Go(e, t) {
+  return (typeof e == "function" ? e(t) : e && (e.current = t), e);
+}
+function hw(e, t) {
+  var n = g.useState(function () {
+    return {
+      value: e,
+      callback: t,
+      facade: {
+        get current() {
+          return n.value;
+        },
+        set current(r) {
+          var o = n.value;
+          o !== r && ((n.value = r), n.callback(r, o));
+        },
+      },
+    };
+  })[0];
+  return ((n.callback = t), n.facade);
+}
+var yw = typeof window < "u" ? g.useLayoutEffect : g.useEffect,
+  Qa = new WeakMap();
+function vw(e, t) {
+  var n = hw(null, function (r) {
+    return e.forEach(function (o) {
+      return Go(o, r);
+    });
+  });
+  return (
+    yw(
+      function () {
+        var r = Qa.get(n);
+        if (r) {
+          var o = new Set(r),
+            i = new Set(e),
+            s = n.current;
+          (o.forEach(function (a) {
+            i.has(a) || Go(a, null);
+          }),
+            i.forEach(function (a) {
+              o.has(a) || Go(a, s);
+            }));
+        }
+        Qa.set(n, e);
+      },
+      [e],
+    ),
+    n
+  );
+}
+function bw(e) {
+  return e;
+}
+function ww(e, t) {
+  t === void 0 && (t = bw);
+  var n = [],
+    r = !1,
+    o = {
+      read: function () {
+        if (r)
+          throw new Error(
+            "Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.",
+          );
+        return n.length ? n[n.length - 1] : e;
+      },
+      useMedium: function (i) {
+        var s = t(i, r);
+        return (
+          n.push(s),
+          function () {
+            n = n.filter(function (a) {
+              return a !== s;
+            });
+          }
+        );
+      },
+      assignSyncMedium: function (i) {
+        for (r = !0; n.length;) {
+          var s = n;
+          ((n = []), s.forEach(i));
+        }
+        n = {
+          push: function (a) {
+            return i(a);
+          },
+          filter: function () {
+            return n;
+          },
+        };
+      },
+      assignMedium: function (i) {
+        r = !0;
+        var s = [];
+        if (n.length) {
+          var a = n;
+          ((n = []), a.forEach(i), (s = n));
+        }
+        var c = function () {
+            var f = s;
+            ((s = []), f.forEach(i));
+          },
+          u = function () {
+            return Promise.resolve().then(c);
+          };
+        (u(),
+          (n = {
+            push: function (f) {
+              (s.push(f), u());
+            },
+            filter: function (f) {
+              return ((s = s.filter(f)), n);
+            },
+          }));
+      },
+    };
+  return o;
+}
+function xw(e) {
+  e === void 0 && (e = {});
+  var t = ww(null);
+  return ((t.options = Kt({ async: !0, ssr: !1 }, e)), t);
+}
+var Au = function (e) {
+  var t = e.sideCar,
+    n = Ml(e, ["sideCar"]);
+  if (!t)
+    throw new Error(
+      "Sidecar: please provide `sideCar` property to import the right car",
+    );
+  var r = t.read();
+  if (!r) throw new Error("Sidecar medium not found");
+  return g.createElement(r, Kt({}, n));
+};
+Au.isSideCarExport = !0;
+function Sw(e, t) {
+  return (e.useMedium(t), Au);
+}
+var ku = xw(),
+  Zo = function () {},
+  So = g.forwardRef(function (e, t) {
+    var n = g.useRef(null),
+      r = g.useState({
+        onScrollCapture: Zo,
+        onWheelCapture: Zo,
+        onTouchMoveCapture: Zo,
+      }),
+      o = r[0],
+      i = r[1],
+      s = e.forwardProps,
+      a = e.children,
+      c = e.className,
+      u = e.removeScrollBar,
+      f = e.enabled,
+      d = e.shards,
+      m = e.sideCar,
+      y = e.noRelative,
+      p = e.noIsolation,
+      v = e.inert,
+      h = e.allowPinchZoom,
+      S = e.as,
+      x = S === void 0 ? "div" : S,
+      C = e.gapMode,
+      w = Ml(e, [
+        "forwardProps",
+        "children",
+        "className",
+        "removeScrollBar",
+        "enabled",
+        "shards",
+        "sideCar",
+        "noRelative",
+        "noIsolation",
+        "inert",
+        "allowPinchZoom",
+        "as",
+        "gapMode",
+      ]),
+      k = m,
+      _ = vw([n, t]),
+      D = Kt(Kt({}, w), o);
+    return g.createElement(
+      g.Fragment,
+      null,
+      f &&
+        g.createElement(k, {
+          sideCar: ku,
+          removeScrollBar: u,
+          shards: d,
+          noRelative: y,
+          noIsolation: p,
+          inert: v,
+          setCallbacks: i,
+          allowPinchZoom: !!h,
+          lockRef: n,
+          gapMode: C,
+        }),
+      s
+        ? g.cloneElement(g.Children.only(a), Kt(Kt({}, D), { ref: _ }))
+        : g.createElement(x, Kt({}, D, { className: c, ref: _ }), a),
+    );
+  });
+So.defaultProps = { enabled: !0, removeScrollBar: !0, inert: !1 };
+So.classNames = { fullWidth: Gr, zeroRight: Hr };
+var Cw = function () {
+  if (typeof __webpack_nonce__ < "u") return __webpack_nonce__;
+};
+function Pw() {
+  if (!document) return null;
+  var e = document.createElement("style");
+  e.type = "text/css";
+  var t = Cw();
+  return (t && e.setAttribute("nonce", t), e);
+}
+function Aw(e, t) {
+  e.styleSheet
+    ? (e.styleSheet.cssText = t)
+    : e.appendChild(document.createTextNode(t));
+}
+function kw(e) {
+  var t = document.head || document.getElementsByTagName("head")[0];
+  t.appendChild(e);
+}
+var Iw = function () {
+    var e = 0,
+      t = null;
+    return {
+      add: function (n) {
+        (e == 0 && (t = Pw()) && (Aw(t, n), kw(t)), e++);
+      },
+      remove: function () {
+        (e--,
+          !e && t && (t.parentNode && t.parentNode.removeChild(t), (t = null)));
+      },
+    };
+  },
+  _w = function () {
+    var e = Iw();
+    return function (t, n) {
+      g.useEffect(
+        function () {
+          return (
+            e.add(t),
+            function () {
+              e.remove();
+            }
+          );
+        },
+        [t && n],
+      );
+    };
+  },
+  Iu = function () {
+    var e = _w(),
+      t = function (n) {
+        var r = n.styles,
+          o = n.dynamic;
+        return (e(r, o), null);
+      };
+    return t;
+  },
+  Tw = { left: 0, top: 0, right: 0, gap: 0 },
+  Jo = function (e) {
+    return parseInt(e || "", 10) || 0;
+  },
+  Mw = function (e) {
+    var t = window.getComputedStyle(document.body),
+      n = t[e === "padding" ? "paddingLeft" : "marginLeft"],
+      r = t[e === "padding" ? "paddingTop" : "marginTop"],
+      o = t[e === "padding" ? "paddingRight" : "marginRight"];
+    return [Jo(n), Jo(r), Jo(o)];
+  },
+  Dw = function (e) {
+    if ((e === void 0 && (e = "margin"), typeof window > "u")) return Tw;
+    var t = Mw(e),
+      n = document.documentElement.clientWidth,
+      r = window.innerWidth;
+    return {
+      left: t[0],
+      top: t[1],
+      right: t[2],
+      gap: Math.max(0, r - n + t[2] - t[0]),
+    };
+  },
+  jw = Iu(),
+  Fn = "data-scroll-locked",
+  Nw = function (e, t, n, r) {
+    var o = e.left,
+      i = e.top,
+      s = e.right,
+      a = e.gap;
+    return (
+      n === void 0 && (n = "margin"),
+      `
+  .`
+        .concat(
+          pw,
+          ` {
+   overflow: hidden `,
+        )
+        .concat(
+          r,
+          `;
+   padding-right: `,
+        )
+        .concat(a, "px ")
+        .concat(
+          r,
+          `;
+  }
+  body[`,
+        )
+        .concat(
+          Fn,
+          `] {
+    overflow: hidden `,
+        )
+        .concat(
+          r,
+          `;
+    overscroll-behavior: contain;
+    `,
+        )
+        .concat(
+          [
+            t && "position: relative ".concat(r, ";"),
+            n === "margin" &&
+              `
+    padding-left: `
+                .concat(
+                  o,
+                  `px;
+    padding-top: `,
+                )
+                .concat(
+                  i,
+                  `px;
+    padding-right: `,
+                )
+                .concat(
+                  s,
+                  `px;
+    margin-left:0;
+    margin-top:0;
+    margin-right: `,
+                )
+                .concat(a, "px ")
+                .concat(
+                  r,
+                  `;
+    `,
+                ),
+            n === "padding" &&
+              "padding-right: ".concat(a, "px ").concat(r, ";"),
+          ]
+            .filter(Boolean)
+            .join(""),
+          `
+  }
+  
+  .`,
+        )
+        .concat(
+          Hr,
+          ` {
+    right: `,
+        )
+        .concat(a, "px ")
+        .concat(
+          r,
+          `;
+  }
+  
+  .`,
+        )
+        .concat(
+          Gr,
+          ` {
+    margin-right: `,
+        )
+        .concat(a, "px ")
+        .concat(
+          r,
+          `;
+  }
+  
+  .`,
+        )
+        .concat(Hr, " .")
+        .concat(
+          Hr,
+          ` {
+    right: 0 `,
+        )
+        .concat(
+          r,
+          `;
+  }
+  
+  .`,
+        )
+        .concat(Gr, " .")
+        .concat(
+          Gr,
+          ` {
+    margin-right: 0 `,
+        )
+        .concat(
+          r,
+          `;
+  }
+  
+  body[`,
+        )
+        .concat(
+          Fn,
+          `] {
+    `,
+        )
+        .concat(gw, ": ")
+        .concat(
+          a,
+          `px;
+  }
+`,
+        )
+    );
+  },
+  Xa = function () {
+    var e = parseInt(document.body.getAttribute(Fn) || "0", 10);
+    return isFinite(e) ? e : 0;
+  },
+  Rw = function () {
+    g.useEffect(function () {
+      return (
+        document.body.setAttribute(Fn, (Xa() + 1).toString()),
+        function () {
+          var e = Xa() - 1;
+          e <= 0
+            ? document.body.removeAttribute(Fn)
+            : document.body.setAttribute(Fn, e.toString());
+        }
+      );
+    }, []);
+  },
+  Ew = function (e) {
+    var t = e.noRelative,
+      n = e.noImportant,
+      r = e.gapMode,
+      o = r === void 0 ? "margin" : r;
+    Rw();
+    var i = g.useMemo(
+      function () {
+        return Dw(o);
+      },
+      [o],
+    );
+    return g.createElement(jw, { styles: Nw(i, !t, o, n ? "" : "!important") });
+  },
+  Mi = !1;
+if (typeof window < "u")
+  try {
+    var Or = Object.defineProperty({}, "passive", {
+      get: function () {
+        return ((Mi = !0), !0);
+      },
+    });
+    (window.addEventListener("test", Or, Or),
+      window.removeEventListener("test", Or, Or));
+  } catch {
+    Mi = !1;
+  }
+var Mn = Mi ? { passive: !1 } : !1,
+  Ow = function (e) {
+    return e.tagName === "TEXTAREA";
+  },
+  _u = function (e, t) {
+    if (!(e instanceof Element)) return !1;
+    var n = window.getComputedStyle(e);
+    return (
+      n[t] !== "hidden" &&
+      !(n.overflowY === n.overflowX && !Ow(e) && n[t] === "visible")
+    );
+  },
+  Lw = function (e) {
+    return _u(e, "overflowY");
+  },
+  zw = function (e) {
+    return _u(e, "overflowX");
+  },
+  el = function (e, t) {
+    var n = t.ownerDocument,
+      r = t;
+    do {
+      typeof ShadowRoot < "u" && r instanceof ShadowRoot && (r = r.host);
+      var o = Tu(e, r);
+      if (o) {
+        var i = Mu(e, r),
+          s = i[1],
+          a = i[2];
+        if (s > a) return !0;
+      }
+      r = r.parentNode;
+    } while (r && r !== n.body);
+    return !1;
+  },
+  Fw = function (e) {
+    var t = e.scrollTop,
+      n = e.scrollHeight,
+      r = e.clientHeight;
+    return [t, n, r];
+  },
+  Bw = function (e) {
+    var t = e.scrollLeft,
+      n = e.scrollWidth,
+      r = e.clientWidth;
+    return [t, n, r];
+  },
+  Tu = function (e, t) {
+    return e === "v" ? Lw(t) : zw(t);
+  },
+  Mu = function (e, t) {
+    return e === "v" ? Fw(t) : Bw(t);
+  },
+  Vw = function (e, t) {
+    return e === "h" && t === "rtl" ? -1 : 1;
+  },
+  $w = function (e, t, n, r, o) {
+    var i = Vw(e, window.getComputedStyle(t).direction),
+      s = i * r,
+      a = n.target,
+      c = t.contains(a),
+      u = !1,
+      f = s > 0,
+      d = 0,
+      m = 0;
+    do {
+      if (!a) break;
+      var y = Mu(e, a),
+        p = y[0],
+        v = y[1],
+        h = y[2],
+        S = v - h - i * p;
+      (p || S) && Tu(e, a) && ((d += S), (m += p));
+      var x = a.parentNode;
+      a = x && x.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? x.host : x;
+    } while ((!c && a !== document.body) || (c && (t.contains(a) || t === a)));
+    return (((f && Math.abs(d) < 1) || (!f && Math.abs(m) < 1)) && (u = !0), u);
+  },
+  Lr = function (e) {
+    return "changedTouches" in e
+      ? [e.changedTouches[0].clientX, e.changedTouches[0].clientY]
+      : [0, 0];
+  },
+  tl = function (e) {
+    return [e.deltaX, e.deltaY];
+  },
+  nl = function (e) {
+    return e && "current" in e ? e.current : e;
+  },
+  Ww = function (e, t) {
+    return e[0] === t[0] && e[1] === t[1];
+  },
+  Uw = function (e) {
+    return `
+  .block-interactivity-`
+      .concat(
+        e,
+        ` {pointer-events: none;}
+  .allow-interactivity-`,
+      )
+      .concat(
+        e,
+        ` {pointer-events: all;}
+`,
+      );
+  },
+  Hw = 0,
+  Dn = [];
+function Gw(e) {
+  var t = g.useRef([]),
+    n = g.useRef([0, 0]),
+    r = g.useRef(),
+    o = g.useState(Hw++)[0],
+    i = g.useState(Iu)[0],
+    s = g.useRef(e);
+  (g.useEffect(
+    function () {
+      s.current = e;
+    },
+    [e],
+  ),
+    g.useEffect(
+      function () {
+        if (e.inert) {
+          document.body.classList.add("block-interactivity-".concat(o));
+          var v = bf([e.lockRef.current], (e.shards || []).map(nl), !0).filter(
+            Boolean,
+          );
+          return (
+            v.forEach(function (h) {
+              return h.classList.add("allow-interactivity-".concat(o));
+            }),
+            function () {
+              (document.body.classList.remove("block-interactivity-".concat(o)),
+                v.forEach(function (h) {
+                  return h.classList.remove("allow-interactivity-".concat(o));
+                }));
+            }
+          );
+        }
+      },
+      [e.inert, e.lockRef.current, e.shards],
+    ));
+  var a = g.useCallback(function (v, h) {
+      if (
+        ("touches" in v && v.touches.length === 2) ||
+        (v.type === "wheel" && v.ctrlKey)
+      )
+        return !s.current.allowPinchZoom;
+      var S = Lr(v),
+        x = n.current,
+        C = "deltaX" in v ? v.deltaX : x[0] - S[0],
+        w = "deltaY" in v ? v.deltaY : x[1] - S[1],
+        k,
+        _ = v.target,
+        D = Math.abs(C) > Math.abs(w) ? "h" : "v";
+      if ("touches" in v && D === "h" && _.type === "range") return !1;
+      var I = window.getSelection(),
+        N = I && I.anchorNode,
+        V = N ? N === _ || N.contains(_) : !1;
+      if (V) return !1;
+      var X = el(D, _);
+      if (!X) return !0;
+      if ((X ? (k = D) : ((k = D === "v" ? "h" : "v"), (X = el(D, _))), !X))
+        return !1;
+      if (
+        (!r.current && "changedTouches" in v && (C || w) && (r.current = k), !k)
+      )
+        return !0;
+      var U = r.current || k;
+      return $w(U, h, v, U === "h" ? C : w);
+    }, []),
+    c = g.useCallback(function (v) {
+      var h = v;
+      if (!(!Dn.length || Dn[Dn.length - 1] !== i)) {
+        var S = "deltaY" in h ? tl(h) : Lr(h),
+          x = t.current.filter(function (k) {
+            return (
+              k.name === h.type &&
+              (k.target === h.target || h.target === k.shadowParent) &&
+              Ww(k.delta, S)
+            );
+          })[0];
+        if (x && x.should) {
+          h.cancelable && h.preventDefault();
+          return;
+        }
+        if (!x) {
+          var C = (s.current.shards || [])
+              .map(nl)
+              .filter(Boolean)
+              .filter(function (k) {
+                return k.contains(h.target);
+              }),
+            w = C.length > 0 ? a(h, C[0]) : !s.current.noIsolation;
+          w && h.cancelable && h.preventDefault();
+        }
+      }
+    }, []),
+    u = g.useCallback(function (v, h, S, x) {
+      var C = { name: v, delta: h, target: S, should: x, shadowParent: Zw(S) };
+      (t.current.push(C),
+        setTimeout(function () {
+          t.current = t.current.filter(function (w) {
+            return w !== C;
+          });
+        }, 1));
+    }, []),
+    f = g.useCallback(function (v) {
+      ((n.current = Lr(v)), (r.current = void 0));
+    }, []),
+    d = g.useCallback(function (v) {
+      u(v.type, tl(v), v.target, a(v, e.lockRef.current));
+    }, []),
+    m = g.useCallback(function (v) {
+      u(v.type, Lr(v), v.target, a(v, e.lockRef.current));
+    }, []);
+  g.useEffect(function () {
+    return (
+      Dn.push(i),
+      e.setCallbacks({
+        onScrollCapture: d,
+        onWheelCapture: d,
+        onTouchMoveCapture: m,
+      }),
+      document.addEventListener("wheel", c, Mn),
+      document.addEventListener("touchmove", c, Mn),
+      document.addEventListener("touchstart", f, Mn),
+      function () {
+        ((Dn = Dn.filter(function (v) {
+          return v !== i;
+        })),
+          document.removeEventListener("wheel", c, Mn),
+          document.removeEventListener("touchmove", c, Mn),
+          document.removeEventListener("touchstart", f, Mn));
+      }
+    );
+  }, []);
+  var y = e.removeScrollBar,
+    p = e.inert;
+  return g.createElement(
+    g.Fragment,
+    null,
+    p ? g.createElement(i, { styles: Uw(o) }) : null,
+    y
+      ? g.createElement(Ew, { noRelative: e.noRelative, gapMode: e.gapMode })
+      : null,
+  );
+}
+function Zw(e) {
+  for (var t = null; e !== null;)
+    (e instanceof ShadowRoot && ((t = e.host), (e = e.host)),
+      (e = e.parentNode));
+  return t;
+}
+const Jw = Sw(ku, Gw);
+var fs = g.forwardRef(function (e, t) {
+  return g.createElement(So, Kt({}, e, { ref: t, sideCar: Jw }));
+});
+fs.classNames = So.classNames;
+var Kw = function (e) {
+    if (typeof document > "u") return null;
+    var t = Array.isArray(e) ? e[0] : e;
+    return t.ownerDocument.body;
+  },
+  jn = new WeakMap(),
+  zr = new WeakMap(),
+  Fr = {},
+  Ko = 0,
+  Du = function (e) {
+    return e && (e.host || Du(e.parentNode));
+  },
+  qw = function (e, t) {
+    return t
+      .map(function (n) {
+        if (e.contains(n)) return n;
+        var r = Du(n);
+        return r && e.contains(r)
+          ? r
+          : (console.error(
+              "aria-hidden",
+              n,
+              "in not contained inside",
+              e,
+              ". Doing nothing",
+            ),
+            null);
+      })
+      .filter(function (n) {
+        return !!n;
+      });
+  },
+  Yw = function (e, t, n, r) {
+    var o = qw(t, Array.isArray(e) ? e : [e]);
+    Fr[n] || (Fr[n] = new WeakMap());
+    var i = Fr[n],
+      s = [],
+      a = new Set(),
+      c = new Set(o),
+      u = function (d) {
+        !d || a.has(d) || (a.add(d), u(d.parentNode));
+      };
+    o.forEach(u);
+    var f = function (d) {
+      !d ||
+        c.has(d) ||
+        Array.prototype.forEach.call(d.children, function (m) {
+          if (a.has(m)) f(m);
+          else
+            try {
+              var y = m.getAttribute(r),
+                p = y !== null && y !== "false",
+                v = (jn.get(m) || 0) + 1,
+                h = (i.get(m) || 0) + 1;
+              (jn.set(m, v),
+                i.set(m, h),
+                s.push(m),
+                v === 1 && p && zr.set(m, !0),
+                h === 1 && m.setAttribute(n, "true"),
+                p || m.setAttribute(r, "true"));
+            } catch (S) {
+              console.error("aria-hidden: cannot operate on ", m, S);
+            }
+        });
+    };
+    return (
+      f(t),
+      a.clear(),
+      Ko++,
+      function () {
+        (s.forEach(function (d) {
+          var m = jn.get(d) - 1,
+            y = i.get(d) - 1;
+          (jn.set(d, m),
+            i.set(d, y),
+            m || (zr.has(d) || d.removeAttribute(r), zr.delete(d)),
+            y || d.removeAttribute(n));
+        }),
+          Ko--,
+          Ko ||
+            ((jn = new WeakMap()),
+            (jn = new WeakMap()),
+            (zr = new WeakMap()),
+            (Fr = {})));
+      }
+    );
+  },
+  ju = function (e, t, n) {
+    n === void 0 && (n = "data-aria-hidden");
+    var r = Array.from(Array.isArray(e) ? e : [e]),
+      o = Kw(e);
+    return o
+      ? (r.push.apply(r, Array.from(o.querySelectorAll("[aria-live], script"))),
+        Yw(r, o, n, "aria-hidden"))
+      : function () {
+          return null;
+        };
+  },
+  Qw = Object.defineProperty,
+  ut = (e, t) => Qw(e, "name", { value: t, configurable: !0 }),
+  ms = "Dialog",
+  [Nu, lC] = Gn(ms),
+  [Xw, Dt] = Nu(ms),
+  ex = ut((e) => {
+    const {
+        __scopeDialog: t,
+        children: n,
+        open: r,
+        defaultOpen: o,
+        onOpenChange: i,
+        modal: s = !0,
+      } = e,
+      a = g.useRef(null),
+      c = g.useRef(null),
+      [u, f] = oo({ prop: r, defaultProp: o ?? !1, onChange: i, caller: ms }),
+      [d, m] = g.useState(0),
+      [y, p] = g.useState(0);
+    return l.jsx(Xw, {
+      scope: t,
+      triggerRef: a,
+      contentRef: c,
+      contentId: zn(),
+      titleId: zn(),
+      descriptionId: zn(),
+      titlePresent: d > 0,
+      descriptionPresent: y > 0,
+      setTitleCount: m,
+      setDescriptionCount: p,
+      open: u,
+      onOpenChange: f,
+      onOpenToggle: g.useCallback(() => f((v) => !v), [f]),
+      modal: s,
+      children: n,
+    });
+  }, "Dialog"),
+  Ru = "DialogPortal",
+  [tx, Eu] = Nu(Ru, { forceMount: void 0 }),
+  nx = ut((e) => {
+    const { __scopeDialog: t, forceMount: n, children: r, container: o } = e,
+      i = Dt(Ru, t);
+    return l.jsx(tx, {
+      scope: t,
+      forceMount: n,
+      children: g.Children.map(r, (s) =>
+        l.jsx(wo, {
+          present: n || i.open,
+          children: l.jsx(wu, { asChild: !0, container: o, children: s }),
+        }),
+      ),
+    });
+  }, "DialogPortal"),
+  Di = "DialogOverlay",
+  Ou = g.forwardRef(
+    ut(function (t, n) {
+      const r = Eu(Di, t.__scopeDialog),
+        { forceMount: o = r.forceMount, ...i } = t,
+        s = Dt(Di, t.__scopeDialog);
+      return s.modal
+        ? l.jsx(wo, {
+            present: o || s.open,
+            children: l.jsx(ox, { ...i, ref: n }),
+          })
+        : null;
+    }, "DialogOverlay"),
+  ),
+  rx = Ft("DialogOverlay.RemoveScroll"),
+  ox = g.forwardRef(
+    ut(function (t, n) {
+      const { __scopeDialog: r, ...o } = t,
+        i = Dt(Di, r),
+        s = uu(),
+        a = we(n, s);
+      return l.jsx(fs, {
+        as: rx,
+        allowPinchZoom: !0,
+        shards: [i.contentRef],
+        children: l.jsx(ke.div, {
+          "data-state": ps(i.open),
+          ...o,
+          ref: a,
+          style: { pointerEvents: "auto", ...o.style },
+        }),
+      });
+    }, "DialogOverlayImpl"),
+  ),
+  dr = "DialogContent",
+  Lu = g.forwardRef(
+    ut(function (t, n) {
+      const r = Eu(dr, t.__scopeDialog),
+        { forceMount: o = r.forceMount, ...i } = t,
+        s = Dt(dr, t.__scopeDialog);
+      return l.jsx(wo, {
+        present: o || s.open,
+        children: s.modal
+          ? l.jsx(ix, { ...i, ref: n })
+          : l.jsx(sx, { ...i, ref: n }),
+      });
+    }, "DialogContent"),
+  ),
+  ix = g.forwardRef(
+    ut(function (t, n) {
+      const r = Dt(dr, t.__scopeDialog),
+        o = g.useRef(null),
+        i = we(n, r.contentRef, o);
+      return (
+        g.useEffect(() => {
+          const s = o.current;
+          if (s) return ju(s);
+        }, []),
+        l.jsx(zu, {
+          ...t,
+          ref: i,
+          trapFocus: r.open,
+          disableOutsidePointerEvents: r.open,
+          onCloseAutoFocus: he(t.onCloseAutoFocus, (s) => {
+            var a;
+            (s.preventDefault(),
+              (a = r.triggerRef.current) == null || a.focus());
+          }),
+          onPointerDownOutside: he(t.onPointerDownOutside, (s) => {
+            const a = s.detail.originalEvent,
+              c = a.button === 0 && a.ctrlKey === !0;
+            (a.button === 2 || c) && s.preventDefault();
+          }),
+          onFocusOutside: he(t.onFocusOutside, (s) => s.preventDefault()),
+        })
+      );
+    }, "DialogContentModal"),
+  ),
+  sx = g.forwardRef(
+    ut(function (t, n) {
+      const r = Dt(dr, t.__scopeDialog),
+        o = g.useRef(!1),
+        i = g.useRef(!1);
+      return l.jsx(zu, {
+        ...t,
+        ref: n,
+        trapFocus: !1,
+        disableOutsidePointerEvents: !1,
+        onCloseAutoFocus: (s) => {
+          var a, c;
+          ((a = t.onCloseAutoFocus) == null || a.call(t, s),
+            s.defaultPrevented ||
+              (o.current || (c = r.triggerRef.current) == null || c.focus(),
+              s.preventDefault()),
+            (o.current = !1),
+            (i.current = !1));
+        },
+        onInteractOutside: (s) => {
+          var u, f;
+          ((u = t.onInteractOutside) == null || u.call(t, s),
+            s.defaultPrevented ||
+              ((o.current = !0),
+              s.detail.originalEvent.type === "pointerdown" &&
+                (i.current = !0)));
+          const a = s.target;
+          (((f = r.triggerRef.current) == null ? void 0 : f.contains(a)) &&
+            s.preventDefault(),
+            s.detail.originalEvent.type === "focusin" &&
+              i.current &&
+              s.preventDefault());
+        },
+      });
+    }, "DialogContentNonModal"),
+  ),
+  zu = g.forwardRef(
+    ut(function (t, n) {
+      const {
+          __scopeDialog: r,
+          trapFocus: o,
+          onOpenAutoFocus: i,
+          onCloseAutoFocus: s,
+          ...a
+        } = t,
+        c = Dt(dr, r);
+      return (
+        xo(),
+        l.jsx(l.Fragment, {
+          children: l.jsx(mu, {
+            asChild: !0,
+            loop: !0,
+            trapped: o,
+            onMountAutoFocus: i,
+            onUnmountAutoFocus: s,
+            children: l.jsx(cu, {
+              role: "dialog",
+              id: c.contentId,
+              "aria-describedby": c.descriptionPresent
+                ? c.descriptionId
+                : void 0,
+              "aria-labelledby": c.titlePresent ? c.titleId : void 0,
+              "data-state": ps(c.open),
+              ...a,
+              ref: n,
+              deferPointerDownOutside: !0,
+              onDismiss: () => c.onOpenChange(!1),
+            }),
+          }),
+        })
+      );
+    }, "DialogContentImpl"),
+  ),
+  ax = "DialogTitle",
+  Fu = g.forwardRef(
+    ut(function (t, n) {
+      const { __scopeDialog: r, ...o } = t,
+        i = Dt(ax, r),
+        { setTitleCount: s } = i;
+      return (
+        Me(() => (s((a) => a + 1), () => s((a) => a - 1)), [s]),
+        l.jsx(ke.h2, { id: i.titleId, ...o, ref: n })
+      );
+    }, "DialogTitle"),
+  ),
+  lx = "DialogDescription",
+  Bu = g.forwardRef(
+    ut(function (t, n) {
+      const { __scopeDialog: r, ...o } = t,
+        i = Dt(lx, r),
+        { setDescriptionCount: s } = i;
+      return (
+        Me(() => (s((a) => a + 1), () => s((a) => a - 1)), [s]),
+        l.jsx(ke.p, { id: i.descriptionId, ...o, ref: n })
+      );
+    }, "DialogDescription"),
+  ),
+  cx = "DialogClose",
+  ux = g.forwardRef(
+    ut(function (t, n) {
+      const { __scopeDialog: r, ...o } = t,
+        i = Dt(cx, r);
+      return l.jsx(ke.button, {
+        type: "button",
+        ...o,
+        ref: n,
+        onClick: he(t.onClick, () => i.onOpenChange(!1)),
+      });
+    }, "DialogClose"),
+  );
+function ps(e) {
+  return e ? "open" : "closed";
+}
+ut(ps, "getState");
+const dx = ex,
+  fx = nx,
+  Vu = g.forwardRef(({ className: e, ...t }, n) =>
+    l.jsx(Ou, {
+      ref: n,
+      className: De(
+        "fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        e,
+      ),
+      ...t,
+    }),
+  );
+Vu.displayName = Ou.displayName;
+const $u = g.forwardRef(({ className: e, children: t, ...n }, r) =>
+  l.jsxs(fx, {
+    children: [
+      l.jsx(Vu, {}),
+      l.jsxs(Lu, {
+        ref: r,
+        className: De(
+          "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+          e,
+        ),
+        ...n,
+        children: [
+          t,
+          l.jsxs(ux, {
+            className:
+              "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground",
+            children: [
+              l.jsx(Li, { className: "h-4 w-4" }),
+              l.jsx("span", { className: "sr-only", children: "Close" }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  }),
+);
+$u.displayName = Lu.displayName;
+const Wu = ({ className: e, ...t }) =>
+  l.jsx("div", {
+    className: De("flex flex-col space-y-1.5 text-center sm:text-left", e),
+    ...t,
+  });
+Wu.displayName = "DialogHeader";
+const Uu = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(Fu, {
+    ref: n,
+    className: De("text-lg font-semibold leading-none tracking-tight", e),
+    ...t,
+  }),
+);
+Uu.displayName = Fu.displayName;
+const mx = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(Bu, {
+    ref: n,
+    className: De("text-sm text-muted-foreground", e),
+    ...t,
+  }),
+);
+mx.displayName = Bu.displayName;
+var px = Object.defineProperty,
+  gx = (e, t) => px(e, "name", { value: t, configurable: !0 }),
+  hx = g.forwardRef(
+    gx(function (t, n) {
+      return l.jsx(ke.label, {
+        ...t,
+        ref: n,
+        onMouseDown: (r) => {
+          var i;
+          r.target.closest("button, input, select, textarea") ||
+            ((i = t.onMouseDown) == null || i.call(t, r),
+            !r.defaultPrevented && r.detail > 1 && r.preventDefault());
+        },
+      });
+    }, "Label"),
+  ),
+  Hu = hx;
+const rl = (e) => (typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e),
+  ol = Rl,
+  Gu = (e, t) => (n) => {
+    var r;
+    if ((t == null ? void 0 : t.variants) == null)
+      return ol(
+        e,
+        n == null ? void 0 : n.class,
+        n == null ? void 0 : n.className,
+      );
+    const { variants: o, defaultVariants: i } = t,
+      s = Object.keys(o).map((u) => {
+        const f = n == null ? void 0 : n[u],
+          d = i == null ? void 0 : i[u];
+        if (f === null) return null;
+        const m = rl(f) || rl(d);
+        return o[u][m];
+      }),
+      a =
+        n &&
+        Object.entries(n).reduce((u, f) => {
+          let [d, m] = f;
+          return (m === void 0 || (u[d] = m), u);
+        }, {}),
+      c =
+        t == null || (r = t.compoundVariants) === null || r === void 0
+          ? void 0
+          : r.reduce((u, f) => {
+              let { class: d, className: m, ...y } = f;
+              return Object.entries(y).every((p) => {
+                let [v, h] = p;
+                return Array.isArray(h)
+                  ? h.includes({ ...i, ...a }[v])
+                  : { ...i, ...a }[v] === h;
+              })
+                ? [...u, d, m]
+                : u;
+            }, []);
+    return ol(
+      e,
+      s,
+      c,
+      n == null ? void 0 : n.class,
+      n == null ? void 0 : n.className,
+    );
+  },
+  yx = Gu(
+    "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+  ),
+  Co = g.forwardRef(({ className: e, ...t }, n) =>
+    l.jsx(Hu, { ref: n, className: De(yx(), e), ...t }),
+  );
+Co.displayName = Hu.displayName;
+const Zu = yp,
+  Ju = g.createContext(null),
+  Ct = ({ ...e }) =>
+    l.jsx(Ju.Provider, {
+      value: { name: e.name },
+      children: l.jsx(mp, { ...e }),
+    }),
+  Po = () => {
+    const e = g.useContext(Ju),
+      t = g.useContext(Ku),
+      { getFieldState: n, formState: r } = hp();
+    if (!e) throw new Error("useFormField should be used within <FormField>");
+    if (!t) throw new Error("useFormField should be used within <FormItem>");
+    const o = n(e.name, r),
+      { id: i } = t;
+    return {
+      id: i,
+      name: e.name,
+      formItemId: `${i}-form-item`,
+      formDescriptionId: `${i}-form-item-description`,
+      formMessageId: `${i}-form-item-message`,
+      ...o,
+    };
+  },
+  Ku = g.createContext(null),
+  ht = g.forwardRef(({ className: e, ...t }, n) => {
+    const r = g.useId();
+    return l.jsx(Ku.Provider, {
+      value: { id: r },
+      children: l.jsx("div", { ref: n, className: De("space-y-2", e), ...t }),
+    });
+  });
+ht.displayName = "FormItem";
+const gn = g.forwardRef(({ className: e, ...t }, n) => {
+  const { error: r, formItemId: o } = Po();
+  return l.jsx(Co, {
+    ref: n,
+    className: De(r && "text-destructive", e),
+    htmlFor: o,
+    ...t,
+  });
+});
+gn.displayName = "FormLabel";
+const yt = g.forwardRef(({ ...e }, t) => {
+  const {
+    error: n,
+    formItemId: r,
+    formDescriptionId: o,
+    formMessageId: i,
+  } = Po();
+  return l.jsx(tu, {
+    ref: t,
+    id: r,
+    "aria-describedby": n ? `${o} ${i}` : `${o}`,
+    "aria-invalid": !!n,
+    ...e,
+  });
+});
+yt.displayName = "FormControl";
+const vx = g.forwardRef(({ className: e, ...t }, n) => {
+  const { formDescriptionId: r } = Po();
+  return l.jsx("p", {
+    ref: n,
+    id: r,
+    className: De("text-sm text-muted-foreground", e),
+    ...t,
+  });
+});
+vx.displayName = "FormDescription";
+const hn = g.forwardRef(({ className: e, children: t, ...n }, r) => {
+  const { error: o, formMessageId: i } = Po(),
+    s = o ? String((o == null ? void 0 : o.message) ?? "") : t;
+  return s
+    ? l.jsx("p", {
+        ref: r,
+        id: i,
+        className: De("text-sm font-medium text-destructive", e),
+        ...n,
+        children: s,
+      })
+    : null;
+});
+hn.displayName = "FormMessage";
+const yn = g.forwardRef(({ className: e, type: t, ...n }, r) =>
+  l.jsx("input", {
+    type: t,
+    className: De(
+      "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+      e,
+    ),
+    ref: r,
+    ...n,
+  }),
+);
+yn.displayName = "Input";
+const bx = Gu(
+    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+    {
+      variants: {
+        variant: {
+          default:
+            "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+          destructive:
+            "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          outline:
+            "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          secondary:
+            "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+          ghost: "hover:bg-accent hover:text-accent-foreground",
+          link: "text-primary underline-offset-4 hover:underline",
+        },
+        size: {
+          default: "h-9 px-4 py-2",
+          sm: "h-8 rounded-md px-3 text-xs",
+          lg: "h-10 rounded-md px-8",
+          icon: "h-9 w-9",
+        },
+      },
+      defaultVariants: { variant: "default", size: "default" },
+    },
+  ),
+  gs = g.forwardRef(
+    ({ className: e, variant: t, size: n, asChild: r = !1, ...o }, i) => {
+      const s = r ? tu : "button";
+      return l.jsx(s, {
+        className: De(bx({ variant: t, size: n, className: e })),
+        ref: i,
+        ...o,
+      });
+    },
+  );
+gs.displayName = "Button";
+var wx = Object.defineProperty,
+  xx = (e, t) => wx(e, "name", { value: t, configurable: !0 });
+function ji(e, [t, n]) {
+  return Math.min(n, Math.max(t, e));
+}
+xx(ji, "clamp");
+var Sx = Object.defineProperty,
+  $e = (e, t) => Sx(e, "name", { value: t, configurable: !0 });
+function qu(e) {
+  const t = e + "CollectionProvider",
+    [n, r] = Gn(t),
+    [o, i] = n(t, { collectionRef: { current: null }, itemMap: new Map() }),
+    s = $e((v) => {
+      const { scope: h, children: S } = v,
+        x = g.useRef(null),
+        C = g.useRef(new Map()).current;
+      return l.jsx(o, { scope: h, itemMap: C, collectionRef: x, children: S });
+    }, "CollectionProvider");
+  s.displayName = t;
+  const a = e + "CollectionSlot",
+    c = Ft(a),
+    u = g.forwardRef((v, h) => {
+      const { scope: S, children: x } = v,
+        C = i(a, S),
+        w = we(h, C.collectionRef);
+      return l.jsx(c, { ref: w, children: x });
+    });
+  u.displayName = a;
+  const f = e + "CollectionItemSlot",
+    d = "data-radix-collection-item",
+    m = Ft(f),
+    y = g.forwardRef((v, h) => {
+      const { scope: S, children: x, ...C } = v,
+        w = g.useRef(null),
+        k = we(h, w),
+        _ = i(f, S);
+      return (
+        g.useEffect(
+          () => (
+            _.itemMap.set(w, { ref: w, ...C }),
+            () => void _.itemMap.delete(w)
+          ),
+        ),
+        l.jsx(m, { [d]: "", ref: k, children: x })
+      );
+    });
+  y.displayName = f;
+  function p(v) {
+    const h = i(e + "CollectionConsumer", v);
+    return g.useCallback(() => {
+      const x = h.collectionRef.current;
+      if (!x) return [];
+      const C = Array.from(x.querySelectorAll(`[${d}]`));
+      return Array.from(h.itemMap.values()).sort(
+        (_, D) => C.indexOf(_.ref.current) - C.indexOf(D.ref.current),
+      );
+    }, [h.collectionRef, h.itemMap]);
+  }
+  return (
+    $e(p, "useCollection"),
+    [{ Provider: s, Slot: u, ItemSlot: y }, p, r]
+  );
+}
+$e(qu, "createCollection");
+var il = new WeakMap(),
+  _e,
+  ot,
+  qo =
+    ((ot = class extends Map {
+      constructor(n) {
+        super(n);
+        Es(this, _e);
+        (No(this, _e, [...super.keys()]), il.set(this, !0));
+      }
+      set(n, r) {
+        return (
+          il.get(this) &&
+            (this.has(n)
+              ? (Ge(this, _e)[Ge(this, _e).indexOf(n)] = n)
+              : Ge(this, _e).push(n)),
+          super.set(n, r),
+          this
+        );
+      }
+      insert(n, r, o) {
+        const i = this.has(r),
+          s = Ge(this, _e).length,
+          a = hs(n);
+        let c = a >= 0 ? a : s + a;
+        const u = c < 0 || c >= s ? -1 : c;
+        if (u === this.size || (i && u === this.size - 1) || u === -1)
+          return (this.set(r, o), this);
+        const f = this.size + (i ? 0 : 1);
+        a < 0 && c++;
+        const d = [...Ge(this, _e)];
+        let m,
+          y = !1;
+        for (let p = c; p < f; p++)
+          if (c === p) {
+            let v = d[p];
+            (d[p] === r && (v = d[p + 1]),
+              i && this.delete(r),
+              (m = this.get(v)),
+              this.set(r, o));
+          } else {
+            !y && d[p - 1] === r && (y = !0);
+            const v = d[y ? p : p - 1],
+              h = m;
+            ((m = this.get(v)), this.delete(v), this.set(v, h));
+          }
+        return this;
+      }
+      with(n, r, o) {
+        const i = new ot(this);
+        return (i.insert(n, r, o), i);
+      }
+      before(n) {
+        const r = Ge(this, _e).indexOf(n) - 1;
+        if (!(r < 0)) return this.entryAt(r);
+      }
+      setBefore(n, r, o) {
+        const i = Ge(this, _e).indexOf(n);
+        return i === -1 ? this : this.insert(i, r, o);
+      }
+      after(n) {
+        let r = Ge(this, _e).indexOf(n);
+        if (((r = r === -1 || r === this.size - 1 ? -1 : r + 1), r !== -1))
+          return this.entryAt(r);
+      }
+      setAfter(n, r, o) {
+        const i = Ge(this, _e).indexOf(n);
+        return i === -1 ? this : this.insert(i + 1, r, o);
+      }
+      first() {
+        return this.entryAt(0);
+      }
+      last() {
+        return this.entryAt(-1);
+      }
+      clear() {
+        return (No(this, _e, []), super.clear());
+      }
+      delete(n) {
+        const r = super.delete(n);
+        return (r && Ge(this, _e).splice(Ge(this, _e).indexOf(n), 1), r);
+      }
+      deleteAt(n) {
+        const r = this.keyAt(n);
+        return r !== void 0 ? this.delete(r) : !1;
+      }
+      at(n) {
+        const r = Zr(Ge(this, _e), n);
+        if (r !== void 0) return this.get(r);
+      }
+      entryAt(n) {
+        const r = Zr(Ge(this, _e), n);
+        if (r !== void 0) return [r, this.get(r)];
+      }
+      indexOf(n) {
+        return Ge(this, _e).indexOf(n);
+      }
+      keyAt(n) {
+        return Zr(Ge(this, _e), n);
+      }
+      from(n, r) {
+        const o = this.indexOf(n);
+        if (o === -1) return;
+        let i = o + r;
+        return (
+          i < 0 && (i = 0),
+          i >= this.size && (i = this.size - 1),
+          this.at(i)
+        );
+      }
+      keyFrom(n, r) {
+        const o = this.indexOf(n);
+        if (o === -1) return;
+        let i = o + r;
+        return (
+          i < 0 && (i = 0),
+          i >= this.size && (i = this.size - 1),
+          this.keyAt(i)
+        );
+      }
+      find(n, r) {
+        let o = 0;
+        for (const i of this) {
+          if (Reflect.apply(n, r, [i, o, this])) return i;
+          o++;
+        }
+      }
+      findIndex(n, r) {
+        let o = 0;
+        for (const i of this) {
+          if (Reflect.apply(n, r, [i, o, this])) return o;
+          o++;
+        }
+        return -1;
+      }
+      filter(n, r) {
+        const o = [];
+        let i = 0;
+        for (const s of this)
+          (Reflect.apply(n, r, [s, i, this]) && o.push(s), i++);
+        return new ot(o);
+      }
+      map(n, r) {
+        const o = [];
+        let i = 0;
+        for (const s of this)
+          (o.push([s[0], Reflect.apply(n, r, [s, i, this])]), i++);
+        return new ot(o);
+      }
+      reduce(...n) {
+        const [r, o] = n;
+        let i = 0,
+          s = o ?? this.at(0);
+        for (const a of this)
+          (i === 0 && n.length === 1
+            ? (s = a)
+            : (s = Reflect.apply(r, this, [s, a, i, this])),
+            i++);
+        return s;
+      }
+      reduceRight(...n) {
+        const [r, o] = n;
+        let i = o ?? this.at(-1);
+        for (let s = this.size - 1; s >= 0; s--) {
+          const a = this.at(s);
+          s === this.size - 1 && n.length === 1
+            ? (i = a)
+            : (i = Reflect.apply(r, this, [i, a, s, this]));
+        }
+        return i;
+      }
+      toSorted(n) {
+        const r = [...this.entries()].sort(n);
+        return new ot(r);
+      }
+      toReversed() {
+        const n = new ot();
+        for (let r = this.size - 1; r >= 0; r--) {
+          const o = this.keyAt(r),
+            i = this.get(o);
+          n.set(o, i);
+        }
+        return n;
+      }
+      toSpliced(...n) {
+        const r = [...this.entries()];
+        return (r.splice(...n), new ot(r));
+      }
+      slice(n, r) {
+        const o = new ot();
+        let i = this.size - 1;
+        if (n === void 0) return o;
+        (n < 0 && (n = n + this.size), r !== void 0 && r > 0 && (i = r - 1));
+        for (let s = n; s <= i; s++) {
+          const a = this.keyAt(s),
+            c = this.get(a);
+          o.set(a, c);
+        }
+        return o;
+      }
+      every(n, r) {
+        let o = 0;
+        for (const i of this) {
+          if (!Reflect.apply(n, r, [i, o, this])) return !1;
+          o++;
+        }
+        return !0;
+      }
+      some(n, r) {
+        let o = 0;
+        for (const i of this) {
+          if (Reflect.apply(n, r, [i, o, this])) return !0;
+          o++;
+        }
+        return !1;
+      }
+    }),
+    (_e = new WeakMap()),
+    $e(ot, "OrderedDict"),
+    ot);
+function Zr(e, t) {
+  if ("at" in Array.prototype) return Array.prototype.at.call(e, t);
+  const n = Yu(e, t);
+  return n === -1 ? void 0 : e[n];
+}
+$e(Zr, "at");
+function Yu(e, t) {
+  const n = e.length,
+    r = hs(t),
+    o = r >= 0 ? r : n + r;
+  return o < 0 || o >= n ? -1 : o;
+}
+$e(Yu, "toSafeIndex");
+function hs(e) {
+  return e !== e || e === 0 ? 0 : Math.trunc(e);
+}
+$e(hs, "toSafeInteger");
+function Cx(e) {
+  const t = e + "CollectionProvider",
+    [n, r] = Gn(t),
+    [o, i] = n(t, {
+      collectionElement: null,
+      collectionRef: { current: null },
+      collectionRefObject: { current: null },
+      itemMap: new qo(),
+      setItemMap: $e(() => {}, "setItemMap"),
+    }),
+    s = $e(
+      ({ state: C, ...w }) =>
+        C ? l.jsx(c, { ...w, state: C }) : l.jsx(a, { ...w }),
+      "CollectionProvider",
+    );
+  s.displayName = t;
+  const a = $e((C) => {
+    const w = h();
+    return l.jsx(c, { ...C, state: w });
+  }, "CollectionInit");
+  a.displayName = t + "Init";
+  const c = $e((C) => {
+    const { scope: w, children: k, state: _ } = C,
+      D = g.useRef(null),
+      [I, N] = g.useState(null),
+      V = we(D, N),
+      [X, U] = _;
+    return (
+      g.useEffect(() => {
+        if (!I) return;
+        const O = ed(() => {});
+        return (
+          O.observe(I, { childList: !0, subtree: !0 }),
+          () => {
+            O.disconnect();
+          }
+        );
+      }, [I]),
+      l.jsx(o, {
+        scope: w,
+        itemMap: X,
+        setItemMap: U,
+        collectionRef: V,
+        collectionRefObject: D,
+        collectionElement: I,
+        children: k,
+      })
+    );
+  }, "CollectionProviderImpl");
+  c.displayName = t + "Impl";
+  const u = e + "CollectionSlot",
+    f = Ft(u),
+    d = g.forwardRef((C, w) => {
+      const { scope: k, children: _ } = C,
+        D = i(u, k),
+        I = we(w, D.collectionRef);
+      return l.jsx(f, { ref: I, children: _ });
+    });
+  d.displayName = u;
+  const m = e + "CollectionItemSlot",
+    y = "data-radix-collection-item",
+    p = Ft(m),
+    v = g.forwardRef((C, w) => {
+      const { scope: k, children: _, ...D } = C,
+        I = g.useRef(null),
+        [N, V] = g.useState(null),
+        X = we(w, I, V),
+        U = i(m, k),
+        { setItemMap: O } = U,
+        B = g.useRef(D);
+      Qu(B.current, D) || (B.current = D);
+      const H = B.current;
+      return (
+        g.useEffect(() => {
+          const G = H;
+          return (
+            O((Y) =>
+              N
+                ? Y.has(N)
+                  ? Y.set(N, { ...G, element: N }).toSorted(Ni)
+                  : (Y.set(N, { ...G, element: N }), Y.toSorted(Ni))
+                : Y,
+            ),
+            () => {
+              O((Y) => (!N || !Y.has(N) ? Y : (Y.delete(N), new qo(Y))));
+            }
+          );
+        }, [N, H, O]),
+        l.jsx(p, { [y]: "", ref: X, children: _ })
+      );
+    });
+  v.displayName = m;
+  function h() {
+    return g.useState(new qo());
+  }
+  $e(h, "useInitCollection");
+  function S(C) {
+    const { itemMap: w } = i(e + "CollectionConsumer", C);
+    return w;
+  }
+  return (
+    $e(S, "useCollection"),
+    [
+      { Provider: s, Slot: d, ItemSlot: v },
+      { createCollectionScope: r, useCollection: S, useInitCollection: h },
+    ]
+  );
+}
+$e(Cx, "createCollection");
+function Qu(e, t) {
+  if (e === t) return !0;
+  if (typeof e != "object" || typeof t != "object" || e == null || t == null)
+    return !1;
+  const n = Object.keys(e),
+    r = Object.keys(t);
+  if (n.length !== r.length) return !1;
+  for (const o of n)
+    if (!Object.prototype.hasOwnProperty.call(t, o) || e[o] !== t[o]) return !1;
+  return !0;
+}
+$e(Qu, "shallowEqual");
+function Xu(e, t) {
+  return !!(t.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_PRECEDING);
+}
+$e(Xu, "isElementPreceding");
+function Ni(e, t) {
+  return !e[1].element || !t[1].element
+    ? 0
+    : Xu(e[1].element, t[1].element)
+      ? -1
+      : 1;
+}
+$e(Ni, "sortByDocumentPosition");
+function ed(e) {
+  return new MutationObserver((n) => {
+    for (const r of n)
+      if (r.type === "childList") {
+        e();
+        return;
+      }
+  });
+}
+$e(ed, "getChildListObserver");
+var Px = Object.defineProperty,
+  Ax = (e, t) => Px(e, "name", { value: t, configurable: !0 }),
+  kx = g.createContext(void 0);
+function td(e) {
+  const t = g.useContext(kx);
+  return e || t || "ltr";
+}
+Ax(td, "useDirection");
+const Ix = ["top", "right", "bottom", "left"],
+  Xt = Math.min,
+  Lt = Math.max,
+  io = Math.round,
+  Br = Math.floor,
+  zt = (e) => ({ x: e, y: e }),
+  _x = { left: "right", right: "left", bottom: "top", top: "bottom" };
+function nd(e, t, n) {
+  return Lt(e, Xt(t, n));
+}
+function Vt(e, t) {
+  return typeof e == "function" ? e(t) : e;
+}
+function en(e) {
+  return e.split("-")[0];
+}
+function Zn(e) {
+  return e.split("-")[1];
+}
+function ys(e) {
+  return e === "x" ? "y" : "x";
+}
+function vs(e) {
+  return e === "y" ? "height" : "width";
+}
+function At(e) {
+  const t = e[0];
+  return t === "t" || t === "b" ? "y" : "x";
+}
+function bs(e) {
+  return ys(At(e));
+}
+function Tx(e, t, n) {
+  n === void 0 && (n = !1);
+  const r = Zn(e),
+    o = bs(e),
+    i = vs(o);
+  let s =
+    o === "x"
+      ? r === (n ? "end" : "start")
+        ? "right"
+        : "left"
+      : r === "start"
+        ? "bottom"
+        : "top";
+  return (t.reference[i] > t.floating[i] && (s = so(s)), [s, so(s)]);
+}
+function Mx(e) {
+  const t = so(e);
+  return [Ri(e), t, Ri(t)];
+}
+function Ri(e) {
+  return e.includes("start")
+    ? e.replace("start", "end")
+    : e.replace("end", "start");
+}
+const sl = ["left", "right"],
+  al = ["right", "left"],
+  Dx = ["top", "bottom"],
+  jx = ["bottom", "top"];
+function Nx(e, t, n) {
+  switch (e) {
+    case "top":
+    case "bottom":
+      return n ? (t ? al : sl) : t ? sl : al;
+    case "left":
+    case "right":
+      return t ? Dx : jx;
+    default:
+      return [];
+  }
+}
+function Rx(e, t, n, r) {
+  const o = Zn(e);
+  let i = Nx(en(e), n === "start", r);
+  return (
+    o && ((i = i.map((s) => s + "-" + o)), t && (i = i.concat(i.map(Ri)))),
+    i
+  );
+}
+function so(e) {
+  const t = en(e);
+  return _x[t] + e.slice(t.length);
+}
+function Ex(e) {
+  var t, n, r, o;
+  return {
+    top: (t = e.top) != null ? t : 0,
+    right: (n = e.right) != null ? n : 0,
+    bottom: (r = e.bottom) != null ? r : 0,
+    left: (o = e.left) != null ? o : 0,
+  };
+}
+function rd(e) {
+  return typeof e != "number"
+    ? Ex(e)
+    : { top: e, right: e, bottom: e, left: e };
+}
+function ao(e) {
+  const { x: t, y: n, width: r, height: o } = e;
+  return {
+    width: r,
+    height: o,
+    top: n,
+    left: t,
+    right: t + r,
+    bottom: n + o,
+    x: t,
+    y: n,
+  };
+}
+function ll(e, t, n) {
+  let { reference: r, floating: o } = e;
+  const i = At(t),
+    s = bs(t),
+    a = vs(s),
+    c = en(t),
+    u = i === "y",
+    f = r.x + r.width / 2 - o.width / 2,
+    d = r.y + r.height / 2 - o.height / 2,
+    m = r[a] / 2 - o[a] / 2;
+  let y;
+  switch (c) {
+    case "top":
+      y = { x: f, y: r.y - o.height };
+      break;
+    case "bottom":
+      y = { x: f, y: r.y + r.height };
+      break;
+    case "right":
+      y = { x: r.x + r.width, y: d };
+      break;
+    case "left":
+      y = { x: r.x - o.width, y: d };
+      break;
+    default:
+      y = { x: r.x, y: r.y };
+  }
+  const p = Zn(t);
+  return (p && (y[s] += m * (p === "end" ? 1 : -1) * (n && u ? -1 : 1)), y);
+}
+async function Ox(e, t) {
+  var n;
+  t === void 0 && (t = {});
+  const { x: r, y: o, platform: i, rects: s, elements: a, strategy: c } = e,
+    {
+      boundary: u = "clippingAncestors",
+      rootBoundary: f = "viewport",
+      elementContext: d = "floating",
+      altBoundary: m = !1,
+      padding: y = 0,
+    } = Vt(t, e),
+    p = rd(y),
+    h = a[m ? (d === "floating" ? "reference" : "floating") : d],
+    S = ao(
+      await i.getClippingRect({
+        element:
+          (n = await (i.isElement == null ? void 0 : i.isElement(h))) == null ||
+          n
+            ? h
+            : h.contextElement ||
+              (await (i.getDocumentElement == null
+                ? void 0
+                : i.getDocumentElement(a.floating))),
+        boundary: u,
+        rootBoundary: f,
+        strategy: c,
+      }),
+    ),
+    x =
+      d === "floating"
+        ? { x: r, y: o, width: s.floating.width, height: s.floating.height }
+        : s.reference,
+    C = await (i.getOffsetParent == null
+      ? void 0
+      : i.getOffsetParent(a.floating)),
+    w = ((await (i.isElement == null ? void 0 : i.isElement(C))) &&
+      (await (i.getScale == null ? void 0 : i.getScale(C)))) || { x: 1, y: 1 },
+    k = ao(
+      i.convertOffsetParentRelativeRectToViewportRelativeRect
+        ? await i.convertOffsetParentRelativeRectToViewportRelativeRect({
+            elements: a,
+            rect: x,
+            offsetParent: C,
+            strategy: c,
+          })
+        : x,
+    );
+  return {
+    top: (S.top - k.top + p.top) / w.y,
+    bottom: (k.bottom - S.bottom + p.bottom) / w.y,
+    left: (S.left - k.left + p.left) / w.x,
+    right: (k.right - S.right + p.right) / w.x,
+  };
+}
+const Lx = 50,
+  zx = async (e, t, n) => {
+    const {
+        placement: r = "bottom",
+        strategy: o = "absolute",
+        middleware: i = [],
+        platform: s,
+      } = n,
+      a = s.detectOverflow ? s : { ...s, detectOverflow: Ox },
+      c = await (s.isRTL == null ? void 0 : s.isRTL(t));
+    let u = await s.getElementRects({ reference: e, floating: t, strategy: o }),
+      { x: f, y: d } = ll(u, r, c),
+      m = r,
+      y = 0;
+    const p = {};
+    for (let v = 0; v < i.length; v++) {
+      const h = i[v];
+      if (!h) continue;
+      const { name: S, fn: x } = h,
+        {
+          x: C,
+          y: w,
+          data: k,
+          reset: _,
+        } = await x({
+          x: f,
+          y: d,
+          initialPlacement: r,
+          placement: m,
+          strategy: o,
+          middlewareData: p,
+          rects: u,
+          platform: a,
+          elements: { reference: e, floating: t },
+        });
+      ((f = C ?? f),
+        (d = w ?? d),
+        (p[S] = { ...p[S], ...k }),
+        _ &&
+          y < Lx &&
+          (y++,
+          typeof _ == "object" &&
+            (_.placement && (m = _.placement),
+            _.rects &&
+              (u =
+                _.rects === !0
+                  ? await s.getElementRects({
+                      reference: e,
+                      floating: t,
+                      strategy: o,
+                    })
+                  : _.rects),
+            ({ x: f, y: d } = ll(u, m, c))),
+          (v = -1)));
+    }
+    return { x: f, y: d, placement: m, strategy: o, middlewareData: p };
+  },
+  Fx = (e) => ({
+    name: "arrow",
+    options: e,
+    async fn(t) {
+      const {
+          x: n,
+          y: r,
+          placement: o,
+          rects: i,
+          platform: s,
+          elements: a,
+          middlewareData: c,
+        } = t,
+        { element: u, padding: f = 0 } = Vt(e, t) || {};
+      if (u == null) return {};
+      const d = rd(f),
+        m = { x: n, y: r },
+        y = bs(o),
+        p = vs(y),
+        v = await s.getDimensions(u),
+        h = y === "y",
+        S = h ? "top" : "left",
+        x = h ? "bottom" : "right",
+        C = h ? "clientHeight" : "clientWidth",
+        w = i.reference[p] + i.reference[y] - m[y] - i.floating[p],
+        k = m[y] - i.reference[y],
+        _ = await (s.getOffsetParent == null ? void 0 : s.getOffsetParent(u));
+      let D = _ ? _[C] : 0;
+      (!D || !(await (s.isElement == null ? void 0 : s.isElement(_)))) &&
+        (D = a.floating[C] || i.floating[p]);
+      const I = w / 2 - k / 2,
+        N = D / 2 - v[p] / 2 - 1,
+        V = Xt(d[S], N),
+        X = Xt(d[x], N),
+        U = D - v[p] - X,
+        O = D / 2 - v[p] / 2 + I,
+        B = nd(V, O, U),
+        H =
+          !c.arrow &&
+          Zn(o) != null &&
+          O !== B &&
+          i.reference[p] / 2 - (O < V ? V : X) - v[p] / 2 < 0,
+        G = H ? (O < V ? O - V : O - U) : 0;
+      return {
+        [y]: m[y] + G,
+        data: {
+          [y]: B,
+          centerOffset: O - B - G,
+          ...(H && { alignmentOffset: G }),
+        },
+        reset: H,
+      };
+    },
+  }),
+  Bx = function (e) {
+    return (
+      e === void 0 && (e = {}),
+      {
+        name: "flip",
+        options: e,
+        async fn(t) {
+          var n, r;
+          const {
+              placement: o,
+              middlewareData: i,
+              rects: s,
+              initialPlacement: a,
+              platform: c,
+              elements: u,
+            } = t,
+            {
+              mainAxis: f = !0,
+              crossAxis: d = !0,
+              fallbackPlacements: m,
+              fallbackStrategy: y = "bestFit",
+              fallbackAxisSideDirection: p = "none",
+              flipAlignment: v = !0,
+              ...h
+            } = Vt(e, t);
+          if ((n = i.arrow) != null && n.alignmentOffset) return {};
+          const S = en(o),
+            x = At(a),
+            C = en(a) === a,
+            w = await (c.isRTL == null ? void 0 : c.isRTL(u.floating)),
+            k = m || (C || !v ? [so(a)] : Mx(a)),
+            _ = p !== "none";
+          !m && _ && k.push(...Rx(a, v, p, w));
+          const D = [a, ...k],
+            I = await c.detectOverflow(t, h),
+            N = [];
+          let V = ((r = i.flip) == null ? void 0 : r.overflows) || [];
+          if ((f && N.push(I[S]), d)) {
+            const B = Tx(o, s, w);
+            N.push(I[B[0]], I[B[1]]);
+          }
+          if (
+            ((V = [...V, { placement: o, overflows: N }]),
+            !N.every((B) => B <= 0))
+          ) {
+            var X, U;
+            const B = (((X = i.flip) == null ? void 0 : X.index) || 0) + 1,
+              H = D[B];
+            if (
+              H &&
+              (!(d === "alignment" ? x !== At(H) : !1) ||
+                V.every((Z) =>
+                  At(Z.placement) === x ? Z.overflows[0] > 0 : !0,
+                ))
+            )
+              return {
+                data: { index: B, overflows: V },
+                reset: { placement: H },
+              };
+            let G =
+              (U = V.filter((Y) => Y.overflows[0] <= 0).sort(
+                (Y, Z) => Y.overflows[1] - Z.overflows[1],
+              )[0]) == null
+                ? void 0
+                : U.placement;
+            if (!G)
+              switch (y) {
+                case "bestFit": {
+                  var O;
+                  const Y =
+                    (O = V.filter((Z) => {
+                      if (_) {
+                        const ie = At(Z.placement);
+                        return ie === x || ie === "y";
+                      }
+                      return !0;
+                    })
+                      .map((Z) => [
+                        Z.placement,
+                        Z.overflows
+                          .filter((ie) => ie > 0)
+                          .reduce((ie, R) => ie + R, 0),
+                      ])
+                      .sort((Z, ie) => Z[1] - ie[1])[0]) == null
+                      ? void 0
+                      : O[0];
+                  Y && (G = Y);
+                  break;
+                }
+                case "initialPlacement":
+                  G = a;
+                  break;
+              }
+            if (o !== G) return { reset: { placement: G } };
+          }
+          return {};
+        },
+      }
+    );
+  };
+function cl(e, t) {
+  return {
+    top: e.top - t.height,
+    right: e.right - t.width,
+    bottom: e.bottom - t.height,
+    left: e.left - t.width,
+  };
+}
+function ul(e) {
+  return Ix.some((t) => e[t] >= 0);
+}
+const Vx = function (e) {
+    return (
+      e === void 0 && (e = {}),
+      {
+        name: "hide",
+        options: e,
+        async fn(t) {
+          const { rects: n, platform: r } = t,
+            { strategy: o = "referenceHidden", ...i } = Vt(e, t);
+          switch (o) {
+            case "referenceHidden": {
+              const s = await r.detectOverflow(t, {
+                  ...i,
+                  elementContext: "reference",
+                }),
+                a = cl(s, n.reference);
+              return {
+                data: { referenceHiddenOffsets: a, referenceHidden: ul(a) },
+              };
+            }
+            case "escaped": {
+              const s = await r.detectOverflow(t, { ...i, altBoundary: !0 }),
+                a = cl(s, n.floating);
+              return { data: { escapedOffsets: a, escaped: ul(a) } };
+            }
+            default:
+              return {};
+          }
+        },
+      }
+    );
+  },
+  od = new Set(["left", "top"]);
+async function $x(e, t) {
+  const { placement: n, platform: r, elements: o } = e,
+    i = await (r.isRTL == null ? void 0 : r.isRTL(o.floating)),
+    s = en(n),
+    a = Zn(n),
+    c = At(n) === "y",
+    u = od.has(s) ? -1 : 1,
+    f = i && c ? -1 : 1,
+    d = Vt(t, e);
+  let {
+    mainAxis: m,
+    crossAxis: y,
+    alignmentAxis: p,
+  } = typeof d == "number"
+    ? { mainAxis: d, crossAxis: 0, alignmentAxis: null }
+    : {
+        mainAxis: d.mainAxis || 0,
+        crossAxis: d.crossAxis || 0,
+        alignmentAxis: d.alignmentAxis,
+      };
+  return (
+    a && typeof p == "number" && (y = a === "end" ? p * -1 : p),
+    c ? { x: y * f, y: m * u } : { x: m * u, y: y * f }
+  );
+}
+const Wx = function (e) {
+    return (
+      e === void 0 && (e = 0),
+      {
+        name: "offset",
+        options: e,
+        async fn(t) {
+          var n, r;
+          const { x: o, y: i, placement: s, middlewareData: a } = t,
+            c = await $x(t, e);
+          return s === ((n = a.offset) == null ? void 0 : n.placement) &&
+            (r = a.arrow) != null &&
+            r.alignmentOffset
+            ? {}
+            : { x: o + c.x, y: i + c.y, data: { ...c, placement: s } };
+        },
+      }
+    );
+  },
+  Ux = function (e) {
+    return (
+      e === void 0 && (e = {}),
+      {
+        name: "shift",
+        options: e,
+        async fn(t) {
+          const { x: n, y: r, placement: o, platform: i } = t,
+            {
+              mainAxis: s = !0,
+              crossAxis: a = !1,
+              limiter: c = {
+                fn: (x) => {
+                  let { x: C, y: w } = x;
+                  return { x: C, y: w };
+                },
+              },
+              ...u
+            } = Vt(e, t),
+            f = { x: n, y: r },
+            d = await i.detectOverflow(t, u),
+            m = At(o),
+            y = ys(m);
+          let p = f[y],
+            v = f[m];
+          const h = (x, C) =>
+            nd(
+              C + d[x === "y" ? "top" : "left"],
+              C,
+              C - d[x === "y" ? "bottom" : "right"],
+            );
+          (s && (p = h(y, p)), a && (v = h(m, v)));
+          const S = c.fn({ ...t, [y]: p, [m]: v });
+          return {
+            ...S,
+            data: { x: S.x - n, y: S.y - r, enabled: { [y]: s, [m]: a } },
+          };
+        },
+      }
+    );
+  },
+  Hx = function (e) {
+    return (
+      e === void 0 && (e = {}),
+      {
+        options: e,
+        fn(t) {
+          var n, r;
+          const { x: o, y: i, placement: s, rects: a, middlewareData: c } = t,
+            { offset: u = 0, mainAxis: f = !0, crossAxis: d = !0 } = Vt(e, t),
+            m = { x: o, y: i },
+            y = At(s),
+            p = ys(y);
+          let v = m[p],
+            h = m[y];
+          const S = Vt(u, t),
+            x =
+              typeof S == "number"
+                ? { mainAxis: S, crossAxis: 0 }
+                : {
+                    mainAxis: (n = S.mainAxis) != null ? n : 0,
+                    crossAxis: (r = S.crossAxis) != null ? r : 0,
+                  };
+          if (f) {
+            const k = p === "y" ? "height" : "width",
+              _ = a.reference[p] - a.floating[k] + x.mainAxis,
+              D = a.reference[p] + a.reference[k] - x.mainAxis;
+            v < _ ? (v = _) : v > D && (v = D);
+          }
+          if (d) {
+            var C, w;
+            const k = p === "y" ? "width" : "height",
+              _ = od.has(en(s)),
+              D =
+                a.reference[y] -
+                a.floating[k] +
+                ((_ && ((C = c.offset) == null ? void 0 : C[y])) || 0) +
+                (_ ? 0 : x.crossAxis),
+              I =
+                a.reference[y] +
+                a.reference[k] +
+                (_ ? 0 : ((w = c.offset) == null ? void 0 : w[y]) || 0) -
+                (_ ? x.crossAxis : 0);
+            h < D ? (h = D) : h > I && (h = I);
+          }
+          return { [p]: v, [y]: h };
+        },
+      }
+    );
+  },
+  Gx = function (e) {
+    return (
+      e === void 0 && (e = {}),
+      {
+        name: "size",
+        options: e,
+        async fn(t) {
+          const { placement: n, rects: r, platform: o, elements: i } = t,
+            { apply: s = () => {}, ...a } = Vt(e, t),
+            c = await o.detectOverflow(t, a),
+            u = en(n),
+            f = Zn(n),
+            d = At(n) === "y",
+            { width: m, height: y } = r.floating;
+          let p, v;
+          u === "top" || u === "bottom"
+            ? ((p = u),
+              (v =
+                f ===
+                ((await (o.isRTL == null ? void 0 : o.isRTL(i.floating)))
+                  ? "start"
+                  : "end")
+                  ? "left"
+                  : "right"))
+            : ((v = u), (p = f === "end" ? "top" : "bottom"));
+          const h = y - c.top - c.bottom,
+            S = m - c.left - c.right,
+            x = Xt(y - c[p], h),
+            C = Xt(m - c[v], S),
+            w = t.middlewareData.shift,
+            k = !w;
+          let _ = x,
+            D = C;
+          (w != null && w.enabled.x && (D = S),
+            w != null && w.enabled.y && (_ = h),
+            k &&
+              !f &&
+              (d
+                ? (D = m - 2 * Lt(c.left, c.right))
+                : (_ = y - 2 * Lt(c.top, c.bottom))),
+            await s({ ...t, availableWidth: D, availableHeight: _ }));
+          const I = await o.getDimensions(i.floating);
+          return m !== I.width || y !== I.height
+            ? { reset: { rects: !0 } }
+            : {};
+        },
+      }
+    );
+  };
+function Ao() {
+  return typeof window < "u";
+}
+function Jn(e) {
+  return id(e) ? (e.nodeName || "").toLowerCase() : "#document";
+}
+function nt(e) {
+  var t;
+  return (
+    (e == null || (t = e.ownerDocument) == null ? void 0 : t.defaultView) ||
+    window
+  );
+}
+function $t(e) {
+  var t;
+  return (t = (id(e) ? e.ownerDocument : e.document) || window.document) == null
+    ? void 0
+    : t.documentElement;
+}
+function id(e) {
+  return Ao() ? e instanceof Node || e instanceof nt(e).Node : !1;
+}
+function _t(e) {
+  return Ao() ? e instanceof Element || e instanceof nt(e).Element : !1;
+}
+function sn(e) {
+  return Ao() ? e instanceof HTMLElement || e instanceof nt(e).HTMLElement : !1;
+}
+function dl(e) {
+  return !Ao() || typeof ShadowRoot > "u"
+    ? !1
+    : e instanceof ShadowRoot || e instanceof nt(e).ShadowRoot;
+}
+function ko(e) {
+  const { overflow: t, overflowX: n, overflowY: r, display: o } = Tt(e);
+  return (
+    /auto|scroll|overlay|hidden|clip/.test(t + r + n) &&
+    o !== "inline" &&
+    o !== "contents"
+  );
+}
+function Zx(e) {
+  return /^(table|td|th)$/.test(Jn(e));
+}
+function Io(e) {
+  try {
+    if (e.matches(":popover-open")) return !0;
+  } catch {}
+  try {
+    return e.matches(":modal");
+  } catch {
+    return !1;
+  }
+}
+const Jx = /transform|translate|scale|rotate|perspective|filter/,
+  Kx = /paint|layout|strict|content/,
+  un = (e) => !!e && e !== "none";
+let Yo;
+function ws(e) {
+  const t = _t(e) ? Tt(e) : e;
+  return (
+    un(t.transform) ||
+    un(t.translate) ||
+    un(t.scale) ||
+    un(t.rotate) ||
+    un(t.perspective) ||
+    (!xs() && (un(t.backdropFilter) || un(t.filter))) ||
+    Jx.test(t.willChange || "") ||
+    Kx.test(t.contain || "")
+  );
+}
+function qx(e) {
+  let t = Sn(e);
+  for (; sn(t) && !fr(t);) {
+    if (ws(t)) return t;
+    if (Io(t)) return null;
+    t = Sn(t);
+  }
+  return null;
+}
+function xs() {
+  return (
+    Yo == null &&
+      (Yo =
+        typeof CSS < "u" &&
+        CSS.supports &&
+        CSS.supports("-webkit-backdrop-filter", "none")),
+    Yo
+  );
+}
+function fr(e) {
+  return /^(html|body|#document)$/.test(Jn(e));
+}
+function Tt(e) {
+  return nt(e).getComputedStyle(e);
+}
+function _o(e) {
+  return _t(e)
+    ? { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop }
+    : { scrollLeft: e.scrollX, scrollTop: e.scrollY };
+}
+function Sn(e) {
+  if (Jn(e) === "html") return e;
+  const t = e.assignedSlot || e.parentNode || (dl(e) && e.host) || $t(e);
+  return dl(t) ? t.host : t;
+}
+function sd(e) {
+  const t = Sn(e);
+  return fr(t) ? (e.ownerDocument || e).body : sn(t) && ko(t) ? t : sd(t);
+}
+function mr(e, t, n) {
+  var r;
+  (t === void 0 && (t = []), n === void 0 && (n = !0));
+  const o = sd(e),
+    i = o === ((r = e.ownerDocument) == null ? void 0 : r.body),
+    s = nt(o);
+  if (i) {
+    const a = Ei(s);
+    return t.concat(
+      s,
+      s.visualViewport || [],
+      ko(o) ? o : [],
+      a && n ? mr(a) : [],
+    );
+  } else return t.concat(o, mr(o, [], n));
+}
+function Ei(e) {
+  return e.parent && Object.getPrototypeOf(e.parent) ? e.frameElement : null;
+}
+function ad(e) {
+  const t = Tt(e);
+  let n = parseFloat(t.width) || 0,
+    r = parseFloat(t.height) || 0;
+  const o = sn(e),
+    i = o ? e.offsetWidth : n,
+    s = o ? e.offsetHeight : r,
+    a = io(n) !== i || io(r) !== s;
+  return (a && ((n = i), (r = s)), { width: n, height: r, $: a });
+}
+function Ss(e) {
+  return _t(e) ? e : e.contextElement;
+}
+function Bn(e) {
+  const t = Ss(e);
+  if (!sn(t)) return zt(1);
+  const n = t.getBoundingClientRect(),
+    { width: r, height: o, $: i } = ad(t);
+  let s = (i ? io(n.width) : n.width) / r,
+    a = (i ? io(n.height) : n.height) / o;
+  return (
+    (!s || !Number.isFinite(s)) && (s = 1),
+    (!a || !Number.isFinite(a)) && (a = 1),
+    { x: s, y: a }
+  );
+}
+const Yx = zt(0);
+function ld(e) {
+  const t = nt(e);
+  return !xs() || !t.visualViewport
+    ? Yx
+    : { x: t.visualViewport.offsetLeft, y: t.visualViewport.offsetTop };
+}
+function Qx(e, t, n) {
+  return (t === void 0 && (t = !1), !!n && t && n === nt(e));
+}
+function Cn(e, t, n, r) {
+  (t === void 0 && (t = !1), n === void 0 && (n = !1));
+  const o = e.getBoundingClientRect(),
+    i = Ss(e);
+  let s = zt(1);
+  t && (r ? _t(r) && (s = Bn(r)) : (s = Bn(e)));
+  const a = Qx(i, n, r) ? ld(i) : zt(0);
+  let c = (o.left + a.x) / s.x,
+    u = (o.top + a.y) / s.y,
+    f = o.width / s.x,
+    d = o.height / s.y;
+  if (i && r) {
+    const m = nt(i),
+      y = _t(r) ? nt(r) : r;
+    let p = m,
+      v = Ei(p);
+    for (; v && y !== p;) {
+      const h = Bn(v),
+        S = v.getBoundingClientRect(),
+        x = Tt(v),
+        C = S.left + (v.clientLeft + parseFloat(x.paddingLeft)) * h.x,
+        w = S.top + (v.clientTop + parseFloat(x.paddingTop)) * h.y;
+      ((c *= h.x),
+        (u *= h.y),
+        (f *= h.x),
+        (d *= h.y),
+        (c += C),
+        (u += w),
+        (p = nt(v)),
+        (v = Ei(p)));
+    }
+  }
+  return ao({ width: f, height: d, x: c, y: u });
+}
+function To(e, t) {
+  const n = _o(e).scrollLeft;
+  return t ? t.left + n : Cn($t(e)).left + n;
+}
+function cd(e, t) {
+  const n = e.getBoundingClientRect(),
+    r = n.left + t.scrollLeft - To(e, n),
+    o = n.top + t.scrollTop;
+  return { x: r, y: o };
+}
+function Xx(e) {
+  let { elements: t, rect: n, offsetParent: r, strategy: o } = e;
+  const i = o === "fixed",
+    s = $t(r),
+    a = t ? Io(t.floating) : !1;
+  if (r === s || (a && i)) return n;
+  let c = { scrollLeft: 0, scrollTop: 0 },
+    u = zt(1);
+  const f = zt(0),
+    d = sn(r);
+  if ((d || !i) && ((Jn(r) !== "body" || ko(s)) && (c = _o(r)), d)) {
+    const y = Cn(r);
+    ((u = Bn(r)), (f.x = y.x + r.clientLeft), (f.y = y.y + r.clientTop));
+  }
+  const m = s && !d && !i ? cd(s, c) : zt(0);
+  return {
+    width: n.width * u.x,
+    height: n.height * u.y,
+    x: n.x * u.x - c.scrollLeft * u.x + f.x + m.x,
+    y: n.y * u.y - c.scrollTop * u.y + f.y + m.y,
+  };
+}
+function eS(e) {
+  return e.getClientRects ? Array.from(e.getClientRects()) : [];
+}
+function tS(e) {
+  const t = _o(e),
+    n = e.ownerDocument.body,
+    r = Lt(e.scrollWidth, e.clientWidth, n.scrollWidth, n.clientWidth),
+    o = Lt(e.scrollHeight, e.clientHeight, n.scrollHeight, n.clientHeight);
+  let i = -t.scrollLeft + To(e);
+  const s = -t.scrollTop;
+  return (
+    Tt(n).direction === "rtl" && (i += Lt(e.clientWidth, n.clientWidth) - r),
+    { width: r, height: o, x: i, y: s }
+  );
+}
+const nS = 25;
+function rS(e, t, n) {
+  n === void 0 && (n = "viewport");
+  const r = n === "layoutViewport",
+    o = nt(e),
+    i = $t(e),
+    s = o.visualViewport;
+  let a = i.clientWidth,
+    c = i.clientHeight,
+    u = 0,
+    f = 0;
+  if (s) {
+    const m = !xs() || t === "fixed";
+    r
+      ? m || ((u = -s.offsetLeft), (f = -s.offsetTop))
+      : ((a = s.width),
+        (c = s.height),
+        m && ((u = s.offsetLeft), (f = s.offsetTop)));
+  }
+  if (To(i) <= 0) {
+    const m = i.ownerDocument,
+      y = m.body,
+      p = getComputedStyle(y),
+      v =
+        (m.compatMode === "CSS1Compat" &&
+          parseFloat(p.marginLeft) + parseFloat(p.marginRight)) ||
+        0,
+      h = Math.abs(i.clientWidth - y.clientWidth - v),
+      S =
+        getComputedStyle(i).scrollbarGutter === "stable both-edges" ? h / 2 : h;
+    S <= nS && (a -= S);
+  }
+  return { width: a, height: c, x: u, y: f };
+}
+function oS(e, t) {
+  const n = Cn(e, !0, t === "fixed"),
+    r = n.top + e.clientTop,
+    o = n.left + e.clientLeft,
+    i = Bn(e),
+    s = e.clientWidth * i.x,
+    a = e.clientHeight * i.y,
+    c = o * i.x,
+    u = r * i.y;
+  return { width: s, height: a, x: c, y: u };
+}
+function fl(e, t, n) {
+  let r;
+  if (t === "viewport" || t === "layoutViewport") r = rS(e, n, t);
+  else if (t === "document") r = tS($t(e));
+  else if (_t(t)) r = oS(t, n);
+  else {
+    const o = ld(e);
+    r = { x: t.x - o.x, y: t.y - o.y, width: t.width, height: t.height };
+  }
+  return ao(r);
+}
+function iS(e, t) {
+  const n = t.get(e);
+  if (n) return n;
+  let r = mr(e, [], !1).filter((a) => _t(a) && Jn(a) !== "body"),
+    o = null;
+  const i = Tt(e).position === "fixed";
+  let s = i ? Sn(e) : e;
+  for (; _t(s) && !fr(s);) {
+    const a = Tt(s),
+      c = ws(s),
+      u = o ? o.position : i ? "fixed" : "";
+    (!c && (u === "fixed" || (u === "absolute" && a.position === "static"))
+      ? (r = r.filter((d) => d !== s))
+      : (o = a),
+      (s = Sn(s)));
+  }
+  return (t.set(e, r), r);
+}
+function sS(e) {
+  let { element: t, boundary: n, rootBoundary: r, strategy: o } = e;
+  const s = [
+      ...(n === "clippingAncestors"
+        ? Io(t)
+          ? []
+          : iS(t, this._c)
+        : [].concat(n)),
+      r,
+    ],
+    a = fl(t, s[0], o);
+  let c = a.top,
+    u = a.right,
+    f = a.bottom,
+    d = a.left;
+  for (let m = 1; m < s.length; m++) {
+    const y = fl(t, s[m], o);
+    ((c = Lt(y.top, c)),
+      (u = Xt(y.right, u)),
+      (f = Xt(y.bottom, f)),
+      (d = Lt(y.left, d)));
+  }
+  return { width: u - d, height: f - c, x: d, y: c };
+}
+function aS(e) {
+  const { width: t, height: n } = ad(e);
+  return { width: t, height: n };
+}
+function lS(e, t, n) {
+  const r = sn(t),
+    o = $t(t),
+    i = n === "fixed",
+    s = Cn(e, !0, i, t);
+  let a = { scrollLeft: 0, scrollTop: 0 };
+  const c = zt(0);
+  if ((r || !i) && ((Jn(t) !== "body" || ko(o)) && (a = _o(t)), r)) {
+    const m = Cn(t, !0, i, t);
+    ((c.x = m.x + t.clientLeft), (c.y = m.y + t.clientTop));
+  }
+  !r && o && (c.x = To(o));
+  const u = o && !r && !i ? cd(o, a) : zt(0),
+    f = s.left + a.scrollLeft - c.x - u.x,
+    d = s.top + a.scrollTop - c.y - u.y;
+  return { x: f, y: d, width: s.width, height: s.height };
+}
+function Qo(e) {
+  return Tt(e).position === "static";
+}
+function ml(e, t) {
+  if (!sn(e) || Tt(e).position === "fixed") return null;
+  if (t) return t(e);
+  let n = e.offsetParent;
+  return ($t(e) === n && (n = n.ownerDocument.body), n);
+}
+function ud(e, t) {
+  const n = nt(e);
+  if (Io(e)) return n;
+  if (!sn(e)) {
+    let o = Sn(e);
+    for (; o && !fr(o);) {
+      if (_t(o) && !Qo(o)) return o;
+      o = Sn(o);
+    }
+    return n;
+  }
+  let r = ml(e, t);
+  for (; r && Zx(r) && Qo(r);) r = ml(r, t);
+  return r && fr(r) && Qo(r) && !ws(r) ? n : r || qx(e) || n;
+}
+const cS = async function (e) {
+  const t = this.getOffsetParent || ud,
+    n = this.getDimensions,
+    r = await n(e.floating);
+  return {
+    reference: lS(e.reference, await t(e.floating), e.strategy),
+    floating: { x: 0, y: 0, width: r.width, height: r.height },
+  };
+};
+function uS(e) {
+  return Tt(e).direction === "rtl";
+}
+const dS = {
+  convertOffsetParentRelativeRectToViewportRelativeRect: Xx,
+  getDocumentElement: $t,
+  getClippingRect: sS,
+  getOffsetParent: ud,
+  getElementRects: cS,
+  getClientRects: eS,
+  getDimensions: aS,
+  getScale: Bn,
+  isElement: _t,
+  isRTL: uS,
+};
+function dd(e, t) {
+  return (
+    e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height
+  );
+}
+function fS(e, t, n) {
+  let r = null,
+    o;
+  const i = $t(e);
+  function s() {
+    var f;
+    (clearTimeout(o), (f = r) == null || f.disconnect(), (r = null));
+  }
+  function a(f, d) {
+    (f === void 0 && (f = !1), d === void 0 && (d = 1), s());
+    const m = e.getBoundingClientRect(),
+      { left: y, top: p, width: v, height: h } = m;
+    if ((f || t(), !v || !h)) return;
+    const S = Br(p),
+      x = Br(i.clientWidth - (y + v)),
+      C = Br(i.clientHeight - (p + h)),
+      w = Br(y),
+      _ = {
+        rootMargin: -S + "px " + -x + "px " + -C + "px " + -w + "px",
+        threshold: Lt(0, Xt(1, d)) || 1,
+      };
+    let D = !0;
+    function I(N) {
+      const V = N[0].intersectionRatio;
+      if (!dd(m, e.getBoundingClientRect())) return a();
+      if (V !== d) {
+        if (!D) return a();
+        V
+          ? a(!1, V)
+          : (o = setTimeout(() => {
+              a(!1, 1e-7);
+            }, 1e3));
+      }
+      D = !1;
+    }
+    try {
+      r = new IntersectionObserver(I, { ..._, root: i.ownerDocument });
+    } catch {
+      r = new IntersectionObserver(I, _);
+    }
+    r.observe(e);
+  }
+  const c = nt(e),
+    u = () => a(n);
+  return (
+    c.addEventListener("resize", u),
+    a(!0),
+    () => {
+      (c.removeEventListener("resize", u), s());
+    }
+  );
+}
+function mS(e, t, n, r) {
+  r === void 0 && (r = {});
+  const {
+      ancestorScroll: o = !0,
+      ancestorResize: i = !0,
+      elementResize: s = typeof ResizeObserver == "function",
+      layoutShift: a = typeof IntersectionObserver == "function",
+      animationFrame: c = !1,
+    } = r,
+    u = Ss(e),
+    f = o || i ? [...(u ? mr(u) : []), ...(t ? mr(t) : [])] : [];
+  f.forEach((S) => {
+    (o && S.addEventListener("scroll", n),
+      i && S.addEventListener("resize", n));
+  });
+  const d = u && a ? fS(u, n, i) : null;
+  let m = -1,
+    y = null;
+  s &&
+    ((y = new ResizeObserver((S) => {
+      let [x] = S;
+      (x &&
+        x.target === u &&
+        y &&
+        t &&
+        (y.unobserve(t),
+        cancelAnimationFrame(m),
+        (m = requestAnimationFrame(() => {
+          var C;
+          (C = y) == null || C.observe(t);
+        }))),
+        n());
+    })),
+    u && !c && y.observe(u),
+    t && y.observe(t));
+  let p,
+    v = c ? Cn(e) : null;
+  c && h();
+  function h() {
+    const S = Cn(e);
+    (v && !dd(v, S) && n(), (v = S), (p = requestAnimationFrame(h)));
+  }
+  return (
+    n(),
+    () => {
+      var S;
+      (f.forEach((x) => {
+        (o && x.removeEventListener("scroll", n),
+          i && x.removeEventListener("resize", n));
+      }),
+        d == null || d(),
+        (S = y) == null || S.disconnect(),
+        (y = null),
+        c && cancelAnimationFrame(p));
+    }
+  );
+}
+const pS = Wx,
+  gS = Ux,
+  hS = Bx,
+  yS = Gx,
+  vS = Vx,
+  pl = Fx,
+  bS = Hx,
+  wS = (e, t, n) => {
+    const r = new Map(),
+      o = n ?? {},
+      i = { ...dS, ...o.platform, _c: r };
+    return zx(e, t, { ...o, platform: i });
+  };
+var xS = typeof document < "u",
+  SS = function () {},
+  Jr = xS ? g.useLayoutEffect : SS;
+function lo(e, t) {
+  if (e === t) return !0;
+  if (typeof e != typeof t) return !1;
+  if (typeof e == "function" && e.toString() === t.toString()) return !0;
+  let n, r, o;
+  if (e && t && typeof e == "object") {
+    if (Array.isArray(e)) {
+      if (((n = e.length), n !== t.length)) return !1;
+      for (r = n; r-- !== 0;) if (!lo(e[r], t[r])) return !1;
+      return !0;
+    }
+    if (((o = Object.keys(e)), (n = o.length), n !== Object.keys(t).length))
+      return !1;
+    for (r = n; r-- !== 0;) if (!{}.hasOwnProperty.call(t, o[r])) return !1;
+    for (r = n; r-- !== 0;) {
+      const i = o[r];
+      if (!(i === "_owner" && e.$$typeof) && !lo(e[i], t[i])) return !1;
+    }
+    return !0;
+  }
+  return e !== e && t !== t;
+}
+function fd(e) {
+  return typeof window > "u"
+    ? 1
+    : (e.ownerDocument.defaultView || window).devicePixelRatio || 1;
+}
+function gl(e, t) {
+  const n = fd(e);
+  return Math.round(t * n) / n;
+}
+function Xo(e) {
+  const t = g.useRef(e);
+  return (
+    Jr(() => {
+      t.current = e;
+    }),
+    t
+  );
+}
+function CS(e) {
+  e === void 0 && (e = {});
+  const {
+      placement: t = "bottom",
+      strategy: n = "absolute",
+      middleware: r = [],
+      platform: o,
+      elements: { reference: i, floating: s } = {},
+      transform: a = !0,
+      whileElementsMounted: c,
+      open: u,
+    } = e,
+    [f, d] = g.useState({
+      x: 0,
+      y: 0,
+      strategy: n,
+      placement: t,
+      middlewareData: {},
+      isPositioned: !1,
+    }),
+    [m, y] = g.useState(r);
+  lo(m, r) || y(r);
+  const [p, v] = g.useState(null),
+    [h, S] = g.useState(null),
+    x = g.useCallback((Z) => {
+      Z !== _.current && ((_.current = Z), v(Z));
+    }, []),
+    C = g.useCallback((Z) => {
+      Z !== D.current && ((D.current = Z), S(Z));
+    }, []),
+    w = i || p,
+    k = s || h,
+    _ = g.useRef(null),
+    D = g.useRef(null),
+    I = g.useRef(f),
+    N = c != null,
+    V = Xo(c),
+    X = Xo(o),
+    U = Xo(u),
+    O = g.useCallback(() => {
+      if (!_.current || !D.current) return;
+      const Z = { placement: t, strategy: n, middleware: m };
+      (X.current && (Z.platform = X.current),
+        wS(_.current, D.current, Z).then((ie) => {
+          const R = { ...ie, isPositioned: U.current !== !1 };
+          B.current &&
+            !lo(I.current, R) &&
+            ((I.current = R),
+            yr.flushSync(() => {
+              d(R);
+            }));
+        }));
+    }, [m, t, n, X, U]);
+  Jr(() => {
+    u === !1 &&
+      I.current.isPositioned &&
+      ((I.current.isPositioned = !1), d((Z) => ({ ...Z, isPositioned: !1 })));
+  }, [u]);
+  const B = g.useRef(!1);
+  (Jr(
+    () => (
+      (B.current = !0),
+      () => {
+        B.current = !1;
+      }
+    ),
+    [],
+  ),
+    Jr(() => {
+      if ((w && (_.current = w), k && (D.current = k), w && k)) {
+        if (V.current) return V.current(w, k, O);
+        O();
+      }
+    }, [w, k, O, V, N]));
+  const H = g.useMemo(
+      () => ({ reference: _, floating: D, setReference: x, setFloating: C }),
+      [x, C],
+    ),
+    G = g.useMemo(() => ({ reference: w, floating: k }), [w, k]),
+    Y = g.useMemo(() => {
+      const Z = { position: n, left: 0, top: 0 };
+      if (!G.floating) return Z;
+      const ie = gl(G.floating, f.x),
+        R = gl(G.floating, f.y);
+      return a
+        ? {
+            ...Z,
+            transform: "translate(" + ie + "px, " + R + "px)",
+            ...(fd(G.floating) >= 1.5 && { willChange: "transform" }),
+          }
+        : { position: n, left: ie, top: R };
+    }, [n, a, G.floating, f.x, f.y]);
+  return g.useMemo(
+    () => ({ ...f, update: O, refs: H, elements: G, floatingStyles: Y }),
+    [f, O, H, G, Y],
+  );
+}
+const PS = (e) => {
+    function t(n) {
+      return {}.hasOwnProperty.call(n, "current");
+    }
+    return {
+      name: "arrow",
+      options: e,
+      fn(n) {
+        const { element: r, padding: o } = typeof e == "function" ? e(n) : e;
+        return r && t(r)
+          ? r.current != null
+            ? pl({ element: r.current, padding: o }).fn(n)
+            : {}
+          : r
+            ? pl({ element: r, padding: o }).fn(n)
+            : {};
+      },
+    };
+  },
+  AS = (e, t) => {
+    const n = pS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  },
+  kS = (e, t) => {
+    const n = gS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  },
+  IS = (e, t) => ({ fn: bS(e).fn, options: [e, t] }),
+  _S = (e, t) => {
+    const n = hS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  },
+  TS = (e, t) => {
+    const n = yS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  },
+  MS = (e, t) => {
+    const n = vS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  },
+  DS = (e, t) => {
+    const n = PS(e);
+    return { name: n.name, fn: n.fn, options: [e, t] };
+  };
+var jS = Object.defineProperty,
+  NS = (e, t) => jS(e, "name", { value: t, configurable: !0 });
+function md(e) {
+  const [t, n] = g.useState(void 0);
+  return (
+    Me(() => {
+      if (e) {
+        n({ width: e.offsetWidth, height: e.offsetHeight });
+        const r = new ResizeObserver((o) => {
+          if (!Array.isArray(o) || !o.length) return;
+          const i = o[0];
+          let s, a;
+          if ("borderBoxSize" in i) {
+            const c = i.borderBoxSize,
+              u = Array.isArray(c) ? c[0] : c;
+            ((s = u.inlineSize), (a = u.blockSize));
+          } else ((s = e.offsetWidth), (a = e.offsetHeight));
+          n({ width: s, height: a });
+        });
+        return (r.observe(e, { box: "border-box" }), () => r.unobserve(e));
+      } else n(void 0);
+    }, [e]),
+    t
+  );
+}
+NS(md, "useSize");
+var RS = Object.defineProperty,
+  Qt = (e, t) => RS(e, "name", { value: t, configurable: !0 }),
+  pd = "Popper",
+  [gd, hd] = Gn(pd),
+  [ES, yd] = gd(pd),
+  OS = Qt((e) => {
+    const { __scopePopper: t, children: n } = e,
+      [r, o] = g.useState(null),
+      [i, s] = g.useState(void 0);
+    return l.jsx(ES, {
+      scope: t,
+      anchor: r,
+      onAnchorChange: o,
+      placementState: i,
+      setPlacementState: s,
+      children: n,
+    });
+  }, "Popper"),
+  LS = "PopperAnchor",
+  zS = g.forwardRef(
+    Qt(function (t, n) {
+      const { __scopePopper: r, virtualRef: o, ...i } = t,
+        s = yd(LS, r),
+        a = g.useRef(null),
+        c = s.onAnchorChange,
+        u = g.useCallback(
+          (v) => {
+            ((a.current = v), v && c(v));
+          },
+          [c],
+        ),
+        f = we(n, u),
+        d = g.useRef(null);
+      g.useEffect(() => {
+        if (!o) return;
+        const v = d.current;
+        ((d.current = o.current), v !== d.current && c(d.current));
+      });
+      const m = s.placementState && Mo(s.placementState),
+        y = m == null ? void 0 : m[0],
+        p = m == null ? void 0 : m[1];
+      return o
+        ? null
+        : l.jsx(ke.div, {
+            "data-radix-popper-side": y,
+            "data-radix-popper-align": p,
+            ...i,
+            ref: f,
+          });
+    }, "PopperAnchor"),
+  ),
+  vd = "PopperContent",
+  [FS, cC] = gd(vd),
+  BS = g.forwardRef(
+    Qt(function (t, n) {
+      var ne, ve, ce, se, ae, ze, Ke;
+      const {
+          __scopePopper: r,
+          side: o = "bottom",
+          sideOffset: i = 0,
+          align: s = "center",
+          alignOffset: a = 0,
+          arrowPadding: c = 0,
+          avoidCollisions: u = !0,
+          collisionBoundary: f = [],
+          collisionPadding: d = 0,
+          sticky: m = "partial",
+          hideWhenDetached: y = !1,
+          updatePositionStrategy: p = "optimized",
+          onPlaced: v,
+          ...h
+        } = t,
+        S = yd(vd, r),
+        [x, C] = g.useState(null),
+        w = we(n, C),
+        [k, _] = g.useState(null),
+        D = md(k),
+        I = (D == null ? void 0 : D.width) ?? 0,
+        N = (D == null ? void 0 : D.height) ?? 0,
+        V = o + (s !== "center" ? "-" + s : ""),
+        X =
+          typeof d == "number"
+            ? d
+            : { top: 0, right: 0, bottom: 0, left: 0, ...d },
+        U = Array.isArray(f) ? f : [f],
+        O = U.length > 0,
+        B = { padding: X, boundary: U.filter(bd), altBoundary: O },
+        {
+          refs: H,
+          floatingStyles: G,
+          placement: Y,
+          isPositioned: Z,
+          middlewareData: ie,
+        } = CS({
+          strategy: "fixed",
+          placement: V,
+          whileElementsMounted: Qt(
+            (...jt) => mS(...jt, { animationFrame: p === "always" }),
+            "whileElementsMounted",
+          ),
+          elements: { reference: S.anchor },
+          middleware: [
+            AS({ mainAxis: i + N, alignmentAxis: a }),
+            u &&
+              kS({
+                mainAxis: !0,
+                crossAxis: !1,
+                limiter: m === "partial" ? IS() : void 0,
+                ...B,
+              }),
+            u && _S({ ...B }),
+            TS({
+              ...B,
+              apply: Qt(
+                ({
+                  elements: jt,
+                  rects: Nt,
+                  availableWidth: ln,
+                  availableHeight: Kn,
+                }) => {
+                  const { width: Cr, height: qn } = Nt.reference,
+                    Wt = jt.floating.style;
+                  (Wt.setProperty("--radix-popper-available-width", `${ln}px`),
+                    Wt.setProperty(
+                      "--radix-popper-available-height",
+                      `${Kn}px`,
+                    ),
+                    Wt.setProperty("--radix-popper-anchor-width", `${Cr}px`),
+                    Wt.setProperty("--radix-popper-anchor-height", `${qn}px`));
+                },
+                "apply",
+              ),
+            }),
+            k && DS({ element: k, padding: c }),
+            VS({ arrowWidth: I, arrowHeight: N }),
+            y &&
+              MS({
+                strategy: "referenceHidden",
+                ...B,
+                boundary: O ? B.boundary : void 0,
+              }),
+          ],
+        }),
+        R = S.setPlacementState;
+      Me(
+        () => (
+          R(Y),
+          () => {
+            R(void 0);
+          }
+        ),
+        [Y, R],
+      );
+      const [Le, Se] = Mo(Y),
+        Ce = It(v);
+      Me(() => {
+        Z && (Ce == null || Ce());
+      }, [Z, Ce]);
+      const Je = (ne = ie.arrow) == null ? void 0 : ne.x,
+        pe = (ve = ie.arrow) == null ? void 0 : ve.y,
+        fe = ((ce = ie.arrow) == null ? void 0 : ce.centerOffset) !== 0,
+        [Xe, te] = g.useState();
+      return (
+        Me(() => {
+          x && te(window.getComputedStyle(x).zIndex);
+        }, [x]),
+        l.jsx("div", {
+          ref: H.setFloating,
+          "data-radix-popper-content-wrapper": "",
+          style: {
+            ...G,
+            transform: Z ? G.transform : "translate(0, -200%)",
+            minWidth: "max-content",
+            zIndex: Xe,
+            "--radix-popper-transform-origin": [
+              (se = ie.transformOrigin) == null ? void 0 : se.x,
+              (ae = ie.transformOrigin) == null ? void 0 : ae.y,
+            ].join(" "),
+            ...(((ze = ie.hide) == null ? void 0 : ze.referenceHidden) && {
+              visibility: "hidden",
+              pointerEvents: "none",
+            }),
+          },
+          dir: t.dir,
+          children: l.jsx(FS, {
+            scope: r,
+            placedSide: Le,
+            placedAlign: Se,
+            onArrowChange: _,
+            arrowX: Je,
+            arrowY: pe,
+            shouldHideArrow: fe,
+            children: l.jsx(ke.div, {
+              "data-side": Le,
+              "data-align": Se,
+              ...h,
+              ref: w,
+              style: {
+                ...h.style,
+                animation: Z
+                  ? (Ke = h.style) == null
+                    ? void 0
+                    : Ke.animation
+                  : "none",
+              },
+            }),
+          }),
+        })
+      );
+    }, "PopperContent"),
+  );
+function bd(e) {
+  return e !== null;
+}
+Qt(bd, "isNotNull");
+var VS = Qt(
+  (e) => ({
+    name: "transformOrigin",
+    options: e,
+    fn(t) {
+      var h, S, x;
+      const { placement: n, rects: r, middlewareData: o } = t,
+        s = ((h = o.arrow) == null ? void 0 : h.centerOffset) !== 0,
+        a = s ? 0 : e.arrowWidth,
+        c = s ? 0 : e.arrowHeight,
+        [u, f] = Mo(n),
+        d = { start: "0%", center: "50%", end: "100%" }[f],
+        m = (((S = o.arrow) == null ? void 0 : S.x) ?? 0) + a / 2,
+        y = (((x = o.arrow) == null ? void 0 : x.y) ?? 0) + c / 2;
+      let p = "",
+        v = "";
+      return (
+        u === "bottom"
+          ? ((p = s ? d : `${m}px`), (v = `${-c}px`))
+          : u === "top"
+            ? ((p = s ? d : `${m}px`), (v = `${r.floating.height + c}px`))
+            : u === "right"
+              ? ((p = `${-c}px`), (v = s ? d : `${y}px`))
+              : u === "left" &&
+                ((p = `${r.floating.width + c}px`), (v = s ? d : `${y}px`)),
+        { data: { x: p, y: v } }
+      );
+    },
+  }),
+  "transformOrigin",
+);
+function Mo(e) {
+  const [t, n = "center"] = e.split("-");
+  return [t, n];
+}
+Qt(Mo, "getSideAndAlignFromPlacement");
+var $S = OS,
+  WS = zS,
+  US = BS,
+  HS = Object.defineProperty,
+  GS = (e, t) => HS(e, "name", { value: t, configurable: !0 });
+function wd(e) {
+  const t = g.useRef({ value: e, previous: e });
+  return g.useMemo(
+    () => (
+      t.current.value !== e &&
+        ((t.current.previous = t.current.value), (t.current.value = e)),
+      t.current.previous
+    ),
+    [e],
+  );
+}
+GS(wd, "usePrevious");
+var ZS = Object.freeze({
+    position: "absolute",
+    border: 0,
+    width: 1,
+    height: 1,
+    padding: 0,
+    margin: -1,
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    wordWrap: "normal",
+  }),
+  JS = Object.defineProperty,
+  le = (e, t) => JS(e, "name", { value: t, configurable: !0 }),
+  KS = [" ", "Enter", "ArrowUp", "ArrowDown"],
+  qS = [" ", "Enter"],
+  $n = "Select",
+  [Do, jo, YS] = qu($n),
+  [In, uC] = Gn($n, [YS, hd]),
+  Cs = hd(),
+  [QS, an] = In($n),
+  [XS, e0] = In($n);
+function xd(e) {
+  const {
+      __scopeSelect: t,
+      children: n,
+      open: r,
+      defaultOpen: o,
+      onOpenChange: i,
+      value: s,
+      defaultValue: a,
+      onValueChange: c,
+      dir: u,
+      name: f,
+      autoComplete: d,
+      disabled: m,
+      required: y,
+      form: p,
+      internal_do_not_use_render: v,
+    } = e,
+    h = Cs(t),
+    [S, x] = g.useState(null),
+    [C, w] = g.useState(null),
+    [k, _] = g.useState(!1),
+    D = td(u),
+    [I, N] = oo({ prop: r, defaultProp: o ?? !1, onChange: i, caller: $n }),
+    [V, X] = oo({ prop: s, defaultProp: a, onChange: c, caller: $n }),
+    U = g.useRef(null),
+    O = g.useRef(V);
+  g.useEffect(() => {
+    const Se = p
+      ? S == null
+        ? void 0
+        : S.ownerDocument.getElementById(p)
+      : S == null
+        ? void 0
+        : S.form;
+    if (Se instanceof HTMLFormElement) {
+      const Ce = le(() => X(O.current), "reset");
+      return (
+        Se.addEventListener("reset", Ce),
+        () => Se.removeEventListener("reset", Ce)
+      );
+    }
+  }, [p, S, X]);
+  const B = S ? !!p || !!S.closest("form") : !0,
+    [H, G] = g.useState(new Set()),
+    Y = zn(),
+    Z = Array.from(H)
+      .map((Se) => Se.props.value)
+      .join(";"),
+    ie = g.useCallback((Se) => {
+      G((Ce) => new Set(Ce).add(Se));
+    }, []),
+    R = g.useCallback((Se) => {
+      G((Ce) => {
+        const Je = new Set(Ce);
+        return (Je.delete(Se), Je);
+      });
+    }, []),
+    Le = {
+      required: y,
+      trigger: S,
+      onTriggerChange: x,
+      valueNode: C,
+      onValueNodeChange: w,
+      valueNodeHasChildren: k,
+      onValueNodeHasChildrenChange: _,
+      contentId: Y,
+      value: V,
+      onValueChange: X,
+      open: I,
+      onOpenChange: N,
+      dir: D,
+      triggerPointerDownPosRef: U,
+      disabled: m,
+      name: f,
+      autoComplete: d,
+      form: p,
+      nativeOptions: H,
+      nativeSelectKey: Z,
+      isFormControl: B,
+    };
+  return l.jsx($S, {
+    ...h,
+    children: l.jsx(QS, {
+      scope: t,
+      ...Le,
+      children: l.jsx(Do.Provider, {
+        scope: t,
+        children: l.jsx(XS, {
+          scope: t,
+          onNativeOptionAdd: ie,
+          onNativeOptionRemove: R,
+          children: jd(v) ? v(Le) : n,
+        }),
+      }),
+    }),
+  });
+}
+le(xd, "SelectProvider");
+var t0 = le((e) => {
+    const { __scopeSelect: t, children: n, ...r } = e;
+    return l.jsx(xd, {
+      __scopeSelect: t,
+      ...r,
+      internal_do_not_use_render: ({ isFormControl: o }) =>
+        l.jsxs(l.Fragment, {
+          children: [n, o ? l.jsx(P0, { __scopeSelect: t }) : null],
+        }),
+    });
+  }, "Select"),
+  n0 = "SelectTrigger",
+  Sd = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, disabled: o = !1, ...i } = t,
+        s = Cs(r),
+        a = an(n0, r),
+        c = a.disabled || o,
+        u = we(n, a.onTriggerChange),
+        f = jo(r),
+        d = g.useRef("touch"),
+        [m, y, p] = As((h) => {
+          const S = f().filter((w) => !w.disabled),
+            x = S.find((w) => w.value === a.value),
+            C = ks(S, h, x);
+          C !== void 0 && a.onValueChange(C.value);
+        }),
+        v = le((h) => {
+          (c || (a.onOpenChange(!0), p()),
+            h &&
+              (a.triggerPointerDownPosRef.current = {
+                x: Math.round(h.pageX),
+                y: Math.round(h.pageY),
+              }));
+        }, "handleOpen");
+      return l.jsx(WS, {
+        asChild: !0,
+        ...s,
+        children: l.jsx(ke.button, {
+          type: "button",
+          role: "combobox",
+          "aria-controls": a.open ? a.contentId : void 0,
+          "aria-expanded": a.open,
+          "aria-required": a.required,
+          "aria-autocomplete": "none",
+          dir: a.dir,
+          "data-state": a.open ? "open" : "closed",
+          disabled: c,
+          "data-disabled": c ? "" : void 0,
+          "data-placeholder": Sr(a.value) ? "" : void 0,
+          ...i,
+          ref: u,
+          onClick: he(i.onClick, (h) => {
+            (h.currentTarget.focus(), d.current !== "mouse" && v(h));
+          }),
+          onPointerDown: he(i.onPointerDown, (h) => {
+            d.current = h.pointerType;
+            const S = h.target;
+            (S.hasPointerCapture(h.pointerId) &&
+              S.releasePointerCapture(h.pointerId),
+              h.button === 0 &&
+                h.ctrlKey === !1 &&
+                h.pointerType === "mouse" &&
+                (v(h), h.preventDefault()));
+          }),
+          onKeyDown: he(i.onKeyDown, (h) => {
+            const S = m.current !== "";
+            (!(h.ctrlKey || h.altKey || h.metaKey) &&
+              h.key.length === 1 &&
+              y(h.key),
+              !(S && h.key === " ") &&
+                KS.includes(h.key) &&
+                (v(), h.preventDefault()));
+          }),
+        }),
+      });
+    }, "SelectTrigger"),
+  ),
+  r0 = "SelectValue",
+  o0 = g.forwardRef(
+    le(function (t, n) {
+      const {
+          __scopeSelect: r,
+          className: o,
+          style: i,
+          children: s,
+          placeholder: a = "",
+          ...c
+        } = t,
+        u = an(r0, r),
+        { onValueNodeHasChildrenChange: f } = u,
+        d = s !== void 0,
+        m = we(n, u.onValueNodeChange);
+      Me(() => {
+        f(d);
+      }, [f, d]);
+      const y = Sr(u.value);
+      return l.jsx(ke.span, {
+        ...c,
+        asChild: y ? !1 : c.asChild,
+        ref: m,
+        style: { pointerEvents: "none" },
+        children: l.jsx(
+          g.Fragment,
+          { children: y ? a : s },
+          y ? "placeholder" : "value",
+        ),
+      });
+    }, "SelectValue"),
+  ),
+  i0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, children: o, ...i } = t;
+      return l.jsx(ke.span, {
+        "aria-hidden": !0,
+        ...i,
+        ref: n,
+        children: o || "▼",
+      });
+    }, "SelectIcon"),
+  ),
+  s0 = "SelectPortal",
+  [a0, l0] = In(s0, { forceMount: void 0 }),
+  c0 = le((e) => {
+    const { __scopeSelect: t, forceMount: n, ...r } = e;
+    return l.jsx(a0, {
+      scope: e.__scopeSelect,
+      forceMount: n,
+      children: l.jsx(wu, { asChild: !0, ...r }),
+    });
+  }, "SelectPortal"),
+  Pn = "SelectContent",
+  Cd = g.forwardRef(
+    le(function (t, n) {
+      const r = l0(Pn, t.__scopeSelect),
+        { forceMount: o = r.forceMount, ...i } = t,
+        s = an(Pn, t.__scopeSelect),
+        [a, c] = g.useState();
+      return (
+        Me(() => {
+          c(new DocumentFragment());
+        }, []),
+        l.jsx(wo, {
+          present: o || s.open,
+          children: ({ present: u }) =>
+            u ? l.jsx(f0, { ...i, ref: n }) : l.jsx(u0, { ...i, fragment: a }),
+        })
+      );
+    }, "SelectContent"),
+  ),
+  u0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, children: o, fragment: i } = t;
+      return i
+        ? yr.createPortal(
+            l.jsx(Pd, {
+              scope: r,
+              children: l.jsx(Do.Slot, {
+                scope: r,
+                children: l.jsx("div", { ref: n, children: o }),
+              }),
+            }),
+            i,
+          )
+        : null;
+    }, "SelectContentFragment"),
+  ),
+  pt = 10,
+  [Pd, _n] = In(Pn),
+  d0 = Ft("SelectContent.RemoveScroll"),
+  f0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r } = t,
+        {
+          position: o = "item-aligned",
+          onCloseAutoFocus: i,
+          onEscapeKeyDown: s,
+          onPointerDownOutside: a,
+          side: c,
+          sideOffset: u,
+          align: f,
+          alignOffset: d,
+          arrowPadding: m,
+          collisionBoundary: y,
+          collisionPadding: p,
+          sticky: v,
+          hideWhenDetached: h,
+          avoidCollisions: S,
+          ...x
+        } = t,
+        C = an(Pn, r),
+        [w, k] = g.useState(null),
+        [_, D] = g.useState(null),
+        I = we(n, k),
+        [N, V] = g.useState(null),
+        [X, U] = g.useState(null),
+        O = jo(r),
+        [B, H] = g.useState(!1),
+        G = g.useRef(!1);
+      (g.useEffect(() => {
+        if (w) return ju(w);
+      }, [w]),
+        xo());
+      const Y = g.useCallback(
+          (te) => {
+            const [ne, ...ve] = O().map((ae) => ae.ref.current),
+              [ce] = ve.slice(-1),
+              se = document.activeElement;
+            for (const ae of te)
+              if (
+                ae === se ||
+                (ae == null || ae.scrollIntoView({ block: "nearest" }),
+                ae === ne && _ && (_.scrollTop = 0),
+                ae === ce && _ && (_.scrollTop = _.scrollHeight),
+                ae == null || ae.focus(),
+                document.activeElement !== se)
+              )
+                return;
+          },
+          [O, _],
+        ),
+        Z = g.useCallback(() => Y([N, w]), [Y, N, w]);
+      g.useEffect(() => {
+        B && Z();
+      }, [B, Z]);
+      const { onOpenChange: ie, triggerPointerDownPosRef: R } = C;
+      (g.useEffect(() => {
+        if (w) {
+          let te = { x: 0, y: 0 };
+          const ne = le((ce) => {
+              var se, ae;
+              te = {
+                x: Math.abs(
+                  Math.round(ce.pageX) -
+                    (((se = R.current) == null ? void 0 : se.x) ?? 0),
+                ),
+                y: Math.abs(
+                  Math.round(ce.pageY) -
+                    (((ae = R.current) == null ? void 0 : ae.y) ?? 0),
+                ),
+              };
+            }, "handlePointerMove"),
+            ve = le((ce) => {
+              (te.x <= 10 && te.y <= 10
+                ? ce.preventDefault()
+                : ce.composedPath().includes(w) || ie(!1),
+                document.removeEventListener("pointermove", ne),
+                (R.current = null));
+            }, "handlePointerUp");
+          return (
+            R.current !== null &&
+              (document.addEventListener("pointermove", ne),
+              document.addEventListener("pointerup", ve, {
+                capture: !0,
+                once: !0,
+              })),
+            () => {
+              (document.removeEventListener("pointermove", ne),
+                document.removeEventListener("pointerup", ve, { capture: !0 }));
+            }
+          );
+        }
+      }, [w, ie, R]),
+        g.useEffect(() => {
+          const te = le(() => ie(!1), "close");
+          return (
+            window.addEventListener("blur", te),
+            window.addEventListener("resize", te),
+            () => {
+              (window.removeEventListener("blur", te),
+                window.removeEventListener("resize", te));
+            }
+          );
+        }, [ie]));
+      const [Le, Se] = As((te) => {
+          const ne = O().filter((se) => !se.disabled),
+            ve = ne.find((se) => se.ref.current === document.activeElement),
+            ce = ks(ne, te, ve);
+          ce &&
+            setTimeout(() => {
+              var se;
+              return (se = ce.ref.current) == null ? void 0 : se.focus();
+            });
+        }),
+        Ce = g.useCallback(
+          (te, ne, ve) => {
+            const ce = !G.current && !ve;
+            ((C.value !== void 0 && C.value === ne) || ce) &&
+              (V(te), ce && (G.current = !0));
+          },
+          [C.value],
+        ),
+        Je = g.useCallback(() => (w == null ? void 0 : w.focus()), [w]),
+        pe = g.useCallback(
+          (te, ne, ve) => {
+            const ce = !G.current && !ve;
+            ((C.value !== void 0 && C.value === ne) || ce) && U(te);
+          },
+          [C.value],
+        ),
+        fe = o === "popper" ? hl : m0,
+        Xe =
+          fe === hl
+            ? {
+                side: c,
+                sideOffset: u,
+                align: f,
+                alignOffset: d,
+                arrowPadding: m,
+                collisionBoundary: y,
+                collisionPadding: p,
+                sticky: v,
+                hideWhenDetached: h,
+                avoidCollisions: S,
+              }
+            : {};
+      return l.jsx(Pd, {
+        scope: r,
+        content: w,
+        viewport: _,
+        onViewportChange: D,
+        itemRefCallback: Ce,
+        selectedItem: N,
+        onItemLeave: Je,
+        itemTextRefCallback: pe,
+        focusSelectedItem: Z,
+        selectedItemText: X,
+        position: o,
+        isPositioned: B,
+        searchRef: Le,
+        children: l.jsx(fs, {
+          as: d0,
+          allowPinchZoom: !0,
+          children: l.jsx(mu, {
+            asChild: !0,
+            trapped: C.open,
+            onMountAutoFocus: (te) => {
+              te.preventDefault();
+            },
+            onUnmountAutoFocus: he(i, (te) => {
+              var ne;
+              ((ne = C.trigger) == null || ne.focus({ preventScroll: !0 }),
+                te.preventDefault());
+            }),
+            children: l.jsx(cu, {
+              asChild: !0,
+              disableOutsidePointerEvents: !0,
+              onEscapeKeyDown: s,
+              onPointerDownOutside: a,
+              onFocusOutside: (te) => te.preventDefault(),
+              onDismiss: () => C.onOpenChange(!1),
+              children: l.jsx(fe, {
+                role: "listbox",
+                id: C.contentId,
+                "data-state": C.open ? "open" : "closed",
+                dir: C.dir,
+                onContextMenu: (te) => te.preventDefault(),
+                ...x,
+                ...Xe,
+                onPlaced: () => H(!0),
+                ref: I,
+                style: {
+                  display: "flex",
+                  flexDirection: "column",
+                  outline: "none",
+                  ...x.style,
+                },
+                onKeyDown: he(x.onKeyDown, (te) => {
+                  const ne = te.ctrlKey || te.altKey || te.metaKey;
+                  if (
+                    (te.key === "Tab" && te.preventDefault(),
+                    !ne && te.key.length === 1 && Se(te.key),
+                    ["ArrowUp", "ArrowDown", "Home", "End"].includes(te.key))
+                  ) {
+                    let ce = O()
+                      .filter((se) => !se.disabled)
+                      .map((se) => se.ref.current);
+                    if (
+                      (["ArrowUp", "End"].includes(te.key) &&
+                        (ce = ce.slice().reverse()),
+                      ["ArrowUp", "ArrowDown"].includes(te.key))
+                    ) {
+                      const se = te.target,
+                        ae = ce.indexOf(se);
+                      ce = ce.slice(ae + 1);
+                    }
+                    (setTimeout(() => Y(ce)), te.preventDefault());
+                  }
+                }),
+              }),
+            }),
+          }),
+        }),
+      });
+    }, "SelectContentImpl"),
+  ),
+  m0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, onPlaced: o, ...i } = t,
+        s = an(Pn, r),
+        a = _n(Pn, r),
+        [c, u] = g.useState(null),
+        [f, d] = g.useState(null),
+        m = we(n, d),
+        y = jo(r),
+        p = g.useRef(!1),
+        v = g.useRef(!0),
+        {
+          viewport: h,
+          selectedItem: S,
+          selectedItemText: x,
+          focusSelectedItem: C,
+        } = a,
+        w = g.useCallback(() => {
+          if (s.trigger && s.valueNode && c && f && h && S && x) {
+            const I = s.trigger.getBoundingClientRect(),
+              N = f.getBoundingClientRect(),
+              V = s.valueNode.getBoundingClientRect(),
+              X = x.getBoundingClientRect();
+            if (s.dir !== "rtl") {
+              const se = X.left - N.left,
+                ae = V.left - se,
+                ze = I.left - ae,
+                Ke = I.width + ze,
+                jt = Math.max(Ke, N.width),
+                Nt = window.innerWidth - pt,
+                ln = ji(ae, [pt, Math.max(pt, Nt - jt)]);
+              ((c.style.minWidth = Ke + "px"), (c.style.left = ln + "px"));
+            } else {
+              const se = N.right - X.right,
+                ae = window.innerWidth - V.right - se,
+                ze = window.innerWidth - I.right - ae,
+                Ke = I.width + ze,
+                jt = Math.max(Ke, N.width),
+                Nt = window.innerWidth - pt,
+                ln = ji(ae, [pt, Math.max(pt, Nt - jt)]);
+              ((c.style.minWidth = Ke + "px"), (c.style.right = ln + "px"));
+            }
+            const U = y(),
+              O = window.innerHeight - pt * 2,
+              B = h.scrollHeight,
+              H = window.getComputedStyle(f),
+              G = parseInt(H.borderTopWidth, 10),
+              Y = parseInt(H.paddingTop, 10),
+              Z = parseInt(H.borderBottomWidth, 10),
+              ie = parseInt(H.paddingBottom, 10),
+              R = G + Y + B + ie + Z,
+              Le = Math.min(S.offsetHeight * 5, R),
+              Se = window.getComputedStyle(h),
+              Ce = parseInt(Se.paddingTop, 10),
+              Je = parseInt(Se.paddingBottom, 10),
+              pe = I.top + I.height / 2 - pt,
+              fe = O - pe,
+              Xe = S.offsetHeight / 2,
+              te = S.offsetTop + Xe,
+              ne = G + Y + te,
+              ve = R - ne;
+            if (ne <= pe) {
+              const se = U.length > 0 && S === U[U.length - 1].ref.current;
+              c.style.bottom = "0px";
+              const ae = f.clientHeight - h.offsetTop - h.offsetHeight,
+                ze = Math.max(fe, Xe + (se ? Je : 0) + ae + Z),
+                Ke = ne + ze;
+              c.style.height = Ke + "px";
+            } else {
+              const se = U.length > 0 && S === U[0].ref.current;
+              c.style.top = "0px";
+              const ze =
+                Math.max(pe, G + h.offsetTop + (se ? Ce : 0) + Xe) + ve;
+              ((c.style.height = ze + "px"),
+                (h.scrollTop = ne - pe + h.offsetTop));
+            }
+            ((c.style.margin = `${pt}px 0`),
+              (c.style.minHeight = Le + "px"),
+              (c.style.maxHeight = O + "px"),
+              o == null || o(),
+              requestAnimationFrame(() => (p.current = !0)));
+          }
+        }, [y, s.trigger, s.valueNode, c, f, h, S, x, s.dir, o]);
+      Me(() => w(), [w]);
+      const [k, _] = g.useState();
+      Me(() => {
+        f && _(window.getComputedStyle(f).zIndex);
+      }, [f]);
+      const D = g.useCallback(
+        (I) => {
+          I && v.current === !0 && (w(), C == null || C(), (v.current = !1));
+        },
+        [w, C],
+      );
+      return l.jsx(p0, {
+        scope: r,
+        contentWrapper: c,
+        shouldExpandOnScrollRef: p,
+        onScrollButtonChange: D,
+        children: l.jsx("div", {
+          ref: u,
+          style: {
+            display: "flex",
+            flexDirection: "column",
+            position: "fixed",
+            zIndex: k,
+          },
+          children: l.jsx(ke.div, {
+            ...i,
+            ref: m,
+            style: { boxSizing: "border-box", maxHeight: "100%", ...i.style },
+          }),
+        }),
+      });
+    }, "SelectItemAlignedPosition"),
+  ),
+  hl = g.forwardRef(
+    le(function (t, n) {
+      const {
+          __scopeSelect: r,
+          align: o = "start",
+          collisionPadding: i = pt,
+          ...s
+        } = t,
+        a = Cs(r);
+      return l.jsx(US, {
+        ...a,
+        ...s,
+        ref: n,
+        align: o,
+        collisionPadding: i,
+        style: {
+          boxSizing: "border-box",
+          ...s.style,
+          "--radix-select-content-transform-origin":
+            "var(--radix-popper-transform-origin)",
+          "--radix-select-content-available-width":
+            "var(--radix-popper-available-width)",
+          "--radix-select-content-available-height":
+            "var(--radix-popper-available-height)",
+          "--radix-select-trigger-width": "var(--radix-popper-anchor-width)",
+          "--radix-select-trigger-height": "var(--radix-popper-anchor-height)",
+        },
+      });
+    }, "SelectPopperPosition"),
+  ),
+  [p0, Ps] = In(Pn, {}),
+  yl = "SelectViewport",
+  g0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, nonce: o, ...i } = t,
+        s = _n(yl, r),
+        a = Ps(yl, r),
+        c = we(n, s.onViewportChange),
+        u = g.useRef(0);
+      return l.jsxs(l.Fragment, {
+        children: [
+          l.jsx("style", {
+            dangerouslySetInnerHTML: {
+              __html:
+                "[data-radix-select-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-select-viewport]::-webkit-scrollbar{display:none}",
+            },
+            nonce: o,
+          }),
+          l.jsx(Do.Slot, {
+            scope: r,
+            children: l.jsx(ke.div, {
+              "data-radix-select-viewport": "",
+              role: "presentation",
+              ...i,
+              ref: c,
+              style: {
+                position: "relative",
+                flex: 1,
+                overflow: "hidden auto",
+                ...i.style,
+              },
+              onScroll: he(i.onScroll, (f) => {
+                const d = f.currentTarget,
+                  { contentWrapper: m, shouldExpandOnScrollRef: y } = a;
+                if (y != null && y.current && m) {
+                  const p = Math.abs(u.current - d.scrollTop);
+                  if (p > 0) {
+                    const v = window.innerHeight - pt * 2,
+                      h = parseFloat(m.style.minHeight),
+                      S = parseFloat(m.style.height),
+                      x = Math.max(h, S);
+                    if (x < v) {
+                      const C = x + p,
+                        w = Math.min(v, C),
+                        k = C - w;
+                      ((m.style.height = w + "px"),
+                        m.style.bottom === "0px" &&
+                          ((d.scrollTop = k > 0 ? k : 0),
+                          (m.style.justifyContent = "flex-end")));
+                    }
+                  }
+                }
+                u.current = d.scrollTop;
+              }),
+            }),
+          }),
+        ],
+      });
+    }, "SelectViewport"),
+  ),
+  h0 = "SelectGroup",
+  [dC, y0] = In(h0),
+  v0 = "SelectLabel",
+  Ad = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, ...o } = t,
+        i = y0(v0, r);
+      return l.jsx(ke.div, { id: i.id, ...o, ref: n });
+    }, "SelectLabel"),
+  ),
+  Oi = "SelectItem",
+  [b0, kd] = In(Oi),
+  Id = g.forwardRef(
+    le(function (t, n) {
+      const {
+          __scopeSelect: r,
+          value: o,
+          disabled: i = !1,
+          textValue: s,
+          ...a
+        } = t,
+        c = an(Oi, r),
+        u = _n(Oi, r),
+        f = c.value === o,
+        [d, m] = g.useState(s ?? ""),
+        [y, p] = g.useState(!1),
+        v = It((w) => {
+          var k;
+          return (k = u.itemRefCallback) == null ? void 0 : k.call(u, w, o, i);
+        }),
+        h = we(n, v),
+        S = zn(),
+        x = g.useRef("touch"),
+        C = le(() => {
+          i || (c.onValueChange(o), c.onOpenChange(!1));
+        }, "handleSelect");
+      return l.jsx(b0, {
+        scope: r,
+        value: o,
+        disabled: i,
+        textId: S,
+        isSelected: f,
+        onItemTextChange: g.useCallback((w) => {
+          m((k) => k || ((w == null ? void 0 : w.textContent) ?? "").trim());
+        }, []),
+        children: l.jsx(Do.ItemSlot, {
+          scope: r,
+          value: o,
+          disabled: i,
+          textValue: d,
+          children: l.jsx(ke.div, {
+            role: "option",
+            "aria-labelledby": S,
+            "data-highlighted": y ? "" : void 0,
+            "aria-selected": f && y,
+            "data-state": f ? "checked" : "unchecked",
+            "aria-disabled": i || void 0,
+            "data-disabled": i ? "" : void 0,
+            tabIndex: i ? void 0 : -1,
+            ...a,
+            ref: h,
+            onFocus: he(a.onFocus, () => p(!0)),
+            onBlur: he(a.onBlur, () => p(!1)),
+            onClick: he(a.onClick, () => {
+              x.current !== "mouse" && C();
+            }),
+            onPointerUp: he(a.onPointerUp, () => {
+              x.current === "mouse" && C();
+            }),
+            onPointerDown: he(a.onPointerDown, (w) => {
+              x.current = w.pointerType;
+            }),
+            onPointerMove: he(a.onPointerMove, (w) => {
+              var k;
+              ((x.current = w.pointerType),
+                i
+                  ? (k = u.onItemLeave) == null || k.call(u)
+                  : x.current === "mouse" &&
+                    w.currentTarget.focus({ preventScroll: !0 }));
+            }),
+            onPointerLeave: he(a.onPointerLeave, (w) => {
+              var k;
+              w.currentTarget === document.activeElement &&
+                ((k = u.onItemLeave) == null || k.call(u));
+            }),
+            onKeyDown: he(a.onKeyDown, (w) => {
+              var _;
+              i ||
+                w.target !== w.currentTarget ||
+                (((_ = u.searchRef) == null ? void 0 : _.current) !== "" &&
+                  w.key === " ") ||
+                (qS.includes(w.key) && C(),
+                w.key === " " && w.preventDefault());
+            }),
+          }),
+        }),
+      });
+    }, "SelectItem"),
+  ),
+  Vr = "SelectItemText",
+  w0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, className: o, style: i, ...s } = t,
+        a = an(Vr, r),
+        c = _n(Vr, r),
+        u = kd(Vr, r),
+        f = e0(Vr, r),
+        [d, m] = g.useState(null),
+        y = It((C) => {
+          var w;
+          return (w = c.itemTextRefCallback) == null
+            ? void 0
+            : w.call(c, C, u.value, u.disabled);
+        }),
+        p = we(n, m, u.onItemTextChange, y),
+        v = d == null ? void 0 : d.textContent,
+        h = g.useMemo(
+          () =>
+            l.jsx(
+              "option",
+              { value: u.value, disabled: u.disabled, children: v },
+              u.value,
+            ),
+          [u.disabled, u.value, v],
+        ),
+        { onNativeOptionAdd: S, onNativeOptionRemove: x } = f;
+      return (
+        Me(() => (S(h), () => x(h)), [S, x, h]),
+        l.jsxs(l.Fragment, {
+          children: [
+            l.jsx(ke.span, { id: u.textId, ...s, ref: p }),
+            u.isSelected &&
+            a.valueNode &&
+            !a.valueNodeHasChildren &&
+            !Sr(a.value)
+              ? yr.createPortal(s.children, a.valueNode)
+              : null,
+          ],
+        })
+      );
+    }, "SelectItemText"),
+  ),
+  x0 = "SelectItemIndicator",
+  S0 = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, ...o } = t;
+      return kd(x0, r).isSelected
+        ? l.jsx(ke.span, { "aria-hidden": !0, ...o, ref: n })
+        : null;
+    }, "SelectItemIndicator"),
+  ),
+  vl = "SelectScrollUpButton",
+  _d = g.forwardRef(
+    le(function (t, n) {
+      const r = _n(vl, t.__scopeSelect),
+        o = Ps(vl, t.__scopeSelect),
+        [i, s] = g.useState(!1),
+        a = we(n, o.onScrollButtonChange);
+      return (
+        Me(() => {
+          if (r.viewport && r.isPositioned) {
+            let c = function () {
+              const f = u.scrollTop > 0;
+              s(f);
+            };
+            le(c, "handleScroll");
+            const u = r.viewport;
+            return (
+              c(),
+              u.addEventListener("scroll", c),
+              () => u.removeEventListener("scroll", c)
+            );
+          }
+        }, [r.viewport, r.isPositioned]),
+        i
+          ? l.jsx(Md, {
+              ...t,
+              ref: a,
+              onAutoScroll: () => {
+                const { viewport: c, selectedItem: u } = r;
+                c && u && (c.scrollTop = c.scrollTop - u.offsetHeight);
+              },
+            })
+          : null
+      );
+    }, "SelectScrollUpButton"),
+  ),
+  bl = "SelectScrollDownButton",
+  Td = g.forwardRef(
+    le(function (t, n) {
+      const r = _n(bl, t.__scopeSelect),
+        o = Ps(bl, t.__scopeSelect),
+        [i, s] = g.useState(!1),
+        a = we(n, o.onScrollButtonChange);
+      return (
+        Me(() => {
+          if (r.viewport && r.isPositioned) {
+            let c = function () {
+              const f = u.scrollHeight - u.clientHeight,
+                d = Math.ceil(u.scrollTop) < f;
+              s(d);
+            };
+            le(c, "handleScroll");
+            const u = r.viewport;
+            return (
+              c(),
+              u.addEventListener("scroll", c),
+              () => u.removeEventListener("scroll", c)
+            );
+          }
+        }, [r.viewport, r.isPositioned]),
+        i
+          ? l.jsx(Md, {
+              ...t,
+              ref: a,
+              onAutoScroll: () => {
+                const { viewport: c, selectedItem: u } = r;
+                c && u && (c.scrollTop = c.scrollTop + u.offsetHeight);
+              },
+            })
+          : null
+      );
+    }, "SelectScrollDownButton"),
+  ),
+  Md = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, onAutoScroll: o, ...i } = t,
+        s = _n("SelectScrollButton", r),
+        a = g.useRef(null),
+        c = jo(r),
+        u = g.useCallback(() => {
+          a.current !== null &&
+            (window.clearInterval(a.current), (a.current = null));
+        }, []);
+      return (
+        g.useEffect(() => () => u(), [u]),
+        Me(() => {
+          var d;
+          const f = c().find((m) => m.ref.current === document.activeElement);
+          (d = f == null ? void 0 : f.ref.current) == null ||
+            d.scrollIntoView({ block: "nearest" });
+        }, [c]),
+        l.jsx(ke.div, {
+          "aria-hidden": !0,
+          ...i,
+          ref: n,
+          style: { flexShrink: 0, ...i.style },
+          onPointerDown: he(i.onPointerDown, () => {
+            a.current === null && (a.current = window.setInterval(o, 50));
+          }),
+          onPointerMove: he(i.onPointerMove, () => {
+            var f;
+            ((f = s.onItemLeave) == null || f.call(s),
+              a.current === null && (a.current = window.setInterval(o, 50)));
+          }),
+          onPointerLeave: he(i.onPointerLeave, () => {
+            u();
+          }),
+        })
+      );
+    }, "SelectScrollButtonImpl"),
+  ),
+  Dd = g.forwardRef(
+    le(function (t, n) {
+      const { __scopeSelect: r, ...o } = t;
+      return l.jsx(ke.div, { "aria-hidden": !0, ...o, ref: n });
+    }, "SelectSeparator"),
+  ),
+  C0 = "SelectBubbleInput",
+  P0 = g.forwardRef(
+    le(function ({ __scopeSelect: t, ...n }, r) {
+      const o = an(C0, t),
+        {
+          value: i,
+          onValueChange: s,
+          required: a,
+          disabled: c,
+          name: u,
+          autoComplete: f,
+          form: d,
+        } = o,
+        { nativeOptions: m, nativeSelectKey: y } = o,
+        p = g.useRef(null),
+        v = we(r, p),
+        h = i ?? "",
+        S = wd(h),
+        x = Array.from(m).some((C) => (C.props.value ?? "") === "");
+      return (
+        g.useEffect(() => {
+          const C = p.current;
+          if (!C) return;
+          const w = window.HTMLSelectElement.prototype,
+            _ = Object.getOwnPropertyDescriptor(w, "value").set;
+          if (S !== h && _) {
+            const D = new Event("change", { bubbles: !0 });
+            (_.call(C, h), C.dispatchEvent(D));
+          }
+        }, [S, h]),
+        l.jsxs(
+          ke.select,
+          {
+            "aria-hidden": !0,
+            required: a,
+            tabIndex: -1,
+            name: u,
+            autoComplete: f,
+            disabled: c,
+            form: d,
+            onChange: (C) => s(C.target.value),
+            ...n,
+            style: { ...ZS, ...n.style },
+            ref: v,
+            defaultValue: h,
+            children: [
+              Sr(i) && !x ? l.jsx("option", { value: "" }) : null,
+              Array.from(m),
+            ],
+          },
+          y,
+        )
+      );
+    }, "SelectBubbleInput"),
+  );
+function jd(e) {
+  return typeof e == "function";
+}
+le(jd, "isFunction");
+function Sr(e) {
+  return e === "" || e === void 0;
+}
+le(Sr, "shouldShowPlaceholder");
+function As(e) {
+  const t = It(e),
+    n = g.useRef(""),
+    r = g.useRef(0),
+    o = g.useCallback(
+      (s) => {
+        const a = n.current + s;
+        (t(a),
+          le(function c(u) {
+            ((n.current = u),
+              window.clearTimeout(r.current),
+              u !== "" && (r.current = window.setTimeout(() => c(""), 1e3)));
+          }, "updateSearch")(a));
+      },
+      [t],
+    ),
+    i = g.useCallback(() => {
+      ((n.current = ""), window.clearTimeout(r.current));
+    }, []);
+  return (
+    g.useEffect(() => () => window.clearTimeout(r.current), []),
+    [n, o, i]
+  );
+}
+le(As, "useTypeaheadSearch");
+function ks(e, t, n) {
+  const o = t.length > 1 && Array.from(t).every((u) => u === t[0]) ? t[0] : t,
+    i = n ? e.indexOf(n) : -1;
+  let s = Nd(e, Math.max(i, 0));
+  o.length === 1 && (s = s.filter((u) => u !== n));
+  const c = s.find((u) =>
+    u.textValue.toLowerCase().startsWith(o.toLowerCase()),
+  );
+  return c !== n ? c : void 0;
+}
+le(ks, "findNextItem");
+function Nd(e, t) {
+  return e.map((n, r) => e[(t + r) % e.length]);
+}
+le(Nd, "wrapArray");
+const co = t0,
+  uo = o0,
+  pr = g.forwardRef(({ className: e, children: t, ...n }, r) =>
+    l.jsxs(Sd, {
+      ref: r,
+      className: De(
+        "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+        e,
+      ),
+      ...n,
+      children: [
+        t,
+        l.jsx(i0, {
+          asChild: !0,
+          children: l.jsx(Fi, { className: "h-4 w-4 opacity-50" }),
+        }),
+      ],
+    }),
+  );
+pr.displayName = Sd.displayName;
+const Rd = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(_d, {
+    ref: n,
+    className: De("flex cursor-default items-center justify-center py-1", e),
+    ...t,
+    children: l.jsx(cf, { className: "h-4 w-4" }),
+  }),
+);
+Rd.displayName = _d.displayName;
+const Ed = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(Td, {
+    ref: n,
+    className: De("flex cursor-default items-center justify-center py-1", e),
+    ...t,
+    children: l.jsx(Fi, { className: "h-4 w-4" }),
+  }),
+);
+Ed.displayName = Td.displayName;
+const gr = g.forwardRef(
+  ({ className: e, children: t, position: n = "popper", ...r }, o) =>
+    l.jsx(c0, {
+      children: l.jsxs(Cd, {
+        ref: o,
+        className: De(
+          "relative z-50 max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]",
+          n === "popper" &&
+            "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+          e,
+        ),
+        position: n,
+        ...r,
+        children: [
+          l.jsx(Rd, {}),
+          l.jsx(g0, {
+            className: De(
+              "p-1",
+              n === "popper" &&
+                "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]",
+            ),
+            children: t,
+          }),
+          l.jsx(Ed, {}),
+        ],
+      }),
+    }),
+);
+gr.displayName = Cd.displayName;
+const A0 = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(Ad, {
+    ref: n,
+    className: De("py-1.5 pl-8 pr-2 text-sm font-semibold", e),
+    ...t,
+  }),
+);
+A0.displayName = Ad.displayName;
+const Ne = g.forwardRef(({ className: e, children: t, ...n }, r) =>
+  l.jsxs(Id, {
+    ref: r,
+    className: De(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      e,
+    ),
+    ...n,
+    children: [
+      l.jsx("span", {
+        className:
+          "absolute left-2 flex h-3.5 w-3.5 items-center justify-center",
+        children: l.jsx(S0, { children: l.jsx(Il, { className: "h-4 w-4" }) }),
+      }),
+      l.jsx(w0, { children: t }),
+    ],
+  }),
+);
+Ne.displayName = Id.displayName;
+const k0 = g.forwardRef(({ className: e, ...t }, n) =>
+  l.jsx(Dd, { ref: n, className: De("-mx-1 my-1 h-px bg-muted", e), ...t }),
+);
+k0.displayName = Dd.displayName;
+const I0 = $c({
+  fullName: St().min(2, "Name must be at least 2 characters."),
+  countryCode: St().min(1, "Country code is required."),
+  phone: St()
+    .min(7, "Phone must be at least 7 digits.")
+    .regex(/^\d+$/, "Phone must contain only digits."),
+  email: St().email("Invalid email address."),
+  courseInterest: St().min(1, "Please select a course category."),
+});
+function Od({ isOpen: e, onClose: t, defaultCourse: n }) {
+  const [r, o] = g.useState(!1),
+    [i, s] = g.useState(!1),
+    a = cc({
+      resolver: uc(I0),
+      defaultValues: {
+        fullName: "",
+        countryCode: "+1",
+        phone: "",
+        email: "",
+        courseInterest: n || "",
+      },
+    });
+  async function c(u) {
+    o(!0);
+    try {
+      const { error: f } = await Gc.from("space9_demo_requests").insert([
+        {
+          full_name: u.fullName,
+          phone_number: `${u.countryCode} ${u.phone}`,
+          email: u.email,
+          course_interest: u.courseInterest,
+        },
+      ]);
+      if (f) throw f;
+      (s(!0),
+        setTimeout(() => {
+          (t(), s(!1), a.reset());
+        }, 3e3));
+    } catch (f) {
+      (console.error("Error submitting form:", f),
+        alert("Something went wrong. Please try again."));
+    } finally {
+      o(!1);
+    }
+  }
+  return (
+    q.useEffect(() => {
+      n && a.setValue("courseInterest", n);
+    }, [n, a]),
+    l.jsx(dx, {
+      open: e,
+      onOpenChange: (u) => !u && t(),
+      children: l.jsxs($u, {
+        className:
+          "w-[calc(100%-2rem)] max-w-md border-none shadow-3xl bg-white p-0 overflow-hidden rounded-xl mx-auto",
+        onOpenAutoFocus: (u) => u.preventDefault(),
+        children: [
+          l.jsx(Wu, {
+            className: "pt-6 px-5 sm:pt-8 sm:px-8",
+            children: l.jsx(Uu, {
+              className: "text-lg sm:text-xl font-bold text-black text-center",
+              children: "Reserve Your Free Demo Seat",
+            }),
+          }),
+          l.jsx("div", {
+            className: "p-5 sm:p-8",
+            children: i
+              ? l.jsxs("div", {
+                  className:
+                    "flex flex-col items-center justify-center py-8 sm:py-12 space-y-4 sm:space-y-6 animate-scale-in",
+                  children: [
+                    l.jsxs("div", {
+                      className: "relative",
+                      children: [
+                        l.jsx("div", {
+                          className:
+                            "absolute inset-0 bg-black/5 rounded-full blur-2xl animate-pulse",
+                        }),
+                        l.jsx("div", {
+                          className:
+                            "bg-db-accent rounded-full p-4 relative z-10",
+                          children: l.jsx(_l, {
+                            className: "w-12 h-12 text-white",
+                          }),
+                        }),
+                      ],
+                    }),
+                    l.jsxs("div", {
+                      className: "space-y-2 text-center",
+                      children: [
+                        l.jsx("h3", {
+                          className:
+                            "text-2xl font-bold text-black font-display",
+                          children: "Request Received",
+                        }),
+                        l.jsx("p", {
+                          className:
+                            "text-zinc-500 max-w-[280px] leading-relaxed mx-auto text-sm",
+                          children:
+                            "We've received your request. One of our specialists will reach out shortly.",
+                        }),
+                      ],
+                    }),
+                  ],
+                })
+              : l.jsx(Zu, {
+                  ...a,
+                  children: l.jsxs("form", {
+                    onSubmit: a.handleSubmit(c),
+                    className: "space-y-4 sm:space-y-5",
+                    children: [
+                      l.jsx(Ct, {
+                        control: a.control,
+                        name: "fullName",
+                        render: ({ field: u }) =>
+                          l.jsxs(ht, {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(gn, {
+                                className:
+                                  "text-[11px] font-bold text-black uppercase pl-1",
+                                children: "Full Name",
+                              }),
+                              l.jsx(yt, {
+                                children: l.jsx(yn, {
+                                  placeholder: "Your full name",
+                                  className:
+                                    "h-10 sm:h-12 bg-white border-zinc-200 text-black focus-visible:ring-black focus-visible:border-black rounded-lg transition-all text-sm",
+                                  ...u,
+                                }),
+                              }),
+                              l.jsx(hn, {
+                                className:
+                                  "text-red-500 text-[10px] font-medium pl-1",
+                              }),
+                            ],
+                          }),
+                      }),
+                      l.jsxs("div", {
+                        className:
+                          "grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4",
+                        children: [
+                          l.jsxs("div", {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(Co, {
+                                className:
+                                  "text-[11px] font-bold text-black uppercase pl-1",
+                                children: "Phone",
+                              }),
+                              l.jsxs("div", {
+                                className: "flex gap-2 items-start",
+                                children: [
+                                  l.jsx(Ct, {
+                                    control: a.control,
+                                    name: "countryCode",
+                                    render: ({ field: u }) =>
+                                      l.jsx(ht, {
+                                        className: "space-y-0 flex-shrink-0",
+                                        children: l.jsxs(co, {
+                                          onValueChange: u.onChange,
+                                          value: u.value,
+                                          children: [
+                                            l.jsx(yt, {
+                                              children: l.jsx(pr, {
+                                                className:
+                                                  "w-[95px] h-10 sm:h-12 bg-white border-zinc-200 text-black focus:ring-black focus:border-black rounded-lg transition-all text-sm",
+                                                children: l.jsx(uo, {
+                                                  placeholder: "+1",
+                                                }),
+                                              }),
+                                            }),
+                                            l.jsxs(gr, {
+                                              className:
+                                                "bg-white border-zinc-200 max-h-[200px]",
+                                              children: [
+                                                l.jsx(Ne, {
+                                                  value: "+1",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇺🇸 +1",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+91",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇮🇳 +91",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+44",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇬🇧 +44",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+971",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇦🇪 +971",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+61",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇦🇺 +61",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+65",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇸🇬 +65",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+966",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇸🇦 +966",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+49",
+                                                  className:
+                                                    "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer m-1",
+                                                  children: "🇩🇪 +49",
+                                                }),
+                                              ],
+                                            }),
+                                          ],
+                                        }),
+                                      }),
+                                  }),
+                                  l.jsx(Ct, {
+                                    control: a.control,
+                                    name: "phone",
+                                    render: ({ field: u }) =>
+                                      l.jsx(ht, {
+                                        className: "space-y-0 flex-1",
+                                        children: l.jsx(yt, {
+                                          children: l.jsx(yn, {
+                                            type: "tel",
+                                            placeholder: "9876543210",
+                                            className:
+                                              "h-10 sm:h-12 bg-white border-zinc-200 text-black focus-visible:ring-black focus-visible:border-black rounded-lg transition-all text-sm",
+                                            ...u,
+                                          }),
+                                        }),
+                                      }),
+                                  }),
+                                ],
+                              }),
+                              a.formState.errors.phone &&
+                                l.jsx("p", {
+                                  className:
+                                    "text-red-500 text-[10px] font-medium pl-1",
+                                  children: a.formState.errors.phone.message,
+                                }),
+                            ],
+                          }),
+                          l.jsx(Ct, {
+                            control: a.control,
+                            name: "email",
+                            render: ({ field: u }) =>
+                              l.jsxs(ht, {
+                                className: "space-y-1.5",
+                                children: [
+                                  l.jsx(gn, {
+                                    className:
+                                      "text-[11px] font-bold text-black uppercase pl-1",
+                                    children: "Email",
+                                  }),
+                                  l.jsx(yt, {
+                                    children: l.jsx(yn, {
+                                      type: "email",
+                                      placeholder: "mail@example.com",
+                                      className:
+                                        "h-10 sm:h-12 bg-white border-zinc-200 text-black focus-visible:ring-black focus-visible:border-black rounded-lg transition-all text-sm",
+                                      ...u,
+                                    }),
+                                  }),
+                                  l.jsx(hn, {
+                                    className:
+                                      "text-red-500 text-[10px] font-medium pl-1",
+                                  }),
+                                ],
+                              }),
+                          }),
+                        ],
+                      }),
+                      l.jsx(Ct, {
+                        control: a.control,
+                        name: "courseInterest",
+                        render: ({ field: u }) =>
+                          l.jsxs(ht, {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(gn, {
+                                className:
+                                  "text-[11px] font-bold text-black uppercase pl-1",
+                                children: "Interested Category",
+                              }),
+                              l.jsxs(co, {
+                                onValueChange: u.onChange,
+                                defaultValue: u.value,
+                                children: [
+                                  l.jsx(yt, {
+                                    children: l.jsx(pr, {
+                                      className:
+                                        "h-10 sm:h-12 bg-white border-zinc-200 text-black focus:ring-black focus:border-black rounded-lg transition-all text-sm",
+                                      children: l.jsx(uo, {
+                                        placeholder: "Select a category",
+                                      }),
+                                    }),
+                                  }),
+                                  l.jsx(gr, {
+                                    className: "bg-white border-zinc-200",
+                                    children: $i.map((f) =>
+                                      l.jsx(
+                                        Ne,
+                                        {
+                                          value: f,
+                                          className:
+                                            "text-zinc-900 focus:bg-db-accent focus:text-white cursor-pointer rounded-md m-1",
+                                          children: f,
+                                        },
+                                        f,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              l.jsx(hn, {
+                                className:
+                                  "text-red-500 text-[10px] font-medium pl-1",
+                              }),
+                            ],
+                          }),
+                      }),
+                      l.jsxs("div", {
+                        className: "pt-2 sm:pt-4",
+                        children: [
+                          l.jsxs(gs, {
+                            type: "submit",
+                            disabled: r,
+                            className:
+                              "w-full h-12 sm:h-14 bg-db-accent hover:bg-db-accent/90 text-white font-bold text-sm sm:text-base rounded-lg transition-all active:scale-[0.98] group overflow-hidden relative border-none",
+                            children: [
+                              l.jsx("span", {
+                                className:
+                                  "relative z-10 flex items-center justify-center gap-2",
+                                children: r
+                                  ? "Processing..."
+                                  : "Confirm Registration",
+                              }),
+                              l.jsx("div", {
+                                className:
+                                  "absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500",
+                              }),
+                            ],
+                          }),
+                          l.jsx("p", {
+                            className:
+                              "text-[10px] text-zinc-400 text-center mt-4",
+                            children:
+                              'By clicking "Confirm Registration" you agree to our Terms of Service.',
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+          }),
+        ],
+      }),
+    })
+  );
+}
+const $r = "All";
+function _0() {
+  const { ref: e, isVisible: t } = vr(0.05),
+    [n, r] = g.useState($r),
+    [o, i] = g.useState(!1),
+    [s, a] = g.useState(""),
+    c = n === $r ? si : si.filter((u) => u.category === n);
+  return l.jsxs("section", {
+    id: "programs",
+    className: "relative py-16 lg:py-24 bg-white",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black/[0.05] to-transparent",
+      }),
+      l.jsxs("div", {
+        className: "max-w-[1280px] mx-auto px-5 sm:px-8",
+        children: [
+          l.jsxs(Q.div, {
+            ref: e,
+            variants: bn,
+            initial: "hidden",
+            animate: t ? "visible" : "hidden",
+            className:
+              "flex flex-col items-center text-center gap-4 mb-10 sm:mb-14",
+            children: [
+              l.jsx(Q.p, {
+                variants: Pe,
+                transition: Re,
+                className:
+                  "text-xs font-medium tracking-[0.2em] uppercase text-db-accent",
+                children: "Our Programs",
+              }),
+              l.jsx(Q.h2, {
+                variants: Pe,
+                transition: Re,
+                className:
+                  "font-display font-medium text-2xl sm:text-3xl md:text-display-md text-db-text max-w-2xl",
+                children:
+                  "Programs built for the roles companies are hiring for",
+              }),
+              l.jsx(Q.p, {
+                variants: Pe,
+                transition: { ...Re, delay: 0.1 },
+                className:
+                  "text-sm sm:text-base text-db-muted max-w-xl leading-relaxed",
+                children:
+                  "From cloud engineering to cybersecurity every program is hands-on, industry-aligned, and career-focused.",
+              }),
+            ],
+          }),
+          l.jsxs(Q.div, {
+            initial: { opacity: 0, y: -8 },
+            animate: t ? { opacity: 1, y: 0 } : { opacity: 0, y: -8 },
+            transition: { duration: 0.5, delay: 0.2 },
+            className:
+              "flex flex-nowrap gap-3 overflow-x-auto pb-2 mb-12 sm:mb-16 scrollbar-none px-4 sm:justify-center sm:px-0",
+            children: [
+              l.jsx(Q.button, {
+                onClick: () => r($r),
+                whileHover: { scale: 1.03 },
+                whileTap: { scale: 0.97 },
+                className: `flex-shrink-0 px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide transition-all duration-300 ${n === $r ? "bg-db-accent text-db-bg shadow-md" : "bg-black/[0.04] text-db-muted border border-black/[0.06] hover:text-db-text hover:border-black/[0.1] hover:bg-black/[0.06]"}`,
+                children: "All Programs",
+              }),
+              $i.map((u) =>
+                l.jsx(
+                  Q.button,
+                  {
+                    onClick: () => r(u),
+                    whileHover: { scale: 1.03 },
+                    whileTap: { scale: 0.97 },
+                    className: `flex-shrink-0 px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide transition-all duration-300 ${n === u ? "bg-db-accent text-db-bg shadow-md" : "bg-black/[0.04] text-db-muted border border-black/[0.06] hover:text-db-text hover:border-black/[0.1] hover:bg-black/[0.06]"}`,
+                    children: u,
+                  },
+                  u,
+                ),
+              ),
+            ],
+          }),
+          l.jsx(Kr, {
+            mode: "wait",
+            children: l.jsx(
+              Q.div,
+              {
+                initial: { opacity: 0, x: 20 },
+                animate: { opacity: 1, x: 0 },
+                exit: { opacity: 0, x: -20 },
+                transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+                className: "relative",
+                children:
+                  c.length === 0
+                    ? l.jsxs(Q.div, {
+                        initial: { opacity: 0, scale: 0.9 },
+                        animate: { opacity: 1, scale: 1 },
+                        className: "text-center py-20",
+                        children: [
+                          l.jsx(Tl, {
+                            className:
+                              "w-12 h-12 text-db-muted/30 mx-auto mb-4",
+                          }),
+                          l.jsx("p", {
+                            className: "text-db-muted text-lg",
+                            children: "No courses found in this category.",
+                          }),
+                        ],
+                      })
+                    : l.jsx(l.Fragment, {
+                        children: l.jsxs("div", {
+                          className:
+                            "flex gap-4 overflow-x-auto pb-4 scroll-smooth hide-scrollbar",
+                          style: {
+                            scrollbarWidth: "none",
+                            msOverflowStyle: "none",
+                          },
+                          children: [
+                            c.map((u, f) =>
+                              l.jsx(
+                                Q.div,
+                                {
+                                  initial: { opacity: 0, y: 16 },
+                                  animate: { opacity: 1, y: 0 },
+                                  transition: {
+                                    delay: f * 0.04,
+                                    duration: 0.4,
+                                    ease: [0.22, 1, 0.36, 1],
+                                  },
+                                  className:
+                                    "flex-shrink-0 w-[280px] sm:w-[320px] self-stretch",
+                                  children: l.jsx(Jm, {
+                                    id: u.id,
+                                    title: u.title,
+                                    category: u.category,
+                                    description: u.description,
+                                    image: u.image,
+                                    icon: u.icon,
+                                    onBookDemo: (d) => {
+                                      (a(d), i(!0));
+                                    },
+                                  }),
+                                },
+                                u.id,
+                              ),
+                            ),
+                            l.jsx("div", { className: "flex-shrink-0 w-8" }),
+                          ],
+                        }),
+                      }),
+              },
+              n,
+            ),
+          }),
+          l.jsx(Q.div, {
+            initial: { opacity: 0 },
+            animate: t ? { opacity: 1 } : { opacity: 0 },
+            transition: { duration: 0.5, delay: 0.45 },
+            className: "flex justify-center mt-10",
+            children: l.jsxs(Ot, {
+              to: "/programs",
+              className:
+                "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#111111] text-white text-sm font-semibold hover:bg-[#333333] transition-colors duration-200 group",
+              children: [
+                "View All Programs",
+                l.jsx(Sl, {
+                  className:
+                    "w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform",
+                }),
+              ],
+            }),
+          }),
+          l.jsx("style", {
+            children: `
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `,
+          }),
+        ],
+      }),
+      l.jsx(Od, { isOpen: o, onClose: () => i(!1), defaultCourse: s }),
+    ],
+  });
+}
+const T0 = "/assets/logoComp-3SGmxOcP.png",
+  M0 = ({ children: e, className: t = "" }) =>
+    l.jsxs("div", {
+      className: `relative overflow-hidden rounded-[32px] p-[2px] ${t}`,
+      children: [
+        l.jsx("span", {
+          className:
+            "absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#CF9FFF_0%,#393BB2_50%,#CF9FFF_100%)]",
+        }),
+        l.jsx("div", {
+          className:
+            "inline-flex h-full w-full flex-col rounded-[30px] bg-[#0A0A0B] p-8 md:p-12 text-white backdrop-blur-3xl relative z-10",
+          children: e,
+        }),
+      ],
+    });
+function D0() {
+  const { ref: e, isVisible: t } = vr(0.1),
+    n = [
+      {
+        icon: l.jsx(Pt, { className: "w-5 h-5 text-green-500" }),
+        text: "Affordable, 1-on-1 Personalized Live Training",
+      },
+      {
+        icon: l.jsx(ar, { className: "w-5 h-5 text-green-500" }),
+        text: "Hands-On Learning with Real Projects",
+      },
+      {
+        icon: l.jsx(uf, { className: "w-5 h-5 text-green-500" }),
+        text: "Industry-Focused & Updated Curriculum",
+      },
+      {
+        icon: l.jsx(vn, { className: "w-5 h-5 text-green-500" }),
+        text: "Career Guidance & Job Application Support",
+      },
+      {
+        icon: l.jsx(Tl, { className: "w-5 h-5 text-green-500" }),
+        text: "Focused on Skills That Get You Hired",
+      },
+    ],
+    r = [
+      "High Fees with Limited Value",
+      "Theory-Based Learning Approach",
+      "Outdated & Static Curriculum",
+      "No Real-World Practice or Projects",
+      "Lack of Career & Placement Support",
+    ];
+  return l.jsxs("section", {
+    className: "relative py-16 lg:py-24 bg-white overflow-hidden",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black/[0.05] to-transparent",
+      }),
+      l.jsx("div", {
+        className: "max-w-[1200px] mx-auto px-5 sm:px-8 relative z-10",
+        children: l.jsxs(Q.div, {
+          ref: e,
+          variants: bn,
+          initial: "hidden",
+          animate: t ? "visible" : "hidden",
+          className: "flex flex-col items-center",
+          children: [
+            l.jsxs("div", {
+              className: "text-center mb-16 md:mb-24",
+              children: [
+                l.jsx(Q.p, {
+                  variants: Pe,
+                  transition: Re,
+                  className:
+                    "text-xs font-medium tracking-[0.3em] uppercase text-db-accent mb-6",
+                  children: "The space9 Standard",
+                }),
+                l.jsxs(Q.h2, {
+                  variants: Pe,
+                  transition: Re,
+                  className:
+                    "font-display font-medium text-4xl md:text-6xl lg:text-7xl text-db-text tracking-tight leading-[1.1]",
+                  children: [
+                    "What Makes space9 ",
+                    l.jsx("br", { className: "hidden md:block" }),
+                    l.jsx("span", {
+                      className:
+                        "text-transparent bg-clip-text bg-gradient-to-r from-db-accent to-purple-600",
+                      children: "Different From Others",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            l.jsxs("div", {
+              className: "grid grid-cols-1 lg:grid-cols-2 gap-8 w-full",
+              children: [
+                l.jsx(Q.div, {
+                  variants: Pe,
+                  transition: { ...Re, delay: 0.2 },
+                  className: "w-full h-full",
+                  children: l.jsx(M0, {
+                    children: l.jsxs("div", {
+                      className: "flex flex-col gap-8 h-full",
+                      children: [
+                        l.jsxs("div", {
+                          className:
+                            "flex items-center gap-4 border-b border-white/10 pb-6",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-14 h-14 flex items-center justify-center",
+                              children: l.jsx("img", {
+                                src: T0,
+                                alt: "space9 logo",
+                                className: "w-full h-full object-contain",
+                              }),
+                            }),
+                            l.jsxs("div", {
+                              children: [
+                                l.jsx("h3", {
+                                  className:
+                                    "text-2xl font-display font-medium tracking-tight",
+                                  children: "space9",
+                                }),
+                                l.jsx("p", {
+                                  className:
+                                    "text-sm text-db-accent font-bold tracking-[0.05em] uppercase",
+                                  children: "Learning to Earning",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        l.jsx("div", {
+                          className: "grid gap-6",
+                          children: n.map((o, i) =>
+                            l.jsxs(
+                              "div",
+                              {
+                                className: "flex items-start gap-5 group",
+                                children: [
+                                  l.jsx("div", {
+                                    className:
+                                      "mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center transition-transform group-hover:scale-110",
+                                    children: l.jsx(Il, {
+                                      className: "w-4 h-4 text-green-500",
+                                    }),
+                                  }),
+                                  l.jsx("p", {
+                                    className:
+                                      "text-lg text-white/90 font-medium tracking-tight leading-snug",
+                                    children: o.text,
+                                  }),
+                                ],
+                              },
+                              i,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                  }),
+                }),
+                l.jsx(Q.div, {
+                  variants: Pe,
+                  transition: { ...Re, delay: 0.4 },
+                  className: "w-full h-full",
+                  children: l.jsxs("div", {
+                    className:
+                      "relative overflow-hidden rounded-[32px] p-[2px]",
+                    children: [
+                      l.jsx("span", {
+                        className:
+                          "absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#333_0%,#111_50%,#333_100%)]",
+                      }),
+                      l.jsxs("div", {
+                        className:
+                          "inline-flex h-full w-full flex-col rounded-[30px] bg-[#0A0A0B] p-8 md:p-12 text-white/40 backdrop-blur-3xl relative z-10",
+                        children: [
+                          l.jsxs("div", {
+                            className:
+                              "flex items-center gap-4 border-b border-white/5 pb-6 mb-8",
+                            children: [
+                              l.jsx("div", {
+                                className:
+                                  "w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center",
+                                children: l.jsx(vn, {
+                                  className: "w-5 h-5 text-white/20",
+                                }),
+                              }),
+                              l.jsxs("div", {
+                                children: [
+                                  l.jsx("h3", {
+                                    className:
+                                      "text-2xl font-display font-medium text-white/60 tracking-tight",
+                                    children: "Others",
+                                  }),
+                                  l.jsx("p", {
+                                    className:
+                                      "text-sm text-white/20 font-light",
+                                    children: "Standard Education",
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          l.jsx("div", {
+                            className: "grid gap-5",
+                            children: r.map((o, i) =>
+                              l.jsxs(
+                                "div",
+                                {
+                                  className: "flex items-start gap-4",
+                                  children: [
+                                    l.jsx("div", {
+                                      className:
+                                        "mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-red-500/5 border border-red-500/10 flex items-center justify-center",
+                                      children: l.jsx(Li, {
+                                        className: "w-3 h-3 text-red-500/40",
+                                      }),
+                                    }),
+                                    l.jsx("p", {
+                                      className:
+                                        "text-base text-white/30 font-light tracking-tight",
+                                      children: o,
+                                    }),
+                                  ],
+                                },
+                                i,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      l.jsx("div", {
+        className:
+          "absolute top-1/2 left-0 w-[500px] h-[500px] bg-db-accent/5 rounded-full blur-[120px] -translate-x-1/2 -z-10",
+      }),
+      l.jsx("div", {
+        className:
+          "absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] translate-x-1/4 -z-10",
+      }),
+    ],
+  });
+}
+function j0() {
+  const [e, t] = g.useState(0),
+    { ref: n, isVisible: r } = vr(0.1),
+    o = [
+      {
+        q: "1. What makes space9 different from other training platforms?",
+        a: "space9 focuses on practical, job-oriented training with real projects, live sessions, and career support—so you gain skills that companies actually look for.",
+      },
+      {
+        q: "2. Do you provide placement support?",
+        a: "Yes, we provide job application support, resume optimization, and interview guidance to help you land opportunities faster.",
+      },
+      {
+        q: "3. Are the courses beginner-friendly?",
+        a: "Absolutely. Our programs are designed for both beginners and intermediate learners, with step-by-step guidance and hands-on practice.",
+      },
+      {
+        q: "4. Will I work on real projects?",
+        a: "Yes, you will work on real-world projects and assignments that help you build a strong portfolio and gain practical experience.",
+      },
+      {
+        q: "5. How are the classes conducted?",
+        a: "We offer live on-1-on training sessions along with practical assignments and mentor support, ensuring an interactive learning experience.",
+      },
+      {
+        q: "6. Which career paths can I choose at space9?",
+        a: "You can explore careers in Cybersecurity, Cloud Computing, DevOps, Data Analytics, Artificial Intelligence, Machine Learning and Software Development, based on your interests.",
+      },
+    ];
+  return l.jsxs("section", {
+    className: "relative py-16 lg:py-24",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent",
+      }),
+      l.jsxs("div", {
+        className: "max-w-[780px] mx-auto px-5 sm:px-8",
+        children: [
+          l.jsx(Q.div, {
+            ref: n,
+            variants: bn,
+            initial: "hidden",
+            animate: r ? "visible" : "hidden",
+            children: l.jsxs("div", {
+              className: "flex flex-col items-center text-center mb-16 mx-auto",
+              children: [
+                l.jsx(Q.p, {
+                  variants: Pe,
+                  transition: Re,
+                  className:
+                    "text-xs font-medium tracking-[0.2em] uppercase text-db-accent mb-4",
+                  children: "FAQ",
+                }),
+                l.jsx(Q.h2, {
+                  variants: Pe,
+                  transition: Re,
+                  className:
+                    "font-display font-medium text-display-md text-db-text max-w-2xl mx-auto",
+                  children: "Frequently Asked Questions",
+                }),
+              ],
+            }),
+          }),
+          l.jsx(Q.div, {
+            variants: bn,
+            initial: "hidden",
+            animate: r ? "visible" : "hidden",
+            className: "space-y-2",
+            children: o.map((i, s) =>
+              l.jsxs(
+                Q.div,
+                {
+                  variants: Pe,
+                  transition: { ...Re, delay: s * 0.06 },
+                  className: `rounded-xl border transition-all duration-400 overflow-hidden ${e === s ? "border-db-accent/20 bg-db-surface" : "border-white/[0.06] bg-transparent hover:bg-db-surface/50"}`,
+                  children: [
+                    l.jsxs("button", {
+                      onClick: () => t(e === s ? null : s),
+                      className:
+                        "w-full flex items-center justify-between p-6 text-left focus:outline-none group",
+                      children: [
+                        l.jsx("span", {
+                          className: `font-semibold text-[15px] pr-6 transition-colors duration-300 ${e === s ? "text-db-text" : "text-db-text/70 group-hover:text-db-text"}`,
+                          children: i.q,
+                        }),
+                        l.jsx(Q.div, {
+                          animate: { rotate: e === s ? 180 : 0 },
+                          transition: {
+                            duration: 0.3,
+                            ease: [0.22, 1, 0.36, 1],
+                          },
+                          className: "flex-shrink-0",
+                          children: l.jsx(Fi, {
+                            className: `w-4 h-4 transition-colors duration-300 ${e === s ? "text-db-accent" : "text-db-muted/40"}`,
+                          }),
+                        }),
+                      ],
+                    }),
+                    l.jsx(Kr, {
+                      children:
+                        e === s &&
+                        l.jsx(Q.div, {
+                          initial: { height: 0, opacity: 0 },
+                          animate: { height: "auto", opacity: 1 },
+                          exit: { height: 0, opacity: 0 },
+                          transition: {
+                            duration: 0.35,
+                            ease: [0.22, 1, 0.36, 1],
+                          },
+                          children: l.jsx("div", {
+                            className:
+                              "px-6 pb-6 text-sm text-db-muted leading-[1.8]",
+                            children: i.a,
+                          }),
+                        }),
+                    }),
+                  ],
+                },
+                s,
+              ),
+            ),
+          }),
+        ],
+      }),
+    ],
+  });
+}
+const N0 = $c({
+  fullName: St().min(2, "Name must be at least 2 characters."),
+  countryCode: St().min(1, "Country code is required."),
+  phone: St()
+    .min(7, "Phone must be at least 7 digits.")
+    .regex(/^\d+$/, "Phone must contain only digits."),
+  email: St().email("Invalid email address."),
+  courseInterest: St().min(1, "Please select a course category."),
+});
+function R0() {
+  const [e, t] = g.useState(!1),
+    [n, r] = g.useState(!1),
+    o = cc({
+      resolver: uc(N0),
+      defaultValues: {
+        fullName: "",
+        countryCode: "+1",
+        phone: "",
+        email: "",
+        courseInterest: "Job Ready Programs",
+      },
+    });
+  async function i(s) {
+    t(!0);
+    try {
+      const { error: a } = await Gc.from("space9_demo_requests").insert([
+        {
+          full_name: s.fullName,
+          phone_number: `${s.countryCode} ${s.phone}`,
+          email: s.email,
+          course_interest: s.courseInterest,
+        },
+      ]);
+      if (a) throw a;
+      (r(!0),
+        setTimeout(() => {
+          (r(!1), o.reset());
+        }, 4e3));
+    } catch (a) {
+      (console.error("Error submitting form:", a),
+        alert("Something went wrong. Please try again."));
+    } finally {
+      t(!1);
+    }
+  }
+  return l.jsxs("section", {
+    className:
+      "relative py-16 sm:py-24 bg-gradient-to-b from-white via-purple-50/25 to-white overflow-hidden",
+    children: [
+      l.jsx("div", {
+        className:
+          "absolute top-0 left-0 right-0 h-32 sm:h-44 bg-gradient-to-b from-white via-white/85 to-transparent pointer-events-none z-10",
+      }),
+      l.jsx("div", {
+        className:
+          "absolute bottom-0 left-0 right-0 h-28 sm:h-36 bg-gradient-to-t from-white via-white/85 to-transparent pointer-events-none z-10",
+      }),
+      l.jsx("div", {
+        className: "absolute inset-0 grid-bg opacity-30 pointer-events-none",
+      }),
+      l.jsx("div", {
+        className:
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] sm:w-[850px] h-[420px] sm:h-[550px] bg-purple-500/[0.07] rounded-full blur-[130px] pointer-events-none",
+      }),
+      l.jsx("div", {
+        className: "max-w-[1280px] mx-auto px-4 sm:px-6 relative z-10",
+        children: l.jsxs("div", {
+          className:
+            "max-w-xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-[0_15px_40px_rgba(0,0,0,0.06)] relative overflow-hidden",
+          children: [
+            l.jsx("div", {
+              className:
+                "absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[150px] bg-purple-500/10 rounded-full blur-[60px] pointer-events-none",
+            }),
+            l.jsxs("div", {
+              className: "text-center mb-8 relative z-10",
+              children: [
+                l.jsx("h2", {
+                  className:
+                    "text-2xl sm:text-3xl font-display font-medium text-slate-900 text-center",
+                  children: "Reserve Your Free Demo Seat",
+                }),
+                l.jsx("p", {
+                  className: "text-sm text-slate-600 mt-2 font-medium",
+                  children:
+                    "Join live 1-on-1 sessions and explore our industry-aligned programs.",
+                }),
+              ],
+            }),
+            n
+              ? l.jsxs("div", {
+                  className:
+                    "flex flex-col items-center justify-center py-10 space-y-4 animate-scale-in",
+                  children: [
+                    l.jsx("div", {
+                      className:
+                        "w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-purple-600/30",
+                      children: l.jsx(_l, { className: "w-9 h-9" }),
+                    }),
+                    l.jsxs("div", {
+                      className: "text-center space-y-2",
+                      children: [
+                        l.jsx("h3", {
+                          className:
+                            "text-2xl font-bold text-slate-900 font-display",
+                          children: "Registration Confirmed!",
+                        }),
+                        l.jsx("p", {
+                          className:
+                            "text-slate-600 max-w-xs mx-auto text-sm leading-relaxed",
+                          children:
+                            "Thank you for reserving your seat. Our specialist will contact you shortly.",
+                        }),
+                      ],
+                    }),
+                  ],
+                })
+              : l.jsx(Zu, {
+                  ...o,
+                  children: l.jsxs("form", {
+                    onSubmit: o.handleSubmit(i),
+                    className: "space-y-4 sm:space-y-5",
+                    children: [
+                      l.jsx(Ct, {
+                        control: o.control,
+                        name: "fullName",
+                        render: ({ field: s }) =>
+                          l.jsxs(ht, {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(gn, {
+                                className:
+                                  "text-[11px] font-bold text-slate-900 uppercase tracking-wider pl-0.5",
+                                children: "FULL NAME",
+                              }),
+                              l.jsx(yt, {
+                                children: l.jsx(yn, {
+                                  placeholder: "Your full name",
+                                  className:
+                                    "h-11 sm:h-12 bg-white border-slate-200 text-slate-900 focus-visible:ring-purple-600 focus-visible:border-purple-600 rounded-xl text-sm shadow-sm",
+                                  ...s,
+                                }),
+                              }),
+                              l.jsx(hn, {
+                                className: "text-red-500 text-xs font-medium",
+                              }),
+                            ],
+                          }),
+                      }),
+                      l.jsxs("div", {
+                        className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+                        children: [
+                          l.jsxs("div", {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(Co, {
+                                className:
+                                  "text-[11px] font-bold text-slate-900 uppercase tracking-wider pl-0.5",
+                                children: "PHONE",
+                              }),
+                              l.jsxs("div", {
+                                className: "flex gap-2 items-start",
+                                children: [
+                                  l.jsx(Ct, {
+                                    control: o.control,
+                                    name: "countryCode",
+                                    render: ({ field: s }) =>
+                                      l.jsx(ht, {
+                                        className: "space-y-0 flex-shrink-0",
+                                        children: l.jsxs(co, {
+                                          onValueChange: s.onChange,
+                                          value: s.value,
+                                          children: [
+                                            l.jsx(yt, {
+                                              children: l.jsx(pr, {
+                                                className:
+                                                  "w-[95px] h-11 sm:h-12 bg-white border-slate-200 text-slate-900 focus:ring-purple-600 focus:border-purple-600 rounded-xl text-sm shadow-sm",
+                                                children: l.jsx(uo, {
+                                                  placeholder: "+1",
+                                                }),
+                                              }),
+                                            }),
+                                            l.jsxs(gr, {
+                                              className:
+                                                "bg-white border-slate-200 max-h-[200px] z-50",
+                                              children: [
+                                                l.jsx(Ne, {
+                                                  value: "+1",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇺🇸 +1",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+91",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇮🇳 +91",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+44",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇬🇧 +44",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+971",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇦🇪 +971",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+61",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇦🇺 +61",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+65",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇸🇬 +65",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+966",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇸🇦 +966",
+                                                }),
+                                                l.jsx(Ne, {
+                                                  value: "+49",
+                                                  className:
+                                                    "text-slate-900 cursor-pointer",
+                                                  children: "🇩🇪 +49",
+                                                }),
+                                              ],
+                                            }),
+                                          ],
+                                        }),
+                                      }),
+                                  }),
+                                  l.jsx(Ct, {
+                                    control: o.control,
+                                    name: "phone",
+                                    render: ({ field: s }) =>
+                                      l.jsx(ht, {
+                                        className: "space-y-0 flex-1",
+                                        children: l.jsx(yt, {
+                                          children: l.jsx(yn, {
+                                            type: "tel",
+                                            placeholder: "9876543210",
+                                            className:
+                                              "h-11 sm:h-12 bg-white border-slate-200 text-slate-900 focus-visible:ring-purple-600 focus-visible:border-purple-600 rounded-xl text-sm shadow-sm",
+                                            ...s,
+                                          }),
+                                        }),
+                                      }),
+                                  }),
+                                ],
+                              }),
+                              o.formState.errors.phone &&
+                                l.jsx("p", {
+                                  className:
+                                    "text-red-500 text-xs font-medium pl-0.5",
+                                  children: o.formState.errors.phone.message,
+                                }),
+                            ],
+                          }),
+                          l.jsx(Ct, {
+                            control: o.control,
+                            name: "email",
+                            render: ({ field: s }) =>
+                              l.jsxs(ht, {
+                                className: "space-y-1.5",
+                                children: [
+                                  l.jsx(gn, {
+                                    className:
+                                      "text-[11px] font-bold text-slate-900 uppercase tracking-wider pl-0.5",
+                                    children: "EMAIL",
+                                  }),
+                                  l.jsx(yt, {
+                                    children: l.jsx(yn, {
+                                      type: "email",
+                                      placeholder: "mail@example.com",
+                                      className:
+                                        "h-11 sm:h-12 bg-white border-slate-200 text-slate-900 focus-visible:ring-purple-600 focus-visible:border-purple-600 rounded-xl text-sm shadow-sm",
+                                      ...s,
+                                    }),
+                                  }),
+                                  l.jsx(hn, {
+                                    className:
+                                      "text-red-500 text-xs font-medium",
+                                  }),
+                                ],
+                              }),
+                          }),
+                        ],
+                      }),
+                      l.jsx(Ct, {
+                        control: o.control,
+                        name: "courseInterest",
+                        render: ({ field: s }) =>
+                          l.jsxs(ht, {
+                            className: "space-y-1.5",
+                            children: [
+                              l.jsx(gn, {
+                                className:
+                                  "text-[11px] font-bold text-slate-900 uppercase tracking-wider pl-0.5",
+                                children: "INTERESTED CATEGORY",
+                              }),
+                              l.jsxs(co, {
+                                onValueChange: s.onChange,
+                                defaultValue: s.value,
+                                children: [
+                                  l.jsx(yt, {
+                                    children: l.jsx(pr, {
+                                      className:
+                                        "h-11 sm:h-12 bg-white border-slate-200 text-slate-900 focus:ring-purple-600 focus:border-purple-600 rounded-xl text-sm shadow-sm",
+                                      children: l.jsx(uo, {
+                                        placeholder: "Select a category",
+                                      }),
+                                    }),
+                                  }),
+                                  l.jsx(gr, {
+                                    className: "bg-white border-slate-200 z-50",
+                                    children: $i.map((a) =>
+                                      l.jsx(
+                                        Ne,
+                                        {
+                                          value: a,
+                                          className:
+                                            "text-slate-900 cursor-pointer rounded-lg m-1",
+                                          children: a,
+                                        },
+                                        a,
+                                      ),
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              l.jsx(hn, {
+                                className: "text-red-500 text-xs font-medium",
+                              }),
+                            ],
+                          }),
+                      }),
+                      l.jsxs("div", {
+                        className: "pt-2 sm:pt-4",
+                        children: [
+                          l.jsx(gs, {
+                            type: "submit",
+                            disabled: e,
+                            className:
+                              "w-full h-12 sm:h-13 bg-purple-600 hover:bg-purple-700 text-white font-bold text-base rounded-xl transition-all shadow-md shadow-purple-600/25 active:scale-[0.98]",
+                            children: e
+                              ? "Processing..."
+                              : "Confirm Registration",
+                          }),
+                          l.jsx("p", {
+                            className:
+                              "text-[11px] text-slate-400 text-center mt-3 font-medium",
+                            children:
+                              'By clicking "Confirm Registration" you agree to our Terms of Service.',
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+          ],
+        }),
+      }),
+    ],
+  });
+}
+function E0() {
+  return l.jsxs("section", {
+    className: "relative py-16 lg:py-24 bg-white overflow-hidden",
+    children: [
+      l.jsx("div", {
+        className: "absolute inset-0 grid-bg opacity-40 pointer-events-none",
+      }),
+      l.jsx("div", {
+        className:
+          "absolute -top-1/2 -left-1/4 w-[800px] h-[800px] bg-db-accent/5 rounded-full blur-[150px] pointer-events-none",
+      }),
+      l.jsx("div", {
+        className:
+          "absolute -bottom-1/2 -right-1/4 w-[800px] h-[800px] bg-db-accent/5 rounded-full blur-[150px] pointer-events-none",
+      }),
+      l.jsx("div", {
+        className: "max-w-[1280px] mx-auto px-5 sm:px-8 relative z-10",
+        children: l.jsxs(Q.div, {
+          variants: bn,
+          initial: "hidden",
+          whileInView: "visible",
+          viewport: { once: !0 },
+          className:
+            "relative glass rounded-3xl border border-black/10 p-12 lg:p-20 text-center overflow-hidden shadow-xl shadow-black/5",
+          children: [
+            l.jsx("div", {
+              className:
+                "absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-db-accent/10 rounded-full blur-[100px] pointer-events-none",
+            }),
+            l.jsxs("div", {
+              className: "relative z-10 max-w-[800px] mx-auto",
+              children: [
+                l.jsxs(Q.h2, {
+                  variants: Pe,
+                  transition: { ...Re, delay: 0.1 },
+                  className:
+                    "font-display text-4xl sm:text-5xl md:text-7xl text-slate-950 mb-6 leading-[1.15] tracking-tight",
+                  children: [
+                    "Learn Anytime, Anywhere with the",
+                    " ",
+                    l.jsx("span", {
+                      className: "text-purple-600",
+                      children: "space9 App",
+                    }),
+                  ],
+                }),
+                l.jsx(Q.p, {
+                  variants: Pe,
+                  transition: { ...Re, delay: 0.2 },
+                  className:
+                    "text-xl md:text-2xl text-slate-950 mb-4 max-w-[600px] mx-auto leading-relaxed font-semibold",
+                  children: "Available on",
+                }),
+                l.jsx(Q.div, {
+                  variants: Pe,
+                  transition: { ...Re, delay: 0.3 },
+                  className:
+                    "flex flex-col sm:flex-row items-center justify-center gap-4",
+                  children: l.jsx(Q.a, {
+                    href: "https://play.google.com/store/apps/details?id=com.space9.app",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    className:
+                      "w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 transition-all duration-300 active:scale-95",
+                    children: l.jsx("img", {
+                      src: "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg",
+                      alt: "Google Play Store",
+                      className: "h-12",
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+    ],
+  });
+}
+const O0 = "/assets/logo-Dlsnz2Ol.png";
+function L0() {
+  const { ref: e, isVisible: t } = vr(0.05),
+    n = [
+      {
+        icon: l.jsx(df, { size: 16, className: "text-db-accent" }),
+        text: "support@space9.com",
+        href: "mailto:support@space9.com",
+      },
+      {
+        icon: l.jsx(ff, { size: 16, className: "text-db-accent" }),
+        text: "+91 8308074216",
+        href: "https://wa.me/918249495763",
+      },
+      {
+        icon: l.jsx(mf, { size: 16, className: "text-db-accent" }),
+        text: "Madhusudan Nagarastha, Jatni, Orissa, India, 752050",
+      },
+    ],
+    r = [
+      {
+        icon: l.jsx("svg", {
+          viewBox: "0 0 24 24",
+          className: "w-4 h-4 fill-current text-emerald-500",
+          "aria-hidden": "true",
+          children: l.jsx("path", {
+            d: "M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.44C8.95 7.44 8.68 7.5 8.46 7.74C8.24 7.97 7.63 8.55 7.63 9.71C7.63 10.87 8.48 11.99 8.6 12.15C8.72 12.31 10.25 14.66 12.6 15.67C14.55 16.5 14.96 16.33 15.38 16.29C15.8 16.25 16.73 15.74 16.92 15.2C17.11 14.67 17.11 14.21 17.05 14.11C16.99 14.01 16.84 13.95 16.6 13.83C16.36 13.71 15.2 13.14 14.98 13.06C14.77 12.98 14.61 12.94 14.46 13.18C14.3 13.41 13.85 13.95 13.71 14.11C13.58 14.26 13.44 14.28 13.2 14.16C12.96 14.05 11.96 13.72 10.77 12.66C9.84 11.83 9.21 10.81 9.03 10.5C8.85 10.2 9.01 10.03 9.13 9.91C9.24 9.8 9.38 9.62 9.5 9.48C9.62 9.34 9.66 9.24 9.74 9.09C9.82 8.93 9.78 8.8 9.72 8.68C9.66 8.56 9.21 7.46 9.02 7.01C8.84 6.57 8.65 6.64 8.51 6.63L8.08 6.63C7.92 6.63 7.67 6.69 7.45 6.93",
+          }),
+        }),
+        label: "WhatsApp",
+        href: "/join/free-demo",
+      },
+      {
+        icon: l.jsx(pf, { size: 16 }),
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/space9-official/",
+      },
+      {
+        icon: l.jsx(gf, { size: 16 }),
+        label: "Twitter / X",
+        href: "https://x.com/space9_info",
+      },
+      {
+        icon: l.jsx(hf, { size: 16 }),
+        label: "Instagram",
+        href: "https://www.instagram.com/space9.official",
+      },
+      {
+        icon: l.jsx(yf, { size: 16 }),
+        label: "YouTube",
+        href: "https://youtube.com/@space9official",
+      },
+    ];
+  return l.jsx("footer", {
+    className: "relative bg-db-bg border-t border-black/[0.05] z-10",
+    children: l.jsxs(Q.div, {
+      ref: e,
+      variants: bn,
+      initial: "hidden",
+      animate: t ? "visible" : "hidden",
+      className:
+        "max-w-[1280px] mx-auto px-5 sm:px-8 py-12 lg:py-16 relative z-10",
+      children: [
+        l.jsxs("div", {
+          className:
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8",
+          children: [
+            l.jsxs(Q.div, {
+              variants: Pe,
+              transition: Re,
+              className: "lg:col-span-5 space-y-5",
+              children: [
+                l.jsx("div", {
+                  className: "flex items-center",
+                  children: l.jsx("img", {
+                    src: O0,
+                    alt: "space9",
+                    className: "h-10 w-auto opacity-90 transition-opacity",
+                  }),
+                }),
+                l.jsx("p", {
+                  className: "text-sm text-db-muted leading-relaxed max-w-sm",
+                  children:
+                    "Industry-mapped training programs in Cloud, Cyber Security, AI, and DevOps. Building the next generation of IT professionals.",
+                }),
+                l.jsx("div", {
+                  className: "space-y-2.5 pt-2",
+                  children: n.map((o, i) =>
+                    l.jsxs(
+                      Q.div,
+                      {
+                        variants: Pe,
+                        transition: { ...Re, delay: i * 0.06 },
+                        className: "flex items-center gap-2.5",
+                        children: [
+                          o.icon,
+                          o.href
+                            ? l.jsx("a", {
+                                href: o.href,
+                                target: o.href.startsWith("http")
+                                  ? "_blank"
+                                  : void 0,
+                                rel: o.href.startsWith("http")
+                                  ? "noopener noreferrer"
+                                  : void 0,
+                                className:
+                                  "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                                children: o.text,
+                              })
+                            : l.jsx("span", {
+                                className: "text-sm text-db-muted",
+                                children: o.text,
+                              }),
+                        ],
+                      },
+                      i,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            l.jsxs(Q.div, {
+              variants: Pe,
+              transition: { ...Re, delay: 0.15 },
+              className: "lg:col-span-2",
+              children: [
+                l.jsx("h4", {
+                  className:
+                    "text-xs font-bold tracking-[0.15em] uppercase text-db-text/70 mb-5",
+                  children: "Programs",
+                }),
+                l.jsxs("ul", {
+                  className: "space-y-3",
+                  children: [
+                    l.jsx("li", {
+                      children: l.jsxs("a", {
+                        href: "/join/free-demo",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className:
+                          "text-sm text-db-muted hover:text-emerald-500 transition-colors duration-300 flex items-center gap-1.5 group",
+                        children: [
+                          l.jsx("span", { children: "Free Demo" }),
+                          l.jsx("span", {
+                            className:
+                              "text-[10px] font-semibold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded group-hover:bg-emerald-500/20 transition-colors",
+                            children: "Join",
+                          }),
+                        ],
+                      }),
+                    }),
+                    [
+                      "Cloud Engineering",
+                      "Cyber Security",
+                      "DevOps",
+                      "AI & Data Science",
+                      "All Programs",
+                    ].map((o) =>
+                      l.jsx(
+                        "li",
+                        {
+                          children: l.jsx(Ot, {
+                            to: "/programs",
+                            className:
+                              "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                            children: o,
+                          }),
+                        },
+                        o,
+                      ),
+                    ),
+                  ],
+                }),
+              ],
+            }),
+            l.jsxs(Q.div, {
+              variants: Pe,
+              transition: { ...Re, delay: 0.25 },
+              className: "lg:col-span-2",
+              children: [
+                l.jsx("h4", {
+                  className:
+                    "text-xs font-bold tracking-[0.15em] uppercase text-db-text/70 mb-5",
+                  children: "Company",
+                }),
+                l.jsxs("ul", {
+                  className: "space-y-3",
+                  children: [
+                    l.jsx("li", {
+                      children: l.jsx(Ot, {
+                        to: "/about",
+                        className:
+                          "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                        children: "About Us",
+                      }),
+                    }),
+                    l.jsx("li", {
+                      children: l.jsx(Ot, {
+                        to: "/contact",
+                        className:
+                          "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                        children: "Contact",
+                      }),
+                    }),
+                    l.jsx("li", {
+                      children: l.jsx("a", {
+                        href: "#",
+                        className:
+                          "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                        children: "Careers",
+                      }),
+                    }),
+                    l.jsx("li", {
+                      children: l.jsx(Ot, {
+                        to: "/job-application-support",
+                        className:
+                          "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                        children: "Job Application Support",
+                      }),
+                    }),
+                    l.jsx("li", {
+                      children: l.jsx(Ot, {
+                        to: "/terms",
+                        className:
+                          "text-sm text-db-muted hover:text-db-accent transition-colors duration-300",
+                        children: "Terms & Conditions",
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            l.jsxs(Q.div, {
+              variants: Pe,
+              transition: { ...Re, delay: 0.35 },
+              className: "lg:col-span-3 space-y-4",
+              children: [
+                l.jsx("h4", {
+                  className:
+                    "text-xs font-bold tracking-[0.15em] uppercase text-db-text/70 mb-5",
+                  children: "Connect & Verified Reviews",
+                }),
+                l.jsx("div", {
+                  className: "flex flex-wrap gap-2",
+                  children: r.map(({ icon: o, label: i, href: s }) =>
+                    l.jsx(
+                      Q.a,
+                      {
+                        href: s,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        "aria-label": i,
+                        className:
+                          "w-9 h-9 rounded-lg bg-black/[0.05] border border-black/[0.05] flex items-center justify-center text-db-muted hover:text-db-accent hover:border-db-accent/20 hover:bg-db-accent/[0.06] transition-all duration-300",
+                        whileHover: { scale: 1.1 },
+                        whileTap: { scale: 0.9 },
+                        children: o,
+                      },
+                      i,
+                    ),
+                  ),
+                }),
+                l.jsxs("div", {
+                  className: "pt-3 space-y-2",
+                  children: [
+                    l.jsxs("a", {
+                      href: "https://www.trustpilot.com/review/space9.in",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className:
+                        "flex items-center justify-between p-2 rounded-xl bg-slate-50 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/50 transition-all duration-300 group",
+                      children: [
+                        l.jsxs("div", {
+                          className: "flex items-center gap-2.5",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-200",
+                              children: l.jsxs("svg", {
+                                viewBox: "0 0 24 24",
+                                className: "w-full h-full",
+                                "aria-hidden": "true",
+                                children: [
+                                  l.jsx("path", {
+                                    fill: "#005128",
+                                    d: "M12 17.964l5.214-1.321 2.179 6.714L12 17.964z",
+                                  }),
+                                  l.jsx("path", {
+                                    fill: "#00B67A",
+                                    d: "M24 9.286h-9.179L12 0.643 9.179 9.286H0l7.429 5.357-2.821 8.643 7.429-5.357 4.571-3.286L24 9.286z",
+                                  }),
+                                ],
+                              }),
+                            }),
+                            l.jsx("span", {
+                              className:
+                                "text-xs font-bold text-slate-800 group-hover:text-emerald-700",
+                              children: "Trustpilot",
+                            }),
+                          ],
+                        }),
+                        l.jsx("span", {
+                          className:
+                            "text-[11px] font-extrabold text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-md",
+                          children: "★ 4.5/5",
+                        }),
+                      ],
+                    }),
+                    l.jsxs("a", {
+                      href: "https://share.google/lKgbhT2uLOALKSLCd",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className:
+                        "flex items-center justify-between p-2 rounded-xl bg-slate-50 border border-slate-200/70 hover:border-blue-300 hover:bg-blue-50/50 transition-all duration-300 group",
+                      children: [
+                        l.jsxs("div", {
+                          className: "flex items-center gap-2.5",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-200",
+                              children: l.jsxs("svg", {
+                                viewBox: "0 0 24 24",
+                                className: "w-full h-full",
+                                "aria-hidden": "true",
+                                children: [
+                                  l.jsx("path", {
+                                    fill: "#4285F4",
+                                    d: "M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z",
+                                  }),
+                                  l.jsx("path", {
+                                    fill: "#34A853",
+                                    d: "M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z",
+                                  }),
+                                  l.jsx("path", {
+                                    fill: "#FBBC05",
+                                    d: "M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z",
+                                  }),
+                                  l.jsx("path", {
+                                    fill: "#EA4335",
+                                    d: "M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z",
+                                  }),
+                                ],
+                              }),
+                            }),
+                            l.jsx("span", {
+                              className:
+                                "text-xs font-bold text-slate-800 group-hover:text-blue-700",
+                              children: "Google Reviews",
+                            }),
+                          ],
+                        }),
+                        l.jsx("span", {
+                          className:
+                            "text-[11px] font-extrabold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-md",
+                          children: "★ 4.8/5",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+        l.jsxs(Q.div, {
+          variants: Pe,
+          transition: { ...Re, delay: 0.45 },
+          className:
+            "mt-12 pt-8 border-t border-black/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-db-muted",
+          children: [
+            l.jsx("p", {
+              className: "text-center sm:text-left max-w-xl leading-relaxed",
+              children:
+                "Connect with a growing network of companies looking for skilled tech professionals.",
+            }),
+            l.jsxs("p", {
+              className: "text-center sm:text-right flex-shrink-0",
+              children: [
+                "© ",
+                new Date().getFullYear(),
+                " space9. All rights reserved.",
+              ],
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
+function z0() {
+  const [e, t] = g.useState(!1);
+  return l.jsxs("div", {
+    className:
+      "relative isolate min-h-screen overflow-x-clip bg-white flex flex-col font-body",
+    children: [
+      l.jsx("div", {
+        className:
+          "pointer-events-none fixed inset-0 z-0 h-screen w-screen bg-white bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.3] [transform:translateZ(0)] [will-change:transform] [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_100%)]",
+      }),
+      l.jsxs("div", {
+        className: "relative z-10 flex min-h-screen flex-col",
+        children: [
+          l.jsx(Nf, {}),
+          l.jsxs("main", {
+            className: "flex-grow pt-[72px]",
+            children: [
+              l.jsx(Ef, {}),
+              l.jsx(Wf, {}),
+              l.jsx(Hf, {}),
+              l.jsx(em, { onBookDemoClick: () => t(!0) }),
+              l.jsx(tm, {}),
+              l.jsx(_0, {}),
+              l.jsx(Lf, {}),
+              l.jsx(D0, {}),
+              l.jsx(Qf, {}),
+              l.jsx(R0, {}),
+              l.jsx(j0, {}),
+              l.jsx(E0, {}),
+            ],
+          }),
+          l.jsx(L0, {}),
+          l.jsx(Od, {
+            isOpen: e,
+            onClose: () => t(!1),
+            defaultCourse: "General",
+          }),
+        ],
+      }),
+    ],
+  });
+}
+const F0 = {
+  "soc-bootcamp-101": "https://chat.whatsapp.com/JljU7zYuonR5Yr9WWQedJF",
+  "free-demo": "https://wa.me/918249495763",
+  demo: "https://wa.me/918249495763",
+  "grc-training": "https://wa.me/918249495763",
+  grc: "https://wa.me/918249495763",
+};
+function B0() {
+  const { bootcampId: e } = Hd(),
+    r = (() => {
+      if (e) return e;
+      const i = window.location.pathname.split("/").filter(Boolean),
+        s = i.indexOf("join");
+      return s !== -1 && i[s + 1] ? i[s + 1] : "";
+    })()
+      .trim()
+      .toLowerCase()
+      .replace(/\/$/, ""),
+    o = F0[r] || "/";
+  return (
+    typeof window < "u" && window.location.replace(o),
+    g.useEffect(() => {
+      window.location.replace(o);
+    }, [o]),
+    null
+  );
+}
+const V0 = g.lazy(() =>
+    An(
+      () => import("./CoursesPage-DGNww11V.js"),
+      __vite__mapDeps([0, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.CoursesPage })),
+  ),
+  $0 = g.lazy(() =>
+    An(
+      () => import("./CourseDetailPage-Z4nDbAbC.js"),
+      __vite__mapDeps([5, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.CourseDetailPage })),
+  ),
+  W0 = g.lazy(() =>
+    An(
+      () => import("./AboutPage-wGPfL1oU.js"),
+      __vite__mapDeps([6, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.AboutPage })),
+  ),
+  U0 = g.lazy(() =>
+    An(
+      () => import("./ContactPage-DztNAHFb.js"),
+      __vite__mapDeps([7, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.ContactPage })),
+  ),
+  H0 = g.lazy(() =>
+    An(
+      () => import("./TermsPage-Z8iBTtjj.js"),
+      __vite__mapDeps([8, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.TermsPage })),
+  ),
+  G0 = g.lazy(() =>
+    An(
+      () => import("./JobApplicationSupportPage-CAC1JwTw.js"),
+      __vite__mapDeps([9, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.JobApplicationSupportPage })),
+  ),
+  Z0 = g.lazy(() =>
+    An(
+      () => import("./CertificationSupportPage-DiIqqx9m.js"),
+      __vite__mapDeps([10, 1, 2, 3, 4]),
+    ).then((e) => ({ default: e.CertificationSupportPage })),
+  );
+function J0() {
+  const { pathname: e } = fo();
+  return (
+    g.useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, [e]),
+    null
+  );
+}
+function K0() {
+  const e = fo();
+  return l.jsx(g.Suspense, {
+    fallback: null,
+    children: l.jsxs(Zd, {
+      location: e,
+      children: [
+        l.jsx(ft, { path: "/", element: l.jsx(z0, {}) }),
+        l.jsx(ft, { path: "/programs", element: l.jsx(V0, {}) }),
+        l.jsx(ft, { path: "/programs/:courseId", element: l.jsx($0, {}) }),
+        l.jsx(ft, {
+          path: "/courses",
+          element: l.jsx(Os, { to: "/programs", replace: !0 }),
+        }),
+        l.jsx(ft, {
+          path: "/courses/:courseId",
+          element: l.jsx(Os, { to: "/programs", replace: !0 }),
+        }),
+        l.jsx(ft, { path: "/job-application-support", element: l.jsx(G0, {}) }),
+        l.jsx(ft, { path: "/certification-support", element: l.jsx(Z0, {}) }),
+        l.jsx(ft, { path: "/about", element: l.jsx(W0, {}) }),
+        l.jsx(ft, { path: "/contact", element: l.jsx(U0, {}) }),
+        l.jsx(ft, { path: "/terms", element: l.jsx(H0, {}) }),
+        l.jsx(ft, { path: "/join/:bootcampId", element: l.jsx(B0, {}) }),
+      ],
+    }),
+  });
+}
+function q0() {
+  return l.jsx(Gd, {
+    children: l.jsxs(jf, { children: [l.jsx(J0, {}), l.jsx(K0, {})] }),
+  });
+}
+const ei = document.querySelector("link[rel~='icon']");
+if (ei) ((ei.href = oi), (ei.type = "image/png"));
+else {
+  const e = document.createElement("link");
+  ((e.rel = "icon"),
+    (e.type = "image/png"),
+    (e.href = oi),
+    document.head.appendChild(e));
+}
+const Y0 = document.getElementById("root"),
+  Q0 = Jd(Y0);
+Q0.render(l.jsx(q0, {}));
+export {
+  Od as B,
+  Jm as C,
+  L0 as F,
+  Lf as H,
+  Nf as N,
+  si as a,
+  Zm as b,
+  $i as c,
+  sC as d,
+  aC as e,
+  Pe as f,
+  Re as g,
+  Of as h,
+  bn as s,
+  vr as u,
+};
