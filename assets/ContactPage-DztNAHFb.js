@@ -32,11 +32,6 @@ function ContactIcon({ type }) {
       e.jsx("path", { d: "M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" }),
       e.jsx("circle", { cx: 12, cy: 10, r: 2.5 })
     ];
-  } else if (type === "clock") {
-    children = [
-      e.jsx("circle", { cx: 12, cy: 12, r: 9 }),
-      e.jsx("path", { d: "M12 7v5l3 2" })
-    ];
   } else if (type === "send") {
     children = [
       e.jsx("path", { d: "m22 2-7 20-4-9-9-4Z" }),
@@ -55,24 +50,29 @@ function ContactIcon({ type }) {
   });
 }
 
+// CONTACT INFORMATION CARD
 function ContactCard({ icon, title, description, detail }) {
   return e.jsxs("div", {
-    className: "group rounded-2xl border border-white/[0.07] bg-db-surface p-7 transition-all duration-300 hover:-translate-y-2 hover:border-db-accent/40",
+    className: "group flex flex-col items-center justify-center rounded-2xl border border-white/[0.07] bg-db-surface text-center transition-all duration-300 hover:-translate-y-2 hover:border-db-accent/40",
+    style: {
+      padding: "60px 35px",
+      minHeight: "360px"
+    },
     children: [
       e.jsx("div", {
-        className: "mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent transition-all duration-300 group-hover:bg-db-accent group-hover:text-white",
+        className: "mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-db-accent/10 text-db-accent transition-all duration-300 group-hover:bg-db-accent group-hover:text-white",
         children: e.jsx(ContactIcon, { type: icon })
       }),
       e.jsx("h3", {
-        className: "mb-3 text-lg font-bold text-db-text",
+        className: "mb-4 text-xl font-bold text-db-text",
         children: title
       }),
       e.jsx("p", {
-        className: "mb-2 break-words font-semibold text-db-accent",
+        className: "mb-3 break-words font-semibold text-db-accent",
         children: detail
       }),
       e.jsx("p", {
-        className: "text-sm leading-7 text-db-muted",
+        className: "max-w-xs text-sm leading-7 text-db-muted",
         children: description
       })
     ]
@@ -96,7 +96,7 @@ function ContactPage() {
       return;
     }
 
-    alert("Thank you for contacting Decabyte! Your enquiry has been received in this demo.");
+    alert("Thank you for contacting Space9-Cloud! Your enquiry has been received in this demo.");
     form.reset();
   }
 
@@ -109,6 +109,7 @@ function ContactPage() {
         className: "flex-grow pt-[72px]",
 
         children: [
+
           // HERO SECTION
           e.jsxs("section", {
             className: "relative overflow-hidden py-24 md:py-32",
@@ -124,7 +125,7 @@ function ContactPage() {
                 children: [
                   e.jsx("p", {
                     className: "mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-db-accent",
-                    children: "CONTACT Space9"
+                    children: "CONTACT SPACE9"
                   }),
                   e.jsxs("h1", {
                     className: "mx-auto mb-7 max-w-4xl font-display text-4xl font-bold leading-tight text-db-text md:text-6xl",
@@ -143,7 +144,7 @@ function ContactPage() {
                   }),
                   e.jsx("a", {
                     href: "#contact-form",
-                    className: "mt-9 inline-flex items-center gap-3 rounded-lg bg-db-accent px-7 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90",
+                    className: "mt-9 inline-flex items-center gap-3 rounded-lg bg-db-accent px-10 py-6 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90",
                     children: [
                       "Start a Conversation",
                       e.jsx(ContactIcon, { type: "arrow" })
@@ -154,22 +155,22 @@ function ContactPage() {
             ]
           }),
 
-          // CONTACT INFORMATION
+          // CONTACT INFORMATION SECTION
           e.jsxs("section", {
-            className: "border-t border-white/[0.06] py-20 md:py-24",
+            className: "border-t border-white/[0.06] py-24 md:py-28",
             children: [
               e.jsxs("div", {
-                className: "mx-auto max-w-[1280px] px-5 sm:px-8",
+                className: "mx-auto max-w-[1400px] px-5 sm:px-10",
                 children: [
                   e.jsxs("div", {
-                    className: "mb-14 text-center",
+                    className: "mb-16 text-center",
                     children: [
                       e.jsx("p", {
                         className: "mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-db-accent",
                         children: "GET IN TOUCH"
                       }),
                       e.jsx("h2", {
-                        className: "mb-4 font-display text-3xl font-bold text-db-text md:text-4xl",
+                        className: "mb-5 font-display text-3xl font-bold text-db-text md:text-4xl",
                         children: "We're Here to Help"
                       }),
                       e.jsx("p", {
@@ -178,8 +179,9 @@ function ContactPage() {
                       })
                     ]
                   }),
+
                   e.jsxs("div", {
-                    className: "grid grid-cols-1 gap-5 md:grid-cols-3",
+                    className: "grid grid-cols-1 gap-7 md:grid-cols-3",
                     children: [
                       e.jsx(ContactCard, {
                         icon: "mail",
@@ -197,7 +199,7 @@ function ContactPage() {
                         icon: "location",
                         title: "Our Location",
                         detail: "India",
-                        description: "Get in touch with Decabyte and explore our technology community."
+                        description: "Get in touch with Space9-Cloud and explore our technology community."
                       })
                     ]
                   })
@@ -206,17 +208,19 @@ function ContactPage() {
             ]
           }),
 
-          // CONTACT FORM
+          // CONTACT FORM SECTION
           e.jsxs("section", {
             id: "contact-form",
-            className: "border-t border-white/[0.06] bg-db-surface/30 py-20 md:py-24",
+            className: "border-t border-white/[0.06] bg-db-surface/30 py-24 md:py-28",
             children: [
               e.jsxs("div", {
-                className: "mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-14 px-5 lg:grid-cols-2 sm:px-8",
+                className: "mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-16 px-5 lg:grid-cols-2 sm:px-10",
 
                 children: [
+
+                  // LEFT SIDE CONTENT
                   e.jsxs("div", {
-                    className: "pt-4",
+                    className: "mx-auto w-full max-w-xl",
                     children: [
                       e.jsx("p", {
                         className: "mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-db-accent",
@@ -227,69 +231,72 @@ function ContactPage() {
                         children: "Have a Project or Question in Mind?"
                       }),
                       e.jsx("p", {
-                        className: "mb-10 max-w-lg text-base leading-8 text-db-muted",
+                        className: "mb-10 text-base leading-8 text-db-muted",
                         children: "Whether you're exploring cloud technologies, building your skills in cybersecurity, or looking for expert guidance, we'd love to hear from you."
                       }),
+
                       e.jsxs("div", {
-                        className: "space-y-7",
+                        className: "space-y-8",
                         children: [
                           e.jsxs("div", {
-                            className: "flex items-start gap-4",
+                            className: "flex items-start gap-5",
                             children: [
                               e.jsx("div", {
-                                className: "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
+                                className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
                                 children: "01"
                               }),
                               e.jsxs("div", {
                                 children: [
                                   e.jsx("h3", {
-                                    className: "mb-1 font-semibold text-db-text",
+                                    className: "mb-2 font-semibold text-db-text",
                                     children: "Cloud & DevOps"
                                   }),
                                   e.jsx("p", {
-                                    className: "text-sm leading-6 text-db-muted",
+                                    className: "text-sm leading-7 text-db-muted",
                                     children: "Questions about cloud infrastructure, automation and DevOps."
                                   })
                                 ]
                               })
                             ]
                           }),
+
                           e.jsxs("div", {
-                            className: "flex items-start gap-4",
+                            className: "flex items-start gap-5",
                             children: [
                               e.jsx("div", {
-                                className: "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
+                                className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
                                 children: "02"
                               }),
                               e.jsxs("div", {
                                 children: [
                                   e.jsx("h3", {
-                                    className: "mb-1 font-semibold text-db-text",
+                                    className: "mb-2 font-semibold text-db-text",
                                     children: "Cyber Security"
                                   }),
                                   e.jsx("p", {
-                                    className: "text-sm leading-6 text-db-muted",
+                                    className: "text-sm leading-7 text-db-muted",
                                     children: "Get in touch regarding security learning and technical guidance."
                                   })
                                 ]
                               })
                             ]
                           }),
+
                           e.jsxs("div", {
-                            className: "flex items-start gap-4",
+                            className: "flex items-start gap-5",
                             children: [
                               e.jsx("div", {
-                                className: "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
+                                className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-db-accent/10 text-db-accent",
                                 children: "03"
                               }),
                               e.jsxs("div", {
                                 children: [
                                   e.jsx("h3", {
-                                    className: "mb-1 font-semibold text-db-text",
+                                    className: "mb-2 font-semibold text-db-text",
                                     children: "Partnerships"
                                   }),
                                   e.jsx("p", {
-                                    className: "text-sm leading-6 text-db-muted",
+                                    className: "text-sm leading-7 text-db-muted",
                                     children: "Discuss business enquiries and collaboration opportunities."
                                   })
                                 ]
@@ -301,27 +308,36 @@ function ContactPage() {
                     ]
                   }),
 
+                  // RIGHT SIDE CONTACT FORM
                   e.jsxs("form", {
                     onSubmit: handleSubmit,
-                    className: "rounded-2xl border border-white/[0.08] bg-db-surface p-6 shadow-2xl sm:p-9",
+                    className: "w-full rounded-2xl border border-white/[0.08] bg-db-surface shadow-2xl",
+                    style: {
+                      padding: "60px",
+                      width: "100%",
+                      maxWidth: "100%",
+                      boxSizing: "border-box"
+                    },
                     children: [
                       e.jsx("h3", {
-                        className: "mb-2 text-2xl font-bold text-db-text",
+                        className: "mb-3 text-center text-2xl font-bold text-db-text md:text-3xl",
                         children: "Send Us a Message"
                       }),
+
                       e.jsx("p", {
-                        className: "mb-8 text-sm leading-6 text-db-muted",
+                        className: "mb-10 text-center text-sm leading-7 text-db-muted",
                         children: "Complete the form below and tell us how we can help."
                       }),
 
+                      // NAME AND EMAIL
                       e.jsxs("div", {
-                        className: "mb-5 grid grid-cols-1 gap-5 sm:grid-cols-2",
+                        className: "mb-7 grid grid-cols-1 gap-6 sm:grid-cols-2",
                         children: [
                           e.jsxs("div", {
                             children: [
                               e.jsx("label", {
                                 htmlFor: "contact-name",
-                                className: "mb-2 block text-sm font-medium text-db-text",
+                                className: "mb-3 block text-sm font-medium text-db-text",
                                 children: "Full Name"
                               }),
                               e.jsx("input", {
@@ -331,15 +347,16 @@ function ContactPage() {
                                 placeholder: "Your name",
                                 autoComplete: "name",
                                 required: true,
-                                className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-3 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
+                                className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-4 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
                               })
                             ]
                           }),
+
                           e.jsxs("div", {
                             children: [
                               e.jsx("label", {
                                 htmlFor: "contact-email",
-                                className: "mb-2 block text-sm font-medium text-db-text",
+                                className: "mb-3 block text-sm font-medium text-db-text",
                                 children: "Email Address"
                               }),
                               e.jsx("input", {
@@ -349,19 +366,20 @@ function ContactPage() {
                                 placeholder: "you@example.com",
                                 autoComplete: "email",
                                 required: true,
-                                className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-3 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
+                                className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-4 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
                               })
                             ]
                           })
                         ]
                       }),
 
+                      // SUBJECT
                       e.jsxs("div", {
-                        className: "mb-5",
+                        className: "mb-7",
                         children: [
                           e.jsx("label", {
                             htmlFor: "contact-subject",
-                            className: "mb-2 block text-sm font-medium text-db-text",
+                            className: "mb-3 block text-sm font-medium text-db-text",
                             children: "Subject"
                           }),
                           e.jsx("input", {
@@ -370,33 +388,35 @@ function ContactPage() {
                             type: "text",
                             placeholder: "What would you like to discuss?",
                             required: true,
-                            className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-3 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
+                            className: "w-full rounded-lg border border-white/10 bg-db-bg px-4 py-4 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
                           })
                         ]
                       }),
 
+                      // MESSAGE
                       e.jsxs("div", {
-                        className: "mb-7",
+                        className: "mb-8",
                         children: [
                           e.jsx("label", {
                             htmlFor: "contact-message",
-                            className: "mb-2 block text-sm font-medium text-db-text",
+                            className: "mb-3 block text-sm font-medium text-db-text",
                             children: "Your Message"
                           }),
                           e.jsx("textarea", {
                             id: "contact-message",
                             name: "message",
-                            rows: 5,
+                            rows: 6,
                             placeholder: "Tell us more about your enquiry...",
                             required: true,
-                            className: "w-full resize-y rounded-lg border border-white/10 bg-db-bg px-4 py-3 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
+                            className: "w-full resize-y rounded-lg border border-white/10 bg-db-bg px-4 py-4 text-db-text outline-none transition placeholder:text-db-muted focus:border-db-accent focus:ring-2 focus:ring-db-accent/20"
                           })
                         ]
                       }),
 
+                      // SUBMIT BUTTON
                       e.jsx("button", {
                         type: "submit",
-                        className: "flex w-full items-center justify-center gap-3 rounded-lg bg-db-accent px-6 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90",
+                        className: "flex w-full items-center justify-center gap-3 rounded-lg bg-db-accent px-6 py-5 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:opacity-90",
                         children: [
                           "Submit Enquiry",
                           e.jsx(ContactIcon, { type: "send" })
@@ -404,8 +424,8 @@ function ContactPage() {
                       }),
 
                       e.jsx("p", {
-                        className: "mt-5 text-center text-xs leading-6 text-db-muted",
-                        children: "Thank you for your interest in Decabyte."
+                        className: "mt-6 text-center text-xs leading-6 text-db-muted",
+                        children: "Thank you for your interest in Space9-Cloud."
                       })
                     ]
                   })
@@ -416,7 +436,7 @@ function ContactPage() {
 
           // FINAL SECTION
           e.jsxs("section", {
-            className: "relative overflow-hidden border-t border-white/[0.06] py-20 text-center",
+            className: "relative overflow-hidden border-t border-white/[0.06] py-24 text-center",
             children: [
               e.jsx("div", {
                 className: "pointer-events-none absolute inset-0 bg-db-accent/[0.025]"
@@ -430,7 +450,7 @@ function ContactPage() {
                   }),
                   e.jsx("p", {
                     className: "leading-8 text-db-muted",
-                    children: "From Cloud and Cyber Security to DevOps and AI, start a conversation with Decabyte and take your next step."
+                    children: "From Cloud and Cyber Security to DevOps and AI, start a conversation with Space9-Cloud and take your next step."
                   })
                 ]
               })
