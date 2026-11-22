@@ -1027,3 +1027,34 @@ section {
         border-radius: 15px !important;
     }
 }
+/* SPACE9 PREMIUM EFFECT LAYER */
+
+html,
+body {
+    background-color: #071426;
+}
+
+body {
+    position: relative;
+}
+
+#space9-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#root {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+/* Space9 font fallback */
+body {
+    font-family: "Satoshi", "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cabinet Grotesk", "Segoe UI", Arial, sans-serif;
+}
